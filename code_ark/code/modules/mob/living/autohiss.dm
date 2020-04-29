@@ -13,4 +13,4 @@
 
 			"Æ" = list("Ø")
 		)
-//	autohiss_exempt = list(LANGUAGE_RESOMI)
+	autohiss_exempt = list(LANGUAGE_RESOMI)

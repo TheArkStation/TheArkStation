@@ -30,6 +30,14 @@ jobs:
       env: TEST=MAP MAP_PATH=bearcat
     - name: "Map - Away Sites"
       env: TEST=MAP MAP_PATH=away_sites_testing
+    - name: "Map - Castelnau"
+      env: TEST=MAP MAP_PATH=castelnau
+    - name: "Map - Liberty"
+      env: TEST=MAP MAP_PATH=liberty
+    - name: "Map - Venturestar"
+      env: TEST=MAP MAP_PATH=liberty/venturestar
+    - name: "Map - Lucius"
+      env: TEST=MAP MAP_PATH=liberty/lucius
 
 cache:
   directories:

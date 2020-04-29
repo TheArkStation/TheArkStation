@@ -13,16 +13,16 @@
 			'code_ark/sound/voice/gasp_female3.ogg', 'code_ark/sound/voice/gasp_female4.ogg',
 			'code_ark/sound/voice/gasp_female5.ogg', 'code_ark/sound/voice/gasp_female6.ogg',
 			'code_ark/sound/voice/gasp_female7.ogg'))
-	emote_message_3p = "USER задыхается!"
+	emote_message_3p = "USER задыхаетс&#255;!"
 
 /decl/emote/audible/scretch
-	emote_message_3p = "USER чешется."
+	emote_message_3p = "USER чешетс&#255;."
 
 /decl/emote/audible/choke
-	emote_message_3p = "USER давится!"
+	emote_message_3p = "USER давитс&#255;!"
 
 /decl/emote/audible/gnarl
-	emote_message_3p = "USER рычит и скалится!"
+	emote_message_3p = "USER рычит и скалитс&#255;!"
 
 /decl/emote/audible/chirp
 	key ="chirp"
@@ -62,21 +62,21 @@
 	emote_message_3p = "USER хлопает."
 
 /decl/emote/audible/chuckle
-	emote_message_3p = "USER усмехается."
+	emote_message_3p = "USER усмехаетс&#255;."
 
 /decl/emote/audible/chuckle/resomi
 	emote_sound = 'code_ark/sound/voice/resomicougha.ogg'
-	emote_message_3p = "USER усмехается."
+	emote_message_3p = "USER усмехаетс&#255;."
 
 /decl/emote/audible/cough
 	emote_sound = list(
 		MALE = 'code_ark/sound/voice/cough_male.ogg',
 		FEMALE = 'code_ark/sound/voice/cough_female.ogg')
-	emote_message_3p = "USER кашляет!"
+	emote_message_3p = "USER кашл&#255;ет!"
 
 /decl/emote/audible/cough/resomi
 	emote_sound = 'code_ark/sound/voice/resomicoughb.ogg'
-	emote_message_3p = "USER кашляет!"
+	emote_message_3p = "USER кашл&#255;ет!"
 
 /decl/emote/audible/cry
 	emote_sound = list(
@@ -95,13 +95,13 @@
 	emote_sound = list(
 		MALE = 'code_ark/sound/voice/laugh_male_1.ogg',
 		FEMALE = 'code_ark/sound/voice/laugh_female_2.ogg')
-	emote_message_3p = "USER смеется!"
-	emote_message_3p_target = "USER смеется над TARGET!"
+	emote_message_3p = "USER смеетс&#255;!"
+	emote_message_3p_target = "USER смеетс&#255; над TARGET!"
 
 /decl/emote/audible/laugh/resomi
 	emote_sound = 'code_ark/sound/voice/resomicougha.ogg'
-	emote_message_3p = "USER смеется!"
-	emote_message_3p_target = "USER смеется над TARGET!"
+	emote_message_3p = "USER смеетс&#255;!"
+	emote_message_3p_target = "USER смеетс&#255; над TARGET!"
 
 /decl/emote/audible/mumble
 	emote_message_3p = "USER бормочет."

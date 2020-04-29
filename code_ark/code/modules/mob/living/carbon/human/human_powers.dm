@@ -4,7 +4,7 @@
 	set desc = "Allows you to start/stop hopping over things such as hydroponics trays, tables, and railings."
 	pass_flags ^= PASS_FLAG_TABLE //I dunno what this fancy ^= is but Aronai gave it to me.
 	to_chat(src, "You [pass_flags&PASS_FLAG_TABLE ? "will" : "will NOT"] move over tables/railings/trays!")
-
+/*
 /mob/living/carbon/human/proc/resomi_sonar_ping()
 	set name = "Listen In"
 	set desc = "Allows you to listen in to movement and noises around you."
@@ -59,3 +59,4 @@
 	if(C && I)
 		C.images -= I
 	qdel(I)
+*/

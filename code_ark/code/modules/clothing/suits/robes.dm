@@ -1,33 +1,4 @@
-/obj/item/clothing/suit/storage/toggle/no_pockets/robe/proc/get_gender_suffix(var/suffix = "_s")
-	. = suffix
-	var/mob/living/carbon/human/H
-	if(istype(src.loc, /mob/living/carbon/human))
-		H = src.loc
-		var/bodytype
-		if(ishuman(H))
-			bodytype = H.species.get_bodytype(H)
-
-		if(gender_icons && bodytype == SPECIES_HUMAN && H.gender == FEMALE)
-			. = "_f" + suffix
-
-/obj/item/clothing/suit/storage/toggle/no_pockets/robe/get_icon_state(mob/user_mob, slot)
-	if(item_state_slots && item_state_slots[slot])
-		. = item_state_slots[slot]
-	else
-		. = icon_state
-	if(!findtext(.,"_s", -2)) // If we don't already have our suffix
-		if((icon_state + "_f_s") in icon_states(default_onmob_icons[slot_wear_suit_str]))
-			. +=  get_gender_suffix()
-		else
-			. += "_s"
-
-/obj/item/clothing/suit/storage/toggle/no_pockets/robe/toggle()
-	..()
-	item_state = get_icon_state()
-	update_clothing_icon()
-
 /obj/item/clothing/suit/storage/toggle/no_pockets/robe
-	var/gender_icons = 1
 	name = "robe"
 	icon = 'code_ark/icons/obj/clothing/obj_suit.dmi'
 	item_icons = list(slot_wear_suit_str = 'code_ark/icons/mob/onmob/onmob_suit.dmi')
