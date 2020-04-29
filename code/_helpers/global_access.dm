@@ -249,6 +249,8 @@
 			return global.all_unit_tests_passed;
 		if("all_virtual_listeners")
 			return global.all_virtual_listeners;
+		if("alphabet")
+			return global.alphabet;
 		if("announced_news_types")
 			return global.announced_news_types;
 		if("antag_add_finished")
@@ -847,6 +849,8 @@
 			return global.tape_roll_applications;
 		if("telecomms_list")
 			return global.telecomms_list;
+		if("text_tag_icons")
+			return global.text_tag_icons;
 		if("ticket_panels")
 			return global.ticket_panels;
 		if("tickets")
@@ -1164,6 +1168,8 @@
 			global.all_unit_tests_passed=newval;
 		if("all_virtual_listeners")
 			global.all_virtual_listeners=newval;
+		if("alphabet")
+			global.alphabet=newval;
 		if("announced_news_types")
 			global.announced_news_types=newval;
 		if("antag_add_finished")
@@ -1762,6 +1768,8 @@
 			global.tape_roll_applications=newval;
 		if("telecomms_list")
 			global.telecomms_list=newval;
+		if("text_tag_icons")
+			global.text_tag_icons=newval;
 		if("ticket_panels")
 			global.ticket_panels=newval;
 		if("tickets")
@@ -1954,6 +1962,7 @@
 	"all_ui_styles",
 	"all_unit_tests_passed",
 	"all_virtual_listeners",
+	"alphabet",
 	"announced_news_types",
 	"antag_add_finished",
 	"appearance_manager",
@@ -2253,6 +2262,7 @@
 	"tank_gauge_cache",
 	"tape_roll_applications",
 	"telecomms_list",
+	"text_tag_icons",
 	"ticket_panels",
 	"tickets",
 	"total_lighting_corners",
