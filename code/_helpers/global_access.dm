@@ -249,8 +249,6 @@
 			return global.all_unit_tests_passed;
 		if("all_virtual_listeners")
 			return global.all_virtual_listeners;
-		if("alphabet")
-			return global.alphabet;
 		if("announced_news_types")
 			return global.announced_news_types;
 		if("antag_add_finished")
@@ -1168,8 +1166,6 @@
 			global.all_unit_tests_passed=newval;
 		if("all_virtual_listeners")
 			global.all_virtual_listeners=newval;
-		if("alphabet")
-			global.alphabet=newval;
 		if("announced_news_types")
 			global.announced_news_types=newval;
 		if("antag_add_finished")
@@ -1962,7 +1958,6 @@
 	"all_ui_styles",
 	"all_unit_tests_passed",
 	"all_virtual_listeners",
-	"alphabet",
 	"announced_news_types",
 	"antag_add_finished",
 	"appearance_manager",
