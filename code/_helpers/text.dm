@@ -168,6 +168,13 @@
 			else			non_whitespace = 1
 	if(non_whitespace)		return text		//only accepts the text if it has some non-spaces
 
+// Truncates text to limit if necessary.
+/proc/dd_limittext(message, length)
+	var/size = length(message)
+	if (size <= length)
+		return message
+	else
+		return copytext(message, 1, length + 1)
 
 //Old variant. Haven't dared to replace in some places.
 /proc/sanitize_old(var/t,var/list/repl_chars = list("\n"="#","\t"="#"))
@@ -217,36 +224,21 @@
 
 //Adds 'u' number of zeros ahead of the text 't'
 /proc/add_zero(t, u)
-	return pad_left(t, u, "0")
+	while (length(t) < u)
+		t = "0[t]"
+	return t
 
 //Adds 'u' number of spaces ahead of the text 't'
 /proc/add_lspace(t, u)
-	return pad_left(t, u, " ")
+	while(length(t) < u)
+		t = " [t]"
+	return t
 
 //Adds 'u' number of spaces behind the text 't'
 /proc/add_tspace(t, u)
-	return pad_right(t, u, " ")
-
-// Adds the required amount of 'character' in front of 'text' to extend the lengh to 'desired_length', if it is shorter
-// No consideration are made for a multi-character 'character' input
-/proc/pad_left(text, desired_length, character)
-	var/padding = generate_padding(length(text), desired_length, character)
-	return length(padding) ? "[padding][text]" : text
-
-// Adds the required amount of 'character' after 'text' to extend the lengh to 'desired_length', if it is shorter
-// No consideration are made for a multi-character 'character' input
-/proc/pad_right(text, desired_length, character)
-	var/padding = generate_padding(length(text), desired_length, character)
-	return length(padding) ? "[text][padding]" : text
-
-/proc/generate_padding(current_length, desired_length, character)
-	if(current_length >= desired_length)
-		return ""
-	var/characters = list()
-	for(var/i = 1 to (desired_length - current_length))
-		characters += character
-	return JOINTEXT(characters)
-
+	while(length(t) < u)
+		t = "[t] "
+	return t
 
 //Returns a string with reserved characters and spaces before the first letter removed
 /proc/trim_left(text)
@@ -268,7 +260,7 @@
 
 //Returns a string with the first element of the string capitalized.
 /proc/capitalize(var/t as text)
-	return uppertext(copytext(t, 1, 2)) + copytext(t, 2)
+	return uppertext(copytext_char(t, 1, 2)) + copytext_char(t, 2)
 
 //This proc strips html properly, remove < > and all text between
 //for complete text sanitizing should be used sanitize()
@@ -370,6 +362,40 @@ proc/TextPreview(var/string,var/len=40)
 				return 1
 	return 0
 
+//unicode sanitization
+/*/proc/sanitize_u(t)
+	t = html_encode(sanitize(t))
+	t = replacetext(t, "____255_", "&#1103;")
+	return t
+
+//convertion cp1251 to unicode
+/proc/sanitize_a2u(t)
+	t = replacetext(t, "&#255;", "&#1103;")
+	return t
+
+//convertion unicode to cp1251
+/proc/sanitize_u2a(t)
+	t = replacetext(t, "&#1103;", "&#255;")
+	return t
+
+//clean sanitize cp1251
+/proc/sanitize_a0(t)
+	t = replacetext(t, "я", "&#255;")
+	return t
+
+//clean sanitize unicode
+/proc/sanitize_u0(t)
+	t = replacetext(t, "я", "&#1103;")
+	return t
+
+/proc/remore_cyrillic(t)
+	for(var/i in GLOB.cyrillic_symbols)
+		t = replacetext(t, i, "")
+	return t
+*/
+
+var/list/alphabet = list("a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z")
+
 /proc/generateRandomString(var/length)
 	. = list()
 	for(var/a in 1 to length)
@@ -421,7 +447,10 @@ proc/TextPreview(var/string,var/len=40)
 	t = replacetext(t, "\[/grid\]", "</td></tr></table>")
 	t = replacetext(t, "\[row\]", "</td><tr>")
 	t = replacetext(t, "\[cell\]", "<td>")
-	t = replacetext(t, "\[logo\]", "<img src = exologo.png>")
+	t = replacetext(t, "\[exologo\]", "<img src = exologo.png>")
+	t = replacetext(t, "\[logo\]", "<img src = ntlogo.png>")
+	t = replacetext(t, "я", "&#1103;")
+	t = replacetext(t, "&#255;", "&#1103;")
 	t = replacetext(t, "\[bluelogo\]", "<img src = bluentlogo.png>")
 	t = replacetext(t, "\[solcrest\]", "<img src = sollogo.png>")
 	t = replacetext(t, "\[torchltd\]", "<img src = exologo.png>")
@@ -432,7 +461,10 @@ proc/TextPreview(var/string,var/len=40)
 	t = replacetext(t, "\[xynlogo\]", "<img src = xynlogo.png>")
 	t = replacetext(t, "\[fleetlogo\]", "<img src = fleetlogo.png>")
 	t = replacetext(t, "\[sfplogo\]", "<img src = sfplogo.png>")
+	t = replacetext(t, "\[ccalogo\]", "<img src = ccalogo.png>")
 	t = replacetext(t, "\[editorbr\]", "")
+	t = replacetext(t, "\[img\]","<img src=\"")
+	t = replacetext(t, "\[/img\]", "\" />")
 	return t
 
 //pencode translation to html for tags exclusive to digital files (currently email, nanoword, report editor fields,
@@ -444,7 +476,6 @@ proc/TextPreview(var/string,var/len=40)
 	text = replacetext(text, "\[fontblue\]", "<font color=\"blue\">")//</font> to pass travis html tag integrity check
 	text = replacetext(text, "\[fontgreen\]", "<font color=\"green\">")
 	text = replacetext(text, "\[/font\]", "</font>")
-	text = replacetext(text, "\[redacted\]", "<span class=\"redacted\">R E D A C T E D</span>")
 	return pencode2html(text)
 
 //Will kill most formatting; not recommended.
@@ -488,8 +519,8 @@ proc/TextPreview(var/string,var/len=40)
 	t = replacetext(t, "<img src = daislogo.png>", "\[daislogo\]")
 	t = replacetext(t, "<img src = xynlogo.png>", "\[xynlogo\]")
 	t = replacetext(t, "<img src = sfplogo.png>", "\[sfplogo\]")
+	t = replacetext(t, "<img src = ccalogo.png>", "\[ccalogo\]")
 	t = replacetext(t, "<span class=\"paper_field\"></span>", "\[field\]")
-	t = replacetext(t, "<span class=\"redacted\">R E D A C T E D</span>", "\[redacted\]")
 	t = strip_html_properly(t)
 	return t
 
@@ -498,7 +529,10 @@ proc/TextPreview(var/string,var/len=40)
 	//Feel free to move to Helpers.
 	var/newKey
 	newKey += pick("the", "if", "of", "as", "in", "a", "you", "from", "to", "an", "too", "little", "snow", "dead", "drunk", "rosebud", "duck", "al", "le")
-	newKey += pick("diamond", "beer", "mushroom", "assistant", "clown", "captain", "twinkie", "security", "nuke", "small", "big", "escape", "yellow", "gloves", "monkey", "engine", "nuclear", "ai")
+	if(rand(0, 1))
+		newKey += pick("diamond", "beer", "mushroom", "assistant", "clown", "captain", "twinkie", "security", "nuke", "small", "big", "escape", "yellow", "gloves", "monkey", "engine", "nuclear", "ai")
+	else
+		newKey += pick(GLOB.greek_letters)
 	newKey += pick("1", "2", "3", "4", "5", "6", "7", "8", "9", "0")
 	return newKey
 
@@ -558,6 +592,7 @@ proc/TextPreview(var/string,var/len=40)
 	if(rest)
 		. += .(rest)
 
+/var/icon/text_tag_icons = new('./icons/chattags.dmi')
 /proc/deep_string_equals(var/A, var/B)
 	if (length(A) != length(B))
 		return FALSE
@@ -577,6 +612,21 @@ proc/TextPreview(var/string,var/len=40)
 	text = replacetext(text, ";", "")
 	text = replacetext(text, "&", "")
 	return text
+
+/proc/corrupt_text(t)
+	var/returntext = ""
+	for(var/i = 1, i <= length(t), i++)
+
+		var/letter = copytext(t, i, i+1)
+		if(prob(75))
+			if(prob(10))
+				letter = ""
+			for(var/j = 1, j <= rand(0, 2), j++)
+				letter += pick("#","@","*","&","%","$", "!","№","?","*","*","*","*","*","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z")
+
+		returntext += letter
+
+	return returntext
 
 /proc/text2num_or_default(text, default)
 	var/result = text2num(text)
