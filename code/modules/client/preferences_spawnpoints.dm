@@ -61,10 +61,12 @@ GLOBAL_VAR(spawntypes)
 	display_name = "Cryogenic Storage"
 	msg = "has completed cryogenic revival"
 	disallow_job = list("Robot")
+	var/spawn_name
 
 /datum/spawnpoint/cryo/New()
 	..()
 	turfs = GLOB.latejoin_cryo
+	spawn_name = GLOB.using_map.full_name
 
 /datum/spawnpoint/cryo/after_join(mob/living/carbon/human/victim)
 	if(!istype(victim))
