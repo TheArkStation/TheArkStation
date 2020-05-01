@@ -1,3 +1,4 @@
+//Для резоми, не включать!1! - Теч
 /obj/item/clothing/glasses/New()
 	..()
 	if(icon('code_ark/icons/mob/species/resomi/onmob_eyes_resomi.dmi', icon_state) && !sprite_sheets[SPECIES_RESOMI])
