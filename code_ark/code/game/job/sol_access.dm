@@ -46,6 +46,12 @@
 	desc = "Piloting"
 	region = ACCESS_REGION_SOL
 
+/var/const/access_sol_id = "ACCESS_SOL_ID"
+/datum/access/sol/id
+	id = access_sol_id
+	desc = "ID Modification"
+	region = ACCESS_REGION_SOL
+
 /var/const/access_sol_command = "ACCESS_SOL_COMMAND"
 /datum/access/sol/command
 	id = access_sol_command
@@ -56,4 +62,10 @@
 /datum/access/sol/high_command
 	id = access_sol_command
 	desc = "High Command"
-	region =ACCESS_REGION_SOL_HIGH
+	region = ACCESS_REGION_SOL_HIGH
+
+/var/const/access_sol_sfp = "ACCESS_SOL_SFP"
+/datum/access/sol/sfp
+	id = access_sol_sfp
+	desc = "High Command"
+	region = ACCESS_REGION_SOL_SFP
