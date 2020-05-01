@@ -81,6 +81,8 @@
 
 		handle_medical_side_effects()
 
+		handle_eye_blink()
+
 		if(!client && !mind)
 			species.handle_npc(src)
 
@@ -90,7 +92,6 @@
 
 	//Update our name based on whether our face is obscured/disfigured
 	SetName(get_visible_name())
-
 /mob/living/carbon/human/get_stamina()
 	return stamina
 
