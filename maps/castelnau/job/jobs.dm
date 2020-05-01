@@ -10,7 +10,7 @@
 		/datum/species/diona = list(COMMAND_JOBS, /datum/job/warden, /datum/job/officer),
 		/datum/species/adherent = list(COMMAND_JOBS, /datum/job/warden, /datum/job/officer),
 		/datum/species/nabber = list(COMMAND_JOBS, /datum/job/senior_engineer, /datum/job/senior_doctor, /datum/job/senior_scientist, /datum/job/scientist, /datum/job/qm, /datum/job/warden, /datum/job/officer),
-		/datum/species/resomi = list(COMMAND_JOBS, /datum/job/senior_engineer, /datum/job/senior_doctor, /datum/job/senior_scientist, /datum/job/warden),
+//		/datum/species/resomi = list(COMMAND_JOBS, /datum/job/senior_engineer, /datum/job/senior_doctor, /datum/job/senior_scientist, /datum/job/warden),
 		/datum/species/vox = list(HUMAN_NOVOX_JOBS),
 		/datum/species/vox/armalis = list(HUMAN_NOVOX_JOBS),
 	)
