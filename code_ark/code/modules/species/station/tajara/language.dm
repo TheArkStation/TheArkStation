@@ -1,5 +1,4 @@
-#define LANGUAGE_SIIK_MAAS		"Siik'maas"
-#define LANGUAGE_SIIK_TAJR		"Siik'tajr"
+
 
 /datum/language/tajaran
 /*
