@@ -29,6 +29,11 @@
 /obj/item/clothing/suit/space/rig/light
 	name = "suit"
 	breach_threshold = 18 //comparable to voidsuits
+//[ARK]
+	sprite_sheets = list(
+		SPECIES_TAJARA = 'code_ark/code/modules/species/station/tajara/sprites_cloth/suit.dmi'
+		)
+//[/ARK]
 
 /obj/item/clothing/gloves/rig/light
 	name = "gloves"
@@ -38,6 +43,12 @@
 
 /obj/item/clothing/head/helmet/space/rig/light
 	name = "hood"
+//[ARK]
+	sprite_sheets = list(
+		SPECIES_TAJARA = 'code_ark/code/modules/species/station/tajara/sprites_cloth/helmet.dmi'
+		)
+	tint = 1
+//[/ARK]
 
 /obj/item/weapon/rig/light/hacker
 	name = "cybersuit control module"
