@@ -17,7 +17,7 @@
 //	display_name = "big towel"
 //	description = "Collapsed big towel - looks like you can't use it as a normal one... Use it on the beach or gym."
 //	path = /obj/item/rolled_towel
-//	flags = GEAR_HAS_TYPE_SELECTION ///////////////////����� ���/////////////////////
+//	flags = GEAR_HAS_TYPE_SELECTION ///////////////////пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ/////////////////////
 
 /datum/gear/lipstick
 	sort_category = "Cosmetics"
