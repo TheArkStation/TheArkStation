@@ -44,6 +44,8 @@
 	down_body_parts_covered = null
 	down_icon_state = "steriledown"
 	pull_mask = 1
+	sprite_sheets = list(SPECIES_TAJARA = 'code_ark/code/modules/species/station/tajara/sprites_cloth/mask.dmi') //ARK
+
 
 /obj/item/clothing/mask/fakemoustache
 	name = "fake moustache"
@@ -280,6 +282,9 @@
 			flags_inv = initial(flags_inv)
 			body_parts_covered = initial(body_parts_covered)
 			icon_state = initial(icon_state)
+			sprite_sheets = list(SPECIES_TAJARA = 'code_ark/code/modules/species/station/tajara/sprites_cloth/mask.dmi') //ARK
+
+
 		if(slot_head)
 			flags_inv = 0
 			body_parts_covered = HEAD

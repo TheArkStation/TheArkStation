@@ -225,3 +225,5 @@
 	filter_water = TRUE
 	body_parts_covered = FACE
 	w_class = 2
+	sprite_sheets = list(SPECIES_TAJARA = 'code_ark/code/modules/species/station/tajara/sprites_cloth/mask.dmi') //ARK
+

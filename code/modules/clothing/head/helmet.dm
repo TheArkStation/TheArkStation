@@ -25,6 +25,7 @@
 	siemens_coefficient = 0.7
 	w_class = ITEM_SIZE_NORMAL
 	species_restricted = list("exclude", SPECIES_NABBER, SPECIES_ADHERENT)
+	sprite_sheets = list(SPECIES_TAJARA = 'code_ark/code/modules/species/station/tajara/sprites_cloth/helmet.dmi') //ARK
 
 /obj/item/clothing/head/helmet/nt
 	name = "\improper corporate security helmet"
