@@ -279,6 +279,8 @@
 			return global.atmosphere_alarm;
 		if("attack_log_repository")
 			return global.attack_log_repository;
+		if("autodocs")
+			return global.autodocs;
 		if("base_miss_chance")
 			return global.base_miss_chance;
 		if("basic_robolimb")
@@ -1196,6 +1198,8 @@
 			global.atmosphere_alarm=newval;
 		if("attack_log_repository")
 			global.attack_log_repository=newval;
+		if("autodocs")
+			global.autodocs=newval;
 		if("base_miss_chance")
 			global.base_miss_chance=newval;
 		if("basic_robolimb")
@@ -1973,6 +1977,7 @@
 	"assigned_blocks",
 	"atmosphere_alarm",
 	"attack_log_repository",
+	"autodocs",
 	"base_miss_chance",
 	"basic_robolimb",
 	"blocked",
