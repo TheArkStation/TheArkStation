@@ -32,6 +32,8 @@
 	var/base_state
 	flash_protection = FLASH_PROTECTION_MAJOR
 	tint = TINT_HEAVY
+	sprite_sheets = list(SPECIES_TAJARA = 'code_ark/code/modules/species/station/tajara/sprites_cloth/helmet.dmi') //ARK
+
 
 /obj/item/clothing/head/welding/attack_self()
 	if(!base_state)
