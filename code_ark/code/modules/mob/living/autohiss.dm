@@ -1,17 +1,17 @@
 ///datum/species/resomi
 //	autohiss_basic_map = list(
-//			"ç" = list("ñ"),
+//			"Ã§" = list("Ã±"),
 //
-//			"Ç" = list("Ñ")
+//			"Ã‡" = list("Ã‘")
 //		)
 //	autohiss_extra_map = list(
-//			"÷" = list("ù"),
+//			"Ã·" = list("Ã¹"),
 //
-//			"æ" = list("ø"),
+//			"Ã¦" = list("Ã¸"),
 //
-//			"×" = list("Ù"),
+//			"Ã—" = list("Ã™"),
 //
-//			"Æ" = list("Ø")
+//			"Ã†" = list("Ã˜")
 //		)
 //	autohiss_exempt = list(LANGUAGE_RESOMI)
 
@@ -21,16 +21,16 @@
 	autohiss_basic_map = list(
 			"s" = list("s-s", "ss", "sss"),
 
-			"ñ" = list("ñ-ñ", "ññ", "ñññ"),
+			"Ã±" = list("Ã±-Ã±", "Ã±Ã±", "Ã±Ã±Ã±"),
 
 			"x" = list("s-s", "ss", "s", "sss"),
 		)
 	autohiss_extra_map = list(
-			"ö" = list("ñ-ñ", "ñ", "ññ", "ñññ"),
+			"Ã¶" = list("Ã±-Ã±", "Ã±", "Ã±Ã±", "Ã±Ã±Ã±"),
 
-			"÷" = list("ø-ø", "ø", "øø", "øøø"),
+			"Ã·" = list("Ã¸-Ã¸", "Ã¸", "Ã¸Ã¸", "Ã¸Ã¸Ã¸"),
 
-			"æ" = list("ø-ø", "ø", "øø", "øøø"),
+			"Ã¦" = list("Ã¸-Ã¸", "Ã¸", "Ã¸Ã¸", "Ã¸Ã¸Ã¸"),
 		)
 	autohiss_exempt = list(
 					LANGUAGE_UNATHI_SINTA,
@@ -41,7 +41,7 @@
 /datum/species/tajara
 	autohiss_basic_map = list(
 			"r" = list("rr", "r-r", "rrr"),
-			"ð" = list("ð-ð", "ðð", "ððð"),
+			"Ã°" = list("Ã°-Ã°", "Ã°Ã°", "Ã°Ã°Ã°"),
 		)
 	autohiss_extra_map = list()
 	autohiss_exempt = list(
