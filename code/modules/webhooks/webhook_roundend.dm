@@ -1,6 +1,7 @@
 /decl/webhook/roundend
 	id = WEBHOOK_ROUNDEND
 
+/* see code_ark/modules/webhooks/webhook_roundend.dm
 // Data expects three numerical fields: "survivors", "escaped", "ghosts"
 /decl/webhook/roundend/get_message(var/list/data)
 	. = ..()
@@ -29,3 +30,4 @@
 		"description" = desc,
 		"color" = COLOR_WEBHOOK_DEFAULT
 	))
+*/
