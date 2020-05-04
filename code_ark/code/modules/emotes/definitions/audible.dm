@@ -4,7 +4,7 @@
 	message_type = AUDIBLE_MESSAGE
 
 /decl/emote/audible/whimper
-	emote_message_3p = "USER хнычет."
+	emote_message_3p = "USER ГµГ­Г»Г·ГҐГІ."
 
 /decl/emote/audible/gasp
 	key ="gasp"
@@ -19,27 +19,27 @@
 			'code_ark/sound/voice/gasp_female3.ogg', 'code_ark/sound/voice/gasp_female4.ogg',
 			'code_ark/sound/voice/gasp_female5.ogg', 'code_ark/sound/voice/gasp_female6.ogg',
 			'code_ark/sound/voice/gasp_female7.ogg'))
-	emote_message_3p = "USER задыхается!"
+	emote_message_3p = "USER Г§Г Г¤Г»ГµГ ГҐГІГ±Гї!"
 	conscious = 0
 
 /decl/emote/audible/scretch
-	emote_message_3p = "USER чешется."
+	emote_message_3p = "USER Г·ГҐГёГҐГІГ±&#255;."
 
 /decl/emote/audible/choke
-	emote_message_3p = "USER давится!"
+	emote_message_3p = "USER Г¤Г ГўГЁГІГ±&#255;!"
 
 /decl/emote/audible/gnarl
-	emote_message_3p = "USER рычит и скалится!"
+	emote_message_3p = "USER Г°Г»Г·ГЁГІ ГЁ Г±ГЄГ Г«ГЁГІГ±&#255;!"
 
 /decl/emote/audible/chirp
 	key ="chirp"
-	emote_message_3p = "USER щебечет!"
+	emote_message_3p = "USER Г№ГҐГЎГҐГ·ГҐГІ!"
 
 /decl/emote/audible/whistle
 	key = "whistle"
 	emote_sound = 'code_ark/sound/voice/whistle.ogg'
-	emote_message_1p = "Вы свистите!"
-	emote_message_3p = "USER свистит!"
+	emote_message_1p = "Г‚Г» Г±ГўГЁГ±ГІГЁГІГҐ!"
+	emote_message_3p = "USER Г±ГўГЁГ±ГІГЁГІ!"
 
 /decl/emote/audible/snore
 	key = "snore"
@@ -49,7 +49,7 @@
 		'code_ark/sound/voice/snore_3.ogg', 'code_ark/sound/voice/snore_4.ogg',
 		'code_ark/sound/voice/snore_5.ogg', 'code_ark/sound/voice/snore_6.ogg',
 		'code_ark/sound/voice/snore_7.ogg')
-	emote_message_3p = "USER храпит."
+	emote_message_3p = "USER ГµГ°Г ГЇГЁГІ."
 	conscious = 0
 
 /decl/emote/audible/yawn
@@ -58,42 +58,42 @@
 		MALE = list('code_ark/sound/voice/yawn_male_1.ogg', 'code_ark/sound/voice/yawn_male_2.ogg'),
 		FEMALE = list('code_ark/sound/voice/yawn_female_1.ogg', 'code_ark/sound/voice/yawn_female_2.ogg',
 						'code_ark/sound/voice/yawn_female_3.ogg'))
-	emote_message_3p = "USER зевает."
+	emote_message_3p = "USER Г§ГҐГўГ ГҐГІ."
 
 /decl/emote/audible/salute
 	key = "salute"
 	emote_sound = 'code_ark/sound/effects/salute.ogg'
-	emote_message_3p = "USER делалет воинское приветствие."
+	emote_message_3p = "USER Г¤ГҐГ«Г Г«ГҐГІ ГўГ®ГЁГ­Г±ГЄГ®ГҐ ГЇГ°ГЁГўГҐГІГ±ГІГўГЁГҐ."
 
 
 
 /decl/emote/audible/clap
 	key = "clap"
 	emote_sound = 'code_ark/sound/voice/clap.ogg'
-	emote_message_3p = "USER хлопает."
+	emote_message_3p = "USER ГµГ«Г®ГЇГ ГҐГІ."
 
 /decl/emote/audible/chuckle
 	key = "chuckle"
 	emote_sound = list(
 		MALE = 'code_ark/sound/voice/chuckle_TEMP.ogg',
-		FEMALE = 'code_ark/sound/voice/chuckle_TEMP.ogg')//Заменить звук
-	emote_message_3p = "USER усмехается."
+		FEMALE = 'code_ark/sound/voice/chuckle_TEMP.ogg')//Г‡Г Г¬ГҐГ­ГЁГІГј Г§ГўГіГЄ
+	emote_message_3p = "USER ГіГ±Г¬ГҐГµГ ГҐГІГ±Гї."
 
 /decl/emote/audible/chuckle/resomi
 	emote_sound = 'code_ark/sound/voice/resomicougha.ogg'
-	emote_message_3p = "USER усмехается."
+	emote_message_3p = "USER ГіГ±Г¬ГҐГµГ ГҐГІГ±&#255;."
 
 /decl/emote/audible/cough
 	key = "cough"
 	emote_sound = list(
 		MALE = 'code_ark/sound/voice/cough_male.ogg',
 		FEMALE = 'code_ark/sound/voice/cough_female.ogg')
-	emote_message_3p = "USER кашляет!"
+	emote_message_3p = "USER ГЄГ ГёГ«ГїГҐГІ!"
 	conscious = 0
 
 /decl/emote/audible/cough/resomi
 	emote_sound = 'code_ark/sound/voice/resomicoughb.ogg'
-	emote_message_3p = "USER кашляет!"
+	emote_message_3p = "USER ГЄГ ГёГ«&#255;ГҐГІ!"
 
 /decl/emote/audible/cry
 	key = "cry"
@@ -101,33 +101,33 @@
 		MALE = list('code_ark/sound/voice/cry_male_1.ogg', 'code_ark/sound/voice/cry_male_2.ogg'),
 		FEMALE = list('code_ark/sound/voice/cry_female_1.ogg', 'code_ark/sound/voice/cry_female_2.ogg',
 						'code_ark/sound/voice/cry_female_3.ogg'))
-	emote_message_3p = "USER плачет..."
+	emote_message_3p = "USER ГЇГ«Г Г·ГҐГІ..."
 
 /decl/emote/audible/laugh
 	key = "laugh"
 	emote_sound = list(
 		MALE = 'code_ark/sound/voice/laugh_male_1.ogg',
 		FEMALE = 'code_ark/sound/voice/laugh_female_2.ogg')
-	emote_message_3p = "USER смеется!"
-	emote_message_3p_target = "USER смеется над TARGET!"
+	emote_message_3p = "USER Г±Г¬ГҐГҐГІГ±&#255;!"
+	emote_message_3p_target = "USER Г±Г¬ГҐГҐГІГ±&#255; Г­Г Г¤ TARGET!"
 
 /decl/emote/audible/laugh/resomi
 	emote_sound = 'code_ark/sound/voice/resomicougha.ogg'
-	emote_message_3p = "USER смеется!"
-	emote_message_3p_target = "USER смеется над TARGET!"
+	emote_message_3p = "USER Г±Г¬ГҐГҐГІГ±&#255;!"
+	emote_message_3p_target = "USER Г±Г¬ГҐГҐГІГ±&#255; Г­Г Г¤ TARGET!"
 
 /decl/emote/audible/mumble
-	emote_message_3p = "USER бормочет."
+	emote_message_3p = "USER ГЎГ®Г°Г¬Г®Г·ГҐГІ."
 
 /decl/emote/audible/grumble
-	emote_message_3p = "USER бурчит."
+	emote_message_3p = "USER ГЎГіГ°Г·ГЁГІ."
 
 /decl/emote/audible/giggle
 	key = "giggle"
 	emote_sound = list(
 		MALE = 'code_ark/sound/voice/giggle_male_2.ogg',
 		FEMALE = 'code_ark/sound/voice/giggle_female_3.ogg')
-	emote_message_3p = "USER хихикает."
+	emote_message_3p = "USER ГµГЁГµГЁГЄГ ГҐГІ."
 
 /decl/emote/audible/scream
 	key = "scream"
@@ -135,30 +135,30 @@
 		MALE = list('code_ark/sound/voice/scream_male_1.ogg', 'code_ark/sound/voice/scream_male_2.ogg',
 					'code_ark/sound/voice/scream_male_3.ogg'),
 		FEMALE = list('code_ark/sound/voice/scream_female_1.ogg', 'code_ark/sound/voice/scream_female_2.ogg'))
-	emote_message_3p = "USER кричит!"
+	emote_message_3p = "USER ГЄГ°ГЁГ·ГЁГІ!"
 
 /decl/emote/audible/scream/resomi
 	emote_sound = 'code_ark/sound/voice/resomisneeze.ogg'
-	emote_message_3p = "USER кричит!"
+	emote_message_3p = "USER ГЄГ°ГЁГ·ГЁГІ!"
 
 /decl/emote/audible/slap
-	emote_message_1p_target = "<span class='warning'>Вы дали пощёчину TARGET!</span>"
-	emote_message_1p = "Вы дали себе пощёчину!"
-	emote_message_3p_target = "<span class='warning'>USER дал пощёчину TARGET!</span>"
-	emote_message_3p = "USER дал пощёчину USER_SELF!"
+	emote_message_1p_target = "<span class='warning'>Г‚Г» Г¤Г Г«ГЁ ГЇГ®Г№ВёГ·ГЁГ­Гі TARGET!</span>"
+	emote_message_1p = "Г‚Г» Г¤Г Г«ГЁ Г±ГҐГЎГҐ ГЇГ®Г№ВёГ·ГЁГ­Гі!"
+	emote_message_3p_target = "<span class='warning'>USER Г¤Г Г« ГЇГ®Г№ВёГ·ГЁГ­Гі TARGET!</span>"
+	emote_message_3p = "USER Г¤Г Г« ГЇГ®Г№ВёГ·ГЁГ­Гі USER_SELF!"
 
 /decl/emote/audible/bug_hiss
-	emote_message_3p_target = "USER шипит на TARGET!"
-	emote_message_3p = "USER шипит!"
+	emote_message_3p_target = "USER ГёГЁГЇГЁГІ Г­Г  TARGET!"
+	emote_message_3p = "USER ГёГЁГЇГЁГІ!"
 
 /decl/emote/audible/bug_buzz
-	emote_message_3p = "USER жужжит."
+	emote_message_3p = "USER Г¦ГіГ¦Г¦ГЁГІ."
 
 /decl/emote/audible/bug_chitter
-	emote_message_3p = "USER верещит!"
+	emote_message_3p = "USER ГўГҐГ°ГҐГ№ГЁГІ!"
 
 /decl/emote/audible/vox_shriek
-	emote_message_3p = "USER ВИЗЖИТ!"
+	emote_message_3p = "USER Г‚Г€Г‡Г†Г€Г’!"
 
 /decl/emote/audible/do_extra(var/atom/user)
 	if(emote_sound)
@@ -177,7 +177,7 @@
 	emote_sound = list(
 		MALE = 'code_ark/sound/voice/gasp_male6.ogg',
 		FEMALE = 'code_ark/sound/voice/cough_female.ogg')
-	emote_message_3p = "USER давится."
+	emote_message_3p = "USER Г¤Г ГўГЁГІГ±Гї."
 	conscious = 0
 
 /decl/emote/audible/gnarl
@@ -219,25 +219,25 @@
 	emote_sound = list(
 		MALE = list('code_ark/sound/voice/sneeze_male_1.ogg', 'code_ark/sound/voice/sneeze_male_2.ogg'),
 		FEMALE = list('code_ark/sound/voice/sneeze_female_1.ogg', 'code_ark/sound/voice/sneeze_female_2.ogg'))
-	emote_message_3p = "USER чихает!"
+	emote_message_3p = "USER Г·ГЁГµГ ГҐГІ!"
 
 /decl/emote/audible/sniff
 	key = "sniff"
-	emote_message_3p = "USER принюхивается."
+	emote_message_3p = "USER ГЇГ°ГЁГ­ГѕГµГЁГўГ ГҐГІГ±Гї."
 
 /decl/emote/audible/whimper
 	key = "whimper"
 	emote_sound = list(
 		MALE = list('code_ark/sound/voice/whimper_TEMP.ogg'),
-		FEMALE = list('code_ark/sound/voice/whimper_TEMP.ogg'))//Заменить звук
-	emote_message_3p = "USER хнычет."
+		FEMALE = list('code_ark/sound/voice/whimper_TEMP.ogg'))//Г‡Г Г¬ГҐГ­ГЁГІГј Г§ГўГіГЄ
+	emote_message_3p = "USER ГµГ­Г»Г·ГҐГІ."
 
 /decl/emote/audible/sigh
 	key = "sigh"
 	emote_sound = list(
 		MALE = 'code_ark/sound/voice/sigh_male.ogg',
 		FEMALE = 'code_ark/sound/voice/sigh_female.ogg')
-	emote_message_3p = "USER вздыхает."
+	emote_message_3p = "USER ГўГ§Г¤Г»ГµГ ГҐГІ."
 
 
 /decl/emote/audible/mumble
@@ -252,21 +252,21 @@
 	key = "groan"
 	emote_sound = list(
 		MALE = 'code_ark/sound/voice/groan_TEMP.ogg',
-		FEMALE = 'code_ark/sound/voice/groan_TEMP.ogg')//Заменить звук
-	emote_message_3p = "USER тяжело вздыхает."
+		FEMALE = 'code_ark/sound/voice/groan_TEMP.ogg')//Г‡Г Г¬ГҐГ­ГЁГІГј Г§ГўГіГЄ
+	emote_message_3p = "USER ГІГїГ¦ГҐГ«Г® ГўГ§Г¤Г»ГµГ ГҐГІ."
 	conscious = 0
 
 /decl/emote/audible/moan
 	key = "moan"
 	emote_sound = list(
 		MALE = 'code_ark/sound/voice/moan_TEMP.ogg',
-		FEMALE = 'code_ark/sound/voice/moan_TEMP.ogg')//Заменить звук
-	emote_message_3p = "USER стонет!"
+		FEMALE = 'code_ark/sound/voice/moan_TEMP.ogg')//Г‡Г Г¬ГҐГ­ГЁГІГј Г§ГўГіГЄ
+	emote_message_3p = "USER Г±ГІГ®Г­ГҐГІ!"
 	conscious = 0
 
 /decl/emote/audible/grunt
 	key = "grunt"
-	emote_message_3p = "USER ворчит."
+	emote_message_3p = "USER ГўГ®Г°Г·ГЁГІ."
 
 /decl/emote/audible/slap
 	key = "slap"

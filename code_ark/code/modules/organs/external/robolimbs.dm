@@ -4,6 +4,7 @@
 	icon = 'code_ark/icons/mob/human_races/cyberlimbs/morgan/morgan_main.dmi'
 	unavailable_at_fab = 1
 	unavailable_at_chargen = 1
+
 /*
 /datum/robolimb/resomi
 	company = "Small prosthetic"
@@ -14,6 +15,7 @@
 	allowed_bodytypes = list(SPECIES_RESOMI)
 	applies_to_part = list(BP_L_ARM, BP_R_ARM, BP_L_LEG, BP_R_LEG, BP_L_FOOT, BP_R_FOOT, BP_L_HAND, BP_R_HAND)
 */
+
 /datum/robolimb/bishop/special
 	company = "Bishop Special"
 	icon = 'code_ark/icons/mob/human_races/cyberlimbs/bishop/bishop_special.dmi'
