@@ -6,6 +6,10 @@
 /decl/emote/do_emote(var/atom/user, var/extra_params)
 	..()
 	if(emote_sound) do_sound(user)
+	if(ismob(user))
+		var/mob/living/M = user
+		M.emoteCooldownCheck()
+
 
 /decl/emote/proc/do_sound(var/atom/user)
 	var/mob/living/carbon/human/H = user
