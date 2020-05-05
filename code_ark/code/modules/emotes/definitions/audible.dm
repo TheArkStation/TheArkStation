@@ -227,9 +227,6 @@
 
 /decl/emote/audible/whimper
 	key = "whimper"
-	emote_sound = list(
-		MALE = list('code_ark/sound/voice/whimper_TEMP.ogg'),
-		FEMALE = list('code_ark/sound/voice/whimper_TEMP.ogg'))//Çàìåíèòü çâóê
 	emote_message_3p = "USER õíû÷åò."
 
 /decl/emote/audible/sigh
@@ -259,8 +256,8 @@
 /decl/emote/audible/moan
 	key = "moan"
 	emote_sound = list(
-		MALE = 'code_ark/sound/voice/moan_TEMP.ogg',
-		FEMALE = 'code_ark/sound/voice/moan_TEMP.ogg')//Çàìåíèòü çâóê
+		MALE = list('code_ark/sound/voice/moan_m2.ogg', 'code_ark/sound/voice/moan_m3.ogg', 'code_ark/sound/voice/moan_m4.ogg', 'code_ark/sound/voice/moan_m5.ogg', 'code_ark/sound/voice/moan_m6.ogg'),
+		FEMALE = list('code_ark/sound/voice/moan_f2.ogg', 'code_ark/sound/voice/moan_f3.ogg', 'code_ark/sound/voice/moan_f4.ogg', 'code_ark/sound/voice/moan_f5.ogg', 'code_ark/sound/voice/moan_f7.ogg'))
 	emote_message_3p = "USER ñòîíåò!"
 	conscious = 0
 

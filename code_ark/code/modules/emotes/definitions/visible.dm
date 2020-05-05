@@ -1,4 +1,3 @@
-
 /decl/emote/visible/blink/do_emote(var/mob/user)
 	key = "blink"
 	if(isliving(user)) user:eye_blink()
