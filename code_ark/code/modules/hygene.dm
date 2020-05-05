@@ -23,7 +23,7 @@
 		to_chat(H,"<span class='notice'>You smell like[flawor]</span>")
 		var/msg = "[T.He] smells like [flawor]"
 		H.smells_and_hygene += msg
-		set_extension(H, /datum/extension/scent/custom, "[H.name] smells like[flawor]", /decl/scent_intensity/perfume, SCENT_DESC_ODOR , 5)
+		set_extension(H, /datum/extension/scent/custom, "[H.name] smells like[flawor]", /decl/scent_intensity/perfume, SCENT_DESC_ODOR , 1)
 
 /obj/item/weapon/reagent_containers/spray/perfume
 	name = "perfume sprayer"
