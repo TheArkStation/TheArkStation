@@ -1,25 +1,29 @@
 /mob/living/carbon/human
 	var/list/smells_and_hygene = list()
 
+
+/decl/scent_intensity/perfume  //Custom intensity cause message is a bit different
+	cooldown = 2 MINUTES
+	intensity = 2
+
+/decl/scent_intensity/perfume/PrintMessage(var/mob/user, var/descriptor, var/scent)
+	to_chat(user, SPAN_NOTICE("[scent]")) //Message is constructed in reagent proc
+
+
 /datum/reagent/perfume  //As reagent, because why not?
 	name = "perfume"
 	description = "a general perfume"
 	color = "#0064c877"  //basically water
 	var/flawor
-	var/smelled = FALSE
 
-/datum/reagent/perfume/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
-	if(ishuman(M))
-		var/mob/living/carbon/human/H = M
-		if(prob(3))
-			M.visible_message("<B>\The [H]</B> smells like[flawor]")
-		if(!smelled)
-			to_chat(M,"<span class='notice'>You smell like[flawor]</span>")
-			smelled = TRUE
+/datum/reagent/perfume/touch_mob(var/mob/living/L, var/amount)
+	if(ishuman(L))
+		var/mob/living/carbon/human/H = L
 		var/datum/gender/T = gender_datums[H.get_gender()]
-		var/msg = "[T.He] smells like[flawor]"
-		if(!(msg in H.smells_and_hygene))
-			H.smells_and_hygene += msg
+		to_chat(H,"<span class='notice'>You smell like[flawor]</span>")
+		var/msg = "[T.He] smells like [flawor]"
+		H.smells_and_hygene += msg
+		set_extension(H, /datum/extension/scent/custom, "[H.name] smells like[flawor]", /decl/scent_intensity/perfume, SCENT_DESC_ODOR , 1)
 
 /obj/item/weapon/reagent_containers/spray/perfume
 	name = "perfume sprayer"
