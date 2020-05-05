@@ -6,7 +6,7 @@
 		emoteLastUse = world.time
 		return 1
 	else
-		to_chat(src, "<span class='warning'>Между эмоци&#255;ми должно пройти не менее [emoteCooldown / 10] секунд.</span>")
+		to_chat(src, "<span class='warning'>Между эмоциями должно пройти не менее [emoteCooldown / 10] секунд.</span>")
 		return 0
 
 /mob/living/verb/laugh()
@@ -75,7 +75,7 @@
 	emote("clap")
 
 /mob/living/verb/drool()
-	set name = "Нести чепуху"
+	set name = "Пускать слюни"
 	set category = "Emote"
 	emote("drool")
 
@@ -95,17 +95,17 @@
 	emote("gasp")
 
 /mob/living/verb/glare()
-	set name = "Смотреть с ненавистью"
+	set name = "Пристально смотреть"
 	set category = "Emote"
 	emote("glare")
 
 /mob/living/verb/groan()
-	set name = "Вздохнуть с досадой"
+	set name = "Тяжело вздохуть"
 	set category = "Emote"
 	emote("groan")
 
 /mob/living/verb/grin()
-	set name = "Оскалиться в улыбке"
+	set name = "Оскалиться"
 	set category = "Emote"
 	emote("grin")
 
@@ -150,7 +150,7 @@
 	emote("grunt")
 
 /mob/living/verb/sniff()
-	set name = "Понюхать"
+	set name = "Принюхиваться"
 	set category = "Emote"
 	emote("sniff")
 
@@ -175,7 +175,7 @@
 	emote("tremble")
 
 /mob/living/verb/twitch_v()
-	set name = "Сильно дёргаться"
+	set name = "Яростно дёргаться"
 	set category = "Emote"
 	emote("twitch_v")
 
@@ -185,7 +185,7 @@
 	emote("twitch")
 
 /mob/living/verb/wave()
-	set name = "Махать"
+	set name = "Махать рукой"
 	set category = "Emote"
 	emote("wave")
 
