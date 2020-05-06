@@ -1,3 +1,14 @@
+/mob/living/var/emoteCooldown = 2 SECONDS
+/mob/living/var/emoteLastUse = -1000
+
+/mob/living/proc/emoteCooldownCheck()
+	if(emoteLastUse <= (world.time - emoteCooldown))
+		emoteLastUse = world.time
+		return 1
+	else
+		to_chat(src, "<span class='warning'>Между эмоциями должно пройти не менее [emoteCooldown / 10] секунд.</span>")
+		return 0
+
 /mob
 	var/list/default_emotes = list()
 	var/list/usable_emotes = list()
@@ -122,7 +133,6 @@
 		/decl/emote/visible/airguitar,
 		/decl/emote/visible/blink_r,
 		/decl/emote/visible/bow,
-		/decl/emote/audible/salute,
 		/decl/emote/visible/flap,
 		/decl/emote/visible/aflap,
 		/decl/emote/visible/drool,
@@ -172,7 +182,7 @@
 	default_emotes = list(
 		/decl/emote/audible/clap,
 		/decl/emote/visible/bow,
-		/decl/emote/audible/salute,
+		/decl/emote/visible/salute,
 		/decl/emote/visible/flap,
 		/decl/emote/visible/aflap,
 		/decl/emote/visible/twitch,
