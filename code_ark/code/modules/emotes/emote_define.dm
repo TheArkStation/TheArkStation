@@ -4,11 +4,11 @@
 	// first is the species, associated to a list of genders, associated to a list of the sound effects to use
 
 /decl/emote/do_emote(var/atom/user, var/extra_params)
-	..()
-	if(emote_sound) do_sound(user)
 	if(ismob(user))
 		var/mob/living/M = user
-		M.emoteCooldownCheck()
+		if (M.emoteCooldownCheck())
+			..()
+			if(emote_sound) do_sound(user)
 
 
 /decl/emote/proc/do_sound(var/atom/user)
