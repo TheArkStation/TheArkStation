@@ -1,9 +1,10 @@
+
 /mob/living/carbon/human
-	var/list/smells_and_hygene = list()
+	var/list/examine_hygene = list()
 
 
 /decl/scent_intensity/perfume  //Custom intensity cause message is a bit different
-	cooldown = 2 MINUTES
+	cooldown = 1 MINUTES
 	intensity = 2
 
 /decl/scent_intensity/perfume/PrintMessage(var/mob/user, var/descriptor, var/scent)
@@ -22,8 +23,8 @@
 		var/datum/gender/T = gender_datums[H.get_gender()]
 		to_chat(H,"<span class='notice'>You smell like[flawor]</span>")
 		var/msg = "[T.He] smells like [flawor]"
-		H.smells_and_hygene += msg
-		set_extension(H, /datum/extension/scent/custom, "[H.name] smells like[flawor]", /decl/scent_intensity/perfume, SCENT_DESC_ODOR , 1)
+		H.examine_hygene += msg
+		set_extension(H, /datum/extension/scent/custom, "[H.name] smells like[flawor]", /decl/scent_intensity/perfume, SCENT_DESC_ODOR , 5)
 
 /obj/item/weapon/reagent_containers/spray/perfume
 	name = "perfume sprayer"
@@ -170,21 +171,24 @@
 	icon = 'code_ark/icons/obj/parfume_cosmetics.dmi'
 	icon_state = "Professional_Shampoo"
 	item_state = "Professional_Shampoo"
+	var/now_using = FALSE //IDK where is a function which is not stack, so i did it myself
 
 /obj/item/weapon/shampoo/attack(mob/living/carbon/M as mob, mob/living/carbon/user as mob)
-	if(ishuman(M))
+	if(ishuman(M) && !now_using)
 		var/mob/living/carbon/human/H = M
+		now_using = TRUE
 		var/datum/gender/T = gender_datums[H.get_gender()]
 		if(H == user)
 			to_chat(user, "<span class='notice'>You started washing your hair with shampoo.</span>")
-			if(do_after(user, 20, H) && !("[T.His] hair is clean and silky!" in H.smells_and_hygene))
+			if(do_after(user, 20, H) && !("[T.His] hair is clean and silky!" in H.examine_hygene))
 				user.visible_message("<span class='notice'>[user] washes [T.his] hair with shampoo.</span>")
-				H.smells_and_hygene += "[T.His] hair is clean and silky!"
+				H.examine_hygene += "[T.His] hair is clean and silky!"
 		else
 			user.visible_message("<span class='notice'>[user] started washing [H]'s hair with shampoo.</span>")
-			if(do_after(user, 20, H) && do_after(H, 10, needhand = 0) && !("[T.His] hair is clean and silky!" in H.smells_and_hygene))
+			if(do_after(user, 20, H) && do_after(H, 10, needhand = 0) && !("[T.His] hair is clean and silky!" in H.examine_hygene))
 				user.visible_message("<span class='notice'>[user] washes [H]'s hair with shampoo.</span>")
-				H.smells_and_hygene += "[T.His] hair is clean and silky!"
+				H.examine_hygene += "[T.His] hair is clean and silky!"
+		now_using = FALSE
 
 /obj/item/weapon/napkin
 	name = "napkin"
@@ -193,22 +197,29 @@
 	icon = 'code_ark/icons/obj/parfume_cosmetics.dmi'
 	icon_state = "napkin"
 	item_state = "napkin"
+	var/now_using = FALSE //IDK where is a function which is not stack, so i did it myself
 
 /obj/item/weapon/napkin/attack(mob/living/carbon/M as mob, mob/living/carbon/user as mob)
-	if(ishuman(M))
+	if(ishuman(M) && !now_using)
+		now_using = TRUE
 		var/mob/living/carbon/human/H = M
-		if(do_after(user, 5, H) && H == user)
-			to_chat(user, "<span class='notice'>You wipe off the lipstick with [src].</span>")
-			H.lip_style = null
-			H.update_body()
+		if(H.lip_style == null)
+			now_using = FALSE
+			to_chat(user, "<span class='warning'>There is no lipstck to wipe off.</span>")
 		else
-			user.visible_message("<span class='warning'>[user] begins to wipe [H]'s lipstick off with \the [src].</span>", \
-							 	 "<span class='notice'>You begin to wipe off [H]'s lipstick.</span>")
-			if(do_after(user, 10, H) && do_after(H, 10, needhand = 0))
-				user.visible_message("<span class='notice'>[user] wipes [H]'s lipstick off with \the [src].</span>", \
-									 "<span class='notice'>You wipe off [H]'s lipstick.</span>")
+			if(do_after(user, 5, H) && H == user)
+				to_chat(user, "<span class='notice'>You wipe off the lipstick with [src].</span>")
 				H.lip_style = null
 				H.update_body()
+			else
+				user.visible_message("<span class='warning'>[user] begins to wipe [H]'s lipstick off with \the [src].</span>", \
+								 	 "<span class='notice'>You begin to wipe off [H]'s lipstick.</span>")
+				if(do_after(user, 10, H) && do_after(H, 10, needhand = 0))
+					user.visible_message("<span class='notice'>[user] wipes [H]'s lipstick off with \the [src].</span>", \
+										 "<span class='notice'>You wipe off [H]'s lipstick.</span>")
+					H.lip_style = null
+					H.update_body()
+	now_using = FALSE
 
 /obj/item/weapon/napkin/afterattack(atom/A, mob/user, proximity)
 	if(!proximity)
@@ -252,10 +263,11 @@
 	w_class = ITEM_SIZE_SMALL
 	icon = 'code_ark/icons/obj/parfume_cosmetics.dmi'
 	var/gel = FALSE
-	var/last_gel = FALSE
+	var/now_using = FALSE //IDK where is a function which is not stack, so i did it myself
 
 /obj/item/weapon/toothbrush/attack(mob/living/carbon/M as mob, mob/living/carbon/user as mob)
-	if(ishuman(M) && gel)
+	if(ishuman(M) && gel && !now_using)
+		now_using = TRUE
 		var/mob/living/carbon/human/H = M
 		playsound(H.loc, 'code_ark/sound/effects/toothbrush.ogg', 75, 1)
 		if(do_after(user, 10, H) && H == user)
@@ -270,6 +282,8 @@
 		gel = FALSE
 	else if(!gel)
 		to_chat(user, "<span class='warning'>There is no gel on toothbrush.</span>")
+	now_using = FALSE
+	update_icon()
 
 /obj/item/weapon/toothbrush/attackby(obj/item/weapon/P as obj, mob/user as mob)
 	if(istype(P, /obj/item/weapon/tooth_gel))
@@ -277,13 +291,15 @@
 		if(do_after(user, 10, user))
 			gel = TRUE
 			user.visible_message("<span class='notice'>[user] finished placing gel on [src].</span>")
+	update_icon()
 
 /obj/item/weapon/toothbrush/on_update_icon()
-	if(last_gel != gel)
-		last_gel = gel
-		overlays.Cut()
-		if(gel)
+	overlays.Cut()
+	if(gel)
+		if(overlays.len == 0)
 			overlays += overlay_image(icon, "gel", flags=RESET_COLOR)
+	else
+		overlays = list()
 
 /obj/item/weapon/toothbrush/blue
 	icon_state = "blue_tootbrush"
