@@ -3,5 +3,5 @@
 
 	#include "liberty_areas.dm"
 	#include "machinery/doors.dm"
-	#include "objects/misc.dm "
+	#include "objects/misc.dm"
 	#include "structures/flooring_decals.dm"
