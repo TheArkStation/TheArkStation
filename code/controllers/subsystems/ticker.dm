@@ -373,7 +373,7 @@ Helpers
 
 /datum/controller/subsystem/ticker/proc/declare_completion()
 	
-	to_world("<br><br><br><H1>A round of [SSticker.mode.name] has ended!</H1>")ы
+	to_world("<br><br><br><H1>A round of [SSticker.mode.name] has ended!</H1>")
 	for(var/client/C)
 		if(!C.credits)
 			C.RollCredits()

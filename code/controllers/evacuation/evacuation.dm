@@ -19,6 +19,7 @@ var/datum/evacuation_controller/evacuation_controller
 	var/evac_prep_delay =   10 MINUTES
 	var/evac_launch_delay =  3 MINUTES
 	var/evac_transit_delay = 2 MINUTES
+	var/evac_vote_delay =    5 MINUTES
 
 	var/autotransfer_prep_additional_delay = 0 MINUTES
 	var/emergency_prep_additional_delay = 0 MINUTES
@@ -30,6 +31,7 @@ var/datum/evacuation_controller/evacuation_controller
 	var/evac_ready_time
 	var/evac_launch_time
 	var/evac_arrival_time
+	var/evac_vote_time
 
 	var/list/evacuation_predicates = list()
 
@@ -82,6 +84,7 @@ var/datum/evacuation_controller/evacuation_controller
 	evac_ready_time =   evac_called_at +    (evac_prep_delay*evac_prep_delay_multiplier) + additional_delay
 	evac_launch_time =  evac_ready_time +   evac_launch_delay
 	evac_arrival_time = evac_launch_time +  evac_transit_delay
+	evac_vote_time =    evac_called_at +    evac_vote_delay
 
 	var/evac_range = round((evac_launch_time - evac_called_at)/3)
 	auto_recall_time =  rand(evac_called_at + evac_range, evac_launch_time - evac_range)
@@ -114,6 +117,7 @@ var/datum/evacuation_controller/evacuation_controller
 	evac_called_at =    null
 	evac_launch_time =  null
 	auto_recall_time =  null
+	evac_vote_time = 	null
 
 	if(emergency_evacuation)
 		evac_recalled.Announce(GLOB.using_map.emergency_shuttle_recall_message)
@@ -172,6 +176,9 @@ var/datum/evacuation_controller/evacuation_controller
 	else if(state == EVAC_COOLDOWN)
 		if(world.time >= evac_cooldown_time)
 			state = EVAC_IDLE
+	
+	if (evac_vote_time && world.time >= evac_vote_time)
+		SSvote.initiate_vote(/datum/vote/end_game, automatic = 1)
 
 /datum/evacuation_controller/proc/available_evac_options()
 	return list()
