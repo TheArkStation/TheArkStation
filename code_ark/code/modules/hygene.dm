@@ -34,6 +34,9 @@
 	icon = 'code_ark/icons/obj/parfume_cosmetics.dmi'
 	icon_state = "Nyx_Noir"
 
+/datum/reagent/perfume
+	color = COLOR_BLUE_GRAY
+
 /obj/item/weapon/reagent_containers/spray/perfume/Nyx
 	name = "Nyx Noir"
 	icon_state = "Nyx_Noir"

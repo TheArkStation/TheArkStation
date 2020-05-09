@@ -221,20 +221,60 @@
 /area/liberty/psyho
 	name = "\improper Psychologist"
 
+//RnD
+
 /area/liberty/rnd/corr
-	name = "\improper Research And Development Corridor"
+	name = "\improper TechnoX Corridor"
+	icon_state = "decontamination"
 
 /area/liberty/rnd/lab
-	name = "\improper Research And Development Laboratory"
+	name = "\improper TechnoX Laboratory"
+	icon_state = "devlab"
+
+/area/turbolift/robotics_lift
+	name = "\improper TechnoX Robotics Lift"
+	icon_state = "shuttle3"
+	base_turf = /turf/simulated/open
 
 /area/liberty/rnd/robotic
-	name = "\improper Research And Development Hangar"
+	name = "\improper TechnoX Robotic Lower Hangar"
+	icon_state = "robotics"
+
+/area/liberty/rnd/robotic_upper
+	name = "\improper TechnoX Robotic Upper Hangar"
+	icon_state = "robotics"
 
 /area/liberty/rnd/office
-	name = "\improper Research and Development Owner's Office"
+	name = "\improper TechnoX Owner's Office"
+	icon_state = "heads_rd"
+	req_access = list(access_rd)
 
-/area/liberty/rnd/storage
-	name = "\improper Research And Development Storage"
+/area/liberty/rnd/enter_corr
+	name = "\improper TechnoX Access"
+	icon_state = "decontamination"
+	req_access = list()
+
+/area/liberty/rnd/eva
+	name = "\improper TechnoX EVA"
+	icon_state = "locker"
+
+/area/liberty/rnd/canister
+	name = "\improper TechX Canister Storage"
+	icon_state = "toxstorage"
+
+/area/liberty/rnd/toxi
+	name = "\improper TechnoX Toxins Lab"
+	icon_state = "toxstorage"
+
+/area/liberty/rnd/server
+	name = "\improper TechnoX Servers"
+	icon_state = "purple"
+
+/area/liberty/rnd/break_room
+	name = "\improper TechnoX Break Room"
+	icon_state = "green"
+
+//Service
 
 /area/liberty/chapel
 	name = "\improper Unused Chapel"
