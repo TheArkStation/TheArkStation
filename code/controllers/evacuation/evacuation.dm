@@ -58,7 +58,6 @@ var/datum/evacuation_controller/evacuation_controller
 	evacuation_predicates += esp
 
 /datum/evacuation_controller/proc/call_evacuation(var/mob/user, var/_emergency_evac, var/forced, var/skip_announce, var/autotransfer)
-
 	if(state != EVAC_IDLE)
 		return 0
 
@@ -147,8 +146,8 @@ var/datum/evacuation_controller/evacuation_controller
 		return
 
 	state = EVAC_IN_TRANSIT
-
 	if (emergency_evacuation)
+
 		priority_announcement.Announce(replacetext(replacetext(GLOB.using_map.emergency_shuttle_leaving_dock, "%dock_name%", "[GLOB.using_map.dock_name]"),  "%ETA%", "[round(get_eta()/60,1)] minute\s"))
 	else
 		priority_announcement.Announce(replacetext(replacetext(GLOB.using_map.shuttle_leaving_dock, "%dock_name%", "[GLOB.using_map.dock_name]"),  "%ETA%", "[round(get_eta()/60,1)] minute\s"))
@@ -157,6 +156,7 @@ var/datum/evacuation_controller/evacuation_controller
 
 /datum/evacuation_controller/proc/finish_evacuation()
 	state = EVAC_COMPLETE
+
 
 /datum/evacuation_controller/proc/process()
 
@@ -176,7 +176,7 @@ var/datum/evacuation_controller/evacuation_controller
 	else if(state == EVAC_COOLDOWN)
 		if(world.time >= evac_cooldown_time)
 			state = EVAC_IDLE
-	
+
 	if (evac_vote_time && world.time >= evac_vote_time)
 		SSvote.initiate_vote(/datum/vote/end_game, automatic = 1)
 
