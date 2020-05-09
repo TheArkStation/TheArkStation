@@ -4987,15 +4987,15 @@
 /obj/structure/sign/warning/vent_port{
 	pixel_y = 24
 	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
-	dir = 1;
-	id_tag = "lazarev_shuttle_pump_out_external"
-	},
 /obj/machinery/airlock_sensor/airlock_exterior{
 	frequency = 1331;
 	id_tag = "lazarev_shuttle_sensor_external";
 	pixel_x = 24;
 	req_access = list("ACCESS_SOL_GENERAL")
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/shuttle{
+	dir = 1;
+	id_tag = "lazarev_shuttle_pump_out_external"
 	},
 /turf/simulated/floor/shuttle_ceiling,
 /area/lucius/lazarev)

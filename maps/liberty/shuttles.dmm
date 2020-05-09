@@ -123,12 +123,14 @@
 "cs" = (/obj/structure/girder,/turf/simulated/floor/plating,/area/space)
 "ct" = (/obj/machinery/atmospherics/binary/pump/on,/obj/machinery/door/window/brigdoor/southleft,/turf/simulated/floor/plating,/area/space)
 "cu" = (/obj/effect/floor_decal/industrial/outline/yellow,/obj/machinery/cryopod{icon_state = "body_scanner_0"; dir = 1},/turf/simulated/floor/tiled/techmaint,/area/space)
+"cv" = (/turf/simulated/floor/shuttle_ceiling,/area/space)
 "cw" = (/obj/machinery/atmospherics/binary/pump/on{dir = 1; target_pressure = 999},/obj/machinery/door/window/brigdoor/southright,/turf/simulated/floor/plating,/area/space)
 "cx" = (/obj/machinery/atmospherics/pipe/simple/visible{dir = 9},/obj/effect/floor_decal/corner_techfloor_gray/diagonal{icon_state = "corner_techfloor_gray_diagonal"; dir = 4},/turf/simulated/floor/tiled/steel_grid,/area/space)
 "cy" = (/obj/machinery/atmospherics/pipe/simple/visible,/obj/effect/floor_decal/corner_techfloor_gray/diagonal{icon_state = "corner_techfloor_gray_diagonal"; dir = 4},/turf/simulated/floor/tiled/steel_grid,/area/space)
 "cz" = (/obj/random/toolbox,/obj/random/tool,/turf/simulated/floor/tiled/techfloor,/area/space)
 "cA" = (/obj/machinery/door/airlock/external,/obj/structure/cable/green{d1 = 4; d2 = 8; icon_state = "4-8"},/turf/simulated/floor/tiled/steel_ridged,/area/space)
 "cB" = (/obj/effect/floor_decal/industrial/outline/yellow,/obj/machinery/cryopod{dir = 0},/obj/machinery/light/spot{dir = 1},/turf/simulated/floor/tiled/techmaint,/area/space)
+"cC" = (/obj/machinery/atmospherics/unary/engine{dir = 8},/turf/simulated/wall/r_titanium,/area/space)
 "cD" = (/obj/structure/catwalk,/obj/structure/catwalk,/obj/structure/window/reinforced{dir = 1; health = 1e+006},/turf/simulated/floor/plating,/area/space)
 "cE" = (/obj/machinery/power/apc{name = "south bump"; pixel_y = -24},/obj/structure/cable/green{d2 = 4; icon_state = "0-4"},/turf/simulated/floor/plating,/area/space)
 "cF" = (/obj/machinery/power/smes/buildable/power_shuttle,/obj/structure/cable/green{d2 = 8; icon_state = "0-8"},/turf/simulated/floor/plating,/area/space)
@@ -158,6 +160,10 @@
 "dd" = (/obj/structure/cable/green{d1 = 4; d2 = 8; icon_state = "4-8"},/turf/simulated/wall/r_wall,/area/space)
 "de" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 5},/obj/structure/cable/green{d1 = 4; d2 = 8; icon_state = "4-8"},/obj/effect/floor_decal/industrial/warning{dir = 10; icon_state = "warning"},/turf/simulated/floor/tiled/techfloor,/area/space)
 "df" = (/obj/machinery/atmospherics/unary/vent_pump/on{dir = 1; level = 2},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/obj/effect/floor_decal/industrial/warning,/obj/structure/cable/green{d1 = 4; d2 = 8; icon_state = "4-8"},/turf/simulated/floor/tiled/techfloor,/area/space)
+"dg" = (/obj/machinery/computer,/turf/simulated/floor/tiled,/area/space)
+"dh" = (/obj/machinery/computer{icon_state = "computer"; dir = 4},/turf/simulated/floor/tiled,/area/space)
+"di" = (/obj/structure/bed/chair/shuttle/white{icon_state = "shuttle_chair_preview"; dir = 8},/turf/simulated/floor/tiled,/area/space)
+"dj" = (/obj/structure/table/reinforced,/turf/simulated/floor/tiled,/area/space)
 "dk" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/obj/effect/floor_decal/industrial/warning,/obj/structure/cable/green{d1 = 4; d2 = 8; icon_state = "4-8"},/turf/simulated/floor/tiled/techfloor,/area/space)
 "dl" = (/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,/obj/structure/cable/green{d1 = 4; d2 = 8; icon_state = "4-8"},/obj/effect/floor_decal/industrial/warning{dir = 6; icon_state = "warning"},/turf/simulated/floor/tiled/techfloor,/area/space)
 "dm" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/obj/structure/cable/green{d1 = 4; d2 = 8; icon_state = "4-8"},/turf/simulated/wall/r_wall,/area/space)
@@ -165,6 +171,16 @@
 "do" = (/obj/machinery/atmospherics/pipe/simple/visible{dir = 4},/obj/structure/cable/green{d1 = 4; d2 = 8; icon_state = "4-8"},/obj/effect/floor_decal/corner_techfloor_gray/diagonal{icon_state = "corner_techfloor_gray_diagonal"; dir = 4},/turf/simulated/floor/tiled/steel_grid,/area/space)
 "dp" = (/obj/machinery/atmospherics/pipe/simple/visible{dir = 9},/obj/structure/cable/green{d1 = 4; d2 = 8; icon_state = "4-8"},/obj/effect/floor_decal/corner_techfloor_gray/diagonal{icon_state = "corner_techfloor_gray_diagonal"; dir = 4},/turf/simulated/floor/tiled/steel_grid,/area/space)
 "dq" = (/obj/effect/floor_decal/industrial/warning{dir = 4; icon_state = "danger"},/obj/structure/cable/green{d1 = 4; d2 = 8; icon_state = "4-8"},/obj/structure/cable/green{d1 = 1; d2 = 8; icon_state = "1-8"},/turf/simulated/floor/tiled/steel_grid,/area/space)
+"dr" = (/obj/machinery/computer{icon_state = "computer"; dir = 1},/turf/simulated/floor/tiled,/area/space)
+"ds" = (/obj/structure/navlight_shuttle/alt{icon_state = "navlight_green_alt"; dir = 8},/turf/simulated/floor/shuttle_ceiling,/area/space)
+"dt" = (/obj/structure/navlight_shuttle/red/alt{icon_state = "navlight_red_alt"; dir = 4},/turf/simulated/floor/shuttle_ceiling,/area/space)
+"du" = (/obj/effect/floor_decal/industrial/warning/full,/obj/machinery/atmospherics/unary/vent_pump/on{dir = 1},/turf/simulated/floor/shuttle_ceiling,/area/space)
+"dv" = (/obj/effect/floor_decal/industrial/warning/full,/obj/machinery/atmospherics/unary/vent_pump/high_volume/shuttle{controlled = 0; dir = 2; id_tag = "calypso_cargo_pump_out_internal"},/turf/simulated/floor/shuttle_ceiling,/area/space)
+"dw" = (/turf/simulated/wall/titanium,/area/space)
+"dx" = (/obj/machinery/power/terminal{icon_state = "term"; dir = 4},/turf/simulated/floor/plating,/area/space)
+"dy" = (/obj/machinery/power/smes/buildable/preset/skrell,/turf/simulated/floor/plating,/area/space)
+"dz" = (/obj/machinery/atmospherics/portables_connector{icon_state = "map_connector"; dir = 1},/turf/simulated/floor/plating,/area/space)
+"dA" = (/obj/machinery/atmospherics/unary/heater{icon_state = "heater_0"; dir = 1},/turf/simulated/floor/plating,/area/space)
 
 (1,1,1) = {"
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
@@ -195,21 +211,21 @@ aaababababababababababababababababababaaabababababababababababababababababababab
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaacvcvcvcvaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaadscvcvcvcvcvcvaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaacacacacacababacduaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaacacasasdwasasasacacacaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaacacacacdwasasdwasasasascCabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaababdgasasdwdwdwdwasasasasacacacaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaabdhdiasasdwasasasasasasasdwasacaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaabdhdjdjasasasasasasasasasasasasaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaabdhdiasasdwasdwdwdwdwdwdwdwasacaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaababdrasasdwasdwabababababacacacaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaacacacacdwasdwabababdxdycCabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaacacasdwdzdzdzdAacacacaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaacasacacacababacdvaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaadtcvcvcvcvcvcvaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaacvcvcvcvaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
