@@ -1,3 +1,50 @@
+#define LANGUAGE_RESOMI			"Schechi"
+//#define LANGUAGE_PRESOMI			"Primitive schechi"
+
+// Resomi cultures.
+#define CULTURE_RESOMI_BIRDCAGE   		"Birdcage, \"Born in the void\""
+#define CULTURE_RESOMI_EREMUS     		"Eremus, Eremusianin"
+#define CULTURE_RESOMI_ASRANDA    		"Asranda, Randian"
+#define CULTURE_RESOMI_SAVEEL     		"Saveel, Sav"
+#define CULTURE_RESOMI_REFUGEE 			"Imperial refugee"
+#define CULTURE_RESOMI_NEWGENERATION	"New generation"
+#define CULTURE_RESOMI_LOSTCOLONYRICH  "A native of a thriving lost colony"
+#define CULTURE_RESOMI_LOSTCOLONYPOOR  "A native of a impoverished lost colony"
+
+
+#define HOME_SYSTEM_RESOMI_BIRDCAGE      	"Birdcage (Colchis Habitat)"
+#define HOME_SYSTEM_RESOMI_EREMUS        	"Eremus"
+#define HOME_SYSTEM_RESOMI_TIAMATH       "Tiamat"
+#define HOME_SYSTEM_RESOMI_ASRANDA      	"Asranda"
+#define HOME_SYSTEM_RESOMI_SAVEEL           "Zer'een (Saveel)"
+#define HOME_SYSTEM_RESOMI_LOST_COLONY      "Unknown independent colony"
+#define HOME_SYSTEM_RESOMI_REFUGEE_COLONY   "Unknown Independent Refugee Colony"
+#define HOME_SYSTEM_RESOMI_HOMELESS 		"None"
+#define HOME_SYSTEM_RESOMI_IMPER_COLONY  "Unknown Imperial colony"
+
+#define RELIGION_RESOMI_CHOSEN    "Faith of the Chosen"
+#define RELIGION_RESOMI_EMPEROR   "Cult of the Emperor"
+#define RELIGION_RESOMI_MOUNTAIN  "Echos of the Mountain"
+#define RELIGION_RESOMI_SKIES     "Lights of the Skies"
+
+
+#include "accessory_resomi.dm"
+#include "cloak_resomi.dm"
+#include "glasses_resomi.dm"
+#include "shoes_resomi.dm"
+#include "suit.dm"
+#include "under_resomi.dm"
+#include "loadout.dm"
+#include "robolimbs.dm"
+
+#include "cultures_resomi.dm"
+#include "factions_resomi.dm"
+#include "locations_resomi.dm"
+#include "organs.dm"
+#include "powers.dm"
+#include "religion_resomi.dm"
+#include "language.dm"
+
 /datum/species/resomi
 	name = SPECIES_RESOMI
 	name_plural = "Resomii"
@@ -22,13 +69,13 @@
 
 	move_trail = /obj/effect/decal/cleanable/blood/tracks/paw
 
-	icobase = 			'code_ark/icons/mob/human_races/species/resomi/body.dmi'
-	deform = 			'code_ark/icons/mob/human_races/species/resomi/body.dmi'
-	damage_overlays = 	'code_ark/icons/mob/human_races/species/resomi/damage_overlay.dmi'
-	damage_mask = 		'code_ark/icons/mob/human_races/species/resomi/damage_mask.dmi'
-	blood_mask = 		'code_ark/icons/mob/human_races/species/resomi/blood_mask.dmi'
-	preview_icon =		'code_ark/icons/mob/human_races/species/resomi/preview.dmi'
-	husk_icon = 		'code_ark/icons/mob/human_races/species/resomi/husk.dmi'
+	icobase = 			'code_ark/code/modules/species/station/resomi/sprite_body/body.dmi'
+	deform = 			'code_ark/code/modules/species/station/resomi//sprite_body/body.dmi'
+	damage_overlays = 	'code_ark/code/modules/species/station/resomi//sprite_body/damage_overlay.dmi'
+	damage_mask = 		'code_ark/code/modules/species/station/resomi//sprite_body/damage_mask.dmi'
+	blood_mask = 		'code_ark/code/modules/species/station/resomi//sprite_body/blood_mask.dmi'
+	preview_icon =		'code_ark/code/modules/species/station/resomi//sprite_body/preview.dmi'
+	husk_icon = 		'code_ark/code/modules/species/station/resomi//sprite_body/husk.dmi'
 
 	slowdown = -0.8 //speed fix?
 
@@ -70,7 +117,6 @@
 		"You can't feel your paws because of the cold.",
 		"You feel sluggish and cold.",
 		"Your feathers bristle against the cold.")
-
 	has_limbs = list(
 		BP_CHEST =  list("path" = /obj/item/organ/external/chest),
 		BP_GROIN =  list("path" = /obj/item/organ/external/groin),
@@ -116,7 +162,7 @@
 		TAG_CULTURE = list(
 			CULTURE_RESOMI_REFUGEE,
 			CULTURE_RESOMI_NEWGENERATION,
-			//CULTURE_RESOMI_BIRDCAGE,
+			CULTURE_RESOMI_BIRDCAGE,
 			CULTURE_RESOMI_EREMUS,
 			CULTURE_RESOMI_ASRANDA,
 			CULTURE_HUMAN_LUNAPOOR,
@@ -127,14 +173,14 @@
 			CULTURE_HUMAN_CETI,
 			CULTURE_RESOMI_LOSTCOLONYRICH,
 			CULTURE_RESOMI_LOSTCOLONYPOOR,
-			//CULTURE_RESOMI_SAVEEL,
+			CULTURE_RESOMI_SAVEEL,
 			CULTURE_OTHER
 		),
 		TAG_HOMEWORLD = list(
 			HOME_SYSTEM_RESOMI_BIRDCAGE,
 			HOME_SYSTEM_RESOMI_EREMUS,
 			HOME_SYSTEM_RESOMI_ASRANDA,
-			//HOME_SYSTEM_RESOMI_TIAMATH
+			HOME_SYSTEM_RESOMI_TIAMATH,
 			HOME_SYSTEM_LUNA,
 			HOME_SYSTEM_MARS,
 			HOME_SYSTEM_PLUTO,
@@ -171,7 +217,7 @@
 	)
 
 /datum/species/resomi/get_surgery_overlay_icon(var/mob/living/carbon/human/H)
-	return 'code_ark/icons/mob/human_races/species/resomi/surgery.dmi'
+	return 'code_ark/code/modules/species/station/resomi//sprite_body/surgery.dmi'
 
 /datum/species/resomi/skills_from_age(age)
 	switch(age)

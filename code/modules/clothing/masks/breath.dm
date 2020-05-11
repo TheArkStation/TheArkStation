@@ -19,6 +19,7 @@
 		SPECIES_VOX_ARMALIS = 'icons/mob/species/vox/onmob_mask_vox_armalis.dmi',
 		SPECIES_UNATHI = 'icons/mob/species/unathi/generated/onmob_mask_unathi.dmi',
 		SPECIES_TAJARA = 'code_ark/code/modules/species/station/tajara/sprites_cloth/mask.dmi',
+		SPECIES_RESOMI = 'code_ark/code/modules/species/station/resomi/sprite_cloth/onmob_mask_resomi.dmi'
 		)
 //[/ARK]
 
