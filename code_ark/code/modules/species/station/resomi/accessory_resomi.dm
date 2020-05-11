@@ -1,7 +1,15 @@
+/obj/item/clothing/accessory/scarf/resomi
+	name = "small mantle"
+	desc = "A stylish scarf. The perfect winter accessory for those with a keen fashion sense, and those who just can't handle a cold breeze on their necks."
+	icon = 'code_ark/code/modules/species/station/resomi/sprite_cloth/obj_accessories_resomi.dmi'
+	icon_state = "small_mantle"
+	species_restricted = list(SPECIES_RESOMI)
+
+
 /datum/sprite_accessory/hair/resomi
 	name = "Resomi Plumage"
 	icon_state = "resomi_default"
-	icon = 'code_ark/icons/mob/human_races/species/resomi/hair.dmi'
+	icon = 'code_ark/code/modules/species/station/resomi/sprite_body/hair.dmi'
 	species_allowed = list(SPECIES_RESOMI)
 
 /datum/sprite_accessory/hair/resomi/ears
@@ -71,7 +79,7 @@
 // MARKINGS
 
 /datum/sprite_accessory/marking/resomi
-	icon = 'code_ark/icons/mob/human_races/species/resomi/markings.dmi'
+	icon = 'code_ark/code/modules/species/station/resomi/sprite_body/markings.dmi'
 	species_allowed = list(SPECIES_RESOMI)
 	do_colouration = 1
 

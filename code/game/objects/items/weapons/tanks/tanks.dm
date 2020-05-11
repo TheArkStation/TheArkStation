@@ -13,6 +13,12 @@ var/list/global/tank_gauge_cache = list()
 	obj_flags = OBJ_FLAG_CONDUCTIBLE
 	slot_flags = SLOT_BACK
 	w_class = ITEM_SIZE_LARGE
+//[ARK]
+	sprite_sheets = list(
+		SPECIES_RESOMI = 'code_ark/code/modules/species/station/resomi/sprite_cloth/onmob_back_resomi.dmi',
+//		SPECIES_UNATHI = 'icons/mob/onmob/Unathi/back.dmi'
+		)
+//[/ARK]
 
 	force = 15
 	attack_cooldown = 2*DEFAULT_WEAPON_COOLDOWN

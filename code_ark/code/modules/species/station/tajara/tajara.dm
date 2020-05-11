@@ -18,6 +18,7 @@
 #include "religion_tajara.dm"
 #include "accessory_tajara.dm"
 #include "glasses_xeno_veil.dm"
+#include "xenowear.dm"
 
 /datum/species/tajara
 	name = SPECIES_TAJARA

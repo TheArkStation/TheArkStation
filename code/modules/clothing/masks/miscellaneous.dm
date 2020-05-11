@@ -44,8 +44,13 @@
 	down_body_parts_covered = null
 	down_icon_state = "steriledown"
 	pull_mask = 1
-	sprite_sheets = list(SPECIES_TAJARA = 'code_ark/code/modules/species/station/tajara/sprites_cloth/mask.dmi') //ARK
-
+//[ARK]
+	sprite_sheets = list(
+		SPECIES_TAJARA = 'code_ark/code/modules/species/station/tajara/sprites_cloth/mask.dmi',
+//		SPECIES_UNATHI = 'icons/mob/onmob/Unathi/mask.dmi',
+		SPECIES_RESOMI = 'code_ark/code/modules/species/station/resomi/sprite_cloth/onmob_mask_resomi.dmi',
+		)
+//[/ARK]
 
 /obj/item/clothing/mask/fakemoustache
 	name = "fake moustache"
