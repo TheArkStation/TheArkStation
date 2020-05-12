@@ -76,3 +76,13 @@
 
 /mob/living/carbon/human/adherent/New(var/new_loc)
 	..(new_loc, SPECIES_ADHERENT)
+
+//[ARK]
+/mob/living/carbon/human/resomi/New(var/new_loc)
+	h_style = "Resomi Plumage"
+	..(new_loc, SPECIES_RESOMI)
+
+/mob/living/carbon/human/tajaran/New(var/new_loc)
+	h_style = "Tajaran Ears"
+	..(new_loc, SPECIES_TAJARA)
+//[/ARK]
