@@ -353,14 +353,14 @@
 	sprite_sheets = list(
 		SPECIES_UNATHI = 'maps/torch/icons/mob/unathi/onmob_suit_solgov_unathi.dmi',
 		SPECIES_SKRELL = 'maps/torch/icons/mob/skrell/onmob_suit_solgov_skrell.dmi',
-		SPECIES_TAJARA = 'icons/mob/species/tajaran/suit.dmi',
-		SPECIES_RESOMI = 'infinity/icons/mob/species/resomi/onmob_suit_resomi.dmi'
+		SPECIES_TAJARA = 'code_ark/code/modules/species/station/tajara/sprites_cloth/suit.dmi',
+		SPECIES_RESOMI = 'code_ark/code/modules/species/station/resomi/sprite_cloth/onmob_suit_resomi.dmi'
 		)
 	sprite_sheets_obj = list(
 		SPECIES_UNATHI = 'maps/torch/icons/obj/unathi/obj_suit_solgov_unathi.dmi',
 		SPECIES_SKRELL = 'maps/torch/icons/obj/skrell/obj_suit_solgov_skrell.dmi',
-		SPECIES_TAJARA = 'icons/obj/clothing/species/tajaran/suits.dmi',
-		SPECIES_RESOMI = 'infinity/icons/obj/clothing/species/resomi/obj_suit_resomi.dmi'
+		SPECIES_TAJARA = 'code_ark/code/modules/species/station/tajara/sprites_cloth/suits.dmi',
+		SPECIES_RESOMI = 'code_ark/code/modules/species/station/resomi/sprite_cloth/obj_suit_resomi.dmi'
 		)
 //[/ARK]
 
@@ -390,14 +390,14 @@
 	sprite_sheets = list(
 		SPECIES_UNATHI = 'maps/torch/icons/mob/unathi/onmob_suit_solgov_unathi.dmi',
 		SPECIES_SKRELL = 'maps/torch/icons/mob/skrell/onmob_suit_solgov_skrell.dmi',
-		SPECIES_TAJARA = 'icons/mob/species/tajaran/suit.dmi',
-		SPECIES_RESOMI = 'infinity/icons/mob/species/resomi/onmob_suit_resomi.dmi'
+		SPECIES_TAJARA = 'code_ark/code/modules/species/station/tajara/sprites_cloth/suit.dmi',
+		SPECIES_RESOMI = 'code_ark/code/modules/species/station/resomi/sprite_cloth/onmob_suit_resomi.dmi'
 		)
 	sprite_sheets_obj = list(
 		SPECIES_UNATHI = 'maps/torch/icons/obj/unathi/obj_suit_solgov_unathi.dmi',
 		SPECIES_SKRELL = 'maps/torch/icons/obj/skrell/obj_suit_solgov_skrell.dmi',
-		SPECIES_TAJARA = 'icons/obj/clothing/species/tajaran/suits.dmi',
-		SPECIES_RESOMI = 'infinity/icons/obj/clothing/species/resomi/obj_suit_resomi.dmi'
+		SPECIES_TAJARA = 'code_ark/code/modules/species/station/tajara/sprites_cloth/suits.dmi',
+		SPECIES_RESOMI = 'code_ark/code/modules/species/station/resomi/sprite_cloth/obj_suit_resomi.dmi'
 		)
 //[/ARK]
 
@@ -412,14 +412,14 @@
 	sprite_sheets = list(
 		SPECIES_UNATHI = 'maps/torch/icons/mob/unathi/onmob_suit_solgov_unathi.dmi',
 		SPECIES_SKRELL = 'maps/torch/icons/mob/skrell/onmob_suit_solgov_skrell.dmi',
-		SPECIES_TAJARA = 'icons/mob/species/tajaran/suit.dmi',
-		SPECIES_RESOMI = 'infinity/icons/mob/species/resomi/onmob_suit_resomi.dmi'
+		SPECIES_TAJARA = 'code_ark/code/modules/species/station/tajara/sprites_cloth/suit.dmi',
+		SPECIES_RESOMI = 'code_ark/code/modules/species/station/resomi/sprite_cloth/onmob_suit_resomi.dmi'
 		)
 	sprite_sheets_obj = list(
 		SPECIES_UNATHI = 'maps/torch/icons/obj/unathi/obj_suit_solgov_unathi.dmi',
 		SPECIES_SKRELL = 'maps/torch/icons/obj/skrell/obj_suit_solgov_skrell.dmi',
-		SPECIES_TAJARA = 'icons/obj/clothing/species/tajaran/suits.dmi',
-		SPECIES_RESOMI = 'infinity/icons/obj/clothing/species/resomi/obj_suit_resomi.dmi'
+		SPECIES_TAJARA = 'code_ark/code/modules/species/station/tajara/sprites_cloth/suits.dmi',
+		SPECIES_RESOMI = 'code_ark/code/modules/species/station/resomi/sprite_cloth/obj_suit_resomi.dmi'
 		)
 //[/ARK]
 
@@ -462,12 +462,12 @@
 //[ARK]
 	sprite_sheets = list(
 		SPECIES_SKRELL = 'maps/torch/icons/mob/skrell/onmob_head_solgov_skrell.dmi',
-		SPECIES_TAJARA = 'icons/mob/species/tajaran/helmet.dmi',//INF
-		SPECIES_RESOMI = 'infinity/icons/mob/species/resomi/onmob_head_resomi.dmi'//INF
+		SPECIES_TAJARA = 'code_ark/code/modules/species/station/tajara/sprites_cloth/helmet.dmi',//INF
+		SPECIES_RESOMI = 'code_ark/code/modules/species/station/resomi/sprite_cloth/onmob_head_resomi.dmi'//INF
 		)
 	sprite_sheets_obj = list(
-		SPECIES_TAJARA = 'icons/obj/clothing/species/tajaran/hats.dmi',
-		SPECIES_RESOMI = 'infinity/icons/obj/clothing/species/resomi/obj_head_resomi.dmi'
+		SPECIES_TAJARA = 'code_ark/code/modules/species/station/tajara/sprites_cloth/hats.dmi',
+		SPECIES_RESOMI = 'code_ark/code/modules/species/station/resomi/sprite_cloth/obj_head_resomi.dmi'
 		)
 //[/ARK]
 	armor = list(
