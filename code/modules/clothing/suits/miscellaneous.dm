@@ -373,7 +373,7 @@
 	cold_protection = UPPER_TORSO|LOWER_TORSO|ARMS
 //[ARK]
 	sprite_sheets = list(
-		SPECIES_RESOMI = 'code_ark/code/modules/species/station/resomi/sprite_cloth/onmob_suit_resomi.dmi',
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_suit_resomi.dmi',
 //		SPECIES_UNATHI = 'icons/mob/onmob/Unathi/suit.dmi'
 		)
 //[/ARK]

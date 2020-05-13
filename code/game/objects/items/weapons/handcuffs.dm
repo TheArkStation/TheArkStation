@@ -20,7 +20,7 @@
 	var/cuff_type = "handcuffs"
 //[ARK]
 	sprite_sheets = list(
-		SPECIES_RESOMI = 'code_ark/code/modules/species/station/resomi/sprite_cloth/misc.dmi',
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/misc.dmi',
 //		SPECIES_UNATHI = 'icons/mob/onmob/Unathi/misc.dmi'
 		)
 //[/ARK]

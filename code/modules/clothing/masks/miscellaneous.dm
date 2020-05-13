@@ -46,9 +46,9 @@
 	pull_mask = 1
 //[ARK]
 	sprite_sheets = list(
-		SPECIES_TAJARA = 'code_ark/code/modules/species/station/tajara/sprites_cloth/mask.dmi',
+		SPECIES_TAJARA = 'code_ark/icons/mob/species/tajara/mask.dmi',
 //		SPECIES_UNATHI = 'icons/mob/onmob/Unathi/mask.dmi',
-		SPECIES_RESOMI = 'code_ark/code/modules/species/station/resomi/sprite_cloth/onmob_mask_resomi.dmi',
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_mask_resomi.dmi',
 		)
 //[/ARK]
 
@@ -287,7 +287,7 @@
 			flags_inv = initial(flags_inv)
 			body_parts_covered = initial(body_parts_covered)
 			icon_state = initial(icon_state)
-			sprite_sheets = list(SPECIES_TAJARA = 'code_ark/code/modules/species/station/tajara/sprites_cloth/mask.dmi') //ARK
+			sprite_sheets = list(SPECIES_TAJARA = 'code_ark/icons/mob/species/tajara/mask.dmi') //ARK
 
 
 		if(slot_head)

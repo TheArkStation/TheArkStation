@@ -24,11 +24,11 @@
 	name = SPECIES_TAJARA
 	name_plural = SPECIES_TAJARA
 
-	icobase = 'code_ark/code/modules/species/station/tajara/sprites/body.dmi'
-	deform =  'code_ark/code/modules/species/station/tajara/sprites/deformed_body.dmi'
-	preview_icon = 'code_ark/code/modules/species/station/tajara/sprites/preview.dmi'
+	icobase = 'code_ark/icons/mob/human_races/species/tajara/body.dmi'
+	deform =  'code_ark/icons/mob/human_races/species/tajara/deformed_body.dmi'
+	preview_icon = 'code_ark/icons/mob/human_races/species/tajara/preview.dmi'
 	tail = "tajtail"
-	tail_animation = 'code_ark/code/modules/species/station/tajara/sprites_cloth/tail.dmi'
+	tail_animation = 'code_ark/icons/mob/species/tajara/tail.dmi'
 	default_h_style = "Tajaran Ears"
 
 	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws, /datum/unarmed_attack/punch, /datum/unarmed_attack/bite/sharp)
@@ -79,7 +79,7 @@
 	flesh_color = "#afa59e"
 	base_color = "#333333"
 	blood_color = "#862a51"
-	organs_icon = 'code_ark/code/modules/species/station/tajara/sprites/organs.dmi'
+	organs_icon = 'code_ark/icons/mob/human_races/species/tajara/organs.dmi'
 	reagent_tag = IS_TAJARA
 
 	move_trail = /obj/effect/decal/cleanable/blood/tracks/paw

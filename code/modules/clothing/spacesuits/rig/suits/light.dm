@@ -28,7 +28,7 @@
 
 //[ARK]
 	sprite_sheets = list(
-		SPECIES_RESOMI = 'code_ark/code/modules/species/station/resomi/sprite_cloth/onmob_rig_back_resomi.dmi',
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_rig_back_resomi.dmi',
 //		SPECIES_UNATHI = 'icons/mob/onmob/Unathi/rig_back.dmi'
 		)
 //[/ARK]
@@ -38,8 +38,8 @@
 	breach_threshold = 18 //comparable to voidsuits
 //[ARK]
 	sprite_sheets = list(
-		SPECIES_RESOMI = 'code_ark/code/modules/species/station/resomi/sprite_cloth/onmob_suit_resomi.dmi',
-		SPECIES_TAJARA = 'code_ark/code/modules/species/station/tajara/sprites_cloth/suit.dmi'
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_suit_resomi.dmi',
+		SPECIES_TAJARA = 'code_ark/icons/mob/species/tajara/suit.dmi'
 		)
 //[/ARK]
 
@@ -50,7 +50,7 @@
 	name = "shoes"
 //[ARK]
 	sprite_sheets = list(
-		SPECIES_RESOMI = 'code_ark/code/modules/species/station/resomi/sprite_cloth/onmob_feet_resomi.dmi'
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_feet_resomi.dmi'
 	)
 //[/ARK]
 
@@ -58,8 +58,8 @@
 	name = "hood"
 //[ARK]
 	sprite_sheets = list(
-		SPECIES_RESOMI = 'code_ark/code/modules/species/station/resomi/sprite_cloth/onmob_head_resomi.dmi',
-		SPECIES_TAJARA = 'code_ark/code/modules/species/station/tajara/sprites_cloth/helmet.dmi'
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_head_resomi.dmi',
+		SPECIES_TAJARA = 'code_ark/icons/mob/species/tajara/helmet.dmi'
 		)
 	tint = 1
 //[/ARK]
@@ -147,7 +147,7 @@
 		)
 //[ARK]
 	sprite_sheets = list(
-		SPECIES_RESOMI = 'code_ark/code/modules/species/station/resomi/sprite_cloth/onmob_rig_back_resomi.dmi',
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_rig_back_resomi.dmi',
 //		SPECIES_UNATHI = 'icons/mob/onmob/Unathi/rig_back.dmi'
 		)
 //[/ARK]
@@ -189,7 +189,7 @@
 	item_flags = ITEM_FLAG_THICKMATERIAL | ITEM_FLAG_NOCUFFS
 //[ARK]
 	sprite_sheets = list(
-		SPECIES_RESOMI = 'code_ark/code/modules/species/station/resomi/sprite_cloth/onmob_hands_resomi.dmi'
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_hands_resomi.dmi'
 	)
 //[/ARK]
 

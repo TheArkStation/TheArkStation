@@ -20,7 +20,7 @@
 	var/ks2type = null
 //[ARK]
 	sprite_sheets = list(
-		SPECIES_RESOMI = 'code_ark/code/modules/species/station/resomi/sprite_cloth/onmob_ears_resomi.dmi',
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_ears_resomi.dmi',
 //		SPECIES_UNATHI = 'icons/mob/onmob/Unathi/ears.dmi'
 		)
 //[/ARK]

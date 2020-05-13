@@ -220,7 +220,7 @@
 //[ARK]
 	sprite_sheets = list(
 //		SPECIES_NABBER = 'icons/mob/species/nabber/ties.dmi',
-		SPECIES_RESOMI = 'code_ark/code/modules/species/station/resomi/sprite_cloth/onmob_accessories_resomi.dmi',
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_accessories_resomi.dmi',
 //		SPECIES_UNATHI = 'icons/mob/onmob/Unathi/ties.dmi',
 		"Monkey" = 'icons/mob/species/monkey/onmob_accessories_monkey.dmi'
 		)

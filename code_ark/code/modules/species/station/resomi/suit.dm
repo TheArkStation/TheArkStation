@@ -5,7 +5,7 @@
 
 /obj/item/clothing/suit/storage/toggle/Resomicoat
 	 name = "small cloak"
-	 icon = 'code_ark/code/modules/species/station/resomi/sprite_cloth/obj_suit_resomi.dmi'
+	 icon = 'code_ark/icons/obj/clothing/species/resomi/obj_suit_resomi.dmi'
 	 desc = "A cloak that seems too small to fit a human."
 	 icon_state = "resomicoat"
 	 icon_open = "resomicoat_open"
@@ -20,7 +20,7 @@
 
 /obj/item/clothing/suit/storage/toggle/Resomilabcoat
 	name = "small labcoat"
-	icon = 'code_ark/code/modules/species/station/resomi/sprite_cloth/obj_suit_resomi.dmi'
+	icon = 'code_ark/icons/obj/clothing/species/resomi/obj_suit_resomi.dmi'
 	desc = "A labcoat that seems too small to fit a human."
 	icon_state = "resomi_labcoat"
 	icon_open = "resomi_labcoat_open"
@@ -35,7 +35,7 @@
 /obj/item/clothing/suit/storage/resomicloak
 	name = "black and orange cloak"
 	desc = "It drapes over a Resomes's shoulders and closes at the neck with pockets convienently placed inside."
-	icon = 'code_ark/code/modules/species/station/resomi/sprite_cloth/obj_suit_resomi.dmi'
+	icon = 'code_ark/icons/obj/clothing/species/resomi/obj_suit_resomi.dmi'
 	icon_state = "tesh_cloak_bo"
 	slots = 2
 	species_restricted = list(SPECIES_RESOMI)
@@ -276,7 +276,7 @@
 /obj/item/clothing/suit/storage/hooded/polychromic
 	name = "polychromic cloak"
 	desc = "Resomi cloak. Seems to be coated with polychrome paint. There is also a sewn hood. DO NOT MIX WITH EMP!"
-	icon = 'code_ark/code/modules/species/station/resomi/sprite_cloth/obj_suit_resomi.dmi'
+	icon = 'code_ark/icons/obj/clothing/species/resomi/obj_suit_resomi.dmi'
 	icon_state = "polychromic"
 	hoodtype = /obj/item/clothing/head/winterhood/polychromic_hood
 	action_button_name = "Toggle Hood"
@@ -287,7 +287,7 @@
 /obj/item/clothing/suit/storage/hooded/polychromic/New()
 	..()
 	sprite_sheets = list(
-		SPECIES_RESOMI = 'code_ark/code/modules/species/station/resomi/sprite_cloth/onmob_suit_resomi.dmi'
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_suit_resomi.dmi'
 	)
 	if(pockets)
 		qdel(pockets)
@@ -322,7 +322,7 @@
 
 /obj/item/clothing/head/winterhood/polychromic_hood
 	name = "hood"
-	icon = 'code_ark/code/modules/species/station/resomi/sprite_cloth/obj_head_resomi.dmi'
+	icon = 'code_ark/icons/obj/clothing/species/resomi/obj_head_resomi.dmi'
 	icon_state = "polychromic_hood"
 	species_restricted = list(SPECIES_RESOMI)
 	desc = "It's hood that covers the head."
@@ -332,5 +332,5 @@
 /obj/item/clothing/head/winterhood/polychromic_hood/New()
 	..()
 	sprite_sheets = list(
-		SPECIES_RESOMI = 'code_ark/code/modules/species/station/resomi/sprite_cloth/onmob_head_resomi.dmi'
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_head_resomi.dmi'
 	)

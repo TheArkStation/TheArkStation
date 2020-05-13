@@ -25,5 +25,5 @@
 //[ARK]
 /obj/item/clothing/mask/plunger/equipped(var/M, var/slot)
 	..()
-	sprite_sheets[SPECIES_RESOMI] = (slot == slot_head ? 'code_ark/code/modules/species/station/resomi/sprite_cloth/onmob_head_resomi.dmi' : 'code_ark/code/modules/species/station/resomi/sprite_cloth/onmob_mask_resomi.dmi')
+	sprite_sheets[SPECIES_RESOMI] = (slot == slot_head ? 'code_ark/icons/mob/species/resomi/onmob_head_resomi.dmi' : 'code_ark/icons/mob/species/resomi/onmob_mask_resomi.dmi')
 //[/ARK]

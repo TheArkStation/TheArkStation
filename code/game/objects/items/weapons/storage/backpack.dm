@@ -24,7 +24,7 @@
 	open_sound = 'sound/effects/storage/unzip.ogg'
 //[ARK]
 	sprite_sheets = list(
-		SPECIES_RESOMI = 'code_ark/code/modules/species/station/resomi/sprite_cloth/onmob_back_resomi.dmi',
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_back_resomi.dmi',
 //		SPECIES_UNATHI = 'icons/mob/onmob/Unathi/back.dmi'
 		)
 //[/ARK]
@@ -160,7 +160,7 @@
 	item_state_slots = list(slot_l_hand_str = "rucksack", slot_r_hand_str = "rucksack")
 //[ARK]
 	sprite_sheets = list(
-		SPECIES_RESOMI = 'code_ark/code/modules/species/station/resomi/sprite_cloth/onmob_back_resomi.dmi'
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_back_resomi.dmi'
 		)
 //[/ARK]
 

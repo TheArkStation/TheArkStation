@@ -278,7 +278,7 @@
 //[ARK]
 	sprite_sheets = list(
 //		SPECIES_VOX = 'icons/mob/species/vox/suit.dmi',
-		SPECIES_RESOMI = 'code_ark/code/modules/species/station/resomi/sprite_cloth/onmob_modular_armor_resomi.dmi',
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_modular_armor_resomi.dmi',
 //		SPECIES_UNATHI = 'icons/mob/onmob/Unathi/suit.dmi',
 //		SPECIES_NABBER = 'icons/mob/species/nabber/suit.dmi'
 		)

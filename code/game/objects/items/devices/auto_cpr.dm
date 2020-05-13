@@ -9,7 +9,7 @@
 	var/last_pump
 	var/skilled_setup
 
-	sprite_sheets = list(SPECIES_RESOMI = 'code_ark/code/modules/species/station/resomi/sprite_cloth/onmob_suit_resomi.dmi')//ARK
+	sprite_sheets = list(SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_suit_resomi.dmi')//ARK
 
 /obj/item/auto_cpr/mob_can_equip(mob/living/carbon/human/H, slot, disable_warning = 0, force = 0)
 	. = ..()

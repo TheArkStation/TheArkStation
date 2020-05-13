@@ -165,7 +165,7 @@ var/const/NO_EMAG_ACT = -50
 
 //[ARK]
 	sprite_sheets = list(
-		SPECIES_RESOMI = 'code_ark/code/modules/species/station/resomi/sprite_cloth/onmob_id_resomi.dmi',
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_id_resomi.dmi',
 //		SPECIES_UNATHI = 'icons/mob/onmob/Unathi/id.dmi'
 		)
 //[/ARK]

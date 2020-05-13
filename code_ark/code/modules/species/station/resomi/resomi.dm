@@ -69,13 +69,13 @@
 
 	move_trail = /obj/effect/decal/cleanable/blood/tracks/paw
 
-	icobase = 			'code_ark/code/modules/species/station/resomi/sprite_body/body.dmi'
-	deform = 			'code_ark/code/modules/species/station/resomi//sprite_body/body.dmi'
-	damage_overlays = 	'code_ark/code/modules/species/station/resomi//sprite_body/damage_overlay.dmi'
-	damage_mask = 		'code_ark/code/modules/species/station/resomi//sprite_body/damage_mask.dmi'
-	blood_mask = 		'code_ark/code/modules/species/station/resomi//sprite_body/blood_mask.dmi'
-	preview_icon =		'code_ark/code/modules/species/station/resomi//sprite_body/preview.dmi'
-	husk_icon = 		'code_ark/code/modules/species/station/resomi//sprite_body/husk.dmi'
+	icobase = 			'code_ark/icons/mob/human_races/species/resomi/body.dmi'
+	deform = 			'code_ark/icons/mob/human_races/species/resomi/body.dmi'
+	damage_overlays = 	'code_ark/icons/mob/human_races/species/resomi/damage_overlay.dmi'
+	damage_mask = 		'code_ark/icons/mob/human_races/species/resomi/damage_mask.dmi'
+	blood_mask = 		'code_ark/icons/mob/human_races/species/resomi/blood_mask.dmi'
+	preview_icon =		'code_ark/icons/mob/human_races/species/resomi/preview.dmi'
+	husk_icon = 		'code_ark/icons/mob/human_races/species/resomi/husk.dmi'
 
 	slowdown = -0.8 //speed fix?
 
@@ -217,7 +217,7 @@
 	)
 
 /datum/species/resomi/get_surgery_overlay_icon(var/mob/living/carbon/human/H)
-	return 'code_ark/code/modules/species/station/resomi//sprite_body/surgery.dmi'
+	return 'code_ark/icons/mob/human_races/species/resomi/surgery.dmi'
 
 /datum/species/resomi/skills_from_age(age)
 	switch(age)

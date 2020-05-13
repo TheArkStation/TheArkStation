@@ -18,6 +18,6 @@
 	parent_organ = BP_CHEST
 
 /obj/item/organ/internal/eyes/resomi
-	icon = 'code_ark/code/modules/species/station/resomi/sprite_body/eyes.dmi'
-	eye_icon = 'code_ark/code/modules/species/station/resomi/sprite_body/eyes.dmi'
+	icon = 'code_ark/icons/mob/human_races/species/resomi/eyes.dmi'
+	eye_icon = 'code_ark/icons/mob/human_races/species/resomi/eyes.dmi'
 	icon_state = "eyes_resomi"

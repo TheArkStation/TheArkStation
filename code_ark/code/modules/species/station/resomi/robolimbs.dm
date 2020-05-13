@@ -1,7 +1,7 @@
 /datum/robolimb/resomi
 	company = "Small prosthetic"
 	desc = "This prosthetic is small and fit for nonhuman proportions."
-	icon = 'code_ark/code/modules/species/station/resomi/sprite_body/cyber_resomi_main.dmi'
+	icon = 'code_ark/icons/mob/human_races/species/resomi/cyber_resomi_main.dmi'
 	species_cannot_use = list(SPECIES_ADHERENT, SPECIES_YEOSA, SPECIES_UNATHI, SPECIES_NABBER, SPECIES_DIONA)
 	restricted_to = list(SPECIES_RESOMI)
 	allowed_bodytypes = list(SPECIES_RESOMI)

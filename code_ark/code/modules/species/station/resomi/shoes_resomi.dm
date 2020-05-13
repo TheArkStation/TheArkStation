@@ -1,6 +1,6 @@
 /obj/item/clothing/shoes/workboots/resomi
 	icon_state = "resomi_workboots"
-	icon = 'code_ark/code/modules/species/station/resomi/sprite_cloth/obj_feet_resomi.dmi'
+	icon = 'code_ark/icons/obj/clothing/species/resomi/obj_feet_resomi.dmi'
 	item_state = "workboots"
 	name = "small workboots"
 	desc = "Small and tight shoes with an iron sole for those who work in dangerous area or hate their paws"
@@ -17,7 +17,7 @@
 	name = "cloth footwraps"
 	desc = "A roll of treated canvas used for wrapping paws"
 	icon_state = "clothwrap"
-	icon = 'code_ark/code/modules/species/station/resomi/sprite_cloth/obj_feet_resomi.dmi'
+	icon = 'code_ark/icons/obj/clothing/species/resomi/obj_feet_resomi.dmi'
 	item_state = "clothwrap"
 	force = 0
 	item_flags = ITEM_FLAG_SILENT

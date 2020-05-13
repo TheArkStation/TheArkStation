@@ -67,7 +67,7 @@
 	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_TAJARA,SPECIES_UNATHI)
 	sprite_sheets = list(
 //		SPECIES_UNATHI = 'icons/mob/onmob/Unathi/head.dmi',
-		SPECIES_TAJARA = 'code_ark/code/modules/species/station/tajara/sprites_cloth/helmet.dmi'
+		SPECIES_TAJARA = 'code_ark/icons/mob/species/tajara/helmet.dmi'
 		)
 //[/ARK]
 
@@ -76,7 +76,7 @@
 	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_TAJARA,SPECIES_UNATHI)
 	sprite_sheets = list(
 //		SPECIES_UNATHI = 'icons/mob/onmob/Unathi/suit.dmi',
-		SPECIES_TAJARA = 'code_ark/code/modules/species/station/tajara/sprites_cloth/suit.dmi'
+		SPECIES_TAJARA = 'code_ark/icons/mob/species/tajara/suit.dmi'
 		)
 //[/ARK]
 
@@ -146,7 +146,7 @@
 //[ARK]
 	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_UNATHI,SPECIES_TAJARA,SPECIES_IPC)
 	sprite_sheets = list(
-		SPECIES_TAJARA = 'code_ark/code/modules/species/station/tajara/sprites_cloth/helmet.dmi',
+		SPECIES_TAJARA = 'code_ark/icons/mob/species/tajara/helmet.dmi',
 //		SPECIES_SKRELL = 'icons/mob/species/skrell/onmob_head_skrell.dmi',
 		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_head_helmet_unathi.dmi'
 		)
@@ -157,7 +157,7 @@
 	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_UNATHI,SPECIES_TAJARA,SPECIES_IPC)
 	sprite_sheets = list(
 		SPECIES_UNATHI = 'icons/mob/species/unathi/generated/onmob_suit_unathi.dmi',
-		SPECIES_TAJARA = 'code_ark/code/modules/species/station/tajara/sprites_cloth/suit.dmi'
+		SPECIES_TAJARA = 'code_ark/icons/mob/species/tajara/suit.dmi'
 		)
 //[/ARK]
 
@@ -216,7 +216,7 @@
 
 //[ARK]
 	sprite_sheets = list(
-		SPECIES_RESOMI = 'code_ark/code/modules/species/station/resomi/sprite_cloth/onmob_rig_back_resomi.dmi',
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_rig_back_resomi.dmi',
 //		SPECIES_UNATHI = 'icons/mob/onmob/Unathi/rig_back.dmi'
 		)
 
@@ -279,7 +279,7 @@
 	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_TAJARA,SPECIES_UNATHI)
 	sprite_sheets = list(
 //		SPECIES_UNATHI = 'icons/mob/onmob/Unathi/head.dmi',
-		SPECIES_TAJARA = 'code_ark/code/modules/species/station/tajara/sprites_cloth/helmet.dmi'
+		SPECIES_TAJARA = 'code_ark/icons/mob/species/tajara/helmet.dmi'
 		)
 //[/ARK]
 
@@ -288,7 +288,7 @@
 	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_TAJARA,SPECIES_UNATHI)
 	sprite_sheets = list(
 //		SPECIES_UNATHI = 'icons/mob/onmob/Unathi/suit.dmi',
-		SPECIES_TAJARA = 'code_ark/code/modules/species/station/tajara/sprites_cloth/suit.dmi'
+		SPECIES_TAJARA = 'code_ark/icons/mob/species/tajara/suit.dmi'
 		)
 //[/ARK]
 
@@ -346,7 +346,7 @@
 //[ARK]
 	sprite_sheets = list(
 //		SPECIES_UNATHI = 'icons/mob/onmob/Unathi/rig_back.dmi',
-		SPECIES_RESOMI = 'code_ark/code/modules/species/station/resomi/sprite_cloth/onmob_rig_back_resomi.dmi'
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_rig_back_resomi.dmi'
 		)
 //[/ARK]
 
@@ -355,10 +355,10 @@
 //[ARK]
 	species_restricted = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_TAJARA, SPECIES_UNATHI, SPECIES_RESOMI)
 	sprite_sheets = list(
-		SPECIES_TAJARA = 'code_ark/code/modules/species/station/tajara/sprites_cloth/helmet.dmi',
+		SPECIES_TAJARA = 'code_ark/icons/mob/species/tajara/helmet.dmi',
 		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_head_helmet_unathi.dmi',
 		SPECIES_SKRELL = 'icons/mob/species/skrell/onmob_head_skrell.dmi',
-		SPECIES_RESOMI = 'code_ark/code/modules/species/station/resomi/sprite_cloth/onmob_head_resomi.dmi'
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_head_resomi.dmi'
 		)
 //[/ARK]
 
@@ -366,9 +366,9 @@
 //[ARK]
 	species_restricted = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_TAJARA, SPECIES_UNATHI, SPECIES_RESOMI)
 	sprite_sheets = list(
-		SPECIES_TAJARA = 'code_ark/code/modules/species/station/tajara/sprites_cloth/suit.dmi',
+		SPECIES_TAJARA = 'code_ark/icons/mob/species/tajara/suit.dmi',
 		SPECIES_UNATHI = 'icons/mob/species/unathi/generated/onmob_suit_unathi.dmi',
-		SPECIES_RESOMI = 'code_ark/code/modules/species/station/resomi/sprite_cloth/onmob_suit_resomi.dmi'
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_suit_resomi.dmi'
 		)
 //[/ARK]
 
@@ -377,8 +377,8 @@
 	species_restricted = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_TAJARA, SPECIES_UNATHI, SPECIES_RESOMI)
 	sprite_sheets = list(
 		SPECIES_UNATHI = 'icons/mob/species/unathi/generated/onmob_feet_unathi.dmi',
-		SPECIES_TAJARA = 'code_ark/code/modules/species/station/tajara/sprites_cloth/feet.dmi',
-		SPECIES_RESOMI = 'code_ark/code/modules/species/station/resomi/sprite_cloth/onmob_feet_resomi.dmi'
+		SPECIES_TAJARA = 'code_ark/icons/mob/species/tajara/feet.dmi',
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_feet_resomi.dmi'
 		)
 //[/ARK]
 
@@ -387,8 +387,8 @@
 	species_restricted = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_TAJARA, SPECIES_UNATHI, SPECIES_RESOMI)
 	sprite_sheets = list(
 		SPECIES_UNATHI = 'icons/mob/species/unathi/generated/onmob_hands_unathi.dmi',
-		SPECIES_TAJARA = 'code_ark/code/modules/species/station/tajara/sprites_cloth/hands.dmi',
-		SPECIES_RESOMI = 'code_ark/code/modules/species/station/resomi/sprite_cloth/onmob_hands_resomi.dmi'
+		SPECIES_TAJARA = 'code_ark/icons/mob/species/tajara/hands.dmi',
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_hands_resomi.dmi'
 		)
 //[/ARK]
 
@@ -439,10 +439,10 @@
 //[ARK]
 	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_TAJARA,SPECIES_UNATHI, SPECIES_RESOMI)
 	sprite_sheets = list(
-		SPECIES_RESOMI = 'code_ark/code/modules/species/station/resomi/sprite_cloth/onmob_head_resomi.dmi',
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_head_resomi.dmi',
 //		SPECIES_UNATHI = 'icons/mob/onmob/Unathi/head.dmi',
 //		SPECIES_SCRELL = 'icons/mob/species/skrell/helmet.dmi',
-		SPECIES_TAJARA = 'code_ark/code/modules/species/station/tajara/sprites_cloth/helmet.dmi'
+		SPECIES_TAJARA = 'code_ark/icons/mob/species/tajara/helmet.dmi'
 		)
 //[/ARK]
 
@@ -450,10 +450,10 @@
 //[ARK]
 	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_TAJARA,SPECIES_UNATHI, SPECIES_RESOMI)
 	sprite_sheets = list(\
-		SPECIES_RESOMI = 'code_ark/code/modules/species/station/resomi/sprite_cloth/onmob_suit_resomi.dmi',
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_suit_resomi.dmi',
 //		SPECIES_UNATHI = 'icons/mob/onmob/Unathi/suit.dmi',
 //		SPECIES_SCRELL = 'icons/mob/species/skrell/suit.dmi',
-		SPECIES_TAJARA = 'code_ark/code/modules/species/station/tajara/sprites_cloth/suit.dmi'
+		SPECIES_TAJARA = 'code_ark/icons/mob/species/tajara/suit.dmi'
 		)
 //[/ARK]
 
@@ -461,10 +461,10 @@
 //[ARK]
 	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_TAJARA,SPECIES_UNATHI, SPECIES_RESOMI)
 	sprite_sheets = list(
-		SPECIES_RESOMI = 'code_ark/code/modules/species/station/resomi/sprite_cloth/onmob_feet_resomi.dmi',
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_feet_resomi.dmi',
 //		SPECIES_UNATHI = 'icons/mob/onmob/Unathi/feet.dmi',
 //		SPECIES_SCRELL = 'icons/mob/species/skrell/feet.dmi',
-		SPECIES_TAJARA = 'code_ark/code/modules/species/station/tajara/sprites_cloth/feet.dmi'
+		SPECIES_TAJARA = 'code_ark/icons/mob/species/tajara/feet.dmi'
 		)
 //[/ARK]
 
@@ -472,10 +472,10 @@
 //[ARK]
 	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_TAJARA,SPECIES_UNATHI, SPECIES_RESOMI)
 	sprite_sheets = list(
-		SPECIES_RESOMI = 'code_ark/code/modules/species/station/resomi/sprite_cloth/onmob_hands_resomi.dmi',
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_hands_resomi.dmi',
 //		SPECIES_UNATHI = 'icons/mob/onmob/Unathi/hands.dmi',
 //		SPECIES_SCRELL = 'icons/mob/species/skrell/hands.dmi',
-		SPECIES_TAJARA = 'code_ark/code/modules/species/station/tajara/sprites_cloth/hands.dmi'
+		SPECIES_TAJARA = 'code_ark/icons/mob/species/tajara/hands.dmi'
 		)
 //[/ARK]
 
