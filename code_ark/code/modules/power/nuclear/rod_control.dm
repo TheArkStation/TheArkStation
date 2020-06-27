@@ -24,18 +24,6 @@
 	idle_power_usage = 250
 	active_power_usage = 500
 	var/datum/nano_module/rmon/mon
-	var/overterm = 360
-	var/overrad = 120
-	var/overraddec = 121
-	var/overtdec = 10
-
-
-/obj/machinery/computer/reactor_control/Process()  // I made this just to configure coefficients directly while in the game. If reactor is working correctly, you're free to delete it
-	for(var/obj/machinery/power/nuclear_rod/R in GLOB.nrods)
-		R.thermaldecaycoeff = overtdec
-		R.raddeccoeff = overraddec
-		R.radkoeff = overrad
-		R.thermalkoeff = overterm
 
 
 /obj/machinery/computer/reactor_control/Initialize()
@@ -80,7 +68,7 @@
 		rodlist.Add(list(list(
 		"name" = R.name,
 		"temp" = R.rodtemp,
-		"rads" = R.own_rads,
+		"rads" = R.produced_neutrons,
 		"broken" = R.broken
 		)))
 

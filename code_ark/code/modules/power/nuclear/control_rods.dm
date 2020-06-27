@@ -69,6 +69,7 @@ GLOBAL_LIST_INIT(control_rods, list())
 			return 0
 		else
 			return 1
+			PN.draw_power(amount)
 
 
 /obj/machinery/control_rod/Process()
