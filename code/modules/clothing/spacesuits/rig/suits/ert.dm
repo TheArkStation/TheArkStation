@@ -39,7 +39,7 @@
 	species_restricted = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_TAJARA)
 	sprite_sheets = list(
 //		SPECIES_UNATHI = 'icons/mob/onmob/Unathi/head.dmi',
-		SPECIES_TAJARA = 'code_ark/code/modules/species/station/tajara/sprites_cloth/helmet.dmi'
+		SPECIES_TAJARA = 'code_ark/icons/mob/species/tajara/helmet.dmi'
 		)
 //[/ARK]
 
@@ -47,7 +47,7 @@
 //[ARK]
 	species_restricted = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_TAJARA)
 	sprite_sheets = list(
-		SPECIES_TAJARA = 'code_ark/code/modules/species/station/tajara/sprites_cloth/suit.dmi'
+		SPECIES_TAJARA = 'code_ark/icons/mob/species/tajara/suit.dmi'
 		)
 //[/ARK]
 /obj/item/clothing/shoes/magboots/rig/ert

@@ -46,7 +46,7 @@
 	knockdown = FALSE
 	flags = SHUTTLE_FLAGS_PROCESS
 	skill_needed = SKILL_NONE
-	ceiling_type = /turf/simulated/floor/shuttle_ceiling/torch
+	ceiling_type = /turf/simulated/floor/shuttle_ceiling/sol
 
 /obj/effect/shuttle_landmark/lucius/start
 	name = "SEV Lucius"

@@ -138,6 +138,10 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	icon_state = "steel_decals4";
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/lucius/crew_quarters)
 "au" = (
@@ -457,6 +461,11 @@
 /area/lucius/bridge)
 "bd" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/effect/floor_decal/steeldecal/steel_decals4,
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	icon_state = "steel_decals4";
+	dir = 10
+	},
 /turf/simulated/floor/tiled/dark,
 /area/lucius/bridge)
 "be" = (
@@ -655,6 +664,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
 	id_tag = "lucius_xeno_pump"
 	},
+/obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/white,
 /area/lucius/xeno)
 "by" = (
@@ -1113,6 +1123,14 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	icon_state = "steel_decals4";
+	dir = 9
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	icon_state = "steel_decals4";
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/lucius/hallway/first/aft)
 "cm" = (
@@ -1186,6 +1204,10 @@
 	tag_interior_door = "lucius_xeno_inner";
 	tag_interior_sensor = "lucius_xeno_sensor_interior"
 	},
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	icon_state = "steel_decals6";
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/lucius/hallway/first/aft)
 "cp" = (
@@ -1216,6 +1238,11 @@
 	pixel_x = -32;
 	pixel_y = 24;
 	req_access = list("ACCESS_SOL_SCI")
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals6,
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	icon_state = "steel_decals6";
+	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/lucius/xeno)
@@ -1252,6 +1279,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	icon_state = "steel_decals6";
+	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/lucius/xeno)
@@ -1472,6 +1503,14 @@
 /turf/simulated/floor/tiled,
 /area/lucius/hallway/first/fore)
 "cP" = (
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	icon_state = "steel_decals4";
+	dir = 9
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	icon_state = "steel_decals4";
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/lucius/hallway/first/fore)
 "cQ" = (
@@ -1535,6 +1574,7 @@
 	dir = 1
 	},
 /obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/steeldecal/steel_decals6,
 /turf/simulated/floor/tiled,
 /area/lucius/hallway/first/fore)
 "cV" = (
@@ -1567,6 +1607,10 @@
 	},
 /obj/effect/floor_decal/industrial/shutoff{
 	dir = 4
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	icon_state = "steel_decals6";
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/lucius/crew_quarters)
@@ -1632,6 +1676,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/effect/floor_decal/steeldecal/steel_decals6,
 /turf/simulated/floor/tiled,
 /area/lucius/crew_quarters)
 "df" = (
@@ -1860,6 +1905,10 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	icon_state = "steel_decals6";
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/lucius/hallway/first/aft)
 "dr" = (
@@ -1906,6 +1955,14 @@
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	icon_state = "steel_decals6";
+	dir = 1
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	icon_state = "steel_decals6";
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
@@ -1956,6 +2013,10 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/disposalpipe/segment/bent,
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	icon_state = "steel_decals6";
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/lucius/xeno)
 "dw" = (
@@ -2249,6 +2310,11 @@
 	d1 = 2;
 	d2 = 4;
 	icon_state = "2-4"
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4,
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	icon_state = "steel_decals4";
+	dir = 10
 	},
 /turf/simulated/floor/tiled/dark,
 /area/lucius/bridge)
@@ -2890,6 +2956,11 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/effect/floor_decal/steeldecal/steel_decals4,
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	icon_state = "steel_decals4";
+	dir = 10
+	},
 /turf/simulated/floor/tiled/white,
 /area/lucius/xeno)
 "eE" = (
@@ -2932,6 +3003,14 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	icon_state = "steel_decals4";
+	dir = 1
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	icon_state = "steel_decals4";
+	dir = 6
 	},
 /turf/simulated/floor/tiled/white,
 /area/lucius/ano)
@@ -3286,6 +3365,10 @@
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 4
 	},
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	icon_state = "steel_decals6";
+	dir = 10
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/lucius/atmos)
 "fk" = (
@@ -3294,6 +3377,10 @@
 	},
 /obj/machinery/firealarm{
 	pixel_y = 24
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	icon_state = "steel_decals6";
+	dir = 9
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/lucius/atmos)
@@ -3416,6 +3503,14 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	icon_state = "steel_decals4";
+	dir = 5
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	icon_state = "steel_decals4";
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white,
 /area/lucius/xeno)
 "fu" = (
@@ -3474,6 +3569,14 @@
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	icon_state = "steel_decals4";
+	dir = 5
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	icon_state = "steel_decals4";
+	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/lucius/xeno)
@@ -3650,6 +3753,11 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/effect/floor_decal/steeldecal/steel_decals4,
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	icon_state = "steel_decals4";
+	dir = 10
+	},
 /turf/simulated/floor/tiled/dark,
 /area/lucius/bridge)
 "fO" = (
@@ -3774,6 +3882,14 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	icon_state = "steel_decals4";
+	dir = 9
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	icon_state = "steel_decals4";
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/lucius/med)
 "fW" = (
@@ -3813,6 +3929,14 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	icon_state = "steel_decals6";
+	dir = 1
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	icon_state = "steel_decals6";
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/lucius/cryo)
 "fY" = (
@@ -3824,6 +3948,17 @@
 /area/lucius/cryo)
 "fZ" = (
 /obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	icon_state = "steel_decals6";
+	dir = 10
+	},
+/turf/simulated/floor/tiled/white,
+/area/lucius/cryo)
+"ga" = (
+/obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -3832,11 +3967,11 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	icon_state = "steel_decals6";
+	dir = 9
+	},
 /turf/simulated/floor/tiled/white,
-/area/lucius/cryo)
-"ga" = (
-/obj/machinery/cryopod,
-/turf/simulated/floor/tiled/white/monotile,
 /area/lucius/cryo)
 "gb" = (
 /obj/structure/table/standard,
@@ -3915,6 +4050,10 @@
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
 	dir = 6
 	},
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	icon_state = "steel_decals6";
+	dir = 5
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/lucius/atmos)
 "gk" = (
@@ -3922,6 +4061,10 @@
 	dir = 4
 	},
 /obj/machinery/light,
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	icon_state = "steel_decals6";
+	dir = 6
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/lucius/atmos)
 "gl" = (
@@ -4176,6 +4319,14 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	icon_state = "steel_decals6";
+	dir = 6
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	icon_state = "steel_decals6";
+	dir = 5
+	},
 /turf/simulated/floor/tiled/white,
 /area/lucius/xeno)
 "gB" = (
@@ -4241,12 +4392,20 @@
 	icon_state = "alarm0";
 	pixel_x = -24
 	},
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	icon_state = "steel_decals6";
+	dir = 10
+	},
 /turf/simulated/floor/tiled/white,
 /area/lucius/ano)
 "gF" = (
 /obj/machinery/artifact,
 /obj/structure/anomaly_container,
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	icon_state = "steel_decals6";
+	dir = 9
+	},
 /turf/simulated/floor/tiled/white,
 /area/lucius/ano)
 "gG" = (
@@ -4350,11 +4509,14 @@
 /turf/simulated/floor/tiled/white,
 /area/lucius/med)
 "gN" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
+/obj/machinery/cryopod,
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	icon_state = "steel_decals6";
 	dir = 4
 	},
-/turf/simulated/floor/tiled/white,
-/area/lucius/med)
+/obj/effect/floor_decal/steeldecal/steel_decals6,
+/turf/simulated/floor/tiled/white/monotile,
+/area/lucius/cryo)
 "gO" = (
 /obj/structure/hygiene/sink{
 	pixel_y = -16
@@ -4395,15 +4557,19 @@
 /turf/simulated/floor/tiled/white/monotile,
 /area/lucius/med)
 "gR" = (
-/obj/machinery/cryopod{
+/obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
-/obj/machinery/firealarm{
-	dir = 8;
-	pixel_x = -24
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	icon_state = "steel_decals4";
+	dir = 5
 	},
-/turf/simulated/floor/tiled/white/monotile,
-/area/lucius/cryo)
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	icon_state = "steel_decals4";
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/lucius/med)
 "gS" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -4419,10 +4585,20 @@
 /turf/simulated/floor/tiled/white,
 /area/lucius/cryo)
 "gT" = (
-/obj/machinery/cryopod,
-/obj/item/device/radio/intercom/broadcasting{
+/obj/machinery/cryopod{
+	dir = 4
+	},
+/obj/machinery/firealarm{
 	dir = 8;
-	pixel_x = 24
+	pixel_x = -24
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	icon_state = "steel_decals6";
+	dir = 1
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	icon_state = "steel_decals6";
+	dir = 8
 	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/lucius/cryo)
@@ -4697,13 +4873,16 @@
 /turf/simulated/floor/tiled/white,
 /area/lucius/med)
 "hv" = (
-/obj/machinery/cryopod{
+/obj/machinery/cryopod,
+/obj/item/device/radio/intercom/broadcasting{
+	dir = 8;
+	pixel_x = 24
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	icon_state = "steel_decals6";
 	dir = 4
 	},
-/obj/structure/extinguisher_cabinet{
-	dir = 4;
-	pixel_x = -32
-	},
+/obj/effect/floor_decal/steeldecal/steel_decals6,
 /turf/simulated/floor/tiled/white/monotile,
 /area/lucius/cryo)
 "hw" = (
@@ -4718,9 +4897,20 @@
 /turf/simulated/floor/tiled/white,
 /area/lucius/cryo)
 "hx" = (
-/obj/machinery/cryopod,
-/obj/machinery/light{
+/obj/machinery/cryopod{
 	dir = 4
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -32
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	icon_state = "steel_decals6";
+	dir = 1
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	icon_state = "steel_decals6";
+	dir = 8
 	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/lucius/cryo)
@@ -4739,13 +4929,18 @@
 /turf/simulated/floor/tiled/white,
 /area/lucius/crew_quarters)
 "hz" = (
-/obj/structure/hygiene/shower{
-	dir = 8
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	icon_state = "steel_decals4";
+	dir = 9
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	icon_state = "steel_decals4";
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/lucius/crew_quarters)
 "hA" = (
@@ -4764,6 +4959,14 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	icon_state = "steel_decals4";
+	dir = 9
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	icon_state = "steel_decals4";
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/lucius/crew_quarters)
@@ -4999,16 +5202,17 @@
 /turf/simulated/floor/tiled/white/monotile,
 /area/lucius/crew_quarters)
 "ib" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 1
+/obj/machinery/cryopod,
+/obj/machinery/light{
+	dir = 4
 	},
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	icon_state = "steel_decals6";
+	dir = 4
 	},
-/turf/simulated/floor/tiled/dark,
-/area/lucius/bridge)
+/obj/effect/floor_decal/steeldecal/steel_decals6,
+/turf/simulated/floor/tiled/white/monotile,
+/area/lucius/cryo)
 "ic" = (
 /turf/simulated/floor/plating,
 /area/lucius/maintenance/first/port)
@@ -5021,16 +5225,21 @@
 /turf/simulated/floor/plating,
 /area/lucius/maintenance/first/port)
 "ie" = (
-/obj/machinery/cryopod{
-	dir = 4
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
 	},
-/obj/machinery/alarm/sol{
-	dir = 4;
-	icon_state = "alarm0";
-	pixel_x = -24
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
 	},
-/turf/simulated/floor/tiled/white/monotile,
-/area/lucius/cryo)
+/obj/effect/floor_decal/steeldecal/steel_decals4,
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	icon_state = "steel_decals4";
+	dir = 10
+	},
+/turf/simulated/floor/tiled/dark,
+/area/lucius/bridge)
 "if" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -5057,15 +5266,21 @@
 /turf/simulated/floor/tiled/white,
 /area/lucius/cryo)
 "ih" = (
-/obj/machinery/cryopod,
-/obj/structure/cable/green{
-	d2 = 8;
-	icon_state = "0-8"
+/obj/machinery/cryopod{
+	dir = 4
 	},
-/obj/machinery/power/apc/sol{
+/obj/machinery/alarm/sol{
 	dir = 4;
-	icon_state = "apc0";
-	pixel_x = 24
+	icon_state = "alarm0";
+	pixel_x = -24
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	icon_state = "steel_decals6";
+	dir = 1
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	icon_state = "steel_decals6";
+	dir = 8
 	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/lucius/cryo)
@@ -5074,12 +5289,10 @@
 	dir = 4
 	},
 /obj/machinery/light/small,
+/obj/effect/floor_decal/steeldecal/steel_decals2,
 /turf/simulated/floor/tiled/white,
 /area/lucius/crew_quarters)
 "ij" = (
-/obj/structure/hygiene/shower{
-	dir = 8
-	},
 /obj/machinery/alarm/sol{
 	dir = 1;
 	icon_state = "alarm0";
@@ -5114,6 +5327,10 @@
 /area/lucius/bridge)
 "il" = (
 /obj/machinery/bluespacerelay,
+/obj/effect/floor_decal/techfloor/hole/right{
+	icon_state = "techfloor_hole_right";
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/lucius/telecomms)
 "im" = (
@@ -5792,6 +6009,24 @@
 /obj/machinery/door/firedoor/sol,
 /turf/simulated/floor/tiled/techmaint,
 /area/lucius/maintenance/first/port)
+"jP" = (
+/obj/machinery/cryopod,
+/obj/structure/cable/green{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/machinery/power/apc/sol{
+	dir = 4;
+	icon_state = "apc0";
+	pixel_x = 24
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	icon_state = "steel_decals6";
+	dir = 4
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals6,
+/turf/simulated/floor/tiled/white/monotile,
+/area/lucius/cryo)
 
 (1,1,1) = {"
 aa
@@ -21452,7 +21687,7 @@ eR
 fN
 gI
 hr
-ib
+ie
 aG
 jE
 aa
@@ -22864,7 +23099,7 @@ cR
 dW
 eV
 fT
-gN
+gR
 hs
 ic
 ic
@@ -23874,9 +24109,9 @@ cW
 ed
 eY
 fX
-gR
-hv
-ie
+gT
+hx
+ih
 fX
 eX
 eX
@@ -24075,7 +24310,7 @@ bT
 cX
 ee
 eZ
-fY
+fZ
 fY
 fY
 if
@@ -24277,7 +24512,7 @@ bU
 cY
 ef
 fa
-fZ
+ga
 gS
 hw
 ig
@@ -24479,11 +24714,11 @@ bV
 cZ
 eg
 eY
-ga
-gT
-hx
-ih
-ga
+gN
+hv
+ib
+jP
+gN
 eX
 eX
 iY

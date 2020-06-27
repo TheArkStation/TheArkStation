@@ -24,7 +24,7 @@
 	species_restricted = list(SPECIES_HUMAN, SPECIES_IPC, SPECIES_TAJARA)
 
 	sprite_sheets = list(
-		SPECIES_TAJARA = 'code_ark/code/modules/species/station/tajara/sprites_cloth/helmet.dmi'
+		SPECIES_TAJARA = 'code_ark/icons/mob/species/tajara/helmet.dmi'
 		)
 //[/ARK]
 

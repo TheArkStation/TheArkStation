@@ -1,71 +1,71 @@
 /var/const/access_sol_general = "ACCESS_SOL_GENERAL"
 /datum/access/sol/general
 	id = access_sol_general
-	desc = "General"
+	desc = "Sol General"
 	region = ACCESS_REGION_SOL
 
 /var/const/access_sol_maint = "ACCESS_SOL_MAINT"
 /datum/access/sol/maint
 	id = access_sol_maint
-	desc = "Maintenance"
+	desc = "Sol Maintenance"
 	region = ACCESS_REGION_SOL
 
 /var/const/access_sol_eng = "ACCESS_SOL_ENG"
 /datum/access/sol/eng
 	id = access_sol_eng
-	desc = "Engineering"
+	desc = "Sol Engineering"
 	region = ACCESS_REGION_SOL
 
 /var/const/access_sol_exp = "ACCESS_SOL_EXP"
 /datum/access/sol/exp
 	id = access_sol_exp
-	desc = "Expedition"
+	desc = "Sol Expedition"
 	region = ACCESS_REGION_SOL
 
 /var/const/access_sol_sci = "ACCESS_SOL_SCI"
 /datum/access/sol/sci
 	id = access_sol_sci
-	desc = "Science"
+	desc = "Sol Science"
 	region = ACCESS_REGION_SOL
 
 /var/const/access_sol_med = "ACCESS_SOL_MED"
 /datum/access/sol/med
 	id = access_sol_med
-	desc = "Medical"
+	desc = "Sol Medical"
 	region = ACCESS_REGION_SOL
 
 /var/const/access_sol_sec = "ACCESS_SOL_SEC"
 /datum/access/sol/security
-	id = access_sol_command
-	desc = "Security"
+	id = access_sol_sec
+	desc = "Sol Security"
 	region = ACCESS_REGION_SOL
 
 /var/const/access_sol_pilot = "ACCESS_SOL_PILOT"
 /datum/access/sol/pilot
 	id = access_sol_pilot
-	desc = "Piloting"
+	desc = "Sol Piloting"
 	region = ACCESS_REGION_SOL
 
 /var/const/access_sol_id = "ACCESS_SOL_ID"
 /datum/access/sol/id
 	id = access_sol_id
-	desc = "ID Modification"
+	desc = "Sol ID Modification"
 	region = ACCESS_REGION_SOL
 
 /var/const/access_sol_command = "ACCESS_SOL_COMMAND"
 /datum/access/sol/command
 	id = access_sol_command
-	desc = "Command"
+	desc = "Sol Command"
 	region = ACCESS_REGION_SOL
 
 /var/const/access_sol_high_command = "ACCESS_SOL_HIGH_COMMAND"
 /datum/access/sol/high_command
-	id = access_sol_command
-	desc = "High Command"
+	id = access_sol_high_command
+	desc = "Sol High Command"
 	region = ACCESS_REGION_SOL_HIGH
 
 /var/const/access_sol_sfp = "ACCESS_SOL_SFP"
 /datum/access/sol/sfp
 	id = access_sol_sfp
-	desc = "High Command"
+	desc = "Sol Federal Police"
 	region = ACCESS_REGION_SOL_SFP

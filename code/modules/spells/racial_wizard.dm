@@ -15,7 +15,10 @@
 		SPECIES_UNATHI = /spell/moghes_blessing,
 		SPECIES_DIONA = /spell/aoe_turf/conjure/grove/gestalt,
 		SPECIES_SKRELL = /obj/item/weapon/contract/apprentice/skrell,
-		SPECIES_IPC = /spell/camera_connection)
+		SPECIES_IPC = /spell/camera_connection,
+		SPECIES_TAJARA = /spell/messa_shroud,
+		SPECIES_RESOMI = /spell/aoe_turf/conjure/summon/resomi)
+
 
 /obj/item/weapon/magic_rock/attack_self(mob/user)
 	if(!istype(user,/mob/living/carbon/human))
@@ -260,3 +263,77 @@
 		L.release_eye()
 	qdel(eyeobj)
 	return ..()
+
+//[ARK]
+//RESOMI
+/spell/aoe_turf/conjure/summon/resomi
+	name = "Summon Nano Machines"
+	desc = "This spell summons nano machines from the wizard's body to help them."
+
+	school = "racial"
+	spell_flags = Z2NOCAST
+	invocation_type = SpI_EMOTE
+	invocation = "spasms a moment as nanomachines come out of a port on their back!"
+
+	level_max = list(Sp_TOTAL = 0, Sp_SPEED = 0, Sp_POWER = 0)
+
+	name_summon = 1
+
+	charge_type = Sp_HOLDVAR
+	holder_var_type = "shock_stage"
+	holder_var_amount = 15
+
+	hud_state = "wiz_resomi"
+
+	summon_amt = 1
+	summon_type = list(/mob/living/simple_animal/hostile/commanded/nanomachine)
+
+/spell/aoe_turf/conjure/summon/resomi/before_cast()
+	..()
+	newVars["master"] = holder
+
+/spell/aoe_turf/conjure/summon/resomi/take_charge(mob/user = user, var/skipcharge)
+	. = ..()
+	var/mob/living/carbon/human/H = user
+	if(H && H.shock_stage >= 30)
+		H.visible_message("<b>[user]</b> drops to the floor, thrashing wildly while foam comes from their mouth.")
+		H.Paralyse(20)
+		H.adjustBrainLoss(10)
+
+/obj/item/weapon/storage/bag/cash/infinite
+	startswith = list(/obj/item/weapon/spacecash/bundle/c1000 = 1)
+
+//Tajaran
+/spell/messa_shroud
+	name = "Messa's Shroud"
+	desc = "This spell causes darkness at the point of the caster for a duration of time."
+
+	school = "racial"
+	spell_flags = 0
+	invocation_type = SpI_EMOTE
+	invocation = "mutters a small prayer, the light around them darkening."
+	charge_max = 300 //30 seconds
+
+	range = 5
+	duration = 150 //15 seconds
+
+	cast_sound = 'sound/effects/bamf.ogg'
+
+	hud_state = "wiz_tajaran"
+
+/spell/messa_shroud/choose_targets()
+	return list(get_turf(holder))
+
+/spell/messa_shroud/cast(var/list/targets, mob/user)
+	var/turf/T = targets[1]
+
+	if(!istype(T))
+		return
+
+	var/obj/O = new /obj(T)
+	O.set_light(-10, 0.1, 10, 2, "#ffffff")
+
+	spawn(duration)
+		qdel(O)
+
+//[/ARK]

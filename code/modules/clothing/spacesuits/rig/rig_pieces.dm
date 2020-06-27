@@ -12,7 +12,8 @@
 	brightness_on = 0.5
 //[ARK]
 	sprite_sheets = list(
-		SPECIES_TAJARA = 'code_ark/code/modules/species/station/tajara/sprites_cloth/helmet.dmi',
+		SPECIES_TAJARA = 'code_ark/icons/mob/species/tajara/helmet.dmi',
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_head_resomi.dmi',
 		SPECIES_SKRELL = 'icons/mob/species/skrell/onmob_head_skrell.dmi',
 		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_head_helmet_unathi.dmi',
 		)
@@ -53,8 +54,9 @@
 	can_breach = 1
 //[ARK]
 	sprite_sheets = list(
-		SPECIES_TAJARA = 'code_ark/code/modules/species/station/tajara/sprites_cloth/helmet.dmi',
+		SPECIES_TAJARA = 'code_ark/icons/mob/species/tajara/helmet.dmi',
 		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_head_helmet_unathi.dmi',
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_suit_resomi.dmi'
 		)
 //[/ARK]
 

@@ -13,7 +13,7 @@
 //[ARK]
 	sprite_sheets = list(
 		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_mask_unathi.dmi',
-		SPECIES_TAJARA = 'code_ark/code/modules/species/station/tajara/sprites_cloth/mask.dmi',
+		SPECIES_TAJARA = 'code_ark/icons/mob/species/tajara/mask.dmi',
 		)
 //[/ARK]
 

@@ -372,7 +372,8 @@ Helpers
 	end_game_state = END_GAME_ENDING
 
 /datum/controller/subsystem/ticker/proc/declare_completion()
-	to_world("<br><br><br><H1>A round of [mode.name] has ended!</H1>")
+	
+	to_world("<br><br><br><H1>A round of [SSticker.mode.name] has ended!</H1>")
 	for(var/client/C)
 		if(!C.credits)
 			C.RollCredits()

@@ -18,6 +18,12 @@
 	//left for backward compatability
 	var/ks1type = /obj/item/device/encryptionkey
 	var/ks2type = null
+//[ARK]
+	sprite_sheets = list(
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_ears_resomi.dmi',
+//		SPECIES_UNATHI = 'icons/mob/onmob/Unathi/ears.dmi'
+		)
+//[/ARK]
 
 /obj/item/device/radio/headset/Initialize()
 	. = ..()

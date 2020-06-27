@@ -713,6 +713,16 @@ var/global/floorIsLava = 0
 		sleep(50)
 		world.Reboot()
 
+/datum/admins/proc/end_round()
+	set category = "Server"
+	set name = "End Round"
+	set desc= "Instantly end current round"
+	var/confirm = alert("End current round?", "End the round", "Yes", "Cancel")
+	if (confirm == "Cancel")
+		return
+	else
+		call(/datum/controller/subsystem/ticker/proc/declare_completion)()
+		Master.SetRunLevel(RUNLEVEL_POSTGAME)
 
 /datum/admins/proc/announce()
 	set category = "Special Verbs"

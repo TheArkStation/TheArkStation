@@ -18,6 +18,12 @@
 	var/breakouttime = 1200 //Deciseconds = 120s = 2 minutes
 	var/cuff_sound = 'sound/weapons/handcuffs.ogg'
 	var/cuff_type = "handcuffs"
+//[ARK]
+	sprite_sheets = list(
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/misc.dmi',
+//		SPECIES_UNATHI = 'icons/mob/onmob/Unathi/misc.dmi'
+		)
+//[/ARK]
 
 /obj/item/weapon/handcuffs/examine(mob/user)
 	. = ..()

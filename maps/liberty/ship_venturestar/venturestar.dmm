@@ -46,6 +46,11 @@
 	pixel_y = 24;
 	req_access = list("ACCESS_VENTURESTAR")
 	},
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	icon_state = "extinguisher_closed";
+	pixel_x = 32
+	},
 /turf/simulated/floor/plating,
 /area/venturestar/primaryairlock)
 "ai" = (
@@ -81,6 +86,10 @@
 "am" = (
 /obj/machinery/computer/ship/helm,
 /obj/effect/floor_decal/corner/yellow/border,
+/obj/effect/floor_decal/steeldecal/steel_decals_central5{
+	icon_state = "steel_decals_central5";
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/venturestar/crew_quarters)
 "an" = (
@@ -104,17 +113,33 @@
 	dir = 8
 	},
 /obj/machinery/computer/shuttle_control/explore/venturestar,
+/obj/effect/floor_decal/steeldecal/steel_decals_central5{
+	icon_state = "steel_decals_central5";
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/venturestar/crew_quarters)
 "ap" = (
 /obj/effect/floor_decal/corner/yellow/border,
 /obj/machinery/computer/ship/sensors,
+/obj/effect/floor_decal/steeldecal/steel_decals_central5{
+	icon_state = "steel_decals_central5";
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/venturestar/crew_quarters)
 "aq" = (
 /obj/structure/bed/chair/shuttle/blue{
 	icon_state = "shuttle_chair_preview";
 	dir = 1
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	icon_state = "steel_decals6";
+	dir = 1
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	icon_state = "steel_decals6";
+	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
 /area/venturestar/crew_quarters)
@@ -206,6 +231,14 @@
 	dir = 1
 	},
 /obj/machinery/hologram/holopad/longrange,
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	icon_state = "steel_decals4";
+	dir = 8
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	icon_state = "steel_decals4";
+	dir = 5
+	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/venturestar/crew_quarters)
 "ay" = (
@@ -259,6 +292,7 @@
 /obj/machinery/alarm/venturestar{
 	pixel_y = 24
 	},
+/obj/random/ore,
 /turf/simulated/floor/plating,
 /area/venturestar/primaryairlock)
 "aE" = (
@@ -273,6 +307,14 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	icon_state = "steel_decals4";
+	dir = 4
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	icon_state = "steel_decals4";
+	dir = 9
+	},
 /turf/simulated/floor/tiled,
 /area/venturestar/crew_quarters)
 "aF" = (
@@ -306,6 +348,7 @@
 	icon_state = "map";
 	dir = 4
 	},
+/obj/effect/floor_decal/steeldecal/steel_decals_central6,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/venturestar/primaryairlock)
 "aK" = (
@@ -487,6 +530,11 @@
 	icon_state = "intact";
 	dir = 6
 	},
+/obj/effect/floor_decal/steeldecal/steel_decals9{
+	icon_state = "steel_decals9";
+	dir = 4
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals9,
 /turf/simulated/floor/reinforced/airless,
 /area/venturestar/crew_quarters)
 "bd" = (
@@ -500,6 +548,14 @@
 /area/venturestar/primaryairlock)
 "be" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
+/obj/effect/floor_decal/steeldecal/steel_decals9{
+	icon_state = "steel_decals9";
+	dir = 1
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals9{
+	icon_state = "steel_decals9";
+	dir = 8
+	},
 /turf/simulated/floor/reinforced/airless,
 /area/venturestar/primaryairlock)
 "bf" = (
@@ -573,6 +629,14 @@
 /area/venturestar/primarystorage)
 "bm" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
+/obj/effect/floor_decal/steeldecal/steel_decals9{
+	icon_state = "steel_decals9";
+	dir = 1
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals9{
+	icon_state = "steel_decals9";
+	dir = 8
+	},
 /turf/simulated/floor/reinforced/airless,
 /area/venturestar/primarystorage)
 "bn" = (
@@ -586,6 +650,10 @@
 /area/venturestar/primarystorage)
 "bp" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	icon_state = "steel_decals6";
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark,
 /area/venturestar/primarystorage)
 "bq" = (
@@ -609,6 +677,11 @@
 /area/venturestar/primarystorage)
 "bs" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	icon_state = "steel_decals6";
+	dir = 4
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals6,
 /turf/simulated/floor/tiled/dark,
 /area/venturestar/primarystorage)
 "bt" = (
@@ -657,6 +730,14 @@
 	icon_state = "intact-scrubbers";
 	dir = 6
 	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	icon_state = "steel_decals4";
+	dir = 8
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	icon_state = "steel_decals4";
+	dir = 5
+	},
 /turf/simulated/floor/tiled,
 /area/venturestar/crew_quarters)
 "bA" = (
@@ -666,6 +747,10 @@
 /obj/effect/floor_decal/corner/yellow/border,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	icon_state = "steel_decals6";
+	dir = 5
+	},
 /turf/simulated/floor/tiled,
 /area/venturestar/crew_quarters)
 "bB" = (
@@ -682,6 +767,10 @@
 	d1 = 1;
 	d2 = 4;
 	icon_state = "1-4"
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	icon_state = "steel_decals6";
+	dir = 6
 	},
 /turf/simulated/floor/tiled,
 /area/venturestar/crew_quarters)
@@ -730,6 +819,10 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	icon_state = "steel_decals6";
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/venturestar/crew_quarters)
 "bE" = (
@@ -773,6 +866,10 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	icon_state = "steel_decals6";
+	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
 /area/venturestar/primarystorage)
@@ -827,6 +924,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "intact-scrubbers";
 	dir = 10
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	icon_state = "steel_decals6";
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/venturestar/primarystorage)
@@ -959,6 +1060,11 @@
 	pixel_y = -24;
 	req_access = list("ACCESS_VENTURESTAR")
 	},
+/obj/machinery/firealarm{
+	dir = 4;
+	icon_state = "casing";
+	pixel_x = 24
+	},
 /turf/simulated/floor/plating,
 /area/venturestar/primaryairlock)
 "bX" = (
@@ -1055,6 +1161,10 @@
 	dir = 8
 	},
 /obj/random/drinkbottle,
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	icon_state = "steel_decals6";
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/venturestar/crew_quarters)
 "cf" = (
@@ -1101,6 +1211,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	icon_state = "intact-scrubbers";
 	dir = 4
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	icon_state = "steel_decals6";
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/venturestar/crew_quarters)
@@ -1186,10 +1300,14 @@
 	icon_state = "map_scrubber_on";
 	dir = 1
 	},
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	icon_state = "steel_decals6";
+	dir = 4
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals6,
 /turf/simulated/floor/tiled/dark,
 /area/venturestar/primarystorage)
 "ct" = (
-/obj/effect/floor_decal/steeldecal/steel_decals6,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	icon_state = "map_vent_out";
 	dir = 4
@@ -1222,6 +1340,7 @@
 	icon_state = "casing";
 	pixel_x = -24
 	},
+/obj/effect/floor_decal/steeldecal/steel_decals_central7,
 /turf/simulated/floor/tiled/dark,
 /area/venturestar/primarystorage)
 "cw" = (
@@ -1348,6 +1467,7 @@
 /area/venturestar/primarystorage)
 "cF" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/structure/closet/crate,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/venturestar/primarystorage)
 "cG" = (
@@ -1357,6 +1477,10 @@
 	dir = 1;
 	icon_state = "alarm0";
 	pixel_y = -24
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	icon_state = "steel_decals6";
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/venturestar/primarystorage)
@@ -1414,6 +1538,14 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
 	icon_state = "intact";
 	dir = 9
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	icon_state = "steel_decals4";
+	dir = 8
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	icon_state = "steel_decals4";
+	dir = 5
 	},
 /turf/simulated/floor/tiled,
 /area/venturestar/crew_quarters)
@@ -1670,6 +1802,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/effect/floor_decal/steeldecal/steel_decals_central7,
 /turf/simulated/floor/tiled,
 /area/venturestar/crew_quarters)
 "do" = (
@@ -2048,6 +2181,7 @@
 	icon_state = "4-8";
 	pixel_x = 0
 	},
+/obj/effect/decal/cleanable/blood/oil,
 /turf/simulated/floor,
 /area/venturestar/engineering)
 "dV" = (
@@ -2260,9 +2394,9 @@
 	icon_state = "bordercolor";
 	dir = 1
 	},
-/obj/effect/floor_decal/steeldecal/steel_decals4,
 /obj/random/firstaid,
 /obj/random/medical/lite,
+/obj/effect/floor_decal/steeldecal/steel_decals6,
 /turf/simulated/floor/tiled,
 /area/venturestar/crew_quarters)
 "em" = (
@@ -2319,6 +2453,10 @@
 /area/venturestar/engineering)
 "et" = (
 /obj/effect/floor_decal/industrial/fire,
+/obj/effect/floor_decal/steeldecal/steel_decals9{
+	icon_state = "steel_decals9";
+	dir = 1
+	},
 /turf/simulated/floor,
 /area/venturestar/engineering)
 "eu" = (
@@ -2385,6 +2523,10 @@
 /area/venturestar/engineering)
 "ey" = (
 /obj/effect/floor_decal/industrial/fire,
+/obj/effect/floor_decal/steeldecal/steel_decals9{
+	icon_state = "steel_decals9";
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/venturestar/engineering)
 "ez" = (
@@ -2480,6 +2622,84 @@
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/venturestar/primarystorage)
+"jq" = (
+/obj/effect/floor_decal/industrial/fire,
+/obj/effect/floor_decal/steeldecal/steel_decals_central4{
+	icon_state = "steel_decals_central4";
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/venturestar/engineering)
+"ka" = (
+/obj/effect/floor_decal/techfloor/hole/right{
+	icon_state = "techfloor_hole_right";
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/venturestar/primarystorage)
+"Fj" = (
+/obj/machinery/atmospherics/pipe/simple/visible{
+	dir = 4
+	},
+/obj/structure/catwalk,
+/obj/random/junk,
+/turf/simulated/floor,
+/area/venturestar/engineering)
+"Fm" = (
+/obj/effect/floor_decal/industrial/fire,
+/obj/effect/floor_decal/steeldecal/steel_decals9{
+	icon_state = "steel_decals9";
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/venturestar/engineering)
+"JV" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/atmospherics/pipe/simple/hidden/red,
+/obj/effect/floor_decal/steeldecal/steel_decals9,
+/obj/effect/floor_decal/steeldecal/steel_decals9{
+	icon_state = "steel_decals9";
+	dir = 4
+	},
+/turf/simulated/floor/reinforced/airless,
+/area/venturestar/crew_quarters)
+"KS" = (
+/obj/machinery/conveyor{
+	dir = 8;
+	icon_state = "conveyor0";
+	id_tag = "venturestar_conveyor"
+	},
+/obj/effect/decal/cleanable/blood/oil,
+/turf/simulated/floor,
+/area/venturestar/primarystorage)
+"Ll" = (
+/obj/effect/floor_decal/industrial/fire,
+/obj/effect/floor_decal/steeldecal/steel_decals9{
+	icon_state = "steel_decals9";
+	dir = 4
+	},
+/turf/simulated/floor,
+/area/venturestar/engineering)
+"Ra" = (
+/obj/effect/floor_decal/industrial/warning{
+	icon_state = "stripe";
+	dir = 1
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals6,
+/turf/simulated/floor/tiled/dark,
+/area/venturestar/primarystorage)
+"Vb" = (
+/obj/structure/bed/chair/shuttle/blue{
+	icon_state = "shuttle_chair_preview";
+	dir = 1
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals6,
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	icon_state = "steel_decals6";
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/venturestar/crew_quarters)
 
 (1,1,1) = {"
 aa
@@ -6407,7 +6627,7 @@ aH
 aR
 aR
 bc
-bf
+JV
 bf
 bx
 bM
@@ -6524,7 +6744,7 @@ dT
 ei
 eq
 ek
-ey
+jq
 aa
 aa
 aa
@@ -6626,7 +6846,7 @@ dU
 ej
 er
 ek
-ey
+Fm
 aa
 aa
 aa
@@ -6909,7 +7129,7 @@ aa
 aa
 aj
 ap
-aq
+Vb
 ay
 as
 as
@@ -7029,7 +7249,7 @@ db
 dd
 dx
 dz
-dK
+Fj
 dY
 cN
 eC
@@ -7236,7 +7456,7 @@ cN
 dL
 dZ
 ek
-et
+Ll
 aa
 aa
 aa
@@ -7435,7 +7655,7 @@ cq
 cE
 bh
 dg
-dk
+KS
 dB
 dK
 dX
@@ -7533,7 +7753,7 @@ bk
 br
 bH
 bS
-cq
+ka
 cF
 cS
 dh
@@ -7631,7 +7851,7 @@ bb
 bb
 ag
 bd
-bj
+Ra
 bs
 bI
 bT
@@ -7850,7 +8070,7 @@ ef
 en
 ev
 eE
-ey
+jq
 aa
 aa
 aa
@@ -7952,7 +8172,7 @@ eg
 eo
 ew
 eE
-ey
+Fm
 aa
 aa
 aa
