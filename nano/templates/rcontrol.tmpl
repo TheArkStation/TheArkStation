@@ -5,26 +5,41 @@
 </style>
 
 Reactor control console #{{:data.id}}<br><br>
-{{:helper.link('set overall target length', '', { 'setall' : 1})}}<br>
-<table class='wideTable'><tbody>
-	<tr><td>Name</td><td>target length</td><td>length</td></tr>
-	{{for data.rods}}
-		<tr>
-		<td>{{:value.name}}</td>
-		<td>
-		{{if value.broken}}
-			<span class='bad'>ERROR</span>
-		{{else}}
-			{{:helper.link(value.targ, '', { 'settarg' : value.tag })}} meters
-		{{/if}}
-		</td>
-		<td>
-		{{if value.broken}}
-			<span class='bad'>ERROR</span>
-		{{else}}
-			{{:value.len}} meters
-		{{/if}}
-		</td>
-		</tr>
-	{{/for}}
-</tbody></table><br>
+Toggle PD reactor automatic control system 
+{{if data.manual}}
+	{{:helper.link('off', '', { 'switchauto' : 1})}}
+{{else}}
+	{{:helper.link('on', '', { 'switchauto' : 1})}}
+{{/if}}<br><br>
+
+{{if data.manual}}
+	{{:helper.link('set overall target length', '', { 'setall' : 1})}}<br>
+	<table class='wideTable'><tbody>
+		<tr><td>Name</td><td>target length</td><td>length</td></tr>
+		{{for data.rods}}	
+			<tr>
+			<td>{{:value.name}}</td>
+			<td>
+			{{if value.broken}}
+				<span class='bad'>ERROR</span>
+			{{else}}
+				{{:helper.link(value.targ, '', { 'settarg' : value.tag })}} meters
+			{{/if}}
+			</td>
+			<td>
+			{{if value.broken}}
+				<span class='bad'>ERROR</span>
+			{{else}}
+				{{:value.len}} meters
+			{{/if}}
+			</td>
+			</tr>
+		{{/for}}
+	</tbody></table><br>
+	
+{{else}}
+	Maximal operating temperature: {{:helper.link(data.maxtemp, '', { 'set_max_temp' : 1 })}} K <br>
+	Minimal operating temperature: {{:helper.link(data.mintemp, '', { 'set_min_temp' : 1 })}} K <br>
+	Relation between differential change in activity and moving of the control rods: {{:helper.link(data.regcoeff, '', { 'set_regcoeff' : 1 })}}<br> 
+
+{{/if}}
