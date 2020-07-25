@@ -68,6 +68,7 @@ GLOBAL_LIST_INIT(control_rods, list())
 		if(PN.avail < amount)
 			return 0
 		else
+			PN.draw_power(amount)
 			return 1
 
 

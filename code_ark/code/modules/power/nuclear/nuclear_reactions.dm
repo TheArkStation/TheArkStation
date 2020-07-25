@@ -1,12 +1,14 @@
 #define AS_LOW_AS_NOTHING 0.000001
 #define CHAIN_REACTION_COEFF 80000
 #define DECAY_COEFF 20000
+#define HEAT_COEFF 100
+#define RAD_COEFF 200
 
-/decl/nuclear_reaction  //Nuclear reactions, simillar to fusion and you also can add them as much, as you want.
-	var/substance = ""
-	var/nflow_requirement = 0
-	var/heat_production = 0
-	var/nflow_production = 0
+/decl/nuclear_reaction  
+	var/substance = "" //fissile reactant
+	var/nflow_requirement = 0 //Coefficient between accepted neutron rad and how much fissile material, well, becomes fissile. 0 means it is decay reaction
+	var/heat_production = 0 //Heat per mole of material
+	var/nflow_production = 0 //Neutrons per mole of material
 	var/list/products = list()  // Just DO NOT forget, products must be = 1 in summary.
 
 /decl/nuclear_reaction/proc/React(var/obj/machinery/power/nuclear_rod/host, var/neutron_amount)
@@ -15,7 +17,7 @@
 
 	if(host.reactants[substance] > AS_LOW_AS_NOTHING)  //To eliminate especially "weak" reactions
 		if(nflow_requirement > 0)
-			amount_reacting = (1 + neutron_amount/nflow_requirement) * host.reactants[substance] / CHAIN_REACTION_COEFF
+			amount_reacting = neutron_amount / nflow_requirement * host.reactants[substance] / CHAIN_REACTION_COEFF
 		else
 			amount_reacting = host.reactants[substance] / DECAY_COEFF
 
@@ -28,8 +30,8 @@
 			amount_reacting = host.reactants[substance]
 			host.reactants[substance] = 0
 
-		host.produced_neutrons += amount_reacting * nflow_production
-		host.rodtemp += amount_reacting * heat_production
+		host.produced_neutrons += amount_reacting * nflow_production * RAD_COEFF
+		host.rodtemp += amount_reacting * heat_production * HEAT_COEFF
 
 		for(var/pr_reactant in products)   //Well, this code is mostly copied from R-ust and chemistry, so you can look there for better explanations
 			var/success = 0
@@ -57,7 +59,7 @@
 	substance = "U235"
 	nflow_requirement = 5
 	heat_production = 10
-	nflow_production = 30
+	nflow_production = 25
 	products = list("radioactive waste" = 0.5, "nuclear waste" = 0.5)
 
 /decl/nuclear_reaction/U235_decay

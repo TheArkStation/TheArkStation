@@ -1,3 +1,5 @@
+GLOBAL_LIST_INIT(reactor_consoles, list())
+
 /datum/computer_file/program/reactor_control
 	filename = "Reactor montior"
 	filedesc = "Reactor monitoring software"
@@ -30,11 +32,13 @@
 	. = ..()
 	mon = new(src)
 	mon.id_tag = id_tag
+	GLOB.reactor_consoles += src
 
 
 
 /obj/machinery/computer/reactor_control/Destroy()
 	QDEL_NULL(mon)
+	GLOB.reactor_consoles -= src
 	return ..()
 
 /obj/machinery/computer/reactor_control/interface_interact(mob/user)
@@ -57,14 +61,18 @@
 	name = "Reactor monitor"
 	var/list/known_rods = list()
 	var/id_tag
+	var/average_temp
+	var/average_activity
 
 /datum/nano_module/rmon/ui_interact(mob/user, ui_key = "rcon", datum/nanoui/ui=null, force_open=1, var/datum/topic_state/state = GLOB.default_state)
 	FindDevices() // Update our devices list
 	var/overtemp = 0
+	var/overact
 	var/list/data = host.initial_data()
 	var/list/rodlist = new /list()
 	for(var/obj/machinery/power/nuclear_rod/R in known_rods)
 		overtemp += R.rodtemp
+		overact += R.reaction_capability
 		rodlist.Add(list(list(
 		"name" = R.name,
 		"temp" = R.rodtemp,
@@ -76,6 +84,8 @@
 	data["id"] = id_tag
 	if(known_rods.len)
 		data["summarytemp"] = overtemp/(known_rods.len)
+		average_temp = overtemp/(known_rods.len)
+		average_activity = overact / (known_rods.len)
 	else
 		data["summarytemp"] = 0
 	ui = SSnano.try_update_ui(user, src, ui_key, ui, data, force_open)
@@ -93,6 +103,7 @@
 	for(var/obj/machinery/power/nuclear_rod/I in GLOB.nrods)
 		if(I.id_tag && (I.id_tag == id_tag)) //&& (get_dist(src, I) < 50))
 			known_rods += I
+	
 
 /obj/item/weapon/stock_parts/circuitboard/reactor_montor_console
 	name = T_BOARD("Reactor monitor")

@@ -1,6 +1,8 @@
 GLOBAL_LIST_INIT(nrods, list())
 #define ROD_CONNECT_DIST 8
-
+#define COOLING_COEFF 10
+#define HEATING_COEFF 1200
+#define SEALED_RAD_COEFF 0
 
 /obj/machinery/power/nuclear_rod
 	name = "Nuclear rod"
@@ -15,13 +17,9 @@ GLOBAL_LIST_INIT(nrods, list())
 	var/produced_neutrons = 0
 	var/reaction_capability
 	var/rodtemp = 293 //K
-	var/sealcoeff = 0
-	var/raddecay = 0.003
 	var/list/reactants = list()
 	var/integrity = 100
 	var/broken = FALSE
-	var/thermalkoeff = 360  //Here is the coefficients, I added them for ingame reactor cinfigurations, if reactor is working correctly, they can be replaced with integers
-	var/thermaldecaycoeff = 10
 	var/obj/item/weapon/nuclearfuel/rod/F = null
 	var/list/possible_reactions = new /list(0)
 	//kinda ugly, but supposed to work
@@ -165,22 +163,16 @@ GLOBAL_LIST_INIT(nrods, list())
 	if(sealed == 0)
 		if(rodtemp > 500)
 			set_light(0.6, 1, 7)
-		var/emitted = produced_neutrons/(rodtemp+1)*(rodtemp+300)
-		SSradiation.radiate(src, emitted)
-		var/ratio = min((thermaldecaycoeff / 2), (environment.return_pressure()/ONE_ATMOSPHERE))
+		SSradiation.radiate(src, produced_neutrons)
+		var/ratio = min((COOLING_COEFF / 2), (environment.return_pressure()/ONE_ATMOSPHERE))
 		var/chamb_temp = environment.temperature
-		if ((rodtemp > chamb_temp) && ((rodtemp -= (rodtemp-chamb_temp) * ratio / thermaldecaycoeff) > 0))
-			environment.add_thermal_energy((rodtemp-chamb_temp)*ratio*1200)
-			rodtemp -= (rodtemp-chamb_temp) * ratio / thermaldecaycoeff
+		if ((rodtemp > chamb_temp) && ((rodtemp - (rodtemp-chamb_temp) * ratio / COOLING_COEFF) > 0))
+			environment.add_thermal_energy((rodtemp-chamb_temp)*ratio* HEATING_COEFF)
+			rodtemp -= (rodtemp-chamb_temp) * ratio / COOLING_COEFF
 		else
 			rodtemp += (chamb_temp - rodtemp) * ratio / 20
 	else
-		SSradiation.radiate(src, round (produced_neutrons * sealcoeff))
-	produced_neutrons = produced_neutrons/raddecay*100
-	if(produced_neutrons > 5000)
-		produced_neutrons -= produced_neutrons/raddecay*10
-	if(reaction_capability > 5)
-		reaction_capability = reaction_capability/(rand(191,211))/(rodtemp + 500)*10000
+		SSradiation.radiate(src, round (produced_neutrons * SEALED_RAD_COEFF))
 	check_state()
 	update_icon()
 
