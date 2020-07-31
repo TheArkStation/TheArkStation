@@ -58,7 +58,7 @@ var/const/MAP_HAS_RANK = 2		//Rank system, also togglable
 	var/company_short = "BM"
 	var/system_name = "Uncharted System"
 
-	var/map_admin_faxes = list()
+	var/list/map_admin_faxes = list()
 
 	var/shuttle_docked_message
 	var/shuttle_leaving_dock
@@ -148,6 +148,7 @@ var/const/MAP_HAS_RANK = 2		//Rank system, also togglable
 			FACTION_EXPEDITIONARY,
 			FACTION_FLEET,
 			FACTION_PCRC,
+			FACTION_SAARE,
 			FACTION_OTHER
 		),
 		TAG_CULTURE = list(

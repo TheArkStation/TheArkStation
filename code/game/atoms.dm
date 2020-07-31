@@ -55,7 +55,7 @@
 		updateVisibility(src)
 		var/turf/T = loc
 		if(istype(T))
-			T.handle_opacity_change(src)
+			T.RecalculateOpacity()
 
 	return INITIALIZE_HINT_NORMAL
 
@@ -257,7 +257,7 @@ its easier to just keep the beam vertical.
 			f_name = "a "
 		f_name += "<font color ='[blood_color]'>stained</font> [name][infix]!"
 
-	to_chat(user, "\icon[src] That's [f_name] [suffix]")
+	to_chat(user, "[icon2html(src, user)] That's [f_name] [suffix]")
 	to_chat(user, desc)
 	return TRUE
 

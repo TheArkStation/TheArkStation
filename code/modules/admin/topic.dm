@@ -308,10 +308,10 @@
 		ban_unban_log_save("[key_name(usr)] edited [banned_key]'s ban. Reason: [reason] Duration: [duration]")
 		log_and_message_admins("edited [banned_key]'s ban. Reason: [reason] Duration: [duration]")
 		Banlist.cd = "/base/[banfolder]"
-		Banlist["reason"] << reason
-		Banlist["temp"] << temp
-		Banlist["minutes"] << minutes
-		Banlist["bannedby"] << usr.ckey
+		to_save(Banlist["reason"], reason)
+		to_save(Banlist["temp"], temp)
+		to_save(Banlist["minutes"], minutes)
+		to_save(Banlist["bannedby"], usr.ckey)
 		Banlist.cd = "/base"
 		SSstatistics.add_field("ban_edit",1)
 		unbanpanel()
@@ -1306,7 +1306,7 @@
 		var/mob/observer/ghost/G = C.mob
 		if(istype(G))
 			sleep(2)
-			G.ManualFollow(M)
+			G.start_following(M)
 
 	else if(href_list["check_antagonist"])
 		check_antagonists()

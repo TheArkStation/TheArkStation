@@ -70,7 +70,7 @@
 /datum/chemical_reaction/proc/post_reaction(var/datum/reagents/holder)
 	var/atom/container = holder.my_atom
 	if(mix_message && container && !ismob(container))
-		container.visible_message("<span class='notice'>\icon[container] [mix_message]</span>")
+		container.visible_message("<span class='notice'>[icon2html(container, viewers(container))] [mix_message]</span>")
 		playsound(container, reaction_sound, 80, 1)
 
 //obtains any special data that will be provided to the reaction products
@@ -952,7 +952,7 @@
 	var/obj/item/slime_extract/T = holder.my_atom
 	T.Uses--
 	if(T.Uses <= 0)
-		T.visible_message("\icon[T]<span class='notice'>\The [T]'s power is consumed in the reaction.</span>")
+		T.visible_message("[icon2html(T, viewers(T))]<span class='notice'>\The [T]'s power is consumed in the reaction.</span>")
 		T.SetName("used slime extract")
 		T.desc = "This extract has been used up."
 
@@ -2714,28 +2714,28 @@
 	result_amount = 3
 	minimum_temperature = 50 CELSIUS
 	maximum_temperature = (70 CELSIUS) + 100
-	mix_message = "The tea turns a bitter black"
+	mix_message = "The tea turns a bitter black."
 
 /datum/chemical_reaction/mumbaksting
 	name = "Mumbak Sting"
 	result = /datum/reagent/drink/alien/mumbaksting
 	required_reagents = list(/datum/reagent/drink/alien/unathijuice = 2, /datum/reagent/toxin = 1)
 	result_amount = 3
-	mix_message = "The toxins mix with the juice to create a dark red substance"
+	mix_message = "The toxins mix with the juice to create a dark red substance."
 
 /datum/chemical_reaction/wasgaelhi
 	name = "Wasgaelhi"
 	result = /datum/reagent/ethanol/alien/wasgaelhi
 	required_reagents = list(/datum/reagent/drink/alien/unathijuice = 2, /datum/reagent/ethanol/wine = 1)
 	result_amount = 3
-	mix_message = "The mixture turns a dark green"
+	mix_message = "The mixture turns a dull purple."
 
 /datum/chemical_reaction/kzkzaa
 	name = "Kzkzaa"
 	result = /datum/reagent/drink/alien/kzkzaa
 	required_reagents = list(/datum/reagent/drink/alien/unathijuice = 2, /datum/reagent/nutriment/protein = 1)
 	result_amount = 3
-	mix_message = "The mixture turns a dark green"
+	mix_message = "The mixture turns a deep orange."
 
 //Fruit Expansion
 

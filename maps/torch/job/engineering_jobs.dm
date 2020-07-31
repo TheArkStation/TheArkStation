@@ -162,7 +162,7 @@
 /datum/job/roboticist
 	title = "Roboticist"
 	department = "Engineering"
-	department_flag = ENG
+	department_flag = ENG|ROB
 
 	total_positions = 2
 	spawn_positions = 2
@@ -199,7 +199,7 @@
 	                    SKILL_ANATOMY      = SKILL_EXPERT)
 	skill_points = 20
 
-	access = list(access_robotics, access_robotics_engineering, access_engine, access_solgov_crew)
+	access = list(access_robotics, access_engine, access_solgov_crew)
 	minimal_access = list()
 
 /datum/job/roboticist/get_description_blurb()

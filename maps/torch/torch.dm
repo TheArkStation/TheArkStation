@@ -109,6 +109,7 @@
 	#include "language/human/misc/spacer.dm"
 
 	#include "machinery/apc_shuttle.dm"
+	#include "machinery/faxmachine.dm"
 	#include "machinery/keycard authentication.dm"
 	#include "machinery/suit_storage.dm"
 
@@ -169,6 +170,7 @@
 	#include "../away/voxship/voxship.dm"
 	#include "../away/skrellscoutship/skrellscoutship.dm"
 	#include "../away/meatstation/meatstation.dm"
+	#include "../away/miningstation/miningstation.dm"
 
 	#include "../../code/datums/music_tracks/chasing_time.dm"
 

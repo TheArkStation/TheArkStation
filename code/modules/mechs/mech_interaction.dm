@@ -17,6 +17,11 @@
 		body.MouseDrop_T(dropping, user)
 	else . = ..()
 
+/mob/living/exosuit/MouseDrop(mob/living/carbon/human/over_object) //going from assumption none of previous options are relevant to exosuit
+	if(body)
+		if(!body.MouseDrop(over_object))
+			return ..()
+	
 /mob/living/exosuit/RelayMouseDrag(src_object, over_object, src_location, over_location, src_control, over_control, params, var/mob/user)
 	if(user && (user in pilots) && user.loc == src)
 		return OnMouseDrag(src_object, over_object, src_location, over_location, src_control, over_control, params, user)
@@ -172,7 +177,7 @@
 				log_and_message_admins("used [temp_system] targetting [A]", user, src.loc)
 			//Mech equipment subtypes can add further click delays
 			var/extra_delay = 0
-			if(ME != null)
+			if(!isnull(selected_system))
 				ME = selected_system
 				extra_delay = ME.equipment_delay
 			setClickCooldown(arms ? arms.action_delay + extra_delay : 15 + extra_delay)

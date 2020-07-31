@@ -399,7 +399,7 @@
 	M.adjustToxLoss(0.5 * removed)
 
 /datum/reagent/capsaicin/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
-	if(alien == IS_DIONA)
+	if(alien == IS_DIONA || alien == IS_UNATHI)
 		return
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
@@ -742,6 +742,15 @@
 
 	glass_name = "pear juice"
 	glass_desc = "Delicious juice made from pears."
+
+/datum/reagent/drink/juice/cabbage
+	name = "Cabbage Juice"
+	description = "It's a health drink, apparently."
+	taste_description = "cabbage"
+	color = "#1fb848"
+
+	glass_name = "cabbage juice"
+	glass_desc = "It's a health drink, apparently."
 
 // Everything else
 
@@ -2760,7 +2769,7 @@
 	name = "Hrukhza Leaf Extract"
 	description = "A bitter liquid used in most recipes on Moghes."
 	taste_description = "bland, disgusting bitterness"
-	color = "#e78108"
+	color = "#345c52"
 	glass_name = "hrukhza leaf extract"
 	glass_desc = "A bitter extract from the hrukhza."
 
@@ -2776,7 +2785,7 @@
 	name = "Mumbak Sting"
 	description = "A drink made from the venom of the Yuum."
 	taste_description = "harsh and stinging sweetness"
-	color = "#7e4c2e"
+	color = "#550000"
 	glass_name = "Mumbak sting"
 	glass_desc = "A drink made from the venom of the Yuum."
 
@@ -2784,7 +2793,7 @@
 	name = "Wasgaelhi"
 	description = "Wine made from various fruits from the swamps of Moghes."
 	taste_description = "swampy fruit"
-	color = "#678e46"
+	color = "#6b596b"
 	strength = 10
 	glass_name = "wasgaelhi"
 	glass_desc = "Wine made from various fruits from the swamps of Moghes."
@@ -2794,7 +2803,7 @@
 	description = "A blend of teas from Moghes, commonly drank by Unathi."
 	taste_description = "bitter energising tea"
 	color = "#0e0900"
-	glass_name = "skiranhi tea"
+	glass_name = "skrianhi tea"
 	glass_desc = "A blend of teas from Moghes, commonly drank by Unathi."
 
 // Non-Alcoholic Drinks

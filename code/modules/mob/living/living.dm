@@ -164,7 +164,7 @@ default behaviour is:
 
 /proc/swap_density_check(var/mob/swapper, var/mob/swapee)
 	var/turf/T = get_turf(swapper)
-	if(T.density)
+	if(T?.density)
 		return 1
 	for(var/atom/movable/A in T)
 		if(A == swapper)
@@ -895,3 +895,6 @@ default behaviour is:
 
 /mob/living/proc/eyecheck()
 	return FLASH_PROTECTION_NONE
+
+/mob/living/proc/InStasis()
+	return FALSE
