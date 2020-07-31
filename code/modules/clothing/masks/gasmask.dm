@@ -72,7 +72,12 @@
 		laser = ARMOR_LASER_MINOR,
 		bio = ARMOR_BIO_RESISTANT
 		)
-
+//[ARK]
+	sprite_sheets = list(
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_mask_resomi.dmi',
+//		SPECIES_UNATHI = 'infinity/icons/mob/species/unathi/onmob_mask_unathi.dmi'
+		)
+//[/ARK]
 //In scaling order of utility and seriousness
 
 /obj/item/clothing/mask/gas/radical
@@ -225,3 +230,12 @@
 	filter_water = TRUE
 	body_parts_covered = FACE
 	w_class = 2
+//[ARK]
+	sprite_sheets = list(
+		SPECIES_VOX = 'icons/mob/species/vox/onmob_mask_vox.dmi',
+		SPECIES_VOX_ARMALIS = 'icons/mob/species/vox/onmob_mask_vox_armalis.dmi',
+		SPECIES_TAJARA = 'code_ark/icons/mob/species/tajara/mask.dmi',
+//		SPECIES_UNATHI = 'icons/mob/onmob/Unathi/mask.dmi',
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_mask_resomi.dmi',
+		)
+//[/ARK]

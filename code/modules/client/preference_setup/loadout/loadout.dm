@@ -355,6 +355,9 @@ var/list/gear_datums = list()
 	var/category
 	var/list/gear_tweaks = list() //List of datums which will alter the item after it has been spawned.
 
+	var/allowed_client_age = 0 // ark code
+	var/pda_replacement = FALSE
+
 /datum/gear/New()
 	if(HAS_FLAGS(flags, GEAR_HAS_TYPE_SELECTION|GEAR_HAS_SUBTYPE_SELECTION))
 		CRASH("May not have both type and subtype selection tweaks")

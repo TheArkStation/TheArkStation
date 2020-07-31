@@ -24,3 +24,10 @@
 	color = "#ffd700"
 	force = 1
 	attack_verb = list("smote")
+
+//[ARK]
+/obj/item/weapon/towel/equipped(var/M, var/slot)
+	..()
+	sprite_sheets = list(SPECIES_RESOMI = (slot == slot_head ? 'code_ark/icons/mob/species/resomi/onmob_head_resomi.dmi' : 'code_ark/icons/mob/species/resomi/onmob_suit_resomi.dmi'))
+
+//[/ARK]

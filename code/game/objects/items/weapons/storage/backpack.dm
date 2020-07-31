@@ -22,6 +22,13 @@
 	max_w_class = ITEM_SIZE_LARGE
 	max_storage_space = DEFAULT_BACKPACK_STORAGE
 	open_sound = 'sound/effects/storage/unzip.ogg'
+//[ARK]
+	sprite_sheets = list(
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_back_resomi.dmi',
+//		SPECIES_UNATHI = 'icons/mob/onmob/Unathi/back.dmi'
+		)
+//[/ARK]
+
 
 /obj/item/weapon/storage/backpack/equipped()
 	if(!has_extension(src, /datum/extension/appearance))
@@ -151,6 +158,11 @@
 	desc = "A sturdy military-grade backpack with low-profile straps. Designed to work well with armor."
 	icon_state = "rucksack"
 	item_state_slots = list(slot_l_hand_str = "rucksack", slot_r_hand_str = "rucksack")
+//[ARK]
+	sprite_sheets = list(
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_back_resomi.dmi'
+		)
+//[/ARK]
 
 /obj/item/weapon/storage/backpack/rucksack/blue
 	name = "blue rucksack"

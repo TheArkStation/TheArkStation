@@ -321,6 +321,14 @@
 	var/show_descs = show_descriptors_to(user)
 	if(show_descs)
 		msg += "<span class='notice'>[jointext(show_descs, "<br>")]</span>"
+	
+	//Ark
+	if(distance <= 2 && !(skipface && skipjumpsuit) && (examine_hygene != list())) //spacesuits block view and scents
+		msg += "<br>"
+		for(var/hygene_stat in examine_hygene)
+			msg += "<span class='notice'>[hygene_stat]<br></span>"
+	//!Ark
+	
 	to_chat(user, jointext(msg, null))
 
 //Helper procedure. Called by /mob/living/carbon/human/examine() and /mob/living/carbon/human/Topic() to determine HUD access to security and medical records.
@@ -349,7 +357,7 @@
 	set category = "IC"
 
 	var/list/HTML = list()
-	HTML += "<body>"
+	HTML += "<meta charset=\"UTF-8\"><body>"
 	HTML += "<tt><center>"
 	HTML += "<b>Update Flavour Text</b> <hr />"
 	HTML += "<br></center>"

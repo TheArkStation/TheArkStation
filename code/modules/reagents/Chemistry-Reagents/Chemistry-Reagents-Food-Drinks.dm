@@ -50,8 +50,13 @@
 /datum/reagent/nutriment/proc/adjust_nutrition(var/mob/living/carbon/M, var/alien, var/removed)
 	var/nut_removed = removed
 	var/hyd_removed = removed
-	if(alien == IS_UNATHI)
-		removed *= 0.1 // Unathi get most of their nutrition from meat.
+//[ARK]
+	switch(alien)
+		if(IS_RESOMI)
+			removed *= 0.8 // Resomi get a bit more nutrition from meat, a bit less from other stuff to compensate
+		if(IS_UNATHI)
+			removed *= 0.1 // Unathi get most of their nutrition from meat.
+//[/ARK]
 	if(nutriment_factor)
 		M.adjust_nutrition(nutriment_factor * nut_removed) // For hunger and fatness
 	if(hydration_factor)
@@ -77,9 +82,12 @@
 	..()
 
 /datum/reagent/nutriment/protein/adjust_nutrition(var/mob/living/carbon/M, var/alien, var/removed)
+//[ARK]
 	switch(alien)
+		if(IS_RESOMI) removed *= 1.25
 		if(IS_UNATHI) removed *= 2.25
 	M.adjust_nutrition(nutriment_factor * removed)
+//[/ARK]
 
 /datum/reagent/nutriment/protein/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien && alien == IS_SKRELL)
@@ -809,20 +817,37 @@
 		return
 	..()
 
+//[ARK]
+	if(alien == IS_TAJARA)
+		M.adjustToxLoss(0.5 * removed)
+		M.make_jittery(4) //extra sensitive to caffine
 	if(adj_temp > 0)
 		holder.remove_reagent(/datum/reagent/frostoil, 10 * removed)
 	if(volume > 15)
 		M.add_chemical_effect(CE_PULSE, 1)
 	if(volume > 45)
 		M.add_chemical_effect(CE_PULSE, 1)
+//[/ARK]
 
 /datum/reagent/nutriment/coffee/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
+//[ARK]
+	if(alien == IS_TAJARA)
+		M.adjustToxLoss(2 * removed)
+		M.make_jittery(4)
+		return
+//[/ARK]
 	M.add_chemical_effect(CE_PULSE, 2)
+
 
 /datum/reagent/drink/coffee/overdose(var/mob/living/carbon/M, var/alien)
 	if(alien == IS_DIONA)
 		return
+//[ARK]
+	if(alien == IS_TAJARA)
+		M.adjustToxLoss(4 * REM)
+		M.apply_effect(3, STUTTER)
+//[/ARK]
 	M.make_jittery(5)
 	M.add_chemical_effect(CE_PULSE, 1)
 
@@ -1380,10 +1405,27 @@
 	M.sleeping = max(0, M.sleeping - 2)
 	if(M.bodytemperature > 310)
 		M.bodytemperature = max(310, M.bodytemperature - (5 * TEMPERATURE_DAMAGE_COEFFICIENT))
+//[ARK]
+	if(alien == IS_TAJARA)
+		M.adjustToxLoss(0.5 * removed)
+		M.make_jittery(4) //extra sensitive to caffine
+
+/datum/reagent/ethanol/coffee/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+	if(alien == IS_TAJARA)
+		M.adjustToxLoss(2 * removed)
+		M.make_jittery(4)
+		return
+	..()
+//[/ARK]
 
 /datum/reagent/ethanol/coffee/overdose(var/mob/living/carbon/M, var/alien)
 	if(alien == IS_DIONA)
 		return
+//[ARK]
+	if(alien == IS_TAJARA)
+		M.adjustToxLoss(4 * REM)
+		M.apply_effect(3, STUTTER)
+//[/ARK]
 	M.make_jittery(5)
 
 /datum/reagent/ethanol/coffee/kahlua

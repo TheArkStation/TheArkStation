@@ -3,6 +3,11 @@
 	icon = 'maps/torch/icons/obj/obj_head_solgov.dmi'
 	item_icons = list(slot_head_str = 'maps/torch/icons/mob/onmob_head_solgov.dmi')
 	siemens_coefficient = 0.9
+//[ARK]
+	sprite_sheets = list(
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_head_resomi.dmi'
+		)
+//[/ARK]
 
 //Utility
 /obj/item/clothing/head/soft/solgov
@@ -21,9 +26,13 @@
 	name = "\improper Expeditionary Corps cap"
 	desc = "It's a black ballcap bearing the Expeditonary Corps crest."
 	icon_state = "expeditionsoft"
+//[ARK]
 	sprite_sheets = list(
+//		SPECIES_VOX = 'icons/mob/species/vox/head.dmi',
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_head_resomi.dmi',
 		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_head_unathi.dmi'
 		)
+//[/ARK]
 
 /obj/item/clothing/head/soft/solgov/expedition/co
 	name = "\improper Expeditionary Corps captain's cap"
@@ -223,9 +232,13 @@
 	name = "expeditionary beret"
 	desc = "A black beret belonging to the SCG Expeditionary Corps. For personnel that are more inclined towards style than safety."
 	icon_state = "beret_black"
+//[ARK]
 	sprite_sheets = list(
+//		SPECIES_VOX = 'icons/mob/species/vox/head.dmi',
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_head_resomi.dmi',
 		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_head_unathi.dmi'
 		)
+//[/ARK]
 
 /obj/item/clothing/head/beret/solgov/expedition/security
 	name = "expeditionary security beret"
@@ -387,9 +400,13 @@
 	icon = 'maps/torch/icons/obj/obj_head_solgov.dmi'
 	item_icons = list(slot_head_str = 'maps/torch/icons/mob/onmob_head_solgov.dmi')
 	starting_accessories = null
+//[ARK]
 	sprite_sheets = list(
-		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_head_helmet_unathi.dmi'
+//		SPECIES_VOX = 'icons/mob/species/vox/head.dmi',
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_head_resomi.dmi',
+		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_head_unathi.dmi'
 		)
+//[/ARK]
 
 /obj/item/clothing/head/helmet/solgov/command
 	name = "command helmet"
@@ -421,47 +438,71 @@
 /obj/item/clothing/head/helmet/space/void/engineering/alt/sol
 	icon = 'maps/torch/icons/obj/obj_head_solgov.dmi'
 	item_icons = list(slot_head_str = 'maps/torch/icons/mob/onmob_head_solgov.dmi')
+//[ARK]
 	sprite_sheets = list(
 		SPECIES_UNATHI = 'maps/torch/icons/mob/unathi/onmob_head_solgov_unathi.dmi',
 		SPECIES_SKRELL = 'maps/torch/icons/mob/skrell/onmob_head_solgov_skrell.dmi',
+		SPECIES_TAJARA = 'code_ark/icons/mob/species/tajara/helmet.dmi',
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_head_resomi.dmi'
 		)
 	sprite_sheets_obj = list(
 		SPECIES_UNATHI = 'maps/torch/icons/obj/unathi/obj_head_solgov_unathi.dmi',
 		SPECIES_SKRELL = 'maps/torch/icons/obj/skrell/obj_head_solgov_skrell.dmi',
+		SPECIES_TAJARA = 'code_ark/icons/mob/species/tajara/hats.dmi',
+		SPECIES_RESOMI = 'code_ark/icons/obj/clothing/species/resomi/obj_head_resomi.dmi'
 		)
+//[/ARK]
 
 /obj/item/clothing/head/helmet/space/void/atmos/alt/sol
 	icon = 'maps/torch/icons/obj/obj_head_solgov.dmi'
 	item_icons = list(slot_head_str = 'maps/torch/icons/mob/onmob_head_solgov.dmi')
+//[ARK]
 	sprite_sheets = list(
 		SPECIES_UNATHI = 'maps/torch/icons/mob/unathi/onmob_head_solgov_unathi.dmi',
 		SPECIES_SKRELL = 'maps/torch/icons/mob/skrell/onmob_head_solgov_skrell.dmi',
+		SPECIES_TAJARA = 'code_ark/icons/mob/species/tajara/helmet.dmi',
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_head_resomi.dmi'
 		)
 	sprite_sheets_obj = list(
 		SPECIES_UNATHI = 'maps/torch/icons/obj/unathi/obj_head_solgov_unathi.dmi',
 		SPECIES_SKRELL = 'maps/torch/icons/obj/skrell/obj_head_solgov_skrell.dmi',
+		SPECIES_TAJARA = 'code_ark/icons/mob/species/tajara/hats.dmi',
+		SPECIES_RESOMI = 'code_ark/icons/obj/clothing/species/resomi/obj_head_resomi.dmi'
 		)
+//[ARK]
 
 /obj/item/clothing/head/helmet/space/void/pilot/sol
 	icon = 'maps/torch/icons/obj/obj_head_solgov.dmi'
 	item_icons = list(slot_head_str = 'maps/torch/icons/mob/onmob_head_solgov.dmi')
+//[ARK]
 	sprite_sheets = list(
 		SPECIES_UNATHI = 'maps/torch/icons/mob/unathi/onmob_head_solgov_unathi.dmi',
 		SPECIES_SKRELL = 'maps/torch/icons/mob/skrell/onmob_head_solgov_skrell.dmi',
+		SPECIES_TAJARA = 'code_ark/icons/mob/species/tajara/helmet.dmi',
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_head_resomi.dmi'
 		)
 	sprite_sheets_obj = list(
 		SPECIES_UNATHI = 'maps/torch/icons/obj/unathi/obj_head_solgov_unathi.dmi',
 		SPECIES_SKRELL = 'maps/torch/icons/obj/skrell/obj_head_solgov_skrell.dmi',
+		SPECIES_TAJARA = 'code_ark/icons/mob/species/tajara/hats.dmi',
+		SPECIES_RESOMI = 'code_ark/icons/obj/clothing/species/resomi/obj_head_resomi.dmi'
 		)
+//[/ARK]
 
 /obj/item/clothing/head/helmet/space/void/medical/alt/sol
 	icon = 'maps/torch/icons/obj/obj_head_solgov.dmi'
 	item_icons = list(slot_head_str = 'maps/torch/icons/mob/onmob_head_solgov.dmi')
+//[ARK]
 	sprite_sheets = list(
 		SPECIES_UNATHI = 'maps/torch/icons/mob/unathi/onmob_head_solgov_unathi.dmi',
 		SPECIES_SKRELL = 'maps/torch/icons/mob/skrell/onmob_head_solgov_skrell.dmi',
+		SPECIES_TAJARA = 'code_ark/icons/mob/species/tajara/helmet.dmi',
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_head_resomi.dmi'
 		)
 	sprite_sheets_obj = list(
 		SPECIES_UNATHI = 'maps/torch/icons/obj/unathi/obj_head_solgov_unathi.dmi',
 		SPECIES_SKRELL = 'maps/torch/icons/obj/skrell/obj_head_solgov_skrell.dmi',
+		SPECIES_TAJARA = 'code_ark/icons/mob/species/tajara/hats.dmi',
+		SPECIES_RESOMI = 'code_ark/icons/obj/clothing/species/resomi/obj_head_resomi.dmi'
 		)
+//[/ARK]

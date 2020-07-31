@@ -55,7 +55,7 @@
 /obj/item/mech_component/sensors/heavy/prebuild()
 	..()
 	software = new(src)
-	software.installed_software = list(MECH_SOFTWARE_WEAPONS)
+	software.installed_software = list(MECH_SOFTWARE_WEAPONS, MECH_SOFTWARE_ADVWEAPONS)
 
 /obj/item/mech_component/chassis/heavy
 	name = "reinforced exosuit chassis"

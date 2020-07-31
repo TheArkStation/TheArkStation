@@ -81,6 +81,7 @@
 #define COLOR_ASTEROID_ROCK    "#735555"
 #define COLOR_NULLGLASS        "#ff6088"
 #define COLOR_DIAMOND          "#d8d4ea"
+#define COLOR_SFP_BLUE 		   "#2c425f" // THE ARK PROJECT CODE
 
 
 #define	PIPE_COLOR_GREY        "#808080"
@@ -110,6 +111,7 @@
 #define	COMMS_COLOR_CENTCOMM   "#5c5c7c"
 #define	COMMS_COLOR_SYNDICATE  "#6d3f40"
 #define	COMMS_COLOR_SKRELL     "#7331c4"
+#define	COMMS_COLOR_SOL_COMMAND "#0080ff" // THE ARK PROJECT CODE
 
 #define WOOD_COLOR_GENERIC     "#d5a66e"
 #define WOOD_COLOR_RICH        "#792f27"

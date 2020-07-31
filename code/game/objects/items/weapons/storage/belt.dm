@@ -13,6 +13,12 @@
 	slot_flags = SLOT_BELT
 	var/overlay_flags
 	attack_verb = list("whipped", "lashed", "disciplined")
+//[ARK]
+	sprite_sheets = list(
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_belt_resomi.dmi',
+//		SPECIES_UNATHI = 'icons/mob/onmob/Unathi/belt.dmi'
+		)
+//[/ARK]
 
 /obj/item/weapon/storage/belt/verb/toggle_layer()
 	set name = "Switch Belt Layer"

@@ -556,9 +556,12 @@ ranks - ec
 	slot = ACCESSORY_SLOT_RANK
 	gender = PLURAL
 	high_visibility = 1
+//[ARK]
 	sprite_sheets = list(
-		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_accessories_sol_unathi.dmi'
+		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_accessories_sol_unathi.dmi',
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_accessories_resomi.dmi'
 		)
+//[/ARK]
 
 /obj/item/clothing/accessory/solgov/rank/get_fibers()
 	return null

@@ -26,18 +26,43 @@
 	boot_type =  /obj/item/clothing/shoes/magboots/rig/light
 	glove_type = /obj/item/clothing/gloves/rig/light
 
+//[ARK]
+	sprite_sheets = list(
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_rig_back_resomi.dmi',
+//		SPECIES_UNATHI = 'icons/mob/onmob/Unathi/rig_back.dmi'
+		)
+//[/ARK]
+
 /obj/item/clothing/suit/space/rig/light
 	name = "suit"
 	breach_threshold = 18 //comparable to voidsuits
+//[ARK]
+	sprite_sheets = list(
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_suit_resomi.dmi',
+		SPECIES_TAJARA = 'code_ark/icons/mob/species/tajara/suit.dmi'
+		)
+//[/ARK]
 
 /obj/item/clothing/gloves/rig/light
 	name = "gloves"
 
 /obj/item/clothing/shoes/magboots/rig/light
 	name = "shoes"
+//[ARK]
+	sprite_sheets = list(
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_feet_resomi.dmi'
+	)
+//[/ARK]
 
 /obj/item/clothing/head/helmet/space/rig/light
 	name = "hood"
+//[ARK]
+	sprite_sheets = list(
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_head_resomi.dmi',
+		SPECIES_TAJARA = 'code_ark/icons/mob/species/tajara/helmet.dmi'
+		)
+	tint = 1
+//[/ARK]
 
 /obj/item/weapon/rig/light/hacker
 	name = "cybersuit control module"
@@ -120,6 +145,12 @@
 		/obj/item/rig_module/self_destruct,
 		/obj/item/rig_module/cooling_unit
 		)
+//[ARK]
+	sprite_sheets = list(
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_rig_back_resomi.dmi',
+//		SPECIES_UNATHI = 'icons/mob/onmob/Unathi/rig_back.dmi'
+		)
+//[/ARK]
 
 /obj/item/weapon/rig/light/ninja/verb/rename_suit()
 	set name = "Name Ninja Suit"
@@ -156,6 +187,11 @@
 	name = "insulated gloves"
 	siemens_coefficient = 0
 	item_flags = ITEM_FLAG_THICKMATERIAL | ITEM_FLAG_NOCUFFS
+//[ARK]
+	sprite_sheets = list(
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_hands_resomi.dmi'
+	)
+//[/ARK]
 
 /obj/item/clothing/suit/space/rig/light/ninja
 	breach_threshold = 38 //comparable to regular hardsuits

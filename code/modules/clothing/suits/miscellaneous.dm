@@ -371,6 +371,12 @@
 	icon_closed = "hoodie"
 	min_cold_protection_temperature = T0C - 20
 	cold_protection = UPPER_TORSO|LOWER_TORSO|ARMS
+//[ARK]
+	sprite_sheets = list(
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_suit_resomi.dmi',
+//		SPECIES_UNATHI = 'icons/mob/onmob/Unathi/suit.dmi'
+		)
+//[/ARK]
 
 /obj/item/clothing/suit/storage/toggle/hoodie/cti
 	name = "\improper CTI hoodie"

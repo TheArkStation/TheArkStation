@@ -10,11 +10,15 @@
 	heat_protection =    HEAD|FACE|EYES
 	cold_protection =    HEAD|FACE|EYES
 	brightness_on = 0.5
+//[ARK]
 	sprite_sheets = list(
+		SPECIES_TAJARA = 'code_ark/icons/mob/species/tajara/helmet.dmi',
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_head_resomi.dmi',
 		SPECIES_SKRELL = 'icons/mob/species/skrell/onmob_head_skrell.dmi',
 		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_head_helmet_unathi.dmi',
 		)
 	species_restricted = null
+//[/ARK]
 
 /obj/item/clothing/gloves/rig
 	name = "gauntlets"
@@ -48,9 +52,14 @@
 	breach_threshold = 38
 	resilience = 0.2
 	can_breach = 1
+//[ARK]
 	sprite_sheets = list(
-		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_suit_unathi.dmi',
+		SPECIES_TAJARA = 'code_ark/icons/mob/species/tajara/helmet.dmi',
+		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_head_helmet_unathi.dmi',
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_suit_resomi.dmi'
 		)
+//[/ARK]
+
 	var/list/supporting_limbs = list() //If not-null, automatically splints breaks. Checked when removing the suit.
 
 /obj/item/clothing/suit/space/rig/equipped(mob/M)

@@ -63,17 +63,41 @@
 
 /obj/item/clothing/head/helmet/space/rig/industrial
 	camera = /obj/machinery/camera/network/mining
-	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_UNATHI)
+//[ARK]
+	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_TAJARA,SPECIES_UNATHI)
+	sprite_sheets = list(
+//		SPECIES_UNATHI = 'icons/mob/onmob/Unathi/head.dmi',
+		SPECIES_TAJARA = 'code_ark/icons/mob/species/tajara/helmet.dmi'
+		)
+//[/ARK]
 
 /obj/item/clothing/suit/space/rig/industrial
-	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_UNATHI)
+//[ARK]
+	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_TAJARA,SPECIES_UNATHI)
+	sprite_sheets = list(
+//		SPECIES_UNATHI = 'icons/mob/onmob/Unathi/suit.dmi',
+		SPECIES_TAJARA = 'code_ark/icons/mob/species/tajara/suit.dmi'
+		)
+//[/ARK]
 
 /obj/item/clothing/shoes/magboots/rig/industrial
-	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_UNATHI)
+//[ARK]
+	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_TAJARA,SPECIES_UNATHI)
+/*	sprite_sheets = list(
+		SPECIES_UNATHI = 'icons/mob/onmob/Unathi/feet.dmi'
+		)
+*/
+//[/ARK]
 
 /obj/item/clothing/gloves/rig/industrial
-	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_UNATHI)
 	siemens_coefficient = 0
+//[ARK]
+	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_TAJARA,SPECIES_UNATHI)
+/*	sprite_sheets = list(
+		SPECIES_UNATHI = 'icons/mob/onmob/Unathi/hands.dmi'
+		)
+*/
+//[/ARK]
 
 /obj/item/weapon/rig/industrial/equipped
 
@@ -119,27 +143,33 @@
 /obj/item/clothing/head/helmet/space/rig/eva
 	light_overlay = "helmet_light_dual"
 	camera = /obj/machinery/camera/network/engineering
-	species_restricted = list(SPECIES_HUMAN,SPECIES_IPC)
+//[ARK]
+	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_UNATHI,SPECIES_TAJARA,SPECIES_IPC)
 	sprite_sheets = list(
-		SPECIES_SKRELL = 'icons/mob/species/skrell/onmob_head_skrell.dmi',
+		SPECIES_TAJARA = 'code_ark/icons/mob/species/tajara/helmet.dmi',
+//		SPECIES_SKRELL = 'icons/mob/species/skrell/onmob_head_skrell.dmi',
 		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_head_helmet_unathi.dmi'
 		)
+//[/ARK]
 
 /obj/item/clothing/suit/space/rig/eva
-	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_UNATHI,SPECIES_IPC)
+//[ARK]
+	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_UNATHI,SPECIES_TAJARA,SPECIES_IPC)
 	sprite_sheets = list(
-		SPECIES_UNATHI = 'icons/mob/species/unathi/generated/onmob_suit_unathi.dmi'
+		SPECIES_UNATHI = 'icons/mob/species/unathi/generated/onmob_suit_unathi.dmi',
+		SPECIES_TAJARA = 'code_ark/icons/mob/species/tajara/suit.dmi'
 		)
+//[/ARK]
 
 /obj/item/clothing/shoes/magboots/rig/eva
-	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_UNATHI,SPECIES_IPC)
+	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_UNATHI,SPECIES_TAJARA,SPECIES_IPC) //ARK
 	sprite_sheets = list(
 		SPECIES_UNATHI = 'icons/mob/species/unathi/generated/onmob_feet_unathi.dmi'
 		)
 
 /obj/item/clothing/gloves/rig/eva
-	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_UNATHI,SPECIES_IPC)
 	siemens_coefficient = 0
+	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_UNATHI,SPECIES_TAJARA,SPECIES_IPC) //ARK
 	sprite_sheets = list(
 		SPECIES_UNATHI = 'icons/mob/species/unathi/generated/onmob_hands_unathi.dmi'
 		)
@@ -153,6 +183,18 @@
 		/obj/item/rig_module/vision/meson,
 		/obj/item/rig_module/cooling_unit
 		)
+
+//[ARK]
+/obj/item/clothing/head/helmet/space/rig/ce
+	camera = /obj/machinery/camera/network/engineering
+
+/obj/item/clothing/suit/space/rig/ce
+
+/obj/item/clothing/gloves/rig/ce
+	siemens_coefficient = 0
+
+/obj/item/clothing/shoes/magboots/rig/ce
+//[/ARK]
 
 /obj/item/weapon/rig/ce
 	name = "advanced engineering hardsuit control module"
@@ -172,8 +214,17 @@
 	offline_vision_restriction = TINT_HEAVY
 	max_heat_protection_temperature = FIRESUIT_MAX_HEAT_PROTECTION_TEMPERATURE // this is passed to the rig suit components when deployed, including the helmet.
 
+//[ARK]
+	sprite_sheets = list(
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_rig_back_resomi.dmi',
+//		SPECIES_UNATHI = 'icons/mob/onmob/Unathi/rig_back.dmi'
+		)
+
 	helm_type = /obj/item/clothing/head/helmet/space/rig/ce
+	chest_type = /obj/item/clothing/suit/space/rig/ce
 	glove_type = /obj/item/clothing/gloves/rig/ce
+	boot_type = /obj/item/clothing/shoes/magboots/rig/ce
+//[/ARK]
 
 	allowed = list(/obj/item/weapon/gun,/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/device/suit_cooling_unit,/obj/item/weapon/storage/ore,/obj/item/weapon/storage/toolbox,/obj/item/weapon/storage/briefcase/inflatable,/obj/item/weapon/inflatable_dispenser,/obj/item/device/t_scanner,/obj/item/weapon/pickaxe,/obj/item/weapon/rcd)
 
@@ -194,11 +245,6 @@
 		/obj/item/rig_module/cooling_unit
 		)
 
-/obj/item/clothing/head/helmet/space/rig/ce
-	camera = /obj/machinery/camera/network/engineering
-
-/obj/item/clothing/gloves/rig/ce
-	siemens_coefficient = 0
 
 /obj/item/weapon/rig/hazmat
 	name = "\improper AMI control module"
@@ -229,16 +275,39 @@
 /obj/item/clothing/head/helmet/space/rig/hazmat
 	light_overlay = "helmet_light_dual"
 	camera = /obj/machinery/camera/network/research
-	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_UNATHI)
+//[ARK]
+	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_TAJARA,SPECIES_UNATHI)
+	sprite_sheets = list(
+//		SPECIES_UNATHI = 'icons/mob/onmob/Unathi/head.dmi',
+		SPECIES_TAJARA = 'code_ark/icons/mob/species/tajara/helmet.dmi'
+		)
+//[/ARK]
 
 /obj/item/clothing/suit/space/rig/hazmat
-	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_UNATHI)
+//[ARK]
+	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_TAJARA,SPECIES_UNATHI)
+	sprite_sheets = list(
+//		SPECIES_UNATHI = 'icons/mob/onmob/Unathi/suit.dmi',
+		SPECIES_TAJARA = 'code_ark/icons/mob/species/tajara/suit.dmi'
+		)
+//[/ARK]
 
 /obj/item/clothing/shoes/magboots/rig/hazmat
-	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_UNATHI)
+//[ARK]
+	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_TAJARA,SPECIES_UNATHI)
+/*	sprite_sheets = list(
+		SPECIES_UNATHI = 'icons/mob/onmob/Unathi/feet.dmi'
+		)
+*/
+//[/ARK]
 
 /obj/item/clothing/gloves/rig/hazmat
-	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_UNATHI)
+//[ARK]
+	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_TAJARA,SPECIES_UNATHI)
+	sprite_sheets = list(
+//		SPECIES_UNATHI = 'icons/mob/onmob/Unathi/hands.dmi'
+		)
+//[/ARK]
 
 /obj/item/weapon/rig/hazmat/equipped
 
@@ -274,32 +343,54 @@
 	allowed = list(/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/device/suit_cooling_unit,/obj/item/weapon/storage/firstaid,/obj/item/device/scanner/health,/obj/item/stack/medical,/obj/item/roller,/obj/item/auto_cpr,/obj/item/weapon/inflatable_dispenser)
 
 	req_access = list(access_medical_equip)
+//[ARK]
+	sprite_sheets = list(
+//		SPECIES_UNATHI = 'icons/mob/onmob/Unathi/rig_back.dmi',
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_rig_back_resomi.dmi'
+		)
+//[/ARK]
 
 /obj/item/clothing/head/helmet/space/rig/medical
 	camera = /obj/machinery/camera/network/medbay
-	species_restricted = list(SPECIES_HUMAN, SPECIES_UNATHI, SPECIES_SKRELL)
+//[ARK]
+	species_restricted = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_TAJARA, SPECIES_UNATHI, SPECIES_RESOMI)
 	sprite_sheets = list(
+		SPECIES_TAJARA = 'code_ark/icons/mob/species/tajara/helmet.dmi',
 		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_head_helmet_unathi.dmi',
 		SPECIES_SKRELL = 'icons/mob/species/skrell/onmob_head_skrell.dmi',
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_head_resomi.dmi'
 		)
+//[/ARK]
 
 /obj/item/clothing/suit/space/rig/medical
-	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL, SPECIES_UNATHI)
+//[ARK]
+	species_restricted = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_TAJARA, SPECIES_UNATHI, SPECIES_RESOMI)
 	sprite_sheets = list(
-		SPECIES_UNATHI = 'icons/mob/species/unathi/generated/onmob_suit_unathi.dmi'
+		SPECIES_TAJARA = 'code_ark/icons/mob/species/tajara/suit.dmi',
+		SPECIES_UNATHI = 'icons/mob/species/unathi/generated/onmob_suit_unathi.dmi',
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_suit_resomi.dmi'
 		)
+//[/ARK]
 
 /obj/item/clothing/shoes/magboots/rig/medical
-	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL, SPECIES_UNATHI)
+//[ARK]
+	species_restricted = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_TAJARA, SPECIES_UNATHI, SPECIES_RESOMI)
 	sprite_sheets = list(
-		SPECIES_UNATHI = 'icons/mob/species/unathi/generated/onmob_feet_unathi.dmi'
+		SPECIES_UNATHI = 'icons/mob/species/unathi/generated/onmob_feet_unathi.dmi',
+		SPECIES_TAJARA = 'code_ark/icons/mob/species/tajara/feet.dmi',
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_feet_resomi.dmi'
 		)
+//[/ARK]
 
 /obj/item/clothing/gloves/rig/medical
-	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL, SPECIES_UNATHI)
+//[ARK]
+	species_restricted = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_TAJARA, SPECIES_UNATHI, SPECIES_RESOMI)
 	sprite_sheets = list(
-		SPECIES_UNATHI = 'icons/mob/species/unathi/generated/onmob_hands_unathi.dmi'
+		SPECIES_UNATHI = 'icons/mob/species/unathi/generated/onmob_hands_unathi.dmi',
+		SPECIES_TAJARA = 'code_ark/icons/mob/species/tajara/hands.dmi',
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_hands_resomi.dmi'
 		)
+//[/ARK]
 
 /obj/item/weapon/rig/medical/equipped
 
@@ -336,20 +427,57 @@
 	glove_type = /obj/item/clothing/gloves/rig/hazard
 
 	allowed = list(/obj/item/weapon/gun,/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/weapon/handcuffs,/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/device/suit_cooling_unit,/obj/item/weapon/melee/baton)
+//[ARK]
+	sprite_sheets = list(
+//		SPECIES_UNATHI = 'icons/mob/onmob/Unathi/rig_back.dmi'
+		)
+//[/ARK]
 
 /obj/item/clothing/head/helmet/space/rig/hazard
 	light_overlay = "helmet_light_dual"
 	camera = /obj/machinery/camera/network/security
-	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_UNATHI)
+//[ARK]
+	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_TAJARA,SPECIES_UNATHI, SPECIES_RESOMI)
+	sprite_sheets = list(
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_head_resomi.dmi',
+//		SPECIES_UNATHI = 'icons/mob/onmob/Unathi/head.dmi',
+//		SPECIES_SCRELL = 'icons/mob/species/skrell/helmet.dmi',
+		SPECIES_TAJARA = 'code_ark/icons/mob/species/tajara/helmet.dmi'
+		)
+//[/ARK]
 
 /obj/item/clothing/suit/space/rig/hazard
-	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_UNATHI)
+//[ARK]
+	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_TAJARA,SPECIES_UNATHI, SPECIES_RESOMI)
+	sprite_sheets = list(\
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_suit_resomi.dmi',
+//		SPECIES_UNATHI = 'icons/mob/onmob/Unathi/suit.dmi',
+//		SPECIES_SCRELL = 'icons/mob/species/skrell/suit.dmi',
+		SPECIES_TAJARA = 'code_ark/icons/mob/species/tajara/suit.dmi'
+		)
+//[/ARK]
 
 /obj/item/clothing/shoes/magboots/rig/hazard
-	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_UNATHI)
+//[ARK]
+	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_TAJARA,SPECIES_UNATHI, SPECIES_RESOMI)
+	sprite_sheets = list(
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_feet_resomi.dmi',
+//		SPECIES_UNATHI = 'icons/mob/onmob/Unathi/feet.dmi',
+//		SPECIES_SCRELL = 'icons/mob/species/skrell/feet.dmi',
+		SPECIES_TAJARA = 'code_ark/icons/mob/species/tajara/feet.dmi'
+		)
+//[/ARK]
 
 /obj/item/clothing/gloves/rig/hazard
-	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_UNATHI)
+//[ARK]
+	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_TAJARA,SPECIES_UNATHI, SPECIES_RESOMI)
+	sprite_sheets = list(
+		SPECIES_RESOMI = 'code_ark/icons/mob/species/resomi/onmob_hands_resomi.dmi',
+//		SPECIES_UNATHI = 'icons/mob/onmob/Unathi/hands.dmi',
+//		SPECIES_SCRELL = 'icons/mob/species/skrell/hands.dmi',
+		SPECIES_TAJARA = 'code_ark/icons/mob/species/tajara/hands.dmi'
+		)
+//[/ARK]
 
 /obj/item/weapon/rig/hazard/equipped
 

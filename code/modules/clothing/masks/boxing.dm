@@ -10,9 +10,12 @@
 	down_icon_state = "balaclava_r"
 	pull_mask = 1
 	w_class = ITEM_SIZE_SMALL
+//[ARK]
 	sprite_sheets = list(
 		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_mask_unathi.dmi',
+		SPECIES_TAJARA = 'code_ark/icons/mob/species/tajara/mask.dmi',
 		)
+//[/ARK]
 
 /obj/item/clothing/mask/balaclava/tactical
 	name = "green balaclava"

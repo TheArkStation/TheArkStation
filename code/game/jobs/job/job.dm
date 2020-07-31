@@ -35,6 +35,8 @@
 	var/announced = TRUE                  //If their arrival is announced on radio
 	var/latejoin_at_spawnpoints           //If this job should use roundstart spawnpoints for latejoin (offstation jobs etc)
 
+	var/forced_spawnpoint
+
 	var/hud_icon						  //icon used for Sec HUD overlay
 
 	var/min_skill = list()				  //Minimum skills allowed for the job. List should contain skill (as in /decl/hierarchy/skill path), with values which are numbers.
@@ -417,6 +419,9 @@
 	var/mob/H = C.mob
 	var/spawnpoint = C.prefs.spawnpoint
 	var/datum/spawnpoint/spawnpos
+
+	if(forced_spawnpoint)
+		spawnpoint = forced_spawnpoint
 
 	if(spawnpoint == DEFAULT_SPAWNPOINT_ID)
 		spawnpoint = GLOB.using_map.default_spawn

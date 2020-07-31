@@ -1,0 +1,142 @@
+<style type="text/css">
+	table.wideTable   {
+		width:100%;
+	}
+
+</style>
+
+
+{{if data.autodoc}}
+	{{if data.auto}}
+		{{:helper.link('Automatic', '', { 'switch' : 1})}}
+	{{else}}
+		{{:helper.link('Manual', '', { 'switch' : 1})}}
+	{{/if}}
+	<br>
+	<br>
+	Overall patient status:{{:helper.link('eject', '', { 'eject' : 1})}}<br>
+	{{if data.dead}}
+		<h2><span class='bad'>DEAD</span>h2>
+	{{else}}
+		{{if data.health < 0}}
+			<h2><span class='bad'>Critical</span></h2>
+		{{else}}
+			{{:helper.displayBar(data.health, 0, data.mhealth, (data.relat >= 70) ? 'good' : (data.relat >= 30) ? 'average' : 'bad')}}
+		{{/if}}
+	{{/if}}
+	<br>
+	<br>
+	<table>
+		<tr><td>{{:helper.link('Manual control', '', { 'Control' : 1})}}</td>
+		<td>{{:helper.link('Queue', '', { 'Que' : 1})}}</td>
+		<td>{{:helper.link('Settings', '', { 'Settings' : 1})}}</td></tr>
+	</table><br><hr>
+{{else}}
+	<h1><center>{{:helper.link('ERROR Autodoc is not connected', 'refresh', { 'Find Autodoc' : 1})}}</center></h1>
+{{/if}}
+
+{{if data.window == 1}}
+	<b>Manual control mode</b><br>
+	Set stasis: <br>{{:helper.link(data.stasis, '', { 'setstasis' : 1})}} <br>
+	Anestesia:<br>
+	{{if data.anestesia}}
+		{{:helper.link('ON', '', { 'anest' : 1})}}
+	{{else}}
+		{{:helper.link('OFF', '', { 'anest' : 1})}}
+	{{/if}}
+	<br>
+	<br>
+	<b>Organ data:</b>
+	<table class='wideTable'><tbody>
+		<tr><td>
+		<table>
+		{{for data.organs}}
+			<tr><td>{{:helper.link(value.name, '', { 'SelectLimb' : value.name})}}:
+				{{for value.problems :problem:problemKey}}
+					{{:problem}}
+				{{empty}}
+					healphy
+				{{/for}}<br>
+			<table>
+				{{for value.internal :internal:internalKey}}
+					<tr><td>{{:helper.link(internal.name, '', { 'SelectLimb' : internal.name})}}:
+					 {{for internal.intproblems :ipro:iproKey}}
+						{{:ipro}}
+					{{empty}}
+						healphy						
+					{{/for}} 
+					</td></tr>  
+				{{/for}}
+				{{for value.implants :impl:implKey}}
+					<tr><td>{{:helper.link(impl.name, '', { 'SelectLimb' : impl.id})}}: inorganic object </td></tr>
+				{{/for}}
+			</table> 
+			</td></tr>
+		{{empty}}
+			<tr><td><b>ERROR</b></td></tr>
+		{{/for}}
+		</table>
+		</td>
+		<td>
+		<table>
+			<tr><td>{{:helper.link('Reanimate heart', '', { 'Defib' : 1})}}</td></tr>
+			{{if data.selected}}
+				<tr><td>Possible operations for {{:data.selected}}: </td></tr>
+				<tr><td>{{:helper.link('Imlant or transplant a thing', '', { 'TranspO' : data.selectedlimb})}}</td></tr>
+				<tr><td>{{:helper.link('Amputate/Remove', '', { 'RemoveO' : data.selectedlimb})}}</td></tr>
+				{{for data.selected_operations}}
+					{{if value == "damaged"}}
+						<tr><td>{{:helper.link('Mend tissue', '', { 'HealO' : data.selectedlimb})}}</td></tr>
+					{{/if}}
+					{{if value == "infected"}}
+						<tr><td>{{:helper.link('Treat infection', '', { 'PuriO' : data.selectedlimb})}}</td></tr>
+					{{/if}}
+					{{if value == "broken bones"}}
+						<tr><td>{{:helper.link('Mend bones', '', { 'BoneO' : data.selectedlimb})}}</td></tr>
+					{{/if}}
+					{{if value == "disfigured face"}}
+						<tr><td>{{:helper.link('Facial plastic surgery', '', { 'FaceO' : data.selectedlimb})}}</td></tr>
+					{{/if}}
+					{{if value == "damaged artery"}}
+						<tr><td>{{:helper.link('Cauterize artery', '', { 'VeinO' : data.selectedlimb})}}</td></tr>
+					{{/if}}
+					{{if value == "necro"}}
+						<tr><td>{{:helper.link('Remove necrosis', '', { 'NecrO' : data.selectedlimb})}}</td></tr>
+					{{/if}}
+					{{if value == "bleed"}}
+						<tr><td>{{:helper.link('Clamp veins', '', { 'BandO' : data.selectedlimb})}}</td></tr>
+					{{/if}}
+					{{if value == "implant"}}
+						<tr><td>{{:helper.link('Remove inorganic objects', '', { 'ImplO' : data.selectedlimb})}}</td></tr>
+					{{/if}}
+				{{/for}}
+			{{/if}}
+		</table>
+		</td>
+	</tbody></table>
+{{/if}}
+
+{{if data.window == 2}}
+	<b>Operations queue:</b><br>
+
+{{/if}}
+{{if data.window == 3}}
+	<b>Settings:</b><br>
+	<table>
+		<tr>
+		<td>
+		<table>
+			<tr><td>Permitted Implants:</td></tr>
+			{{for data.PermittedI}}
+				<tr><td>{{:value.name}} {{:helper.link('Remove', '', { 'RemoveImp' : value.name})}} </td></tr>
+			{{/for}}
+		</table>
+		</td>
+	<!--	<td>
+		<table>
+			<tr><td>Priority:</td></tr>
+		</table>
+		</td> -->
+		</tr>
+	</table>
+{{/if}}
