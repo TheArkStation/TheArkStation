@@ -45,3 +45,13 @@
 /obj/machinery/door/airlock/multi_tile/glass/sfp
 	door_color = COLOR_SFP_BLUE
 	stripe_color = COLOR_WHITE
+
+// PORT SERVICES
+
+/obj/machinery/door/airlock/port
+	door_color = COLOR_DARK_BROWN
+	stripe_color = COLOR_SILVER
+
+/obj/machinery/door/airlock/glass/port
+	door_color = COLOR_DARK_BROWN
+	stripe_color = COLOR_SILVER

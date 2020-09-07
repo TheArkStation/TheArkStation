@@ -130,11 +130,11 @@
 		/decl/emote/human/deathgasp,
 		/decl/emote/audible/giggle,
 		/decl/emote/audible/scream,
-		/decl/emote/visible/airguitar,
+//		/decl/emote/visible/airguitar, (бренчит в воздухе и болтает головой словно шимпанзе. Без комментариев)
 		/decl/emote/visible/blink_r,
 		/decl/emote/visible/bow,
-		/decl/emote/visible/flap,
-		/decl/emote/visible/aflap,
+//		/decl/emote/visible/flap, (Человек не умеет хлопать крыльями. С какого Воре вы достали это?)
+//		/decl/emote/visible/aflap, (сердито хлопает крыльями? Человек?)
 		/decl/emote/visible/drool,
 		/decl/emote/visible/eyebrow,
 		/decl/emote/visible/twitch,
@@ -162,7 +162,7 @@
 		/decl/emote/visible/alook,
 		/decl/emote/visible/eroll,
 		/decl/emote/visible/hbow,
-		/decl/emote/visible/hip,
+//		/decl/emote/visible/hip, (Без понятия что это)
 		/decl/emote/visible/holdup,
 		/decl/emote/visible/crub,
 		/decl/emote/visible/erub,
@@ -183,8 +183,8 @@
 		/decl/emote/audible/clap,
 		/decl/emote/visible/bow,
 		/decl/emote/visible/salute,
-		/decl/emote/visible/flap,
-		/decl/emote/visible/aflap,
+//		/decl/emote/visible/flap, (Роботы не умеют хлопать крыльями, вернее, в игре нет роботов с крыльями)
+//		/decl/emote/visible/aflap,(Роботы не умеют сердито хлопать крыльями)
 		/decl/emote/visible/twitch,
 		/decl/emote/visible/twitch_v,
 		/decl/emote/visible/nod,

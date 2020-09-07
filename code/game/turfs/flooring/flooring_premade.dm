@@ -384,6 +384,8 @@
 	icon_state = "water"
 	turf_flags = TURF_IS_WET
 
+	var/overlay_deepness = "overlay-deep" //ARK
+
 /turf/simulated/floor/beach/water/is_flooded(lying_mob, absolute)
 	. = absolute ? ..() : lying_mob
 
@@ -392,10 +394,12 @@
 
 /turf/simulated/floor/beach/water/ocean
 	icon_state = "seadeep"
+	overlay_deepness = "overlay-deepf"
 
 /turf/simulated/floor/beach/water/New()
 	..()
-	overlays += image("icon"='icons/misc/beach.dmi',"icon_state"="water5","layer"=MOB_LAYER+0.1)
+//ARK	overlays += image("icon"='icons/misc/beach.dmi',"icon_state"="water5","layer"=MOB_LAYER+0.1)
+	overlays += image(icon = 'code_ark/icons/misc/beach.dmi', icon_state = overlay_deepness, layer = MOB_LAYER + 0.1) //ARK
 
 /turf/simulated/floor/crystal
 	name = "crystal floor"

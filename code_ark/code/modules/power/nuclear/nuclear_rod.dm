@@ -1,8 +1,4 @@
 GLOBAL_LIST_INIT(nrods, list())
-#define ROD_CONNECT_DIST 8
-#define COOLING_COEFF 10
-#define HEATING_COEFF 1200
-#define SEALED_RAD_COEFF 0
 
 /obj/machinery/power/nuclear_rod
 	name = "Nuclear rod"
@@ -14,56 +10,27 @@ GLOBAL_LIST_INIT(nrods, list())
 	var/sealed = FALSE
 	use_power = 0
 	var/accepted_rads = 0
-	var/produced_neutrons = 0
-	var/reaction_capability
-	var/rodtemp = 293 //K
+	var/own_rads = 0
+	var/reaction_rads
+	var/rodtemp = 293
+	var/sealcoeff = 0
+	var/raddecay = 0.003
 	var/list/reactants = list()
 	var/integrity = 100
-	var/broken = FALSE
+	var/broken = 0
+	var/thermalkoeff = 360  //Here is the coefficients, I added them for ingame reactor cinfigurations, if reactor is working correctly, they can be replaced with integers
+	var/radkoeff = 65
+	var/raddeccoeff = 121
+	var/thermaldecaycoeff = 10
 	var/obj/item/weapon/nuclearfuel/rod/F = null
 	var/list/possible_reactions = new /list(0)
-	//kinda ugly, but supposed to work
-	var/obj/machinery/power/nuclear_rod/reactor_host = null
-	var/list/connected_rods = null
-	//
-	var/rod_processed = FALSE
-	var/reactor_processed = FALSE
-
 
 /obj/machinery/power/nuclear_rod/Initialize()
 	. = ..()
 	GLOB.nrods += src
-	var/need_new_reactor = TRUE
-	for(var/obj/machinery/power/nuclear_rod/N in GLOB.nrods)
-		if(N.connected_rods != null)
-			need_new_reactor = FALSE
-			reactor_host = N
-			N.connected_rods += src
-	if(need_new_reactor)
-		connected_rods = list()
-		reactor_host = src
-		connected_rods += src
-		for(var/obj/machinery/power/nuclear_rod/N in GLOB.nrods)
-			if(get_dist(src, N) <= ROD_CONNECT_DIST)
-				N.reactor_host = src
-				connected_rods += N
-
-
 
 /obj/machinery/power/nuclear_rod/Destroy()
 	GLOB.nrods -= src
-	if(reactor_host != null)
-		reactor_host.connected_rods -= src
-	else
-		connected_rods -= src
-		var/obj/machinery/power/nuclear_rod/closest_rod = null
-		var/dist = ROD_CONNECT_DIST + 1
-		for(var/obj/machinery/power/nuclear_rod/N in connected_rods)
-			if(get_dist(N, src) < dist)
-				closest_rod = N
-				dist = get_dist(N, src)
-		closest_rod.connected_rods = connected_rods
-		closest_rod.reactor_host = null
 	return ..()
 
 /obj/machinery/power/nuclear_rod/examine(mob/user)
@@ -147,32 +114,36 @@ GLOBAL_LIST_INIT(nrods, list())
 		broken = 1
 		reactants = list()
 		message_admins("[src] just molten down!")
-		produced_neutrons = 2000
-
+		own_rads = 2000
 
 /obj/machinery/power/nuclear_rod/Process()     // Here is main purpouse of the rod - heating and radiating.
-	if(!Process_Rod())
-		message_admins("Something went terribly wrong with [src] processing")
+	React()
 	if(rodtemp < 0)
 		rodtemp = 0
 	if(F && !reactants.len)
 		reactants = F.reactants
 		qdel(F)
-
+	var/raddecay = rand((raddeccoeff * 0.95), raddeccoeff)
 	var/datum/gas_mixture/environment = loc.return_air()
 	if(sealed == 0)
 		if(rodtemp > 500)
 			set_light(0.6, 1, 7)
-		SSradiation.radiate(src, produced_neutrons)
-		var/ratio = min((COOLING_COEFF / 2), (environment.return_pressure()/ONE_ATMOSPHERE))
+		var/emitted = own_rads/(rodtemp+1)*(rodtemp+300)
+		SSradiation.radiate(src, emitted)
+		var/ratio = min((thermaldecaycoeff / 2), (environment.return_pressure()/ONE_ATMOSPHERE))
 		var/chamb_temp = environment.temperature
-		if ((rodtemp > chamb_temp) && ((rodtemp - (rodtemp-chamb_temp) * ratio / COOLING_COEFF) > 0))
-			environment.add_thermal_energy((rodtemp-chamb_temp)*ratio* HEATING_COEFF)
-			rodtemp -= (rodtemp-chamb_temp) * ratio / COOLING_COEFF
+		if ((rodtemp > chamb_temp) && ((rodtemp -= (rodtemp-chamb_temp) * ratio / thermaldecaycoeff) > 0))
+			environment.add_thermal_energy((rodtemp-chamb_temp)*ratio*1200)
+			rodtemp -= (rodtemp-chamb_temp) * ratio / thermaldecaycoeff
 		else
 			rodtemp += (chamb_temp - rodtemp) * ratio / 20
 	else
-		SSradiation.radiate(src, round (produced_neutrons * SEALED_RAD_COEFF))
+		SSradiation.radiate(src, round (own_rads * sealcoeff))
+	own_rads = own_rads/raddecay*100
+	if(own_rads > 5000)
+		own_rads -= own_rads/raddecay*10
+	if(reaction_rads > 5)
+		reaction_rads = reaction_rads/(rand(191,211))/(rodtemp + 500)*10000
 	check_state()
 	update_icon()
 
@@ -196,48 +167,79 @@ GLOBAL_LIST_INIT(nrods, list())
 		else
 			icon_state = "sealed_rod"
 
+/obj/machinery/power/nuclear_rod/proc/AddReact(var/name, var/quantity = 1)  //Just put reactants back in rod.
+	if(name in reactants)
+		reactants[name] += quantity
+	else
+		reactants.Add(name)
+		reactants[name] = quantity
 
-/obj/machinery/power/nuclear_rod/proc/Process_Rod() //This proc is quite baggy, so not be suprised by some strange shit, that certanly WILL happen, if you do not fix it.
-	//at first, calculate neutron input
-	if(reactor_host.reactor_processed == FALSE && rod_processed == FALSE)
-		var/all_processed = TRUE
-		rod_processed = TRUE
-		for(var/obj/machinery/power/nuclear_rod/N in reactor_host.connected_rods)
-			if(N.rod_processed == FALSE)
-				all_processed = FALSE
-				var/turf/T = get_step_to(src, N)
-				var/turf/finalturf = get_step(get_step(N, WEST), EAST)
-				var/neutron_loss = max(get_dist(src, finalturf)**2, 1)
-				while(T != finalturf)
-					if(locate(/obj/machinery/control_rod) in T)
-						var/obj/machinery/control_rod/Cr = locate(/obj/machinery/control_rod) in T
-						neutron_loss *= Cr.rod_length + 1
+/obj/machinery/power/nuclear_rod/proc/React() //This proc is quite baggy, so not be suprised by some strange shit, that certanly WILL happen, if you do not fix it.
+	possible_reactions = list()
+	if((SSradiation.get_rads_at_turf(get_turf(src)) - own_rads) > 0)
+		reaction_rads += (SSradiation.get_rads_at_turf(get_turf(src)) - own_rads)
+	if (reaction_rads < 0)
+		reaction_rads = 0
 
-					else if(istype(T, /turf/simulated/wall))
-						neutron_loss *= 20
+	if(reactants.len)
+		var/list/produced_reactants = new /list(0)
+		var/list/allreactions = decls_repository.get_decls_of_subtype(/decl/nuclear_reaction)
+		for(var/decl in allreactions)
+			var/decl/nuclear_reaction/p_reaction = allreactions[decl]
+			if(!p_reaction.substance || (p_reaction.type in possible_reactions))
+				continue
+			if(reactants[p_reaction.substance] && (reaction_rads >= p_reaction.required_rads))
+				possible_reactions += p_reaction.type
+		while(possible_reactions.len)
+			var/cur_reaction_type = pick_n_take(possible_reactions)
+			var/decl/nuclear_reaction/cur_reaction = new cur_reaction_type
+			var/max_num_reactants = 0
+			if(reaction_rads < cur_reaction.required_rads)
+				continue
 
-					T = get_step_to(T, finalturf)
+			if(reactants[cur_reaction.substance] > 0.000001)  //To eliminate especially "weak" reactions
+				if(cur_reaction.required_rads > 0)
+					max_num_reactants = (1 + reaction_rads/cur_reaction.required_rads) * reactants[cur_reaction.substance] / 80000
+				else
+					max_num_reactants = reactants[cur_reaction.substance] / 2000
+			else
+				max_num_reactants =	reactants[cur_reaction.substance]
+			var/amount_reacting = rand((max_num_reactants * 0.96), max_num_reactants)//This value is sometimes manages to get negative
+			if(amount_reacting <= 0)
+				continue
 
-				reaction_capability += N.produced_neutrons / neutron_loss
-				N.reaction_capability += produced_neutrons / neutron_loss
+			if( reactants[cur_reaction.substance] - amount_reacting >= 0 )
+				reactants[cur_reaction.substance] -= amount_reacting
+			else
+				amount_reacting = reactants[cur_reaction.substance]
+				reactants[cur_reaction.substance] = 0
 
+			if(((amount_reacting * cur_reaction.heat_production * thermalkoeff/9) < 5000) && ((amount_reacting * cur_reaction.heat_production) > 0)) //Change coefficients to configure the rod thermal output. DO NOT forget to doblicate it into if operator.
+				if(((rodtemp + amount_reacting * cur_reaction.heat_production * thermalkoeff) < 3000) || ((amount_reacting * cur_reaction.heat_production * 320) < 250))
+					rodtemp += amount_reacting * cur_reaction.heat_production * thermalkoeff // Temperature increase. Stronger reaction = more temperature.
+				else
+					if(((rodtemp + amount_reacting * cur_reaction.heat_production * thermalkoeff/3) < 4000) || ((amount_reacting * cur_reaction.heat_production * 100) < 200))
+						rodtemp += amount_reacting * cur_reaction.heat_production * thermalkoeff/3  
+					else
+						rodtemp += amount_reacting * cur_reaction.heat_production * thermalkoeff / 9
 
-		if(all_processed)
-			reactor_host.reactor_processed = TRUE
+			if(own_rads < 500) //Same as above, but with radiation.
+				own_rads += amount_reacting * cur_reaction.radiation * radkoeff  //Coefficients are declared in define of the rod.
+			else if(own_rads < 2000)
+				own_rads += amount_reacting * cur_reaction.radiation * radkoeff/2
+			else if(own_rads < 7000)
+				own_rads += amount_reacting * cur_reaction.radiation * radkoeff/6
 
-	else if(reactor_host.reactor_processed == TRUE && rod_processed == TRUE)
-		rod_processed = FALSE
-		var/all_reacted = TRUE
-		for(var/obj/machinery/power/nuclear_rod/N in reactor_host.connected_rods)
-			if(N.rod_processed == TRUE)
-				all_reacted = FALSE
-
-		if(all_reacted)
-			reactor_host.reactor_processed = FALSE
-		produced_neutrons = 0
-		// then reactions themselves
-		for(var/decl/nuclear_reaction/R in decls_repository.get_decls_of_subtype(/decl/nuclear_reaction))
-			if(!R.React(src, produced_neutrons))
-				message_admins("something went terribly wrong with reaction processing in [src]")
-
+			for(var/pr_reactant in cur_reaction.products)   //Well, this code is mostly copied from R-ust and chemistry, so you can look there for better explanations
+				var/success = 0
+				for(var/check_reactant in produced_reactants)
+					if(check_reactant == pr_reactant)
+						produced_reactants[pr_reactant] += cur_reaction.products[pr_reactant] * amount_reacting
+						success = 1
+						break
+				if(!success)
+					produced_reactants[pr_reactant] = cur_reaction.products[pr_reactant] * amount_reacting
+		//	possible_reactions -= cur_reaction.type
+		for(var/prreactant in produced_reactants)
+			AddReact(prreactant, produced_reactants[prreactant])  //Look at AddReact() for details
 	return 1

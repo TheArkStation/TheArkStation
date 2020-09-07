@@ -1,3 +1,5 @@
+var/list/submap_turfs_with_decals = list() // ARK
+
 /datum/map_template
 	var/name = "Default Template Name"
 	var/id = null // All maps that should be loadable during runtime needs an id
@@ -40,6 +42,11 @@
 	return TRUE
 
 /datum/map_template/proc/init_atoms(var/list/atoms)
+	if(GAME_STATE < RUNLEVEL_GAME) // ARK
+		for(var/turf/T in atoms)
+			if(istype(T) && (locate(/obj/effect/floor_decal) in T.contents))
+				submap_turfs_with_decals += T
+
 	if (SSatoms.atom_init_stage == INITIALIZATION_INSSATOMS)
 		return // let proper initialisation handle it later
 

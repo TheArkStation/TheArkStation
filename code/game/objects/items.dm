@@ -376,6 +376,17 @@ var/list/global/slot_flags_enumeration = list(
 		if(!H.slot_is_accessible(slot, src, _user))
 			return 0
 
+	
+	if (!force && istype(src, /obj/item/clothing))
+		var/obj/item/clothing/SC = src
+		var/bulky = SC.get_bulky_coverage() //disallow bulky things from covering one another
+		if (bulky)
+			for (var/obj/item/clothing/C in H.get_equipped_items())
+				if (C.get_bulky_coverage() & bulky)
+					if (!disable_warning)
+						to_chat(H, SPAN_WARNING("\The [SC] is too bulky to wear with \the [C]."))
+					return FALSE
+
 	//Lastly, check special rules for the desired slot.
 	switch(slot)
 		if(slot_l_ear, slot_r_ear)
@@ -431,16 +442,12 @@ var/list/global/slot_flags_enumeration = list(
 				return 0
 			if(H.w_uniform && (slot_w_uniform in mob_equip))
 				var/obj/item/clothing/under/uniform = H.w_uniform
-				if(uniform && !uniform.can_attach_accessory(src))
-					if (!disable_warning)
-						to_chat(H, "<span class='warning'>You cannot equip \the [src] to \the [uniform].</span>")
+				if(uniform && !uniform.can_attach_accessory(src, disable_warning ? null : H))
 					return 0
 				else return 1
 			if(H.wear_suit && (slot_wear_suit in mob_equip))
 				var/obj/item/clothing/suit/suit = H.wear_suit
-				if(suit && !suit.can_attach_accessory(src))
-					if (!disable_warning)
-						to_chat(H, "<span class='warning'>You cannot equip \the [src] to \the [suit].</span>")
+				if(suit && !suit.can_attach_accessory(src, disable_warning ? null : H))
 					return 0
 
 	return 1
@@ -808,9 +815,9 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 
 /obj/item/proc/get_examine_line()
 	if(blood_color)
-		. = SPAN_WARNING("[icon2html(src, viewers(src))] [gender==PLURAL?"some":"a"] <font color='[blood_color]'>stained</font> [src]")
+		. = SPAN_WARNING("[icon2html(src, viewers(get_turf(src)))] [gender==PLURAL?"some":"a"] <font color='[blood_color]'>stained</font> [src]")
 	else
-		. = "[icon2html(src, viewers(src))] \a [src]"
+		. = "[icon2html(src, viewers(get_turf(src)))] \a [src]"
 	var/ID = GetIdCard()
 	if(ID)
 		. += "  <a href='?src=\ref[ID];look_at_id=1'>\[Look at ID\]</a>"

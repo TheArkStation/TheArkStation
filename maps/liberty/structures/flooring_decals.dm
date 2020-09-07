@@ -26,3 +26,6 @@
 /obj/effect/floor_decal/industrial/outline/sfp_blue
 	name = "sfp blue outline"
 	color = COLOR_SFP_BLUE
+
+/obj/effect/floor_decal/spline/fancy/black/full
+	icon_state = "spline_fancy_full"

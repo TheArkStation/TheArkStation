@@ -42,7 +42,7 @@
 
 /decl/emote/visible/jump
 	key ="jump"
-	emote_message_3p = "USER прыгает!"
+	emote_message_3p = "USER подпрыгивает!"
 
 /decl/emote/visible/shiver
 	key ="shiver"

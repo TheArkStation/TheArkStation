@@ -278,3 +278,7 @@
 	key = "squeal"
 	emote_message_3p = "USER пищит."
 	emote_sound = 'sound/voice/LizardSqueal.ogg'
+
+/decl/emote/audible/lizard_squeal
+	key = "prate"
+	emote_message_3p = "USER несет чепуху"

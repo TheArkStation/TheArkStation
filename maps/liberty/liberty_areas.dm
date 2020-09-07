@@ -1,280 +1,230 @@
-//Third floor (Z-2)
-/area/liberty/security/interrogation
-	name = "\improper Interrogation Room"
-	icon_state = "interrogation"
+/area/liberty
+	icon = 'maps/liberty/icons/area.dmi'
+
+/* sound_env options:
+	STANDARD_STATION
+	LARGE_ENCLOSED
+	SMALL_ENCLOSED
+	TUNNEL_ENCLOSED
+	LARGE_SOFTFLOOR
+	MEDIUM_SOFTFLOOR
+	SMALL_SOFTFLOOR
+	ASTEROID
+	SPACE
+	I have totally no idea what most of them sound like.
+	Alternatively, sound ambience can be set directly in the "ambience" variable. */
+
+//////////////////////////////////// LEVEL ZERO ////////////////////////////////////
+
+// BRIG
+
+/area/liberty/sfp
+	req_access = list("ACCESS_SOL_SFP")
+
+/area/liberty/sfp/hallway/zero
+	name = "\improper SFP Field Office - Level Zero Hallway"
+	icon_state = "department_lvl0"
+
+/area/liberty/sfp/cells
+	name = "\improper SFP Field Office - Holding Cells"
+	icon_state = "department_cell"
+
+/area/liberty/sfp/prison
+	name = "\improper SFP Field Office - Long Term Cell"
+	icon_state = "department_prison"
+
+/area/liberty/sfp/laboratory
+	name = "\improper SFP Field Office - Forensic Laboratory"
+	icon_state = "department_laboratory"
+
+/area/liberty/sfp/morgue
+	name = "\improper SFP Field Office - Morgue"
+	icon_state = "department_morgue"
+	sound_env = LARGE_ENCLOSED
+
+/area/liberty/sfp/archive
+	name = "\improper SFP Field Office - Archive"
+	icon_state = "department_archive"
+
+
+//////////////////////////////////// LEVEL ONE ////////////////////////////////////
+
+// MEDBAY
+
+/area/liberty/medbay/reception
+	name = "\improper Medbay - Reception"
+	icon_state = "medbay_reception"
+	// req_access = WRITE ACCESSES
+
+/area/liberty/medbay/chemistry
+	name = "\improper Medbay - Chemistry Lab"
+	icon_state = "medbay_chemistry"
+	// req_access = WRITE ACCESSES
+
+/area/liberty/medbay/exam
+	name = "\improper Medbay - Examination Room"
+	icon_state = "medbay_exam"
+	// req_access = WRITE ACCESSES
+
+/area/liberty/medbay/emergency
+	name = "\improper Medbay - Emergency Treatment Center"
+	icon_state = "medbay_emergency"
+	// req_access = WRITE ACCESSES
+
+/area/liberty/medbay/preop_ward
+	name = "\improper Medbay - Preoperating Ward"
+	icon_state = "medbay_preop_ward"
+	// req_access = WRITE ACCESSES
+
+/area/liberty/medbay/operating
+	name = "\improper Medbay - Operating Room"
+	icon_state = "medbay_operating"
+	// req_access = WRITE ACCESSES
+
+/area/liberty/medbay/operating_storage
+	name = "\improper Medbay - Operating Room Storage"
+	icon_state = "medbay_operating_storage"
+	// req_access = WRITE ACCESSES
+	sound_env = SMALL_ENCLOSED
+
+/area/liberty/medbay/hallway/one
+	name = "\improper Medbay - Level One Hallway"
+	icon_state = "medbay_lvl1"
+	// req_access = WRITE ACCESSES
+
+// BRIG
+
+/area/liberty/sfp/lobby
+	name = "\improper SFP Field Office - Lobby"
+	icon_state = "department_lobby"
+
+/area/liberty/sfp/office
+	name = "\improper SFP Field Office - Office"
+	icon_state = "department_working_space"
 
-/area/liberty/security/armory
-	name = "\improper Armory"
-	icon_state = "armory"
+/area/liberty/sfp/interrogation
+	name = "\improper SFP Field Office - Interrogation"
+	icon_state = "department_interrogation"
+	sound_env = SMALL_ENCLOSED
 
-/area/liberty/security/curator
-	name = "\improper Curator Office"
-	icon_state = "heads_hos"
-
-/area/liberty/security/workspace
-	name = "\improper Security Workspace"
-	icon_state = "security"
-
-/area/liberty/security/locker
-	name = "\improper Locker Room"
-
-/area/liberty/security/lobby
-	name = "\improper Security Lobby"
-
-/area/liberty/security/trecker
-	name = "\improper Trecker Room"
-
-/area/liberty/security/cell1
-	name = "\improper Cell One"
-
-/area/liberty/security/cell2
-	name = "\improper Cell Two"
-
-/area/liberty/security/cell3
-	name = "\improper Cell Three"
-
-/area/liberty/security/cell4
-	name = "\improper Cell Four"
-
-/area/liberty/dladder3
-	name = "\improper Doubled Ladder, Floor 3"
-
-/area/liberty/hall
-	name = "\improper Hall, Floor 3"
-
-/area/liberty/bar
-	name = "\improper Bar"
-
-/area/liberty/restourant
-	name = "\improper Restourant"
-
-/area/liberty/kitchen
-	name = "\improper Kitchen"
-
-/area/liberty/freezer
-	name = "\improper Freezer Room"
-
-/area/liberty/halfways/lhall
-	name = "\improper Halfway, Habbitat Tower - Hall - Port"
-
-/area/liberty/halfways/lhall2
-	name = "\improper Halfway, Habbitat Tower"
-
-/area/liberty/llader3
-	name = "\improper Habbitat Tower, Ladder, Floor 3"
-
-/area/liberty/halfways/twined1
-	name = "\improper First-to-Port Corridor"
-
-/area/liberty/halfways/twined2
-	name = "\improper Second-to-Port Corridor"
-
-/area/liberty/halfways/shophall
-	name = "\improper Shop Hall"
-
-/area/liberty/halfways/unofficecor
-	name = "\improper Unused Office Corridor"
-
-/area/liberty/halfways/obscor
-	name = "\improper Observation Corridor"
-
-/area/liberty/halfways/port/porthall
-	name = "\improper Port Hall"
-
-/area/liberty/halfways/port/dockcor1
-	name = "\improper Docking Corridor 1"
-
-/area/liberty/halfways/port/dockcor2
-	name = "\improper Docking Corridor 2"
-
-/area/liberty/halfways/port/dockcor3
-	name = "\improper Docking Corridor 3"
-
-/area/liberty/halfways/port/dockcor4
-	name = "\improper Docking Corridor 4"
-
-/area/liberty/cargo
-	name = "\improper Cargo Office"
-
-/area/liberty/cargolift
-	name = "\improper Cargo lift"
-
-/area/liberty/shop
-	name = "\improper Shop"
-
-/area/liberty/gym
-	name = "\improper Gym"
-
-/area/liberty/sauna
-	name = "\improper Sauna"
-
-/area/liberty/rladder3
-	name = "\improper Med-Sci Tower Ladder, Floor 3"
-
-/area/liberty/hallfways/rhall
-	name = "\improper Halfway, Hall - Med-Sci Tower - Port"
-
-/area/liberty/hallfways/rhall2
-	name = "\improper Halfway, Med-Sci Tower, Floor 3"
-
-/area/liberty/medical/lobby
-	name = "\improper Medical Lobby"
-
-/area/liberty/medical/stuffroom
-	name = "\improper Stuff Room"
-
-/area/liberty/medical/chemistry
-	name = "\improper Chemistry"
-
-/area/liberty/medical/owneroffice
-	name = "\improper Owner Office"
-
-/area/liberty/medical/cor
-	name = "\improper Medical Corridor"
-
-/area/liberty/medical/storage
-	name = "\improper Medical Storage"
-
-/area/liberty/medical/locker
-	name = "\improper Locker Room"
-
-/area/liberty/medical/surgery
-	name = "\improper Surgery Room"
-
-/area/liberty/medical/exam
-	name = "\improper Examination Room"
-
-/area/liberty/hotel/lobby
-	name = "\improper Hotel Reception"
-
-/area/liberty/unoffice
-	name = "\improper Unused Office"
-
-/area/liberty/hydro
-	name = "\improper Unused Hydroponics"
-
-/area/liberty/sanroom
-	name = "\improper Sanitation Room"
-
-	//Second floor (Z-1)
-
-/area/liberty/hotel/corr
-	name = "\improper Hotel Corridor"
-
-/area/liberty/hotel/room1
-	name = "\improper Hotel Room 1"
-
-/area/liberty/hotel/room2
-	name = "\improper Hotel Room 2"
-
-/area/liberty/hotel/room3
-	name = "\improper Hotel Room 3"
-
-/area/liberty/hotel/room4
-	name = "\improper Hotel Room 4"
-
-/area/liberty/hotel/room5
-	name = "\improper Hotel Room 5"
-
-/area/liberty/hotel/room6
-	name = "\improper Hotel Room 6"
-
-/area/liberty/hotel/room7
-	name = "\improper Hotel Room 7"
-
-/area/liberty/hotel/room8
-	name = "\improper Hotel Room 8"
-
-/area/liberty/livingmod1
-	name = "\improper Living Module 1"
-
-/area/liberty/livingmod2
-	name = "\improper Living Module 2"
-
-/area/liberty/livingmod3
-	name = "\improper Living Module 3"
-
-/area/liberty/livingmod4
-	name = "\improper Living Module 4"
-
-/area/liberty/holodeck
-	name = "\improper Holodeck"
-
-/area/liberty/eva2
-	name = "\improper Eva, Floor 2"
-
-/area/liberty/hall2
-	name = "\improper Hall, Floor 2"
-
-/area/liberty/halfways/dladder2
-	name = "\improper Doubled Ladder, Floor 2"
-
-/area/liberty/halfways/rhall22
-	name = "\improper Halfway, Med-Sci Tower, Floor 3"
-
-/area/liberty/halfways/rladder2
-	name = "\improper Halfway, Med-Sci Tower Ladder, Floor 3"
-
-/area/liberty/halfways/rhall22
-	name = "\improper Halfway, Med-Sci Tower, Floor 2"
-
-/area/liberty/psyho
-	name = "\improper Psychologist"
-
-//RnD
-
-/area/liberty/rnd/corr
-	name = "\improper TechnoX Corridor"
-	icon_state = "decontamination"
-
-/area/liberty/rnd/lab
-	name = "\improper TechnoX Laboratory"
-	icon_state = "devlab"
-
-/area/turbolift/robotics_lift
-	name = "\improper TechnoX Robotics Lift"
-	icon_state = "shuttle3"
-	base_turf = /turf/simulated/open
-
-/area/liberty/rnd/robotic
-	name = "\improper TechnoX Robotic Lower Hangar"
-	icon_state = "robotics"
-
-/area/liberty/rnd/robotic_upper
-	name = "\improper TechnoX Robotic Upper Hangar"
-	icon_state = "robotics"
-
-/area/liberty/rnd/office
-	name = "\improper TechnoX Owner's Office"
-	icon_state = "heads_rd"
-	req_access = list(access_rd)
-
-/area/liberty/rnd/enter_corr
-	name = "\improper TechnoX Access"
-	icon_state = "decontamination"
-	req_access = list()
-
-/area/liberty/rnd/eva
-	name = "\improper TechnoX EVA"
-	icon_state = "locker"
-
-/area/liberty/rnd/canister
-	name = "\improper TechX Canister Storage"
-	icon_state = "toxstorage"
-
-/area/liberty/rnd/toxi
-	name = "\improper TechnoX Toxins Lab"
-	icon_state = "toxstorage"
-
-/area/liberty/rnd/server
-	name = "\improper TechnoX Servers"
-	icon_state = "purple"
-
-/area/liberty/rnd/break_room
-	name = "\improper TechnoX Break Room"
-	icon_state = "green"
-
-//Service
-
-/area/liberty/chapel
-	name = "\improper Unused Chapel"
+/area/liberty/sfp/recreation
+	name = "\improper SFP Field Office - Break Room"
+	icon_state = "department_recreation"
+	sound_env = SMALL_SOFTFLOOR
+
+/area/liberty/sfp/chief
+	name = "\improper SFP Field Office - Supervisor Office"
+	icon_state = "department_chief"
+
+/area/liberty/sfp/reception
+	name = "\improper SFP Field Office - Reception"
+	icon_state = "department_reception"
+
+/area/liberty/sfp/armory
+	name = "\improper SFP Field Office - Armory"
+	icon_state = "department_armory"
+
+/area/liberty/sfp/dorm
+	name = "\improper SFP Field Office - Dormitory"
+	icon_state = "department_dorm"
+
+/area/liberty/sfp/hallway/one_north
+	name = "\improper SFP Field Office - Level One North Hallway"
+	icon_state = "department_lvl1n"
+
+/area/liberty/sfp/hallway/one_south
+	name = "\improper SFP Field Office - Level One South Hallway"
+	icon_state = "department_lvl1s"
+
+//////////////////////////////////// LEVEL TWO ////////////////////////////////////
+
+// MEDBAY
+
+/area/liberty/medbay/hallway/two
+	name = "\improper Medbay - Level Two Hallway"
+	icon_state = "medbay_lvl2"
+	// req_access = WRITE ACCESSES
+
+/area/liberty/medbay/storage
+	name = "\improper Medbay - Storage"
+	icon_state = "medbay_storage"
+	// req_access = WRITE ACCESSES
+
+/area/liberty/medbay/oncall_room
+	name = "\improper Medbay - On-Call Room"
+	icon_state = "medbay_oncall_room"
+	// req_access = WRITE ACCESSES
+
+/area/liberty/medbay/locker_room
+	name = "\improper Medbay - Locker Room"
+	icon_state = "medbay_locker_room"
+	// req_access = WRITE ACCESSES
+
+/area/liberty/medbay/cmo
+	name = "\improper Medbay - Chief Medical Officer"
+	icon_state = "medbay_cmo"
+	// req_access = WRITE ACCESSES
+
+/area/liberty/medbay/ward
+	sound_env = SMALL_SOFTFLOOR
+
+/area/liberty/medbay/ward/one
+	name = "\improper Medbay - Ward One"
+	icon_state = "medbay_ward1"
+
+/area/liberty/medbay/ward/two
+	name = "\improper Medbay - Ward Two"
+	icon_state = "medbay_ward2"
+
+/area/liberty/medbay/ward/three
+	name = "\improper Medbay - Ward Three"
+	icon_state = "medbay_ward3"
+
+// HOTEL
+
+/area/liberty/hotel/room
+	sound_env = SMALL_SOFTFLOOR
+
+/area/liberty/hotel/room/one_zero_one
+	name = "\improper Hotel - Room 101"
+	icon_state = "hotel_room_101"
+
+/area/liberty/hotel/room/one_zero_two
+	name = "\improper Hotel - Room 102"
+	icon_state = "hotel_room_102"
+
+/area/liberty/hotel/room/one_zero_three
+	name = "\improper Hotel - Room 103"
+	icon_state = "hotel_room_103"
+
+/area/liberty/hotel/room/one_zero_four
+	name = "\improper Hotel - Room 104"
+	icon_state = "hotel_room_104"
+
+/area/liberty/hotel/room/two_zero_one
+	name = "\improper Hotel - Room 201"
+	icon_state = "hotel_room_201"
+
+/area/liberty/hotel/room/two_zero_two
+	name = "\improper Hotel - Room 202"
+	icon_state = "hotel_room_202"
+
+/area/liberty/hotel/room/three_zero_one
+	name = "\improper Hotel - Room 301"
+	icon_state = "hotel_room_301"
+
+/area/liberty/hotel/room/three_zero_two
+	name = "\improper Hotel - Room 302"
+	icon_state = "hotel_room_302"
+
+/area/liberty/hotel/room/three_zero_three
+	name = "\improper Hotel - Room 303"
+	icon_state = "hotel_room_303"
+
+/area/liberty/hotel/hallway/west
+	name = "\improper Hotel - West Hallway"
+	icon_state = "hotel_west"
+
+/area/liberty/hotel/hallway/east
+	name = "\improper Hotel - East Hallway"
+	icon_state = "hotel_east"
