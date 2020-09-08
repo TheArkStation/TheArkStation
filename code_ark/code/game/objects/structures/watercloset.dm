@@ -70,7 +70,7 @@
 		"<span class='notice'>You wash your hands using \the [src].</span>")
 
 
-/obj/structure/hygiene/sink//modernattackby(obj/item/O as obj, var/mob/living/user)
+/obj/structure/hygiene/sink/modern/attackby(obj/item/O as obj, var/mob/living/user)
 
 	if(isPlunger(O) && clogged > 0)
 		return ..()
