@@ -14,7 +14,33 @@
 	I have totally no idea what most of them sound like.
 	Alternatively, sound ambience can be set directly in the "ambience" variable. */
 
+////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////// LEVEL ZERO ////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
+
+// HOTEL
+/area/liberty/hotel/casino
+	name = "\improper Hotel - Casino"
+	icon_state = "hotel_casino"
+	sound_env = LARGE_SOFTFLOOR
+
+/area/liberty/hotel/pool
+	name = "\improper Hotel - Swiming Pool"
+	icon_state = "hotel_pool"
+	sound_env = LARGE_ENCLOSED
+
+/area/liberty/hotel/hallway/lower
+	name = "\improper Hotel - Lower Hallway"
+	icon_state = "hotel_lower_hall"
+
+/area/liberty/hotel/sauna
+	name = "\improper Hotel - Sauna"
+	icon_state = "hotel_sauna"
+	sound_env = SMALL_SOFTFLOOR
+
+/area/liberty/hotel/gym
+	name = "\improper Hotel - Gym"
+	icon_state = "hotel_gym"
 
 // BRIG
 
@@ -46,8 +72,9 @@
 	name = "\improper SFP Field Office - Archive"
 	icon_state = "department_archive"
 
-
+///////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////// LEVEL ONE ////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
 
 // MEDBAY
 
@@ -91,6 +118,45 @@
 	name = "\improper Medbay - Level One Hallway"
 	icon_state = "medbay_lvl1"
 	// req_access = WRITE ACCESSES
+
+// HOTEL
+
+/area/liberty/hotel/restaurant
+	sound_env = LARGE_SOFTFLOOR
+
+/area/liberty/hotel/restaurant/main
+	name = "\improper Hotel - Restraurant Main Level"
+	icon_state = "hotel_restaurant"
+
+/area/liberty/hotel/toilet
+	name = "\improper Hotel - Restroom"
+	icon_state = "hotel_toilets"
+
+/area/liberty/hotel/kitchen
+	name = "\improper Hotel - Kitchen"
+	icon_state = "hotel_kitchen"
+
+/area/liberty/hotel/freezer
+	name = "\improper Hotel - Freezer"
+	icon_state = "hotel_freezer"
+
+/area/liberty/hotel/administrator
+	name = "\improper Hotel - Administrator's Office"
+	icon_state = "hotel_administrator"
+	sound_env = MEDIUM_SOFTFLOOR
+
+/area/liberty/hotel/foyer
+	name = "\improper Hotel - Foyer"
+	icon_state = "hotel_foyer"
+	sound_env = LARGE_SOFTFLOOR
+
+/area/liberty/hotel/staff_room
+	name = "\improper Hotel - Staff Room"
+	icon_state = "hotel_staff_room"
+
+/area/liberty/hotel/hallway/staff
+	name = "\improper Hotel - Service Hallway"
+	icon_state = "hotel_staff_hall"
 
 // BRIG
 
@@ -136,7 +202,9 @@
 	name = "\improper SFP Field Office - Level One South Hallway"
 	icon_state = "department_lvl1s"
 
+///////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////// LEVEL TWO ////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
 
 // MEDBAY
 
@@ -181,6 +249,10 @@
 	icon_state = "medbay_ward3"
 
 // HOTEL
+
+/area/liberty/hotel/restaurant/upper
+	name = "\improper Hotel - Restraurant Upper Level"
+	icon_state = "hotel_restaurant_lvl2"
 
 /area/liberty/hotel/room
 	sound_env = SMALL_SOFTFLOOR
@@ -228,3 +300,18 @@
 /area/liberty/hotel/hallway/east
 	name = "\improper Hotel - East Hallway"
 	icon_state = "hotel_east"
+
+/area/liberty/hotel/dorm
+	name = "\improper Hotel - Dormitory"
+	icon_state = "hotel_dorm"
+	sound_env = MEDIUM_SOFTFLOOR
+
+/area/liberty/hotel/warehouse
+	name = "\improper Hotel - Warehouse"
+	icon_state = "hotel_warehouse"
+	sound_env = SMALL_ENCLOSED
+
+/area/liberty/hotel/dressing_room
+	name = "\improper Hotel - Dressing Room"
+	icon_state = "hotel_dressing_room"
+	sound_env = SMALL_SOFTFLOOR
