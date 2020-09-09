@@ -315,3 +315,44 @@
 	name = "\improper Hotel - Dressing Room"
 	icon_state = "hotel_dressing_room"
 	sound_env = SMALL_SOFTFLOOR
+
+///////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////// TURBOLIFT ////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+
+/area/turbolift/liberty
+	name = "\improper Turbolift"
+	icon = 'maps/liberty/icons/area.dmi'
+	icon_state = "turbolift"
+	requires_power = 0
+	dynamic_lighting = 1
+	area_flags = AREA_FLAG_RAD_SHIELDED | AREA_FLAG_ION_SHIELDED
+	req_access = null // SET ACCESS
+
+/area/turbolift/liberty/hotel/ground
+	name = "hotel (level zero)"
+	base_turf = /turf/simulated/floor/plating
+	lift_floor_label = "Hotel - Level Zero"
+	lift_floor_name = "Hotel - Level Zero"
+	lift_announce_str = "Arriving at Hotel Level Zero: Casino. Swiming pool. Gym. Sauna."
+
+/area/turbolift/liberty/hotel/levelone
+	name = "\improper hotel - level one"
+	base_turf = /turf/simulated/open
+	lift_floor_label = "Hotel - Level One"
+	lift_floor_name = "Hotel - Level One"
+	lift_announce_str = "Arriving at Hotel Level One: Reception. Restaurant. Administration."
+
+/area/turbolift/liberty/hotel/leveltwo
+	name = "\improper hotel - level two"
+	base_turf = /turf/simulated/open
+	lift_floor_label = "Hotel - Level Two"
+	lift_floor_name = "Hotel - Level Two"
+	lift_announce_str = "Arriving at Hotel Level Two: Rooms 101-104, 201-202, 301-303."
+
+/area/turbolift/liberty/hotel/top
+	name = "\improper hotel - level three"
+	base_turf = /turf/simulated/open
+	lift_floor_label = "Hotel - Level Three"
+	lift_floor_name = "Hotel - Level Three"
+	lift_announce_str = "Arriving at Hotel Level Three: Room 401."
