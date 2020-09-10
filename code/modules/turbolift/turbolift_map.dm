@@ -15,6 +15,11 @@
 
 	var/list/areas_to_use = list()
 
+	var/ext_panel_x_adj // ARK
+	var/ext_panel_y_adj // ARK
+	var/int_panel_x_adj // ARK
+	var/int_panel_y_adj // ARK
+
 /obj/turbolift_map_holder/Destroy()
 	turbolifts -= src
 	return ..()
@@ -124,6 +129,11 @@
 			light_y1 = uy + 1
 			light_x2 = ux + lift_size_x - 1
 			light_y2 = uy + lift_size_y - 1
+
+	int_panel_x = int_panel_x + int_panel_x_adj // ARK
+	int_panel_y = int_panel_y + int_panel_y_adj // ARK
+	ext_panel_x = ext_panel_x + ext_panel_x_adj // ARK
+	ext_panel_y = ext_panel_y + ext_panel_y_adj // ARK
 
 	// Generate each floor and store it in the controller datum.
 	for(var/cz = uz;cz<=ez;cz++)

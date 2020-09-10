@@ -12,6 +12,9 @@
 	/area/turbolift/liberty/hotel/top
 		)
 
+	ext_panel_y_adj = -3
+	int_panel_y_adj = 1
+
 /obj/machinery/computer/shuttle_control/lift/cargo
 	name = "cargo lift controls"
 	shuttle_tag = "Primary Cargo Lift"

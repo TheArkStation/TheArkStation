@@ -8,7 +8,6 @@
 
 	#include "machinery/doors.dm"
 	#include "objects/misc.dm"
-	#include "objects/turbolift.dm"
 	#include "structures/flooring_decals.dm"
 
 // TORCH DEFINES
