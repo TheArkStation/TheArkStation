@@ -329,30 +329,115 @@
 	area_flags = AREA_FLAG_RAD_SHIELDED | AREA_FLAG_ION_SHIELDED
 	req_access = null // SET ACCESS
 
+// HOTEL
+
 /area/turbolift/liberty/hotel/ground
 	name = "hotel (level zero)"
 	base_turf = /turf/simulated/floor/plating
-	lift_floor_label = "Hotel - Level Zero"
+	lift_floor_label = "0"
 	lift_floor_name = "Hotel - Level Zero"
-	lift_announce_str = "Arriving at Hotel Level Zero: Casino. Swiming pool. Gym. Sauna."
+	lift_announce_str = "Нулевой уровень отеля: Казино. Бассейн. Спортзал. Сауна."
 
-/area/turbolift/liberty/hotel/levelone
+/area/turbolift/liberty/hotel/one
 	name = "\improper hotel - level one"
 	base_turf = /turf/simulated/open
-	lift_floor_label = "Hotel - Level One"
+	lift_floor_label = "1"
 	lift_floor_name = "Hotel - Level One"
-	lift_announce_str = "Arriving at Hotel Level One: Reception. Restaurant. Administration."
+	lift_announce_str = "Первый уровень отеля: Ресепшн. Ресторан. Администрация."
 
-/area/turbolift/liberty/hotel/leveltwo
+/area/turbolift/liberty/hotel/two
 	name = "\improper hotel - level two"
 	base_turf = /turf/simulated/open
-	lift_floor_label = "Hotel - Level Two"
+	lift_floor_label = "2"
 	lift_floor_name = "Hotel - Level Two"
-	lift_announce_str = "Arriving at Hotel Level Two: Rooms 101-104, 201-202, 301-303."
+	lift_announce_str = "Второй уровень отеля: Номера 101-104, 201-202, 301-303."
 
 /area/turbolift/liberty/hotel/top
 	name = "\improper hotel - level three"
 	base_turf = /turf/simulated/open
-	lift_floor_label = "Hotel - Level Three"
+	lift_floor_label = "3"
 	lift_floor_name = "Hotel - Level Three"
-	lift_announce_str = "Arriving at Hotel Level Three: Room 401."
+	lift_announce_str = "Третий уровень отеля. Номер 401."
+
+// MEDBAY
+
+/area/turbolift/liberty/medbay/ground
+	name = "medbay (level one)"
+	base_turf = /turf/simulated/floor/plating
+	lift_floor_label = "1"
+	lift_floor_name = "Medbay - Level One"
+	lift_announce_str = "Первый уровень медбэя: Приёмная. Пункт оказания неотложной помощи. Аптека. Операционная."
+
+/area/turbolift/liberty/medbay/top
+	name = "medbay (level two)"
+	base_turf = /turf/simulated/open
+	lift_floor_label = "2"
+	lift_floor_name = "Medbay - Level Two"
+	lift_announce_str = "Второй уровень медбэя: Палаты. Ординаторская. Главный врач. Склад."
+
+// EAST
+
+/area/turbolift/liberty/east/ground
+	name = "east (level zero)"
+	base_turf = /turf/simulated/floor/plating
+	lift_floor_label = "0"
+	lift_floor_name = "Liberty - Level Zero"
+	lift_announce_str = "Нулевой уровень Либерти: Инженерный отсек. Складские помещения."
+
+/area/turbolift/liberty/east/one
+	name = "east (level one)"
+	base_turf = /turf/simulated/open
+	lift_floor_label = "1"
+	lift_floor_name = "Liberty - Level One"
+	lift_announce_str = "Первый уровень Либерти: Пассажирские терминалы 1 и 2. Отель. Торговая зона. Медбэй. Отделение Федеральной полиции."
+
+/area/turbolift/liberty/east/two
+	name = "east (level two)"
+	base_turf = /turf/simulated/open
+	lift_floor_label = "2"
+	lift_floor_name = "Liberty - Level Two"
+	lift_announce_str = "Второй уровень Либерти: Часовня. Библиотека. Прачечная. Офисные помещения. Конференц-зал."
+
+/area/turbolift/liberty/east/three
+	name = "east (level three)"
+	base_turf = /turf/simulated/open
+	lift_floor_label = "3"
+	lift_floor_name = "Liberty - Level Three"
+	lift_announce_str = "Третий уровень Либерти: Администрация комлпекса. Голодек."
+
+/area/turbolift/liberty/east/top
+	name = "east (level four)"
+	base_turf = /turf/simulated/open
+	lift_floor_label = "4"
+	lift_floor_name = "Liberty - Level Four"
+	lift_announce_str = "Четвёртый уровень Либерти: Башня управления."
+
+// NORTH
+
+/area/turbolift/liberty/north/ground
+	name = "north (level zero)"
+	base_turf = /turf/simulated/floor/plating
+	lift_floor_label = "0"
+	lift_floor_name = "Liberty - Level Zero"
+	lift_announce_str = "Нулевой уровень Либерти: Инженерный отсек. Складские помещения."
+
+/area/turbolift/liberty/north/one
+	name = "north (level one)"
+	base_turf = /turf/simulated/open
+	lift_floor_label = "1"
+	lift_floor_name = "Liberty - Level One"
+	lift_announce_str = "Первый уровень Либерти: Пассажирские терминалы 1 и 2. Отель. Торговая зона. Медбэй. Отделение Федеральной полиции."
+
+/area/turbolift/liberty/north/two
+	name = "north (level two)"
+	base_turf = /turf/simulated/open
+	lift_floor_label = "2"
+	lift_floor_name = "Liberty - Level Two"
+	lift_announce_str = "Второй уровень Либерти: Часовня. Библиотека. Прачечная. Офисные помещения. Конференц-зал."
+
+/area/turbolift/liberty/north/top
+	name = "north (level three)"
+	base_turf = /turf/simulated/open
+	lift_floor_label = "3"
+	lift_floor_name = "Liberty - Level Three"
+	lift_announce_str = "Третий уровень Либерти: Администрация комлпекса. Голодек."
