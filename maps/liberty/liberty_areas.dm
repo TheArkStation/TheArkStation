@@ -327,6 +327,7 @@
 	requires_power = 0
 	dynamic_lighting = 1
 	area_flags = AREA_FLAG_RAD_SHIELDED | AREA_FLAG_ION_SHIELDED
+	ambience = list('code_ark/sound/music/elevator.ogg')
 	req_access = null // SET ACCESS
 
 // HOTEL
@@ -357,7 +358,7 @@
 	base_turf = /turf/simulated/open
 	lift_floor_label = "3"
 	lift_floor_name = "Hotel - Level Three"
-	lift_announce_str = "Третий уровень отеля. Номер 401."
+	lift_announce_str = "Третий уровень отеля: Номер 401."
 
 // MEDBAY
 

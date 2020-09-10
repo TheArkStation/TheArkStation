@@ -37,7 +37,8 @@
 	depth = 5
 	lift_size_x = 4
 	lift_size_y = 4
-	floor_type = /turf/simulated/floor/tiled
+	door_floor_type = /turf/simulated/floor/tiled/monotile
+	floor_type = /turf/simulated/floor/tiled/techmaint
 
 	areas_to_use = list(
 	/area/turbolift/liberty/east/ground,
@@ -50,10 +51,11 @@
 /obj/turbolift_map_holder/liberty/north
 	name = "Liberty north main turbolift map placeholder"
 	dir = SOUTH
-	depth = 5
+	depth = 4
 	lift_size_x = 4
 	lift_size_y = 4
-	floor_type = /turf/simulated/floor/tiled
+	door_floor_type = /turf/simulated/floor/tiled/monotile
+	floor_type = /turf/simulated/floor/tiled/techmaint
 
 	areas_to_use = list(
 	/area/turbolift/liberty/north/ground,
