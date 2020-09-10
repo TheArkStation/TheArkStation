@@ -11,6 +11,7 @@
 	var/wall_type =  /turf/simulated/wall/elevator
 	var/floor_type = /turf/simulated/floor/tiled/dark
 	var/door_type =  /obj/machinery/door/airlock/lift
+	var/door_floor_type // ARK
 	var/firedoor_type = /obj/machinery/door/firedoor
 
 	var/list/areas_to_use = list()
@@ -159,7 +160,10 @@
 					if((tx == ux || ty == uy || tx == ex || ty == ey) && !(tx >= door_x1 && tx <= door_x2 && ty >= door_y1 && ty <= door_y2))
 						swap_to = wall_type
 					else
-						swap_to = floor_type
+						if(door_floor_type && (tx >= door_x1 && tx <= door_x2 && ty >= door_y1 && ty <= door_y2)) // ARK
+							swap_to = door_floor_type // ARK
+						else // ARK
+							swap_to = floor_type // ARK
 
 				if(checking.type != swap_to)
 					checking.ChangeTurf(swap_to)
@@ -188,12 +192,15 @@
 				if(!(checking in floor_turfs))
 					internal = 0
 					if(checking.type != floor_type)
-						checking.ChangeTurf(floor_type)
+						if(door_floor_type) // ARK
+							checking.ChangeTurf(door_floor_type) // ARK
+						else // ARK
+							checking.ChangeTurf(floor_type) // ARK
 						checking = locate(tx,ty,cz)
 					for(var/atom/movable/thing in checking.contents)
 						if(thing.simulated)
 							qdel(thing)
-				if(checking.type == floor_type) // Don't build over empty space on lower levels.
+				if(checking.type == floor_type || checking.type == door_floor_type) // Don't build over empty space on lower levels. // ARK
 					var/obj/machinery/door/airlock/lift/newdoor = new door_type(checking)
 					if(internal)
 						lift.doors += newdoor
