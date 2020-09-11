@@ -99,7 +99,7 @@
 /turf/simulated/floor/plating,
 /area/lucius/maintenance/first/starboard)
 "ax" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/r_wall/prepainted,
 /area/lucius/hallway/first/aft)
 "aA" = (
 /turf/simulated/floor/plating,
@@ -388,7 +388,7 @@
 /turf/simulated/floor/plating,
 /area/lucius/maintenance/first/starboard)
 "bI" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/r_wall/prepainted,
 /area/lucius/maintenance/first/starboard)
 "bK" = (
 /obj/effect/floor_decal/borderfloor{
@@ -567,7 +567,7 @@
 /turf/simulated/floor/tiled,
 /area/lucius/hallway/first/fore)
 "cc" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/r_wall/prepainted,
 /area/lucius/bridge)
 "cd" = (
 /obj/machinery/door/airlock/hatch/maintenance{
@@ -1297,7 +1297,7 @@
 /turf/simulated/floor/shuttle_ceiling,
 /area/lucius/bridge)
 "dB" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/r_wall/prepainted,
 /area/lucius/ano)
 "dC" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
@@ -1644,7 +1644,7 @@
 /turf/simulated/floor/plating,
 /area/lucius/hallway/first/aft)
 "dZ" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/r_wall/prepainted,
 /area/lucius/atmos)
 "ea" = (
 /obj/effect/wallframe_spawn/reinforced,
@@ -2089,7 +2089,7 @@
 /turf/simulated/floor/plating,
 /area/lucius/crew_quarters)
 "eY" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/r_wall/prepainted,
 /area/lucius/cryo)
 "fa" = (
 /obj/item/roller,
@@ -2103,7 +2103,7 @@
 /turf/simulated/floor/tiled/white,
 /area/lucius/med)
 "fb" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/r_wall/prepainted,
 /area/lucius/captain)
 "fd" = (
 /obj/structure/cable/green{
@@ -2117,7 +2117,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/lucius/bridge)
 "fe" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/r_wall/prepainted,
 /area/lucius/med)
 "ff" = (
 /obj/machinery/sleeper,
@@ -3829,6 +3829,24 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/lucius/xeno)
+"nM" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/lucius/telecomms)
 "oj" = (
 /obj/structure/disposalpipe/segment/bent,
 /obj/effect/floor_decal/industrial/warning{
@@ -4241,7 +4259,7 @@
 /turf/simulated/floor/shuttle_ceiling/sol,
 /area/lucius/maintenance/first/port)
 "ws" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/r_wall/prepainted,
 /area/lucius/xeno)
 "ww" = (
 /obj/machinery/atmospherics/unary/freezer{
@@ -4399,7 +4417,7 @@
 /turf/simulated/floor/tiled/white,
 /area/lucius/crew_quarters)
 "ya" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/r_wall/prepainted,
 /area/lucius/crew_quarters)
 "yb" = (
 /obj/structure/table/steel,
@@ -4440,24 +4458,6 @@
 	},
 /turf/simulated/floor/shuttle_ceiling/sol,
 /area/lucius/maintenance/first/starboard)
-"yW" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 4
-	},
-/obj/effect/floor_decal/industrial/warning{
-	dir = 8
-	},
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 9
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/lucius/telecomms)
 "yY" = (
 /obj/machinery/atmospherics/binary/pump{
 	dir = 1;
@@ -5087,7 +5087,7 @@
 /turf/simulated/floor/shuttle_ceiling/sol,
 /area/lucius/bridge)
 "JM" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/r_wall/prepainted,
 /area/lucius/telecomms)
 "Ka" = (
 /obj/machinery/atmospherics/portables_connector,
@@ -5312,6 +5312,21 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/lucius/xeno)
+"NR" = (
+/obj/machinery/door/blast/regular/open{
+	icon_state = "pdoor0";
+	id_tag = "lucius_ano_blast";
+	name = "Anomalous Chamber Blast Doors"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
+/obj/machinery/meter,
+/obj/machinery/door/firedoor/sol,
+/obj/effect/wallframe_spawn/reinforced,
+/obj/structure/sign/warning/internals_required{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/lucius/ano)
 "NT" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -5596,21 +5611,6 @@
 	},
 /turf/space,
 /area/space)
-"Rg" = (
-/obj/machinery/door/blast/regular/open{
-	icon_state = "pdoor0";
-	id_tag = "lucius_ano_blast";
-	name = "Anomalous Chamber Blast Doors"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
-/obj/machinery/meter,
-/obj/machinery/door/firedoor/sol,
-/obj/effect/wallframe_spawn/reinforced,
-/obj/structure/sign/warning/internals_required{
-	dir = 1
-	},
-/turf/simulated/floor/plating,
-/area/lucius/ano)
 "Ri" = (
 /obj/structure/font/dash{
 	dir = 1
@@ -26745,7 +26745,7 @@ Gg
 cP
 dV
 fO
-yW
+nM
 gt
 Ua
 Bu
@@ -32199,7 +32199,7 @@ GJ
 mV
 pD
 xV
-Rg
+NR
 gM
 hW
 jl
