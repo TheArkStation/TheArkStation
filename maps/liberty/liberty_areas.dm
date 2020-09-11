@@ -42,6 +42,14 @@
 	name = "\improper Hotel - Gym"
 	icon_state = "hotel_gym"
 
+/area/liberty/hotel/locker_room_m
+	name = "\improper Hotel - Locker Room (Male)"
+	icon_state = "hotel_lock_m"
+
+/area/liberty/hotel/locker_room_f
+	name = "\improper Hotel - Locker Room (Female)"
+	icon_state = "hotel_lock_f"
+
 // BRIG
 
 /area/liberty/sfp
