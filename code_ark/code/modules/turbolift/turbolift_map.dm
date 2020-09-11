@@ -1,29 +1,12 @@
-// Map object.
-/obj/turbolift_map_holder
-	name = "turbolift map placeholder"
-	icon = 'icons/obj/turbolift_preview_3x3.dmi'
-	dir = SOUTH         // Direction of the holder determines the placement of the lift control panel and doors.
-	var/depth = 1       // Number of floors to generate, including the initial floor.
-	var/lift_size_x = 2 // Number of turfs on each axis to generate in addition to the first
-	var/lift_size_y = 2 // ie. a 3x3 lift would have a value of 2 in each of these variables.
+/obj/turbolift_map_holder/liberty
+	var/door_floor_type
 
-	// Various turf and door types used when generating the turbolift floors.
-	var/wall_type =  /turf/simulated/wall/elevator
-	var/floor_type = /turf/simulated/floor/tiled/dark
-	var/door_type =  /obj/machinery/door/airlock/lift
-	var/firedoor_type = /obj/machinery/door/firedoor
+	var/ext_panel_x_adj
+	var/ext_panel_y_adj
+	var/int_panel_x_adj
+	var/int_panel_y_adj
 
-	var/list/areas_to_use = list()
-
-/obj/turbolift_map_holder/Destroy()
-	turbolifts -= src
-	return ..()
-
-/obj/turbolift_map_holder/New()
-	turbolifts += src
-	..()
-
-/obj/turbolift_map_holder/Initialize()
+/obj/turbolift_map_holder/liberty/Initialize()
 	. = ..()
 	// Create our system controller.
 	var/datum/turbolift/lift = new()
@@ -125,6 +108,11 @@
 			light_x2 = ux + lift_size_x - 1
 			light_y2 = uy + lift_size_y - 1
 
+	int_panel_x = int_panel_x + int_panel_x_adj
+	int_panel_y = int_panel_y + int_panel_y_adj
+	ext_panel_x = ext_panel_x + ext_panel_x_adj
+	ext_panel_y = ext_panel_y + ext_panel_y_adj
+
 	// Generate each floor and store it in the controller datum.
 	for(var/cz = uz;cz<=ez;cz++)
 
@@ -149,7 +137,10 @@
 					if((tx == ux || ty == uy || tx == ex || ty == ey) && !(tx >= door_x1 && tx <= door_x2 && ty >= door_y1 && ty <= door_y2))
 						swap_to = wall_type
 					else
-						swap_to = floor_type
+						if(door_floor_type && (tx >= door_x1 && tx <= door_x2 && ty >= door_y1 && ty <= door_y2))
+							swap_to = door_floor_type // ARK
+						else // ARK
+							swap_to = floor_type // ARK
 
 				if(checking.type != swap_to)
 					checking.ChangeTurf(swap_to)
@@ -178,12 +169,15 @@
 				if(!(checking in floor_turfs))
 					internal = 0
 					if(checking.type != floor_type)
-						checking.ChangeTurf(floor_type)
+						if(door_floor_type) // ARK
+							checking.ChangeTurf(door_floor_type)
+						else
+							checking.ChangeTurf(floor_type)
 						checking = locate(tx,ty,cz)
 					for(var/atom/movable/thing in checking.contents)
 						if(thing.simulated)
 							qdel(thing)
-				if(checking.type == floor_type) // Don't build over empty space on lower levels.
+				if(checking.type == floor_type || checking.type == door_floor_type) // Don't build over empty space on lower levels.
 					var/obj/machinery/door/airlock/lift/newdoor = new door_type(checking)
 					if(internal)
 						lift.doors += newdoor

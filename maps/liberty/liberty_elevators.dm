@@ -4,6 +4,7 @@
 	depth = 4
 	lift_size_x = 3
 	lift_size_y = 3
+	icon = 'icons/obj/turbolift_preview_2x2.dmi'
 	floor_type = /turf/simulated/floor/carpet/red
 	door_floor_type = /turf/simulated/floor/tiled/techfloor/grid
 
@@ -23,6 +24,7 @@
 	depth = 2
 	lift_size_x = 3
 	lift_size_y = 3
+	icon = 'icons/obj/turbolift_preview_2x2.dmi'
 	door_floor_type = /turf/simulated/floor/tiled/white/monotile
 	floor_type = /turf/simulated/floor/tiled/white
 
