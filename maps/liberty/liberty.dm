@@ -4,6 +4,7 @@
 	#include "liberty_areas.dm"
 	#include "liberty_elevators.dm"
 	#include "liberty_overmap.dm"
+	#include "liberty_presets.dm"
 	#include "liberty_turfs.dm"
 	#include "liberty_shuttles.dm"
 

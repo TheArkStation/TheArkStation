@@ -210,6 +210,20 @@
 	name = "\improper SFP Field Office - Level One South Hallway"
 	icon_state = "department_lvl1s"
 
+/area/liberty/sfp/server
+	name = "\improper SFP Field Office - Server Room"
+	icon_state = "department_server"
+	ambience = list('sound/ambience/ambisin2.ogg', 'sound/ambience/signal.ogg', 'sound/ambience/signal.ogg', 'sound/ambience/ambigen10.ogg')
+
+// SCG
+/area/liberty/scg
+	req_access = list(list("ACCESS_SOL_SFP", "ACCESS_SOL_GENERAL"))
+
+/area/liberty/scg/docks
+	name = "\improper SCG Secure Docks"
+	icon_state = "sol_docks"
+
+
 ///////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////// LEVEL TWO ////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////
@@ -323,6 +337,10 @@
 	name = "\improper Hotel - Dressing Room"
 	icon_state = "hotel_dressing_room"
 	sound_env = SMALL_SOFTFLOOR
+
+/area/liberty/hotel/over_stage
+	name = "\improper Hotel - Stage Equipment"
+	icon_state = "hotel_stage"
 
 ///////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////// TURBOLIFT ////////////////////////////////////

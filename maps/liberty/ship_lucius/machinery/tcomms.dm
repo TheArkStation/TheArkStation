@@ -1,6 +1,7 @@
 
 
 // SET THE ACCESS!
+// /datum/map/torch/default_internal_channels()
 
 
 // TCOMMS PRESETS
