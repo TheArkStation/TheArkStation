@@ -2154,7 +2154,7 @@
 /obj/item/weapon/towel,
 /obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
 /obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/turf/simulated/floor/carpet/red,
+/turf/simulated/floor/lino,
 /area/lucius/crew_quarters)
 "fn" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -2313,7 +2313,7 @@
 	pixel_x = -32
 	},
 /obj/structure/flora/pottedplant/deskfern,
-/turf/simulated/floor/carpet/red,
+/turf/simulated/floor/lino,
 /area/lucius/crew_quarters)
 "fA" = (
 /obj/machinery/cryopod,
@@ -2841,12 +2841,6 @@
 /turf/simulated/floor/tiled/white,
 /area/lucius/xeno)
 "gK" = (
-/obj/machinery/conveyor_switch{
-	id_tag = "lucius_xeno_conveyor";
-	name = "Storage Conveyor Switch";
-	req_access = list("SOL_ACCESS_SCI")
-	},
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/cable/green{
 	d2 = 8;
 	icon_state = "0-8"
@@ -2916,10 +2910,6 @@
 /turf/simulated/floor/carpet/blue2,
 /area/lucius/captain)
 "gZ" = (
-/obj/machinery/conveyor{
-	dir = 9;
-	id_tag = "lucius_xeno_conveyor"
-	},
 /obj/machinery/portable_atmospherics/canister/empty/carbon_dioxide,
 /turf/simulated/floor/plating,
 /area/lucius/xeno)
@@ -3162,17 +3152,9 @@
 /turf/simulated/floor/reinforced,
 /area/lucius/xeno)
 "hT" = (
-/obj/machinery/conveyor{
-	dir = 10;
-	id_tag = "lucius_xeno_conveyor"
-	},
 /obj/machinery/portable_atmospherics/canister/hydrogen,
-/turf/simulated/floor/plating,
-/area/lucius/xeno)
-"hV" = (
-/obj/machinery/conveyor{
-	dir = 8;
-	id_tag = "lucius_xeno_conveyor"
+/obj/machinery/light/small{
+	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/lucius/xeno)
@@ -3195,10 +3177,6 @@
 /turf/simulated/floor/tiled/white,
 /area/lucius/ano)
 "hZ" = (
-/obj/machinery/conveyor{
-	dir = 8;
-	id_tag = "lucius_xeno_conveyor"
-	},
 /obj/machinery/portable_atmospherics/canister/empty/phoron,
 /turf/simulated/floor/plating,
 /area/lucius/xeno)
@@ -3264,10 +3242,6 @@
 /turf/simulated/floor/reinforced/airmix,
 /area/lucius/ano)
 "ih" = (
-/obj/machinery/conveyor{
-	dir = 4;
-	id_tag = "lucius_xeno_conveyor"
-	},
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /obj/machinery/alarm/sol{
 	dir = 1;
@@ -3276,17 +3250,9 @@
 /turf/simulated/floor/plating,
 /area/lucius/xeno)
 "ik" = (
-/obj/machinery/conveyor{
-	dir = 6;
-	id_tag = "lucius_xeno_conveyor"
-	},
 /turf/simulated/floor/plating,
 /area/lucius/xeno)
 "il" = (
-/obj/machinery/conveyor{
-	dir = 4;
-	id_tag = "lucius_xeno_conveyor"
-	},
 /obj/item/weapon/reagent_containers/chem_disp_cartridge/hclacid,
 /obj/item/weapon/reagent_containers/chem_disp_cartridge/ethanol,
 /obj/item/weapon/reagent_containers/chem_disp_cartridge/acetone,
@@ -3294,6 +3260,12 @@
 /obj/structure/closet/crate,
 /turf/simulated/floor/plating,
 /area/lucius/xeno)
+"iq" = (
+/obj/structure/sign/icarus/solgov{
+	pixel_y = 32
+	},
+/turf/simulated/floor/shuttle_ceiling/sol,
+/area/lucius/maintenance/first/port)
 "ir" = (
 /turf/simulated/wall/r_wall/hull,
 /area/lucius/maintenance/first/port)
@@ -3352,7 +3324,7 @@
 /area/lucius/atmos)
 "iC" = (
 /obj/structure/fitness/punchingbag,
-/turf/simulated/floor/carpet/red,
+/turf/simulated/floor/lino,
 /area/lucius/crew_quarters)
 "iD" = (
 /obj/structure/table/rack,
@@ -3434,9 +3406,8 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/lucius/maintenance/first/port)
 "iW" = (
-/obj/machinery/conveyor{
-	dir = 5;
-	id_tag = "lucius_xeno_conveyor"
+/obj/machinery/light/small{
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/lucius/xeno)
@@ -3460,7 +3431,7 @@
 /area/lucius/xeno)
 "jd" = (
 /obj/structure/fitness/weightlifter,
-/turf/simulated/floor/carpet/red,
+/turf/simulated/floor/lino,
 /area/lucius/crew_quarters)
 "ji" = (
 /obj/structure/font/u{
@@ -4002,7 +3973,7 @@
 "pR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/carpet/red,
+/turf/simulated/floor/lino,
 /area/lucius/crew_quarters)
 "pV" = (
 /obj/effect/floor_decal/industrial/warning,
@@ -4781,9 +4752,6 @@
 /obj/item/clothing/shoes/magboots,
 /obj/item/clothing/mask/breath,
 /obj/item/weapon/tank/oxygen/yellow,
-/obj/machinery/atmospherics/pipe/simple/hidden/blue{
-	dir = 6
-	},
 /obj/machinery/button/blast_door{
 	id_tag = "lucius_xeno";
 	name = "Xeno Research Protective Blast Doors Control";
@@ -4797,6 +4765,9 @@
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/floor_decal/industrial/warning,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
 /turf/simulated/floor/tiled/white,
 /area/lucius/xeno)
 "FC" = (
@@ -4823,7 +4794,7 @@
 "FJ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/carpet/red,
+/turf/simulated/floor/lino,
 /area/lucius/crew_quarters)
 "FP" = (
 /obj/structure/disposalpipe/trunk{
@@ -5030,7 +5001,7 @@
 	dir = 8;
 	pixel_x = 32
 	},
-/turf/simulated/floor/carpet/red,
+/turf/simulated/floor/lino,
 /area/lucius/crew_quarters)
 "Ic" = (
 /obj/machinery/air_sensor{
@@ -5666,7 +5637,7 @@
 /area/lucius/xeno)
 "RW" = (
 /obj/machinery/light,
-/turf/simulated/floor/carpet/red,
+/turf/simulated/floor/lino,
 /area/lucius/crew_quarters)
 "SK" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -5917,7 +5888,7 @@
 	dir = 1;
 	pixel_y = -24
 	},
-/turf/simulated/floor/carpet/red,
+/turf/simulated/floor/lino,
 /area/lucius/crew_quarters)
 "XR" = (
 /obj/structure/extinguisher_cabinet{
@@ -6035,9 +6006,15 @@
 	dir = 8;
 	pixel_x = 32
 	},
-/obj/machinery/telecomms/bus/preset_lucius,
+/obj/machinery/telecomms/processor/preset_lucius,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/lucius/telecomms)
+"ZJ" = (
+/obj/structure/sign/icarus/solgov{
+	pixel_y = -32
+	},
+/turf/simulated/floor/shuttle_ceiling/sol,
+/area/lucius/maintenance/first/starboard)
 
 (1,1,1) = {"
 aa
@@ -24309,7 +24286,7 @@ aa
 aa
 aa
 aa
-ad
+ZJ
 DT
 al
 aD
@@ -24331,7 +24308,7 @@ eY
 iI
 iO
 ir
-wb
+iq
 aa
 aa
 aa
@@ -31595,7 +31572,7 @@ KN
 ov
 gJ
 hq
-hV
+ik
 ih
 KD
 RS

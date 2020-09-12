@@ -434,7 +434,6 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
-/obj/effect/floor_decal/industrial/warning/corner,
 /turf/simulated/floor/tiled/techfloor,
 /area/lucius/hangar)
 "bj" = (
@@ -639,7 +638,6 @@
 /turf/simulated/floor/plating,
 /area/lucius/lazarev)
 "bT" = (
-/obj/machinery/power/smes/buildable/preset/torch/shuttle,
 /obj/machinery/atmospherics/pipe/simple/hidden/red,
 /obj/structure/fuel_port{
 	pixel_x = 32
@@ -648,6 +646,7 @@
 	d2 = 8;
 	icon_state = "0-8"
 	},
+/obj/machinery/power/smes/buildable/preset/torch/substation_full,
 /turf/simulated/floor/plating,
 /area/lucius/lazarev)
 "bX" = (
@@ -809,6 +808,7 @@
 	pixel_y = 24
 	},
 /obj/structure/railing/mapped,
+/obj/structure/stairs/east,
 /turf/simulated/floor/tiled,
 /area/lucius/hallway/second)
 "cP" = (
@@ -1922,9 +1922,6 @@
 	},
 /obj/structure/cable/green,
 /obj/structure/railing/mapped,
-/obj/structure/railing/mapped{
-	dir = 4
-	},
 /turf/simulated/floor/plating,
 /area/lucius/engineering)
 "fr" = (
@@ -1933,6 +1930,9 @@
 	},
 /obj/structure/railing/mapped,
 /obj/machinery/atmospherics/valve/shutoff/supply{
+	dir = 8
+	},
+/obj/structure/railing/mapped{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
@@ -1991,10 +1991,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/lucius/engineering)
-"fB" = (
-/obj/structure/stairs/east,
-/turf/simulated/wall/r_wall/prepainted,
-/area/lucius/hangar)
 "fC" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green,
 /obj/effect/wallframe_spawn/reinforced/bare,
@@ -2228,15 +2224,7 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/lucius/lazarev)
 "gb" = (
-/obj/structure/cable/cyan{
-	d2 = 8;
-	icon_state = "0-8"
-	},
 /obj/effect/floor_decal/corner/lightgrey/border,
-/obj/machinery/power/apc/sol{
-	dir = 4;
-	pixel_x = 24
-	},
 /turf/simulated/floor/tiled/techfloor,
 /area/lucius/lazarev)
 "gg" = (
@@ -2422,7 +2410,7 @@
 "gJ" = (
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/blue/border,
-/obj/machinery/atmospherics/unary/vent_pump{
+/obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -2458,12 +2446,12 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/lucius/hallway/second)
 "gN" = (
-/obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /obj/effect/floor_decal/corner/lightgrey/border,
+/obj/structure/cable/cyan{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/lucius/lazarev)
 "gT" = (
@@ -2746,14 +2734,9 @@
 /area/lucius/hallway/second)
 "ht" = (
 /obj/effect/paint/silver,
-/obj/effect/wallframe_spawn/reinforced/titanium,
-/obj/machinery/door/firedoor/sol,
-/obj/structure/sign/firstaid{
-	pixel_x = -32;
-	pixel_y = 24
-	},
 /obj/effect/paint_stripe/blue,
-/turf/simulated/floor/plating,
+/obj/structure/font/double/lazarev,
+/turf/simulated/wall/r_titanium,
 /area/lucius/lazarev)
 "hu" = (
 /obj/effect/paint/silver,
@@ -2768,6 +2751,10 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals6{
 	dir = 10
+	},
+/obj/structure/cable/cyan,
+/obj/machinery/power/apc/sol{
+	pixel_y = -24
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/lucius/lazarev)
@@ -3152,15 +3139,16 @@
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 10
 	},
-/obj/item/modular_computer/laptop{
-	dir = 4
-	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
-	dir = 1;
+	dir = 4;
 	frequency = 1331;
 	id_tag = "lucius_dock";
 	name = "Main Docking Port Controller";
-	pixel_y = -24
+	pixel_x = -12;
+	pixel_y = 15
+	},
+/obj/item/modular_computer/laptop/preset/custom_loadout/cheap{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/lucius/hallway/second)
@@ -4045,7 +4033,8 @@
 /area/lucius/storage)
 "uB" = (
 /obj/machinery/power/fusion_core/mapped{
-	id_tag = "lucius_fusion"
+	id_tag = "lucius_fusion";
+	initial_id_tag = "lucius_fusion"
 	},
 /obj/structure/cable/yellow,
 /obj/effect/floor_decal/industrial/warning/full,
@@ -4191,9 +4180,6 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
-/obj/effect/floor_decal/industrial/warning/corner{
-	dir = 4
-	},
 /turf/simulated/floor/tiled/techfloor,
 /area/lucius/hangar)
 "ym" = (
@@ -4275,6 +4261,7 @@
 "zD" = (
 /obj/machinery/computer/fusion/core_control{
 	dir = 4;
+	id_tag = "lucius_fusion";
 	initial_id_tag = "lucius_fusion";
 	req_access = list("ACCESS_SOL_ENG")
 	},
@@ -4382,10 +4369,9 @@
 /area/lucius/hallway/second)
 "BT" = (
 /obj/machinery/conveyor_switch/oneway{
-	id_tag = "lucius_loading";
+	id = "lucius_loading";
 	name = "loading switch";
-	pixel_y = 4;
-	req_access = list("ACCESS_SOL_COMMAND")
+	pixel_y = 4
 	},
 /obj/effect/floor_decal/industrial/warning/full,
 /obj/machinery/button/mass_driver{
@@ -4540,12 +4526,12 @@
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 6
 	},
-/obj/structure/bed/chair{
-	dir = 8
-	},
 /obj/machinery/alarm/sol{
 	dir = 8;
 	pixel_x = 24
+	},
+/obj/structure/bed/chair/padded/blue{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/lucius/hallway/second)
@@ -4605,6 +4591,14 @@
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/lucius/storage)
+"Fg" = (
+/obj/effect/paint/silver,
+/obj/effect/paint_stripe/blue,
+/obj/structure/font/double/lazarev{
+	dir = 1
+	},
+/turf/simulated/wall/r_titanium,
+/area/lucius/lazarev)
 "Fs" = (
 /obj/item/weapon/net_shell,
 /obj/structure/cable/green{
@@ -4865,6 +4859,17 @@
 	},
 /turf/simulated/floor/plating,
 /area/lucius/thrust)
+"IC" = (
+/obj/effect/paint/silver,
+/obj/effect/wallframe_spawn/reinforced/titanium,
+/obj/machinery/door/firedoor/sol,
+/obj/effect/paint_stripe/blue,
+/obj/structure/sign/firstaid{
+	pixel_x = 32;
+	pixel_y = -4
+	},
+/turf/simulated/floor/plating,
+/area/lucius/lazarev)
 "IU" = (
 /obj/structure/catwalk,
 /obj/structure/cable/green{
@@ -4958,11 +4963,6 @@
 "Lo" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
-	},
-/obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/corner/lightgrey/border,
 /turf/simulated/floor/tiled/techfloor,
@@ -22238,7 +22238,7 @@ ab
 ab
 UJ
 TF
-fB
+TF
 dX
 yT
 fR
@@ -22844,11 +22844,11 @@ ab
 dt
 bg
 ZE
-aL
+Fg
 Bl
 eV
 fT
-aL
+ht
 sZ
 vk
 Re
@@ -23253,7 +23253,7 @@ ea
 eW
 fV
 aL
-ht
+hu
 aH
 Lv
 iI
@@ -23658,7 +23658,7 @@ eX
 FK
 FU
 CP
-hu
+IC
 lR
 iI
 ab
@@ -23862,7 +23862,7 @@ gT
 hx
 aL
 xa
-lR
+aH
 ab
 iV
 iZ

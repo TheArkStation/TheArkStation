@@ -19,6 +19,7 @@ var/list/department_radio_keys = list(
 	  ":y" = "Exploration",		".y" = "Exploration",
 	  ":k" = "Recon",		".k" = "Recon",	//Skrell Recon ship
 	  ":o" = "Response Team",".o" = "Response Team", //ERT
+	  ":j" = "Sol Command", ".j" = "Sol Command", // ARK
 
 	  ":R" = "right ear",	".R" = "right ear",
 	  ":L" = "left ear",	".L" = "left ear",

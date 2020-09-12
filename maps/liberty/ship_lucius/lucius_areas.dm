@@ -17,6 +17,7 @@
 	icon_state = "hangar"
 	req_access = list("ACCESS_SOL_GENERAL")
 	sound_env = LARGE_ENCLOSED
+	base_turf = /turf/simulated/floor/plating
 
 /area/lucius/maintenance/second
 	name = "SEV Lucius - Second Deck Aft Maintenance"
