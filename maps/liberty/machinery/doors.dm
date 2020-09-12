@@ -32,10 +32,6 @@
 	..()
 	return INITIALIZE_HINT_LATELOAD
 
-/obj/machinery/door/airlock/research/Initialize()
-	..()
-	return INITIALIZE_HINT_LATELOAD
-
 /obj/machinery/door/airlock/lift/LateInitialize()
 	..()
 	update_connections()
@@ -43,12 +39,6 @@
 	return
 
 /obj/machinery/door/airlock/external/LateInitialize()
-	..()
-	update_connections()
-	update_icon()
-	return
-
-/obj/machinery/door/airlock/research/LateInitialize()
 	..()
 	update_connections()
 	update_icon()
