@@ -3,7 +3,7 @@
 /obj/machinery/telecomms/server/presets/sfp
 	id = "Police Server"
 	freq_listening = list(SEC_FREQ)
-	channel_tags = list(list(SEC_FREQ, "Security", COMMS_COLOR_SECURITY))
+	channel_tags = list(list(SEC_FREQ, "Security", COLOR_SFP_BLUE))
 	autolinkers = list("serverSFP", "broadcasterSFP")
 	network = "sfp"
 
