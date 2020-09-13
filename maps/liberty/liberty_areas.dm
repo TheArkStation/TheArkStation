@@ -12,7 +12,7 @@
 	ASTEROID
 	SPACE
 	I have totally no idea what most of them sound like.
-	Alternatively, sound ambience can be set directly in the "ambience" variable. */
+	Alternatively, sound ambience can be set directly in the "ambience" or "forced_ambience" variable. */
 
 ////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////// LEVEL ZERO ////////////////////////////////////
@@ -353,7 +353,7 @@
 	requires_power = 0
 	dynamic_lighting = 1
 	area_flags = AREA_FLAG_RAD_SHIELDED | AREA_FLAG_ION_SHIELDED
-	ambience = list('code_ark/sound/music/elevator.ogg')
+	forced_ambience = list('code_ark/sound/music/elevator.ogg')
 	req_access = null // SET ACCESS
 
 // HOTEL
