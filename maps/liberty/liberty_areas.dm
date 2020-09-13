@@ -353,7 +353,6 @@
 	requires_power = 0
 	dynamic_lighting = 1
 	area_flags = AREA_FLAG_RAD_SHIELDED | AREA_FLAG_ION_SHIELDED
-	forced_ambience = list('code_ark/sound/music/elevator.ogg')
 	req_access = null // SET ACCESS
 
 // HOTEL
