@@ -19,18 +19,15 @@
 	var/obj/machinery/light_master_switch/master
 
 /obj/machinery/light_switch/slave/Initialize()
-	..()
+	. = ..()
 	SetName("remote light switch ([connected_area.name])")
-
-	connected_area.set_lightswitch(on)
-	update_icon()
 
 /obj/machinery/light_switch/slave/interface_interact(mob/user)
 	if(CanInteract(user, DefaultTopicState()))
 		to_chat(user, SPAN_WARNING("There's no way you can flip a remote light switch. Try to find the linked master switch."))
 
 /obj/machinery/light_master_switch/Initialize()
-	..()
+	. = ..()
 	return INITIALIZE_HINT_LATELOAD
 
 /obj/machinery/light_master_switch/LateInitialize()
