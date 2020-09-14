@@ -66,3 +66,10 @@
 	song = 'code_ark/sound/music/kmacleod_shades_of_spring.ogg'
 	license = /decl/license/cc_by_3_0
 	url = "https://incompetech.com/"
+
+/music_track/pedro_noire_one
+	artist = "Pedro"
+	title = "Noire #1"
+	song = 'code_ark/sound/music/pedro_noire_one.ogg'
+	license = /decl/license/cc_by_3_0
+	url = "https://www.dropbox.com/s/xaznyvgj6n5fnum/Noire%20%231.mp3"

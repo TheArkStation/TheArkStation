@@ -5,7 +5,7 @@
 /obj/structure/lift/panel/Initialize()
 	. = ..()
 	sound_id = "[type]_[sequential_id(type)]"
-	sound_token = GLOB.sound_player.PlayLoopingSound(src, sound_id, 'code_ark/sound/music/elevator.ogg', volume = 20, range = 3, falloff = 2, prefer_mute = TRUE)
+	sound_token = GLOB.sound_player.PlayLoopingSound(src, sound_id, 'sound/music/elevatormusic.ogg', volume = 20, range = 3, falloff = 2, prefer_mute = TRUE)
 
 /obj/structure/lift/panel/Destroy()
 	. = ..()
