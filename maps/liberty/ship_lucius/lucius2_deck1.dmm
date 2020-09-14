@@ -72,6 +72,7 @@
 /obj/structure/railing/mapped{
 	dir = 8
 	},
+/obj/item/weapon/reagent_containers/glass/bucket,
 /turf/simulated/floor/tiled/techmaint,
 /area/lucius/maintenance/first/starboard)
 "as" = (
@@ -1059,12 +1060,6 @@
 /area/lucius/hallway/first/aft)
 "cW" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/machinery/door/airlock/research{
-	dir = 4;
-	frequency = 1379;
-	id_tag = "lucius_xeno_inner";
-	name = "Research Bay Interior Access"
-	},
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
@@ -1083,6 +1078,11 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor/sol,
+/obj/machinery/door/airlock/multi_tile/research{
+	frequency = 1379;
+	id_tag = "lucius_xeno_inner";
+	name = "Research Bay Interior Access"
+	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/lucius/xeno)
 "cX" = (
@@ -1123,12 +1123,6 @@
 	id_tag = "lucius_3";
 	name = "Third Compartment Lockdown Blast Doors"
 	},
-/obj/machinery/door/airlock/research{
-	dir = 4;
-	frequency = 1379;
-	id_tag = "lucius_xeno_outer";
-	name = "Research Bay Exterior Access"
-	},
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
@@ -1141,6 +1135,11 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor/sol,
+/obj/machinery/door/airlock/multi_tile/research{
+	frequency = 1379;
+	id_tag = "lucius_xeno_outer";
+	name = "Research Bay Exterior Access"
+	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/lucius/xeno)
 "da" = (
@@ -3678,11 +3677,6 @@
 	id_tag = "lucius_3";
 	name = "Third Compartment Lockdown Blast Doors"
 	},
-/obj/machinery/door/airlock/research{
-	frequency = 1379;
-	id_tag = "lucius_xeno_outer";
-	name = "Research Bay Exterior Access"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
@@ -5193,11 +5187,6 @@
 /area/lucius/xeno)
 "LY" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/machinery/door/airlock/research{
-	frequency = 1379;
-	id_tag = "lucius_xeno_inner";
-	name = "Research Bay Interior Access"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
