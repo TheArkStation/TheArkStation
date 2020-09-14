@@ -8,5 +8,5 @@
 	sound_token = GLOB.sound_player.PlayLoopingSound(src, sound_id, 'sound/music/elevatormusic.ogg', volume = 20, range = 3, falloff = 2, prefer_mute = TRUE)
 
 /obj/structure/lift/panel/Destroy()
-	. = ..()
 	QDEL_NULL(sound_token)
+	. = ..()
