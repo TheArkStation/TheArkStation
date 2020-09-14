@@ -4,14 +4,14 @@
 	artist = "Bensound"
 	title = "Relaxing"
 	song = 'code_ark/sound/music/bensound_belaxing.ogg'
-	license = /decl/license/cc_by_4_0
+	license = /decl/license/bensound
 	url = "https://www.bensound.com/royalty-free-music/track/relaxing"
 
 /music_track/bensound_better_days
 	artist = "Bensound"
 	title = "Better Days"
 	song = 'code_ark/sound/music/bensound_better_days.ogg'
-	license = /decl/license/cc_by_4_0
+	license = /decl/license/bensound
 	url = "https://www.bensound.com/royalty-free-music/track/better-days"
 
 // INSTRUMENTAL
@@ -20,14 +20,14 @@
 	artist = "Bensound"
 	title = "Sad Day"
 	song = 'code_ark/sound/music/bensound_sad_day.ogg'
-	license = /decl/license/cc_by_4_0
+	license = /decl/license/bensound
 	url = "https://www.bensound.com/royalty-free-music/track/sad-day"
 
 /music_track/bensound_tomorrow
 	artist = "Bensound"
 	title = "Tomorrow"
 	song = 'code_ark/sound/music/bensound_tomorrow.ogg'
-	license = /decl/license/cc_by_4_0
+	license = /decl/license/bensound
 	url = "https://www.bensound.com/royalty-free-music/track/tomorrow"
 
 /music_track/emininni_sicilian_cafe
@@ -43,14 +43,14 @@
 	artist = "Bensound"
 	title = "Love"
 	song = 'code_ark/sound/music/bensound_love.ogg'
-	license = /decl/license/cc_by_4_0
+	license = /decl/license/bensound
 	url = "https://www.bensound.com/royalty-free-music/track/love"
 
 /music_track/bensound_the_jazz_piano
 	artist = "Bensound"
 	title = "The Jazz Piano"
 	song = 'code_ark/sound/music/bensound_the_jazz_piano.ogg'
-	license = /decl/license/cc_by_4_0
+	license = /decl/license/bensound
 	url = "https://www.bensound.com/royalty-free-music/track/the-jazz-piano"
 
 /music_track/kmacleod_night_on_the_docks_sax
@@ -71,5 +71,5 @@
 	artist = "Pedro"
 	title = "Noire #1"
 	song = 'code_ark/sound/music/pedro_noire_one.ogg'
-	license = /decl/license/cc_by_3_0
+	license = /decl/license/grandfathered
 	url = "https://www.dropbox.com/s/xaznyvgj6n5fnum/Noire%20%231.mp3"
