@@ -79,6 +79,33 @@
 /obj/structure/stairs/west,
 /turf/simulated/floor/tiled,
 /area/space)
+"ar" = (
+/obj/effect/paint_stripe/yellow,
+/turf/simulated/wall/prepainted,
+/area/liberty/hotel/room/three_zero_two)
+"as" = (
+/obj/effect/floor_decal/corner/black/diagonal,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/structure/table/woodentable_reinforced,
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/black/border{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/liberty/hotel/room/three_zero_two)
+"at" = (
+/obj/effect/floor_decal/corner/black/diagonal,
+/obj/item/weapon/storage/mirror/advanced{
+	pixel_y = 32
+	},
+/obj/structure/hygiene/sink/modern,
+/obj/structure/table/woodentable_reinforced,
+/turf/simulated/floor/tiled/dark,
+/area/liberty/hotel/room/three_zero_two)
 "au" = (
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/space)
@@ -819,13 +846,26 @@
 /turf/simulated/floor/tiled/dark,
 /area/space)
 "cy" = (
-/obj/structure/table/woodentable,
-/turf/simulated/floor/tiled/dark,
+/obj/structure/bed/chair/wood/walnut,
+/obj/machinery/alarm{
+	pixel_y = 22
+	},
+/obj/machinery/light{
+	dir = 8;
+	icon_state = "tube_map"
+	},
+/turf/simulated/floor/carpet/blue,
 /area/space)
 "cz" = (
-/obj/structure/bed/chair/bathtub,
+/obj/effect/floor_decal/corner/black/diagonal,
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/black/border{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/liberty/hotel/room/three_zero_two)
 "cA" = (
 /obj/structure/bed/sofa/beige/right{
 	dir = 1
@@ -932,6 +972,20 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/space)
+"cS" = (
+/obj/effect/floor_decal/corner/black/diagonal,
+/turf/simulated/floor/tiled/dark,
+/area/liberty/hotel/room/three_zero_two)
+"cT" = (
+/obj/effect/floor_decal/corner/black/diagonal,
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/black/border{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/liberty/hotel/room/three_zero_two)
 "cU" = (
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/dark,
@@ -1125,6 +1179,104 @@
 /obj/machinery/door/airlock/command,
 /turf/simulated/floor/tiled/dark,
 /area/space)
+"dk" = (
+/obj/machinery/door/window/westright,
+/obj/structure/hygiene/shower{
+	dir = 8;
+	pixel_x = 12
+	},
+/obj/effect/floor_decal/corner/black/mono,
+/turf/simulated/floor/tiled/dark/monotile,
+/area/liberty/hotel/room/three_zero_two)
+"dl" = (
+/obj/structure/bed/chair/bathtub,
+/obj/effect/floor_decal/corner/black/diagonal,
+/turf/simulated/floor/tiled/dark,
+/area/liberty/hotel/room/three_zero_two)
+"dm" = (
+/obj/effect/floor_decal/corner/black/diagonal,
+/obj/machinery/light_switch/advanced{
+	dir = 1;
+	icon_state = "light0";
+	pixel_x = 24;
+	pixel_y = -24
+	},
+/turf/simulated/floor/tiled/dark,
+/area/liberty/hotel/room/three_zero_two)
+"dn" = (
+/obj/structure/hygiene/toilet{
+	dir = 8
+	},
+/obj/machinery/door/window/westleft,
+/obj/effect/floor_decal/corner/black/mono,
+/turf/simulated/floor/tiled/dark/monotile,
+/area/liberty/hotel/room/three_zero_two)
+"do" = (
+/obj/machinery/door/airlock/civilian,
+/turf/simulated/floor/tiled/dark,
+/area/liberty/hotel/room/three_zero_two)
+"dp" = (
+/obj/effect/paint_stripe/yellow,
+/turf/simulated/wall/r_wall/prepainted,
+/area/liberty/hotel/room/three_zero_two)
+"dq" = (
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 24
+	},
+/obj/structure/table/woodentable/walnut,
+/obj/item/device/flashlight/lamp/green{
+	pixel_x = -3;
+	pixel_y = 16
+	},
+/turf/simulated/floor/carpet/blue,
+/area/space)
+"dr" = (
+/obj/effect/floor_decal/corner/black/diagonal,
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/black/border{
+	dir = 8
+	},
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -24
+	},
+/turf/simulated/floor/tiled/dark,
+/area/liberty/hotel/room/three_zero_two)
+"ds" = (
+/obj/effect/floor_decal/corner/black/diagonal,
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/black/border{
+	dir = 8
+	},
+/obj/machinery/power/apc{
+	name = "south bump";
+	pixel_y = -28
+	},
+/turf/simulated/floor/tiled/dark,
+/area/liberty/hotel/room/three_zero_two)
+"dt" = (
+/obj/effect/floor_decal/corner/black/diagonal,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/structure/table/woodentable_reinforced,
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/black/border{
+	dir = 4
+	},
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 24
+	},
+/turf/simulated/floor/tiled/dark,
+/area/liberty/hotel/room/three_zero_two)
 "eh" = (
 /obj/structure/flora/jungle/grass/a_3,
 /obj/structure/flora/jungle/grass/b_3,
@@ -17250,12 +17402,12 @@ aF
 aF
 aF
 aF
-bc
-ay
-ay
-ay
-ay
-ay
+aF
+aF
+aF
+aF
+aF
+aF
 bc
 bc
 bc
@@ -17451,14 +17603,14 @@ aF
 aF
 aF
 aF
+cy
 aF
-bc
-ay
-ay
-ay
-ay
-ay
-bc
+ar
+ar
+ar
+ar
+ar
+ar
 cV
 cp
 cp
@@ -17654,14 +17806,14 @@ aF
 aF
 aF
 aF
-bc
-cy
-ay
-ay
-ay
-ay
-cJ
-co
+aF
+ar
+as
+cz
+dr
+ds
+ar
+cW
 co
 co
 co
@@ -17856,14 +18008,14 @@ aF
 aF
 aF
 aF
-bc
-cy
-ay
-cz
-ay
-ay
-bc
-cW
+aF
+ar
+at
+cS
+dl
+dm
+do
+co
 co
 co
 co
@@ -18058,13 +18210,13 @@ aF
 aF
 aF
 aF
-bc
-cy
-ay
-ay
-ay
-ay
-bc
+dq
+ar
+dt
+cT
+cT
+cT
+ar
 cH
 co
 co
@@ -18260,13 +18412,13 @@ aF
 aF
 aF
 aF
-bc
-ay
-ay
-ay
-ay
-ay
-bc
+aF
+ar
+ar
+dk
+ar
+dn
+ar
 cX
 cp
 cY
@@ -18462,13 +18614,13 @@ aF
 aF
 aF
 aF
-bc
-bc
-bc
-bc
-bc
-bc
-bb
+aF
+aF
+ar
+ar
+ar
+ar
+dp
 bb
 bb
 bb
