@@ -342,6 +342,48 @@
 	name = "\improper Hotel - Stage Equipment"
 	icon_state = "hotel_stage"
 
+// CHAPEL
+
+/area/liberty/chapel
+	ambience = list('sound/ambience/ambicha1.ogg','sound/ambience/ambicha2.ogg','sound/ambience/ambicha3.ogg','sound/ambience/ambicha4.ogg','sound/music/traitor.ogg')
+
+/area/liberty/chapel/lobby
+	name = "\improper Chapel - Lobby"
+	icon_state = "chapel_lobby"
+
+/area/liberty/chapel/main
+	name = "\improper Chapel - Main Hall"
+	icon_state = "chapel_main_hall"
+	sound_env = LARGE_ENCLOSED
+
+/area/liberty/chapel/funeral_room
+	name = "\improper Chapel - Funeral Room"
+	icon_state = "chapel_funeral_room"
+
+/area/liberty/chapel/office
+	name = "\improper Chapel - Chaplain's Office"
+	icon_state = "chapel_office"
+
+// PRIVATE EYE
+
+/area/liberty/private_eye
+	name = "\improper Private Eye's Office"
+	icon_state = "private_eye"
+	sound_env = MEDIUM_SOFTFLOOR
+
+// PSYCHOLOGIST
+
+/area/liberty/psychologist
+	sound_env = MEDIUM_SOFTFLOOR
+
+/area/liberty/psychologist/waiting_room
+	name = "\improper Psychologist - Waiting Room"
+	icon_state = "psych_waiting_room"
+
+/area/liberty/psychologist/therapy_room
+	name = "\improper Psychologist - Therapy Room"
+	icon_state = "psych_therapy_room"
+
 ///////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////// TURBOLIFT ////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////
