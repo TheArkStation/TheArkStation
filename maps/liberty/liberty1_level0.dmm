@@ -1722,26 +1722,37 @@
 /turf/simulated/floor/tiled/old_tile,
 /area/liberty/sfp/laboratory)
 "dz" = (
-/obj/structure/table/glass,
 /obj/structure/railing/mapped{
 	dir = 8
 	},
+/obj/structure/filingcabinet/chestdrawer,
 /turf/simulated/floor/tiled/old_cargo,
 /area/liberty/sfp/laboratory)
 "dA" = (
-/obj/structure/table/glass,
-/obj/item/modular_computer/laptop/preset/custom_loadout/advanced,
+/obj/item/weapon/storage/box/masks,
+/obj/item/weapon/storage/box/gloves{
+	pixel_x = 5;
+	pixel_y = 7
+	},
+/obj/structure/table/rack,
+/obj/item/weapon/storage/box/beakers,
+/obj/item/weapon/storage/box/syringes,
 /turf/simulated/floor/tiled/old_cargo,
 /area/liberty/sfp/laboratory)
 "dB" = (
-/obj/structure/filingcabinet/chestdrawer,
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/item/weapon/autopsy_scanner,
+/obj/structure/table/rack,
+/obj/item/weapon/scalpel,
+/obj/item/weapon/circular_saw,
+/obj/item/weapon/cautery,
 /turf/simulated/floor/tiled/old_cargo,
 /area/liberty/sfp/laboratory)
 "dC" = (
 /obj/structure/table/standard,
+/obj/machinery/light,
 /turf/simulated/floor/tiled/old_cargo,
 /area/liberty/sfp/morgue)
 "dD" = (
@@ -1763,6 +1774,9 @@
 /area/liberty/hotel/pool)
 "dF" = (
 /obj/machinery/disposal,
+/obj/machinery/light{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/old_cargo,
 /area/liberty/sfp/morgue)
 "dG" = (
@@ -2305,6 +2319,7 @@
 /obj/item/weapon/folder/red,
 /obj/item/weapon/folder/white,
 /obj/item/weapon/folder/yellow,
+/obj/item/weapon/hand_labeler,
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/sfp/laboratory)
 "eI" = (
@@ -2373,29 +2388,25 @@
 /area/liberty/sfp/laboratory)
 "eO" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/box/gloves{
-	pixel_x = 5;
-	pixel_y = 7
-	},
-/obj/item/weapon/storage/box/masks,
-/obj/item/weapon/scalpel,
-/obj/item/weapon/autopsy_scanner,
 /obj/machinery/power/apc{
 	name = "south bump";
 	pixel_y = -28
 	},
+/obj/item/weapon/reagent_containers/spray/cleaner,
+/obj/item/weapon/reagent_containers/spray/sterilizine,
 /turf/simulated/floor/tiled/old_cargo,
 /area/liberty/sfp/laboratory)
 "eP" = (
-/obj/structure/hygiene/sink{
-	dir = 4;
-	pixel_x = 12
-	},
 /obj/effect/floor_decal/steeldecal/steel_decals6{
 	dir = 8
 	},
 /obj/machinery/light{
 	dir = 4
+	},
+/obj/structure/table/standard,
+/obj/structure/hygiene/sink/modern{
+	icon_state = "sink_modern";
+	dir = 1
 	},
 /turf/simulated/floor/tiled/old_cargo,
 /area/liberty/sfp/laboratory)
@@ -4335,6 +4346,7 @@
 /area/space)
 "mu" = (
 /obj/structure/filingcabinet/filingcabinet,
+/obj/machinery/light,
 /turf/simulated/floor/tiled/old_cargo,
 /area/liberty/sfp/morgue)
 "mB" = (
@@ -26841,8 +26853,8 @@ dg
 Qt
 dF
 Xh
-dV
 pV
+dV
 eB
 dV
 dV
