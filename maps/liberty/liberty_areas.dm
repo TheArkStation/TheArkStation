@@ -315,6 +315,9 @@
 	name = "\improper Hotel - Room 303"
 	icon_state = "hotel_room_303"
 
+/area/liberty/hotel/hallway
+	sound_env = MEDIUM_SOFTFLOOR
+
 /area/liberty/hotel/hallway/west
 	name = "\improper Hotel - West Hallway"
 	icon_state = "hotel_west"
