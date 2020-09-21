@@ -29,3 +29,6 @@
 
 /obj/effect/floor_decal/spline/fancy/black/full
 	icon_state = "spline_fancy_full"
+
+/obj/effect/floor_decal/spline/fancy/corner
+	icon_state = "spline_fancy_corner"
