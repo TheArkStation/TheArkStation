@@ -223,6 +223,39 @@
 	name = "\improper SCG Secure Docks"
 	icon_state = "sol_docks"
 
+// HALLWAYS
+/area/liberty/hallway/one/central
+	name = "\improper Level One - Central Hall"
+	icon_state = "lvl_1_central_hall"
+
+/area/liberty/hallway/one/aft_port
+	name = "\improper Level One - Aft Port Hallway"
+	icon_state = "lvl_1_southwest_hall"
+
+/area/liberty/hallway/one/fore_port
+	name = "\improper Level One - Fore Port Hallway"
+	icon_state = "lvl_1_northwest_hall"
+
+/area/liberty/hallway/one/starboard
+	name = "\improper Level One - Fore Port Hallway"
+	icon_state = "lvl_1_east_hall"
+
+/area/liberty/hallway/one/aft_terminal
+	name = "\improper Level One - Aft Terminal"
+	icon_state = "lvl_1_south_terminal"
+
+/area/liberty/hallway/one/fore_terminal
+	name = "\improper Level One - Fore Terminal"
+	icon_state = "lvl_1_north_terminal"
+
+/area/liberty/hallway/one/aft_docks
+	name = "\improper Level One - Aft Docks"
+	icon_state = "lvl_1_south_docks"
+
+/area/liberty/hallway/one/fore_docks
+	name = "\improper Level One - Fore Docks"
+	icon_state = "lvl_1_north_docks"
+
 
 ///////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////// LEVEL TWO ////////////////////////////////////
