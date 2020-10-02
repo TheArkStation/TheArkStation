@@ -21,6 +21,9 @@
 /obj/effect/paint_stripe/sfp_blue
 	color = COLOR_SFP_BLUE
 
+/obj/effect/paint_stripe/purple
+	color = COLOR_PURPLE_GRAY
+
 // DECALS
 
 /obj/effect/floor_decal/borderfloorsfp
