@@ -31,6 +31,8 @@
 	else
 		var/image/I = image('code_ark/icons/obj/power.dmi', "light-overlay-blank")
 		I.color = area_light_color
+		I.plane = EFFECTS_ABOVE_LIGHTING_PLANE
+		I.layer = ABOVE_LIGHTING_LAYER
 		overlays += I
 		set_light(0.1, 0.1, 1, 2, area_light_color)
 

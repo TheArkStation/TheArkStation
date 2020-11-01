@@ -15,6 +15,13 @@
 
 	var/list/areas_to_use = list()
 
+	var/door_floor_type // ARK
+
+	var/ext_panel_x_adj // ARK
+	var/ext_panel_y_adj // ARK
+	var/int_panel_x_adj // ARK
+	var/int_panel_y_adj // ARK
+
 /obj/turbolift_map_holder/Destroy()
 	turbolifts -= src
 	return ..()
@@ -125,6 +132,11 @@
 			light_x2 = ux + lift_size_x - 1
 			light_y2 = uy + lift_size_y - 1
 
+	int_panel_x = int_panel_x + int_panel_x_adj // ARK
+	int_panel_y = int_panel_y + int_panel_y_adj // ARK
+	ext_panel_x = ext_panel_x + ext_panel_x_adj // ARK
+	ext_panel_y = ext_panel_y + ext_panel_y_adj // ARK
+
 	// Generate each floor and store it in the controller datum.
 	for(var/cz = uz;cz<=ez;cz++)
 
@@ -149,7 +161,10 @@
 					if((tx == ux || ty == uy || tx == ex || ty == ey) && !(tx >= door_x1 && tx <= door_x2 && ty >= door_y1 && ty <= door_y2))
 						swap_to = wall_type
 					else
-						swap_to = floor_type
+						if(door_floor_type && (tx >= door_x1 && tx <= door_x2 && ty >= door_y1 && ty <= door_y2)) // ARK
+							swap_to = door_floor_type // ARK
+						else // ARK
+							swap_to = floor_type // ARK
 
 				if(checking.type != swap_to)
 					checking.ChangeTurf(swap_to)
@@ -177,13 +192,16 @@
 				var/internal = 1
 				if(!(checking in floor_turfs))
 					internal = 0
-					if(checking.type != floor_type)
-						checking.ChangeTurf(floor_type)
+					if(checking.type != floor_type) // ARK
+						if(door_floor_type) // ARK
+							checking.ChangeTurf(door_floor_type) // ARK
+						else // ARK
+							checking.ChangeTurf(floor_type) // ARK
 						checking = locate(tx,ty,cz)
 					for(var/atom/movable/thing in checking.contents)
 						if(thing.simulated)
 							qdel(thing)
-				if(checking.type == floor_type) // Don't build over empty space on lower levels.
+				if(checking.type == floor_type || checking.type == door_floor_type) // Don't build over empty space on lower levels. // ARK
 					var/obj/machinery/door/airlock/lift/newdoor = new door_type(checking)
 					if(internal)
 						lift.doors += newdoor

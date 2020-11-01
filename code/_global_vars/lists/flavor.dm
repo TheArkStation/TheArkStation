@@ -104,7 +104,16 @@ GLOBAL_LIST_INIT(music_tracks, list(
 	"80s All Over Again" = /music_track/eighties,
 	"Wild Encounters" = /music_track/wildencounters,
 	"Torn" = /music_track/torn,
-	"Nebula" = /music_track/nebula
+	"Nebula" = /music_track/nebula,
+	"Relaxing" = /music_track/bensound_relaxing,
+	"Better Days" = /music_track/bensound_better_days,
+	"Sad Day" = /music_track/bensound_sad_day,
+	"Tomorrow" = /music_track/bensound_tomorrow,
+	"Sicilian Cafe" = /music_track/emininni_sicilian_cafe,
+	"Love" = /music_track/bensound_love,
+	"The Jazz Piano" = /music_track/bensound_the_jazz_piano,
+	"Night on the Docks - Sax" = /music_track/kmacleod_night_on_the_docks_sax,
+	"Shades of Spring" = /music_track/kmacleod_shades_of_spring
 ))
 
 /proc/setup_music_tracks(var/list/tracks)

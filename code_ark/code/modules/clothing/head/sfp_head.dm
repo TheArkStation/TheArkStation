@@ -12,6 +12,7 @@
 /obj/item/clothing/head/soft/sfp
 	icon = 'code_ark/icons/obj/clothing/obj_head.dmi'
 	item_icons = list(slot_head_str = 'code_ark/icons/mob/onmob/onmob_head.dmi')
+	flags_inv = BLOCKHEADHAIR
 
 /obj/item/clothing/head/soft/sfp/white
 	name = "sol federal police white cap"

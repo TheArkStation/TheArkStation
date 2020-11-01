@@ -16,7 +16,6 @@
 /obj/item/weapon/reagent_containers/food/snacks/meat/beef,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/floor_decal/steeldecal/steel_decals6{
-	icon_state = "steel_decals6";
 	dir = 9
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -37,7 +36,6 @@
 /obj/item/weapon/storage/box/water,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/floor_decal/steeldecal/steel_decals6{
-	icon_state = "steel_decals6";
 	dir = 10
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -45,18 +43,15 @@
 "aj" = (
 /obj/machinery/light/small,
 /obj/effect/floor_decal/steeldecal/steel_decals6{
-	icon_state = "steel_decals6";
 	dir = 5
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/lucius/hangar)
 "ak" = (
 /obj/effect/floor_decal/steeldecal/steel_decals4{
-	icon_state = "steel_decals4";
 	dir = 5
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
-	icon_state = "steel_decals4";
 	dir = 8
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -82,6 +77,7 @@
 	pixel_y = 8;
 	req_access = list("ACCESS_SOL_GENERAL")
 	},
+/obj/effect/paint_stripe/blue,
 /turf/simulated/wall/r_titanium,
 /area/lucius/lazarev)
 "ap" = (
@@ -188,7 +184,6 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
-	icon_state = "steel_decals4";
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -201,8 +196,7 @@
 	dir = 9
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 9;
-	pixel_y = 0
+	dir = 9
 	},
 /obj/structure/catwalk,
 /obj/structure/cable/green{
@@ -212,30 +206,23 @@
 	},
 /turf/simulated/floor/plating,
 /area/lucius/hangar)
-"aJ" = (
-/obj/effect/floor_decal/industrial/warning{
-	icon_state = "stripe";
-	dir = 6
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/lucius/hangar)
 "aK" = (
 /obj/structure/navlight_shuttle{
-	icon_state = "navlight_green";
 	dir = 4
 	},
 /obj/structure/sign/warning/vent_port{
 	dir = 1;
-	icon_state = "securearea";
 	pixel_y = -32
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	controlled = 0
 	},
+/obj/effect/floor_decal/industrial/warning/full,
 /turf/simulated/floor/shuttle_ceiling,
 /area/lucius/lazarev)
 "aL" = (
 /obj/effect/paint/silver,
+/obj/effect/paint_stripe/blue,
 /turf/simulated/wall/r_titanium,
 /area/lucius/lazarev)
 "aM" = (
@@ -293,8 +280,7 @@
 	icon_state = "2-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 9;
-	icon_state = "intact"
+	dir = 9
 	},
 /obj/structure/cable/yellow{
 	d1 = 2;
@@ -329,6 +315,7 @@
 	pixel_y = -24;
 	req_access = list("ACCESS_SOL_ENG")
 	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/monotile,
 /area/lucius/maintenance/second)
 "aW" = (
@@ -366,7 +353,6 @@
 	},
 /obj/structure/sign/warning/fire{
 	dir = 1;
-	icon_state = "fire";
 	pixel_x = -32
 	},
 /turf/simulated/floor/reinforced/airless,
@@ -374,19 +360,19 @@
 "ba" = (
 /obj/structure/table/rack,
 /obj/effect/floor_decal/corner/blue{
-	icon_state = "corner_white";
 	dir = 5
 	},
 /obj/effect/floor_decal/corner/blue{
-	icon_state = "corner_white";
 	dir = 8
 	},
 /obj/item/device/radio,
 /obj/item/device/radio,
 /obj/machinery/firealarm{
 	dir = 8;
-	pixel_x = -24;
-	pixel_y = 0
+	pixel_x = -24
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/dark,
 /area/lucius/storage)
@@ -412,7 +398,6 @@
 /area/lucius/hallway/second)
 "be" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	icon_state = "intact";
 	dir = 10
 	},
 /obj/structure/cable/green{
@@ -454,6 +439,7 @@
 "bj" = (
 /obj/effect/paint/silver,
 /obj/machinery/atmospherics/pipe/simple/hidden/red,
+/obj/effect/paint_stripe/blue,
 /turf/simulated/wall/r_titanium,
 /area/lucius/lazarev)
 "bl" = (
@@ -471,7 +457,6 @@
 "bo" = (
 /obj/structure/grille,
 /obj/structure/sign/warning/hot_exhaust{
-	icon_state = "fire";
 	dir = 4
 	},
 /turf/simulated/floor/plating,
@@ -488,7 +473,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/lucius/hangar)
 "bq" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/r_wall/prepainted,
 /area/lucius/maintenance/second)
 "br" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -535,28 +520,14 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/alarm/sol{
-	dir = 1;
-	icon_state = "alarm0";
-	pixel_y = -24
-	},
-/turf/simulated/floor/plating,
-/area/lucius/maintenance/second)
-"bF" = (
-/obj/machinery/firealarm{
-	pixel_y = 24
-	},
-/obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
+/obj/structure/extinguisher_cabinet{
+	pixel_y = 32
 	},
 /turf/simulated/floor/plating,
 /area/lucius/maintenance/second)
 "bG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 5;
-	icon_state = "intact"
+	dir = 5
 	},
 /obj/structure/cable/yellow{
 	d1 = 4;
@@ -623,7 +594,6 @@
 /area/lucius/maintenance/second)
 "bK" = (
 /obj/structure/sign/warning/hot_exhaust{
-	icon_state = "fire";
 	dir = 4
 	},
 /obj/effect/paint/red,
@@ -631,7 +601,6 @@
 /area/lucius/thrust)
 "bL" = (
 /obj/machinery/atmospherics/portables_connector{
-	icon_state = "map_connector";
 	dir = 1
 	},
 /obj/machinery/portable_atmospherics/canister/air/airlock,
@@ -659,7 +628,6 @@
 /obj/machinery/atmospherics/portables_connector,
 /obj/machinery/portable_atmospherics/canister/air,
 /obj/machinery/light/small/red{
-	icon_state = "bulb_map";
 	dir = 1
 	},
 /obj/structure/cable/cyan{
@@ -670,28 +638,26 @@
 /turf/simulated/floor/plating,
 /area/lucius/lazarev)
 "bT" = (
-/obj/machinery/power/smes/buildable/preset/torch/shuttle,
 /obj/machinery/atmospherics/pipe/simple/hidden/red,
 /obj/structure/fuel_port{
-	pixel_x = 32;
-	pixel_y = 0
+	pixel_x = 32
 	},
 /obj/structure/cable/cyan{
 	d2 = 8;
 	icon_state = "0-8"
 	},
+/obj/machinery/power/smes/buildable/preset/torch/substation_full,
 /turf/simulated/floor/plating,
 /area/lucius/lazarev)
 "bX" = (
 /obj/structure/shuttle/engine/platform{
-	icon_state = "platform";
 	dir = 4
 	},
 /obj/structure/shuttle/engine/heater{
-	icon_state = "heater";
 	dir = 4
 	},
 /obj/effect/paint/silver,
+/obj/effect/paint_stripe/blue,
 /turf/simulated/wall/r_titanium,
 /area/lucius/lazarev)
 "bY" = (
@@ -699,6 +665,7 @@
 /obj/machinery/ion_engine{
 	dir = 8
 	},
+/obj/effect/paint_stripe/blue,
 /turf/simulated/wall/r_titanium,
 /area/lucius/lazarev)
 "bZ" = (
@@ -707,7 +674,6 @@
 	},
 /obj/machinery/power/apc/sol{
 	dir = 4;
-	icon_state = "apc0";
 	pixel_x = 24
 	},
 /obj/structure/cable/green,
@@ -729,12 +695,12 @@
 	id_tag = "lucius_chamber";
 	name = "Reactor Blast Doors"
 	},
+/obj/machinery/door/firedoor/sol,
 /turf/simulated/floor/plating,
 /area/lucius/engineering)
 "ck" = (
 /obj/machinery/fusion_fuel_injector/mapped{
 	dir = 8;
-	icon_state = "injector0";
 	initial_id_tag = "lucius_fusion_fuel"
 	},
 /obj/machinery/alarm/sol{
@@ -757,7 +723,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/lucius/engineering)
 "cr" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/r_wall/prepainted,
 /area/lucius/hallway/second)
 "cu" = (
 /obj/machinery/door/airlock/hatch/maintenance{
@@ -768,10 +734,12 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/lucius/engineering)
 "cv" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/r_wall/prepainted,
 /area/lucius/fuel)
 "cE" = (
-/obj/effect/floor_decal/industrial/warning,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 6
+	},
 /turf/simulated/floor/reinforced/airless,
 /area/lucius/thrust)
 "cF" = (
@@ -801,20 +769,22 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/reinforced/airless,
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/turf/simulated/floor/plating,
 /area/lucius/thrust)
 "cJ" = (
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/blue/border,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
-	icon_state = "map_scrubber_on";
 	dir = 1
 	},
 /obj/machinery/light,
+/obj/effect/floor_decal/industrial/warning/corner,
 /turf/simulated/floor/tiled/techfloor,
 /area/lucius/hallway/second)
 "cK" = (
 /obj/effect/floor_decal/borderfloorblack,
+/obj/effect/floor_decal/corner/blue/border,
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled/techfloor,
 /area/lucius/hallway/second)
@@ -827,30 +797,32 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/lucius/hallway/second)
 "cM" = (
-/obj/structure/railing,
 /obj/structure/sign/deck/second{
 	pixel_y = 24
 	},
+/obj/structure/railing/mapped,
 /turf/simulated/floor/tiled,
 /area/lucius/hallway/second)
 "cN" = (
-/obj/structure/railing,
 /obj/machinery/alarm/sol{
 	pixel_y = 24
 	},
+/obj/structure/railing/mapped,
 /obj/structure/stairs/east,
 /turf/simulated/floor/tiled,
 /area/lucius/hallway/second)
 "cP" = (
-/obj/structure/railing,
 /obj/effect/floor_decal/industrial/warning/full,
 /obj/structure/sign/warning/vent_port{
 	dir = 8;
-	icon_state = "securearea";
 	pixel_x = 32
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/shuttle{
 	id_tag = "lazarev_shuttle_dock_pump"
+	},
+/obj/structure/railing/mapped,
+/obj/machinery/light{
+	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/lucius/hangar)
@@ -874,7 +846,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/universal,
 /obj/machinery/power/terminal{
-	icon_state = "term";
 	dir = 1
 	},
 /obj/structure/cable/green{
@@ -915,7 +886,6 @@
 /area/lucius/lazarev)
 "dg" = (
 /obj/effect/floor_decal/industrial/warning{
-	icon_state = "stripe";
 	dir = 9
 	},
 /turf/simulated/floor/reinforced/airless,
@@ -940,7 +910,6 @@
 "dm" = (
 /obj/machinery/fusion_fuel_injector/mapped{
 	dir = 8;
-	icon_state = "injector0";
 	initial_id_tag = "lucius_fusion_fuel"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -965,12 +934,12 @@
 	name = "Monitoring Room Blast Doors"
 	},
 /obj/machinery/door/firedoor/sol,
+/obj/machinery/door/firedoor/sol,
 /turf/simulated/floor/plating,
 /area/lucius/engineering)
 "dp" = (
 /obj/machinery/computer/fusion/gyrotron{
 	dir = 4;
-	icon_state = "computer";
 	initial_id_tag = "lucius_fusion_gyro";
 	req_access = list("ACCESS_SOL_ENG")
 	},
@@ -979,7 +948,6 @@
 	},
 /obj/effect/floor_decal/corner/yellow,
 /obj/effect/floor_decal/corner/yellow/border{
-	icon_state = "bordercolor";
 	dir = 9
 	},
 /obj/effect/floor_decal/industrial/warning/corner{
@@ -1014,7 +982,6 @@
 	req_access = list("ACCESS_SOL_ENG")
 	},
 /obj/effect/floor_decal/corner/yellow/border{
-	icon_state = "bordercolor";
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/warning{
@@ -1035,7 +1002,6 @@
 	},
 /obj/effect/floor_decal/corner/yellow/half,
 /obj/effect/floor_decal/corner/yellow/border{
-	icon_state = "bordercolor";
 	dir = 1
 	},
 /obj/machinery/light{
@@ -1043,7 +1009,6 @@
 	},
 /obj/item/weapon/book/manual/rust_engine,
 /obj/effect/floor_decal/industrial/warning/corner{
-	icon_state = "stripecorner";
 	dir = 1
 	},
 /obj/item/device/geiger,
@@ -1058,13 +1023,34 @@
 /obj/effect/floor_decal/industrial/warning/full,
 /turf/simulated/floor/plating,
 /area/lucius/engineering)
+"dt" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/obj/structure/catwalk,
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_y = 32
+	},
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -24
+	},
+/turf/simulated/floor/plating,
+/area/lucius/hangar)
 "du" = (
 /obj/structure/cable/yellow{
 	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/terminal{
-	icon_state = "term";
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/warning,
@@ -1087,14 +1073,12 @@
 	dir = 5
 	},
 /obj/effect/floor_decal/corner/yellow/border{
-	icon_state = "bordercolor";
 	dir = 5
 	},
 /obj/effect/floor_decal/borderfloor/corner2{
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/yellow/bordercorner2{
-	icon_state = "bordercolorcorner2";
 	dir = 4
 	},
 /obj/structure/extinguisher_cabinet{
@@ -1102,7 +1086,6 @@
 	pixel_x = 32
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
-	icon_state = "steel_decals4";
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -1138,7 +1121,6 @@
 /area/lucius/thrust)
 "dM" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/fuel{
-	icon_state = "map";
 	dir = 8
 	},
 /obj/structure/catwalk,
@@ -1149,7 +1131,6 @@
 /area/lucius/thrust)
 "dN" = (
 /obj/machinery/power/terminal{
-	icon_state = "term";
 	dir = 8
 	},
 /obj/structure/cable/yellow{
@@ -1178,7 +1159,6 @@
 	dir = 6
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
-	icon_state = "steel_decals4";
 	dir = 10
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4,
@@ -1205,7 +1185,6 @@
 /area/lucius/hallway/second)
 "dQ" = (
 /obj/effect/floor_decal/borderfloorblack{
-	icon_state = "borderfloor_white";
 	dir = 9
 	},
 /obj/effect/floor_decal/corner/blue/border{
@@ -1226,11 +1205,9 @@
 	pixel_y = 32
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
-	icon_state = "steel_decals4";
 	dir = 1
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
-	icon_state = "steel_decals4";
 	dir = 6
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -1255,13 +1232,10 @@
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 1
 	},
-/obj/structure/cable/green{
-	d2 = 2;
-	icon_state = "0-2"
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 4
 	},
-/obj/machinery/power/apc/sol{
-	dir = 1;
-	icon_state = "apc0";
+/obj/item/device/radio/intercom{
 	pixel_y = 24
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -1272,6 +1246,9 @@
 	},
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 1
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 9
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/lucius/hallway/second)
@@ -1304,18 +1281,23 @@
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 1
 	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/lucius/hallway/second)
 "dW" = (
 /obj/effect/floor_decal/borderfloorblack{
-	icon_state = "borderfloor_white";
 	dir = 5
 	},
 /obj/effect/floor_decal/corner/blue/border{
-	dir = 1
+	dir = 5
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 9
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/lucius/hallway/second)
@@ -1365,7 +1347,6 @@
 	req_access = "ACCESS_SOL_GENERAL"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/shuttle{
-	controlled = 0;
 	dir = 4;
 	id_tag = "venturestar_aux_dock_pump"
 	},
@@ -1374,6 +1355,7 @@
 /area/lucius/lazarev)
 "eb" = (
 /obj/machinery/door/airlock/external/bolted{
+	frequency = 1331;
 	id_tag = "lazarev_shuttle_inner";
 	name = "MRM Lazarev Interior Access"
 	},
@@ -1385,14 +1367,12 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
-	icon_state = "intact";
 	dir = 10
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/lucius/lazarev)
 "ec" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	icon_state = "map-scrubbers";
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
@@ -1413,6 +1393,9 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 5
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/lucius/lazarev)
 "ee" = (
@@ -1424,6 +1407,9 @@
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/lucius/lazarev)
@@ -1441,7 +1427,6 @@
 /area/lucius/lazarev)
 "eg" = (
 /obj/effect/floor_decal/corner/lightgrey/border{
-	icon_state = "bordercolor";
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -1449,7 +1434,6 @@
 "eh" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/effect/floor_decal/corner/lightgrey/border{
-	icon_state = "bordercolor";
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -1460,7 +1444,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan,
 /obj/effect/floor_decal/steeldecal/steel_decals6{
-	icon_state = "steel_decals6";
 	dir = 8
 	},
 /turf/simulated/floor/tiled/steel_grid,
@@ -1541,7 +1524,6 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/yellow/border{
-	icon_state = "bordercolor";
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -1563,7 +1545,8 @@
 "eD" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
 	frequency = 1441;
-	id_tag = "lucius_propellant_in"
+	id = "lucius_propellant_in";
+	id_tag = null
 	},
 /turf/simulated/floor/reinforced/carbon_dioxide,
 /area/lucius/fuel)
@@ -1578,7 +1561,6 @@
 /area/lucius/fuel)
 "eH" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
-	icon_state = "intact";
 	dir = 6
 	},
 /obj/machinery/air_sensor{
@@ -1588,7 +1570,6 @@
 /area/lucius/thrust)
 "eI" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging/junction{
-	icon_state = "intact";
 	dir = 8
 	},
 /turf/simulated/floor/reinforced/airless,
@@ -1598,12 +1579,12 @@
 /obj/machinery/door/blast/regular/open{
 	dir = 8;
 	icon_state = "pdoor0";
-	id_tag = "lucius_combustion_doors"
+	id_tag = "lucius_combustion_blast";
+	name = "Combustion Chamber Blast Door"
 	},
 /obj/machinery/door/firedoor/sol,
 /obj/machinery/atmospherics/binary/passive_gate{
 	dir = 4;
-	icon_state = "map_off";
 	id_tag = "lucius_apu_in";
 	target_pressure = 7500;
 	unlocked = 1
@@ -1613,9 +1594,8 @@
 "eK" = (
 /obj/machinery/atmospherics/tvalve/digital{
 	dir = 4;
-	icon_state = "map_tvalve0";
 	id_tag = "lucius_apu";
-	name = "APU Valve"
+	name = "Main APU Valve"
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/plating,
@@ -1629,7 +1609,6 @@
 	},
 /obj/structure/sign/double/solgovflag/right{
 	dir = 4;
-	icon_state = "solgovflag-right";
 	pixel_x = -32
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -1643,11 +1622,15 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/lucius/hallway/second)
 "eP" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	icon_state = "map-scrubbers";
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
@@ -1670,11 +1653,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
 /turf/simulated/floor/tiled/techfloor,
 /area/lucius/hallway/second)
 "eR" = (
@@ -1687,7 +1665,6 @@
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/corner/black{
-	icon_state = "corner_white";
 	dir = 10
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -1722,7 +1699,6 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden{
-	icon_state = "map";
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -1752,6 +1728,7 @@
 "eV" = (
 /obj/machinery/door/airlock/external/bolted{
 	dir = 4;
+	frequency = 1331;
 	id_tag = "lazarev_shuttle_outer";
 	name = "MRM Lazarev External Access"
 	},
@@ -1776,7 +1753,6 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
-	icon_state = "intact";
 	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_grid,
@@ -1788,7 +1764,6 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
-	icon_state = "intact";
 	dir = 9
 	},
 /turf/simulated/floor/tiled/steel_grid,
@@ -1872,7 +1847,6 @@
 "fl" = (
 /obj/machinery/power/emitter/gyrotron/anchored{
 	dir = 8;
-	icon_state = "emitter-off";
 	initial_id_tag = "lucius_fusion_gyro";
 	req_access = list("ACCESS_SOL_ENG")
 	},
@@ -1901,19 +1875,16 @@
 "fo" = (
 /obj/machinery/computer/fusion/fuel_control{
 	dir = 4;
-	icon_state = "computer";
 	initial_id_tag = "lucius_fusion_fuel";
 	req_access = list("ACCESS_SOL_ENG")
 	},
 /obj/effect/floor_decal/borderfloor{
-	icon_state = "borderfloor_white";
 	dir = 10
 	},
 /obj/effect/floor_decal/corner/yellow{
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/yellow/border{
-	icon_state = "bordercolor";
 	dir = 10
 	},
 /turf/simulated/floor/tiled,
@@ -1928,10 +1899,12 @@
 	},
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/yellow/half{
-	icon_state = "bordercolorhalf";
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/yellow/border,
+/obj/structure/railing/mapped{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/lucius/engineering)
 "fq" = (
@@ -1940,32 +1913,27 @@
 	d2 = 0;
 	icon_state = "16-0"
 	},
-/obj/structure/railing{
-	dir = 8
-	},
-/obj/structure/railing,
 /obj/effect/floor_decal/industrial/warning/full,
 /obj/machinery/atmospherics/pipe/zpipe/up/scrubbers{
-	color = "#ff0000";
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/zpipe/up/supply{
-	icon_state = "up-supply";
 	dir = 4
 	},
 /obj/structure/cable/green,
+/obj/structure/railing/mapped,
 /turf/simulated/floor/plating,
 /area/lucius/engineering)
 "fr" = (
-/obj/structure/railing{
-	dir = 8
-	},
-/obj/structure/railing,
-/obj/machinery/atmospherics/valve/shutoff{
-	dir = 4
-	},
 /obj/effect/floor_decal/industrial/shutoff{
 	dir = 4
+	},
+/obj/structure/railing/mapped,
+/obj/machinery/atmospherics/valve/shutoff/supply{
+	dir = 8
+	},
+/obj/structure/railing/mapped{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/lucius/engineering)
@@ -2001,7 +1969,6 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/yellow/border{
-	icon_state = "bordercolor";
 	dir = 4
 	},
 /obj/machinery/light{
@@ -2034,8 +2001,7 @@
 /area/lucius/fuel)
 "fF" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
-	dir = 5;
-	icon_state = "intact"
+	dir = 5
 	},
 /obj/machinery/sparker{
 	id_tag = "lucius_ignition";
@@ -2045,7 +2011,6 @@
 /area/lucius/thrust)
 "fG" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
-	icon_state = "intact";
 	dir = 10
 	},
 /turf/simulated/floor/reinforced/airless,
@@ -2058,7 +2023,6 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/alarm/sol{
 	dir = 8;
-	icon_state = "alarm0";
 	pixel_x = 24
 	},
 /turf/simulated/floor/tiled/dark/monotile,
@@ -2072,9 +2036,15 @@
 	},
 /obj/structure/sign/double/solgovflag/left{
 	dir = 4;
-	icon_state = "solgovflag-left";
-	pixel_x = -32;
-	pixel_y = 0
+	pixel_x = -32
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 6
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/lucius/hallway/second)
@@ -2091,7 +2061,6 @@
 	pixel_y = 16
 	},
 /obj/effect/floor_decal/corner/black{
-	icon_state = "corner_white";
 	dir = 5
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -2100,11 +2069,14 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 4
+	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/techfloor,
 /area/lucius/hallway/second)
 "fR" = (
@@ -2174,7 +2146,6 @@
 /obj/effect/catwalk_plated,
 /obj/machinery/light,
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/shuttle{
-	controlled = 0;
 	dir = 4;
 	id_tag = "venturestar_aux_dock_pump"
 	},
@@ -2184,6 +2155,7 @@
 "fW" = (
 /obj/machinery/door/airlock/external/bolted{
 	dir = 4;
+	frequency = 1331;
 	id_tag = "lazarev_shuttle_inner";
 	name = "MRM Lazarev Internal Access"
 	},
@@ -2212,7 +2184,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
-	icon_state = "intact";
 	dir = 10
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals_central6,
@@ -2222,7 +2193,6 @@
 /obj/structure/closet/emcloset,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/floor_decal/corner/lightgrey/border{
-	icon_state = "bordercolor";
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -2240,7 +2210,6 @@
 /area/lucius/lazarev)
 "ga" = (
 /obj/effect/floor_decal/industrial/warning{
-	icon_state = "stripe";
 	dir = 6
 	},
 /obj/structure/cable/cyan{
@@ -2250,22 +2219,12 @@
 	},
 /obj/item/device/radio/intercom{
 	dir = 1;
-	icon_state = "intercom";
 	pixel_y = -24
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/lucius/lazarev)
 "gb" = (
-/obj/structure/cable/cyan{
-	d2 = 8;
-	icon_state = "0-8"
-	},
 /obj/effect/floor_decal/corner/lightgrey/border,
-/obj/machinery/power/apc/sol{
-	dir = 4;
-	icon_state = "apc0";
-	pixel_x = 24
-	},
 /turf/simulated/floor/tiled/techfloor,
 /area/lucius/lazarev)
 "gg" = (
@@ -2283,7 +2242,6 @@
 "gl" = (
 /obj/machinery/fusion_fuel_injector/mapped{
 	dir = 8;
-	icon_state = "injector0";
 	id_tag = "lucius_fusion_fuel"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -2304,11 +2262,11 @@
 /area/lucius/engineering)
 "gq" = (
 /obj/structure/stairs/west,
-/obj/structure/railing,
+/obj/structure/railing/mapped,
 /turf/simulated/floor/tiled,
 /area/lucius/engineering)
 "gr" = (
-/obj/structure/railing,
+/obj/structure/railing/mapped,
 /turf/simulated/floor/tiled,
 /area/lucius/engineering)
 "gs" = (
@@ -2324,7 +2282,6 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/yellow/border{
-	icon_state = "bordercolor";
 	dir = 4
 	},
 /obj/structure/cable/green{
@@ -2333,7 +2290,6 @@
 	},
 /obj/machinery/power/apc/sol{
 	dir = 4;
-	icon_state = "apc0";
 	pixel_x = 24
 	},
 /turf/simulated/floor/tiled,
@@ -2341,7 +2297,8 @@
 "gu" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
 	frequency = 1441;
-	id_tag = "lucius_oxidizer_in"
+	id = "lucius_oxidizer_in";
+	id_tag = null
 	},
 /turf/simulated/floor/reinforced/oxygen,
 /area/lucius/fuel)
@@ -2366,15 +2323,12 @@
 "gA" = (
 /obj/item/device/radio/intercom/broadcasting{
 	dir = 4;
-	icon_state = "intercom";
-	pixel_x = -24;
-	pixel_y = 0
+	pixel_x = -24
 	},
 /turf/simulated/floor/plating,
 /area/lucius/fuel)
 "gB" = (
 /obj/machinery/atmospherics/portables_connector{
-	icon_state = "map_connector";
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -2404,14 +2358,14 @@
 /area/lucius/fuel)
 "gD" = (
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
-	icon_state = "intact";
 	dir = 4
 	},
 /obj/effect/wallframe_spawn/reinforced_phoron,
 /obj/machinery/door/blast/regular/open{
 	dir = 8;
 	icon_state = "pdoor0";
-	id_tag = "lucius_combustion_doors"
+	id_tag = "lucius_combustion_blast";
+	name = "Combustion Chamber Blast Door"
 	},
 /obj/machinery/meter,
 /obj/machinery/door/firedoor/sol,
@@ -2427,7 +2381,6 @@
 /area/lucius/thrust)
 "gH" = (
 /obj/effect/floor_decal/borderfloorblack{
-	icon_state = "borderfloor_white";
 	dir = 10
 	},
 /obj/effect/floor_decal/corner/blue/border{
@@ -2435,22 +2388,29 @@
 	},
 /obj/machinery/firealarm{
 	dir = 8;
-	pixel_x = -24;
-	pixel_y = 0
+	pixel_x = -24
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 1
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/lucius/hallway/second)
 "gI" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/effect/floor_decal/borderfloorblack,
+/obj/effect/floor_decal/corner/blue/border,
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled/techfloor,
 /area/lucius/hallway/second)
 "gJ" = (
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/blue/border,
-/obj/machinery/atmospherics/unary/vent_pump{
-	icon_state = "map_vent";
+/obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -2459,14 +2419,12 @@
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
 	dir = 8;
 	frequency = 1331;
-	icon_state = "airlock_control_off";
 	id_tag = "lazarev_shuttle_dock";
 	name = "Lucius Hangar Docking Controller";
 	pixel_x = 24;
 	req_access = list("ACCESS_SOL_GENERAL")
 	},
 /obj/effect/floor_decal/borderfloorblack{
-	icon_state = "borderfloor_white";
 	dir = 6
 	},
 /obj/effect/floor_decal/corner/blue/border{
@@ -2477,27 +2435,27 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/effect/floor_decal/steeldecal/steel_decals4{
-	icon_state = "steel_decals4";
 	dir = 8
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
-	icon_state = "steel_decals4";
 	dir = 5
+	},
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/lucius/hallway/second)
 "gN" = (
-/obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /obj/effect/floor_decal/corner/lightgrey/border,
+/obj/structure/cable/cyan{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/lucius/lazarev)
 "gT" = (
 /obj/effect/floor_decal/corner/lightgrey/border{
-	icon_state = "bordercolor";
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -2516,7 +2474,6 @@
 /area/lucius/engineering)
 "gY" = (
 /obj/effect/floor_decal/industrial/warning{
-	icon_state = "stripe";
 	dir = 6
 	},
 /turf/simulated/floor/reinforced/airless,
@@ -2529,9 +2486,6 @@
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 6
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/lucius/engineering)
@@ -2547,11 +2501,8 @@
 	name = "Reactor Access"
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
 /obj/machinery/access_button/airlock_exterior{
-	master_tag = "lucius_reactor_exterior";
+	master_tag = "lucius_reactor";
 	pixel_y = -24;
 	req_access = list("ACCESS_SOL_ENG")
 	},
@@ -2569,9 +2520,6 @@
 	name = "Reactor Access"
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
 /obj/machinery/access_button/airlock_interior{
 	master_tag = "lucius_reactor";
 	pixel_y = 24;
@@ -2595,9 +2543,6 @@
 	tag_exterior_door = "lucius_reactor_exterior";
 	tag_interior_door = "lucius_reactor_interior"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
 /turf/simulated/floor/plating,
 /area/lucius/engineering)
 "hd" = (
@@ -2607,9 +2552,6 @@
 	icon_state = "4-8"
 	},
 /obj/effect/catwalk_plated,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
 /turf/simulated/floor/plating,
 /area/lucius/engineering)
 "he" = (
@@ -2639,7 +2581,6 @@
 /obj/machinery/fusion_fuel_compressor,
 /obj/machinery/alarm/sol{
 	dir = 1;
-	icon_state = "alarm0";
 	pixel_y = -24
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -2647,11 +2588,9 @@
 /area/lucius/engineering)
 "hg" = (
 /obj/effect/floor_decal/borderfloor{
-	icon_state = "borderfloor_white";
 	dir = 6
 	},
 /obj/effect/floor_decal/corner/yellow/border{
-	icon_state = "bordercolor";
 	dir = 6
 	},
 /obj/structure/closet/crate/radiation,
@@ -2670,7 +2609,6 @@
 "hi" = (
 /obj/machinery/computer/air_control{
 	dir = 4;
-	icon_state = "computer";
 	input_tag = "lucius_propellant_in";
 	name = "Propellant Tank Control";
 	output_tag = "lucius_propellant_out";
@@ -2693,7 +2631,6 @@
 	},
 /obj/machinery/button/ignition{
 	dir = 4;
-	icon_state = "launcherbtt";
 	id_tag = "lucius_ignition";
 	pixel_x = 32;
 	pixel_y = -6;
@@ -2701,7 +2638,6 @@
 	},
 /obj/machinery/button/toggle/valve{
 	dir = 4;
-	icon_state = "launcherbtt";
 	id_tag = "lucius_apu";
 	name = "APU Control";
 	pixel_x = 32;
@@ -2710,7 +2646,6 @@
 	},
 /obj/machinery/button/toggle/valve{
 	dir = 4;
-	icon_state = "launcherbtt";
 	id_tag = "lucius_apu_exhaust";
 	name = "APU Exhaust Bypass";
 	pixel_x = 42;
@@ -2727,7 +2662,6 @@
 	},
 /obj/machinery/computer/air_control/fuel_injection{
 	dir = 8;
-	icon_state = "computer";
 	input_tag = "lucius_combustion_in";
 	name = "Fuel Injection Control Console";
 	sensor_name = "Combustion Chamber";
@@ -2748,7 +2682,8 @@
 /obj/machinery/door/blast/regular/open{
 	dir = 2;
 	icon_state = "pdoor0";
-	id_tag = "lucius_combustion_doors"
+	id_tag = "lucius_combustion_blast";
+	name = "Combustion Shutter Blast Door"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
 /obj/machinery/meter,
@@ -2799,34 +2734,32 @@
 /area/lucius/hallway/second)
 "ht" = (
 /obj/effect/paint/silver,
-/obj/effect/wallframe_spawn/reinforced/titanium,
-/obj/machinery/door/firedoor/sol,
-/obj/structure/sign/firstaid{
-	pixel_x = -32;
-	pixel_y = 24
-	},
-/turf/simulated/floor/plating,
+/obj/effect/paint_stripe/blue,
+/obj/structure/font/double/lazarev,
+/turf/simulated/wall/r_titanium,
 /area/lucius/lazarev)
 "hu" = (
 /obj/effect/paint/silver,
 /obj/effect/wallframe_spawn/reinforced/titanium,
 /obj/machinery/door/firedoor/sol,
+/obj/effect/paint_stripe/blue,
 /turf/simulated/floor/plating,
 /area/lucius/lazarev)
 "hv" = (
 /obj/structure/bed/chair/shuttle/blue{
-	icon_state = "shuttle_chair_preview";
 	dir = 1
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals6{
-	icon_state = "steel_decals6";
 	dir = 10
+	},
+/obj/structure/cable/cyan,
+/obj/machinery/power/apc/sol{
+	pixel_y = -24
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/lucius/lazarev)
 "hx" = (
 /obj/structure/bed/chair/shuttle/blue{
-	icon_state = "shuttle_chair_preview";
 	dir = 8
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
@@ -2841,35 +2774,30 @@
 	tag_exterior_sensor = "lazarev_shuttle_sensor_external"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 9;
-	pixel_y = 0
+	dir = 9
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
-	icon_state = "intact";
 	dir = 5
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/lucius/lazarev)
 "hy" = (
 /obj/structure/shuttle/engine/heater{
-	icon_state = "heater";
 	dir = 4
 	},
 /obj/structure/shuttle/engine/platform{
-	icon_state = "platform";
 	dir = 4
 	},
 /obj/structure/shuttle/engine/heater{
-	icon_state = "heater";
 	dir = 4
 	},
 /obj/effect/paint/silver,
+/obj/effect/paint_stripe/blue,
 /turf/simulated/wall/r_titanium,
 /area/lucius/lazarev)
 "hG" = (
 /obj/machinery/fusion_fuel_injector/mapped{
 	dir = 8;
-	icon_state = "injector0";
 	initial_id_tag = "lucius_fusion_fuel"
 	},
 /obj/machinery/firealarm{
@@ -2882,7 +2810,6 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/techfloor,
 /area/lucius/engineering)
 "hO" = (
@@ -2895,7 +2822,6 @@
 /area/lucius/fuel)
 "hQ" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	icon_state = "intact";
 	dir = 5
 	},
 /turf/simulated/floor/plating,
@@ -2917,9 +2843,9 @@
 /obj/machinery/atmospherics/omni/mixer{
 	tag_east = 2;
 	tag_north = 1;
-	tag_north_con = 0.7;
+	tag_north_con = 0.5;
 	tag_west = 1;
-	tag_west_con = 0.3
+	tag_west_con = 0.5
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/plating,
@@ -2936,7 +2862,6 @@
 	pixel_y = 24
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
-	icon_state = "intact";
 	dir = 4
 	},
 /turf/simulated/floor/plating,
@@ -2968,8 +2893,7 @@
 	icon_state = "2-4"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
-	dir = 4;
-	icon_state = "intact"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/lucius/fuel)
@@ -2977,6 +2901,7 @@
 /obj/structure/catwalk,
 /obj/machinery/embedded_controller/radio/airlock/access_controller{
 	dir = 8;
+	id_tag = "lucius_engines";
 	name = "Engine Bay Access Controller";
 	pixel_x = 24;
 	pixel_y = -24;
@@ -2990,8 +2915,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
-	dir = 4;
-	icon_state = "intact"
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/lucius/fuel)
@@ -3012,9 +2936,10 @@
 	req_access = list("ACCESS_SOL_ENG")
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
-	dir = 4;
-	icon_state = "intact"
+	dir = 4
 	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/firedoor/sol,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/lucius/thrust)
 "hY" = (
@@ -3027,14 +2952,12 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
-	dir = 4;
-	icon_state = "intact"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/lucius/thrust)
 "hZ" = (
 /obj/effect/floor_decal/industrial/warning/corner{
-	icon_state = "stripecorner";
 	dir = 1
 	},
 /obj/machinery/door/airlock/external/bolted{
@@ -3052,26 +2975,27 @@
 	pixel_y = -24;
 	req_access = list("ACCESS_SOL_ENG")
 	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/firedoor/sol,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/lucius/thrust)
 "ic" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
-	icon_state = "map_scrubber_on";
 	dir = 4
 	},
 /obj/structure/table/standard,
 /obj/effect/floor_decal/borderfloorblack{
-	icon_state = "borderfloor_white";
 	dir = 9
 	},
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 9
 	},
-/obj/item/weapon/paper_bin,
+/obj/item/weapon/paper_bin{
+	pixel_y = -6
+	},
 /obj/item/weapon/pen,
 /obj/item/device/radio/intercom{
 	dir = 4;
-	icon_state = "intercom";
 	pixel_x = -12
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -3092,14 +3016,12 @@
 /area/lucius/hangar)
 "ie" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
-	icon_state = "map";
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/blue{
 	dir = 6
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
-	icon_state = "steel_decals4";
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -3107,6 +3029,7 @@
 "if" = (
 /obj/effect/paint/silver,
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
+/obj/effect/paint_stripe/blue,
 /turf/simulated/wall/r_titanium,
 /area/lucius/lazarev)
 "ik" = (
@@ -3114,7 +3037,6 @@
 	dir = 9
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/shuttle{
-	controlled = 0;
 	dir = 4;
 	id_tag = "lucius_dock_pump"
 	},
@@ -3125,7 +3047,6 @@
 	req_access = list("ACCESS_SOL_GENERAL")
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
-	icon_state = "steel_decals4";
 	dir = 9
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -3190,13 +3111,11 @@
 	},
 /obj/structure/sign/warning/fire{
 	dir = 8;
-	icon_state = "fire";
 	pixel_x = 32;
 	pixel_y = -6
 	},
 /obj/machinery/computer/air_control{
 	dir = 1;
-	frequency = 1441;
 	input_tag = "lucius_apu_in";
 	name = "APU Pressure Control Console";
 	output_tag = null;
@@ -3215,20 +3134,21 @@
 "iu" = (
 /obj/structure/table/standard,
 /obj/effect/floor_decal/borderfloorblack{
-	icon_state = "borderfloor_white";
 	dir = 10
 	},
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 10
 	},
-/obj/item/modular_computer/laptop{
-	icon_state = "laptop-open";
-	dir = 4
+/obj/machinery/embedded_controller/radio/airlock/docking_port{
+	dir = 4;
+	frequency = 1331;
+	id_tag = "lucius_dock";
+	name = "Main Docking Port Controller";
+	pixel_x = -12;
+	pixel_y = 15
 	},
-/obj/machinery/alarm/sol{
-	dir = 1;
-	icon_state = "alarm0";
-	pixel_y = -24
+/obj/item/modular_computer/laptop/preset/custom_loadout/cheap{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/lucius/hallway/second)
@@ -3255,7 +3175,6 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/item/device/radio/intercom{
 	dir = 8;
-	icon_state = "intercom";
 	pixel_x = 24
 	},
 /turf/simulated/floor/tiled/dark/monotile,
@@ -3272,11 +3191,13 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor/sol,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/lucius/maintenance/second)
 "ix" = (
 /obj/structure/navlight_shuttle/red{
-	icon_state = "navlight_red";
 	dir = 8
 	},
 /obj/structure/sign/warning/vent_port{
@@ -3292,6 +3213,7 @@
 	dir = 1;
 	id_tag = "lazarev_shuttle_pump_out_external"
 	},
+/obj/effect/floor_decal/industrial/warning/full,
 /turf/simulated/floor/shuttle_ceiling,
 /area/lucius/lazarev)
 "iz" = (
@@ -3310,11 +3232,9 @@
 /area/lucius/maintenance/second)
 "iI" = (
 /obj/effect/floor_decal/steeldecal/steel_decals6{
-	icon_state = "steel_decals6";
 	dir = 5
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals6{
-	icon_state = "steel_decals6";
 	dir = 6
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -3323,18 +3243,15 @@
 /obj/random/maintenance/solgov/clean,
 /obj/machinery/light/spot,
 /obj/effect/floor_decal/steeldecal/steel_decals6{
-	icon_state = "steel_decals6";
 	dir = 6
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/lucius/hangar)
 "iL" = (
 /obj/effect/floor_decal/steeldecal/steel_decals4{
-	icon_state = "steel_decals4";
 	dir = 5
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
-	icon_state = "steel_decals4";
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -3393,6 +3310,14 @@
 "jh" = (
 /obj/effect/floor_decal/corner/blue/full,
 /obj/structure/closet/emcloset,
+/obj/machinery/power/apc/sol{
+	pixel_y = -24
+	},
+/obj/structure/cable/green,
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -32
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/lucius/hallway/second)
 "ji" = (
@@ -3443,6 +3368,11 @@
 "jF" = (
 /obj/effect/wallframe_spawn/reinforced/hull,
 /obj/machinery/door/firedoor/sol,
+/obj/machinery/door/blast/regular/open{
+	icon_state = "pdoor0";
+	id_tag = "lucius_dock";
+	name = "Main Docking Port Blast Doors"
+	},
 /turf/simulated/floor/plating,
 /area/lucius/hallway/second)
 "jP" = (
@@ -3451,7 +3381,6 @@
 /area/lucius/lazarev)
 "jV" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/fuel{
-	icon_state = "map";
 	dir = 1
 	},
 /obj/structure/catwalk,
@@ -3463,6 +3392,24 @@
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/lucius/engineering)
+"kf" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 1;
+	pixel_y = -32
+	},
+/turf/simulated/floor/plating,
+/area/lucius/maintenance/second)
 "kK" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -3520,11 +3467,16 @@
 /area/lucius/storage)
 "lp" = (
 /obj/effect/floor_decal/corner/blue{
-	icon_state = "corner_white";
 	dir = 5
 	},
 /obj/structure/sign/warning/nosmoking_1{
 	pixel_y = 24
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 9
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/lucius/storage)
@@ -3538,26 +3490,28 @@
 /area/lucius/fuel)
 "lz" = (
 /obj/machinery/atmospherics/pipe/simple/visible/black{
-	icon_state = "intact";
 	dir = 5
 	},
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/lucius/thrust)
+"lR" = (
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/lucius/hangar)
 "lW" = (
 /obj/machinery/computer/ship/engines{
-	icon_state = "computer";
 	dir = 8
 	},
 /obj/machinery/light/spot{
-	icon_state = "tube_map";
 	dir = 4
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
-	icon_state = "intact";
 	dir = 10
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -3584,7 +3538,6 @@
 /area/lucius/maintenance/second)
 "ms" = (
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
-	icon_state = "intact";
 	dir = 5
 	},
 /obj/structure/extinguisher_cabinet{
@@ -3614,12 +3567,13 @@
 /turf/simulated/floor/plating,
 /area/lucius/fuel)
 "mC" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/r_wall/prepainted,
 /area/lucius/engineering)
 "mD" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
 	frequency = 1441;
-	id_tag = "lucius_fuel_in"
+	id = "lucius_fuel_in";
+	id_tag = null
 	},
 /turf/simulated/floor/reinforced/hydrogen/fuel,
 /area/lucius/fuel)
@@ -3638,7 +3592,8 @@
 /obj/machinery/door/blast/regular/open{
 	dir = 8;
 	icon_state = "pdoor0";
-	id_tag = "lucius_gun_1"
+	id_tag = "lucius_gun_1";
+	name = "Launcher Blast Door"
 	},
 /obj/effect/wallframe_spawn/reinforced/hull,
 /obj/machinery/door/firedoor/sol,
@@ -3649,13 +3604,13 @@
 /area/lucius/storage)
 "mW" = (
 /obj/machinery/disposal/deliveryChute{
-	icon_state = "intake";
 	dir = 4
 	},
 /obj/effect/decal/cleanable/cobweb,
 /obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
+/obj/effect/floor_decal/industrial/warning/full,
 /turf/simulated/floor/plating,
 /area/lucius/storage)
 "nb" = (
@@ -3687,7 +3642,6 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/techfloor/hole{
-	icon_state = "techfloor_hole_left";
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -3698,6 +3652,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/effect/floor_decal/industrial/warning/corner,
 /turf/simulated/floor/reinforced/airless,
 /area/lucius/thrust)
 "np" = (
@@ -3710,8 +3665,7 @@
 	},
 /obj/machinery/firealarm{
 	dir = 8;
-	pixel_x = -24;
-	pixel_y = 0
+	pixel_x = -24
 	},
 /turf/simulated/floor/plating,
 /area/lucius/maintenance/second)
@@ -3727,11 +3681,9 @@
 /area/lucius/lazarev)
 "nx" = (
 /obj/machinery/atmospherics/pipe/simple/visible/black{
-	icon_state = "intact";
 	dir = 9
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
-	icon_state = "intact";
 	dir = 6
 	},
 /obj/structure/catwalk,
@@ -3739,6 +3691,9 @@
 /area/lucius/thrust)
 "nF" = (
 /obj/structure/grille,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
 /turf/simulated/floor/reinforced/airless,
 /area/lucius/storage)
 "ol" = (
@@ -3754,19 +3709,24 @@
 /obj/item/weapon/tape_roll,
 /obj/machinery/light_construct,
 /obj/effect/floor_decal/corner/blue{
-	icon_state = "corner_white";
 	dir = 10
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 8
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 5
 	},
 /turf/simulated/floor/tiled/dark,
 /area/lucius/storage)
 "oJ" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
-	icon_state = "intact";
 	dir = 9
 	},
 /obj/machinery/atmospherics/unary/outlet_injector{
 	frequency = 1441;
-	id_tag = "lucius_combustion_in"
+	id = "lucius_combustion_in";
+	id_tag = null
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/lucius/thrust)
@@ -3777,18 +3737,15 @@
 	pixel_y = 24
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals6{
-	icon_state = "steel_decals6";
 	dir = 10
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/lucius/hangar)
 "pj" = (
 /obj/effect/floor_decal/steeldecal/steel_decals6{
-	icon_state = "steel_decals6";
 	dir = 6
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals6{
-	icon_state = "steel_decals6";
 	dir = 5
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -3800,8 +3757,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
-	dir = 4;
-	icon_state = "intact"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/lucius/fuel)
@@ -3817,14 +3773,17 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
 	},
-/obj/effect/floor_decal/industrial/warning{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
+	},
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/lucius/hallway/second)
@@ -3848,13 +3807,18 @@
 /obj/machinery/door/firedoor/sol,
 /turf/simulated/floor/tiled/techmaint,
 /area/lucius/engineering)
+"pw" = (
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/lucius/hallway/second)
 "pz" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
 /obj/machinery/alarm/sol{
 	dir = 8;
-	icon_state = "alarm0";
 	pixel_x = 24
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -3865,7 +3829,6 @@
 /area/lucius/storage)
 "pU" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/fuel{
-	icon_state = "map";
 	dir = 8
 	},
 /obj/machinery/light/small/red{
@@ -3883,12 +3846,12 @@
 /area/lucius/storage)
 "qe" = (
 /obj/machinery/disposal/deliveryChute{
-	icon_state = "intake";
 	dir = 4
 	},
 /obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
+/obj/effect/floor_decal/industrial/warning/full,
 /turf/simulated/floor/plating,
 /area/lucius/storage)
 "qp" = (
@@ -3934,11 +3897,9 @@
 "rJ" = (
 /obj/machinery/atmospherics/pipe/simple/visible/black,
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
-	icon_state = "intact";
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/warning/cee{
-	icon_state = "stripecee";
 	dir = 1
 	},
 /obj/machinery/power/turbinemotor{
@@ -3949,8 +3910,8 @@
 /area/lucius/thrust)
 "sB" = (
 /obj/machinery/mass_driver{
-	icon_state = "mass_driver";
-	dir = 8
+	dir = 8;
+	id_tag = "lucius_fire_1"
 	},
 /obj/random/trash,
 /turf/simulated/floor/reinforced/airless,
@@ -3995,11 +3956,19 @@
 	id_tag = "lucius_dock_pump"
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
-	icon_state = "steel_decals4";
 	dir = 5
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/lucius/hallway/second)
+"sZ" = (
+/obj/machinery/light/spot{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/lucius/hangar)
 "tc" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/plating,
@@ -4014,6 +3983,9 @@
 	icon_state = "2-4"
 	},
 /obj/effect/decal/cleanable/cobweb,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
 /turf/simulated/floor/plating,
 /area/lucius/maintenance/second)
 "tl" = (
@@ -4048,8 +4020,7 @@
 /obj/machinery/portable_atmospherics/canister/air/airlock,
 /obj/machinery/firealarm{
 	dir = 8;
-	pixel_x = -24;
-	pixel_y = 0
+	pixel_x = -24
 	},
 /turf/simulated/floor/plating,
 /area/lucius/lazarev)
@@ -4062,7 +4033,8 @@
 /area/lucius/storage)
 "uB" = (
 /obj/machinery/power/fusion_core/mapped{
-	id_tag = "lucius_fusion"
+	id_tag = "lucius_fusion";
+	initial_id_tag = "lucius_fusion"
 	},
 /obj/structure/cable/yellow,
 /obj/effect/floor_decal/industrial/warning/full,
@@ -4087,13 +4059,13 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 9
-	},
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/lucius/maintenance/second)
@@ -4108,24 +4080,40 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/lucius/hangar)
+"vl" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -32
+	},
+/turf/simulated/floor/plating,
+/area/lucius/maintenance/second)
 "vB" = (
-/obj/effect/floor_decal/industrial/warning/corner,
 /obj/structure/cable/yellow{
 	d1 = 2;
 	d2 = 8;
 	icon_state = "2-8"
 	},
+/obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/reinforced/airless,
 /area/lucius/thrust)
 "wA" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 9;
-	pixel_y = 0
+	dir = 9
 	},
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 8;
 	icon_state = "1-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
 	},
 /turf/simulated/floor/plating,
 /area/lucius/maintenance/second)
@@ -4135,7 +4123,6 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/structure/railing,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
 	},
@@ -4147,6 +4134,7 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
+/obj/structure/railing/mapped,
 /turf/simulated/floor/tiled,
 /area/lucius/engineering)
 "xa" = (
@@ -4169,7 +4157,6 @@
 /obj/item/weapon/reagent_containers/food/snacks/salo,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/floor_decal/steeldecal/steel_decals6{
-	icon_state = "steel_decals6";
 	dir = 9
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -4213,7 +4200,6 @@
 /area/lucius/storage)
 "yK" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
-	icon_state = "map";
 	dir = 1
 	},
 /obj/machinery/meter,
@@ -4275,19 +4261,17 @@
 "zD" = (
 /obj/machinery/computer/fusion/core_control{
 	dir = 4;
-	icon_state = "computer";
+	id_tag = "lucius_fusion";
 	initial_id_tag = "lucius_fusion";
 	req_access = list("ACCESS_SOL_ENG")
 	},
 /obj/effect/floor_decal/corner/yellow/half{
-	icon_state = "bordercolorhalf";
 	dir = 4
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
 	},
 /obj/effect/floor_decal/corner/yellow/border{
-	icon_state = "bordercolor";
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
@@ -4306,9 +4290,7 @@
 /area/lucius/thrust)
 "Ak" = (
 /obj/structure/sign/warning/hot_exhaust{
-	dir = 1;
-	icon_state = "fire";
-	pixel_y = 0
+	dir = 1
 	},
 /turf/simulated/wall/ocp_wall,
 /area/lucius/maintenance/second)
@@ -4319,13 +4301,13 @@
 	},
 /obj/machinery/power/apc/sol{
 	dir = 1;
-	icon_state = "apc0";
 	pixel_y = 24
 	},
 /turf/simulated/floor/plating,
 /area/lucius/maintenance/second)
 "Bl" = (
 /obj/machinery/door/airlock/external/bolted{
+	frequency = 1331;
 	id_tag = "lazarev_shuttle_outer";
 	name = "MRM Lazarev External Access"
 	},
@@ -4339,16 +4321,16 @@
 /turf/simulated/floor/tiled/steel_ridged,
 /area/lucius/lazarev)
 "Bo" = (
-/obj/machinery/firealarm{
-	dir = 4;
-	pixel_x = 26
-	},
 /obj/structure/cable/yellow{
 	d1 = 2;
 	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/effect/decal/cleanable/cobweb2,
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 24
+	},
 /turf/simulated/floor/plating,
 /area/lucius/maintenance/second)
 "Bp" = (
@@ -4357,7 +4339,6 @@
 	},
 /obj/structure/sign/warning/fire{
 	dir = 1;
-	icon_state = "fire";
 	pixel_x = 32
 	},
 /turf/simulated/floor/reinforced/airless,
@@ -4365,6 +4346,9 @@
 "Bq" = (
 /obj/structure/grille/broken,
 /obj/random/ore,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
 /turf/simulated/floor/reinforced/airless,
 /area/lucius/storage)
 "BH" = (
@@ -4385,15 +4369,13 @@
 /area/lucius/hallway/second)
 "BT" = (
 /obj/machinery/conveyor_switch/oneway{
-	id_tag = "lucius_loading";
+	id = "lucius_loading";
 	name = "loading switch";
-	pixel_y = 4;
-	req_access = list("ACCESS_SOL_COMMAND")
+	pixel_y = 4
 	},
 /obj/effect/floor_decal/industrial/warning/full,
 /obj/machinery/button/mass_driver{
 	dir = 4;
-	icon_state = "launcherbtt";
 	id_tag = "lucius_fire_1";
 	name = "Gun 1 Fire";
 	pixel_x = -38;
@@ -4402,7 +4384,6 @@
 	},
 /obj/machinery/button/mass_driver{
 	dir = 4;
-	icon_state = "launcherbtt";
 	id_tag = "lucius_fire_2";
 	name = "Gun 2 Fire";
 	pixel_x = -38;
@@ -4425,7 +4406,7 @@
 	pixel_y = 6;
 	req_access = list("ACCESS_SOL_COMMAND")
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/dark,
 /area/lucius/storage)
 "BZ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -4444,7 +4425,6 @@
 /area/lucius/fuel)
 "Ce" = (
 /obj/effect/floor_decal/borderfloorblack{
-	icon_state = "borderfloor_white";
 	dir = 5
 	},
 /obj/effect/floor_decal/corner/blue/border{
@@ -4453,12 +4433,18 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/effect/floor_decal/steeldecal/steel_decals4{
-	icon_state = "steel_decals4";
 	dir = 9
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
-	icon_state = "steel_decals4";
 	dir = 4
+	},
+/obj/machinery/button/blast_door{
+	dir = 4;
+	id_tag = "lucius_dock";
+	name = "Main Dock Blast Doors Control";
+	pixel_x = -32;
+	pixel_y = 9;
+	req_access = list("ACCESS_SOL_GENERAL")
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/lucius/hallway/second)
@@ -4478,6 +4464,12 @@
 /area/lucius/storage)
 "Co" = (
 /obj/effect/wallframe_spawn/reinforced,
+/obj/machinery/door/firedoor/sol,
+/obj/machinery/door/blast/regular/open{
+	icon_state = "pdoor0";
+	id_tag = "lucius_dock";
+	name = "Main Docking Port Blast Doors"
+	},
 /turf/simulated/floor/plating,
 /area/lucius/hallway/second)
 "Cz" = (
@@ -4501,7 +4493,6 @@
 /area/lucius/thrust)
 "CP" = (
 /obj/machinery/computer/shuttle_control/explore/lazarev{
-	icon_state = "computer";
 	dir = 4
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -4517,9 +4508,6 @@
 	icon_state = "4-8"
 	},
 /obj/effect/catwalk_plated,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
 /obj/machinery/light/small/red,
 /turf/simulated/floor/plating,
 /area/lucius/engineering)
@@ -4532,23 +4520,17 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
-/obj/machinery/embedded_controller/radio/airlock/docking_port{
-	dir = 8;
-	frequency = 1331;
-	icon_state = "airlock_control_off";
-	id_tag = "lucius_dock";
-	name = "Main Docking Port Controller";
-	pixel_x = 24
-	},
 /obj/effect/floor_decal/borderfloorblack{
-	icon_state = "borderfloor_white";
 	dir = 6
 	},
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 6
 	},
-/obj/structure/bed/chair{
-	icon_state = "chair_preview";
+/obj/machinery/alarm/sol{
+	dir = 8;
+	pixel_x = 24
+	},
+/obj/structure/bed/chair/padded/blue{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -4582,6 +4564,7 @@
 	pixel_y = -24;
 	req_access = list("ACCESS_SOL_ENG")
 	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/monotile,
 /area/lucius/maintenance/second)
 "EN" = (
@@ -4589,7 +4572,6 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/portables_connector{
-	icon_state = "map_connector";
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -4597,7 +4579,6 @@
 /area/lucius/fuel)
 "EZ" = (
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
-	icon_state = "intact";
 	dir = 5
 	},
 /turf/simulated/floor/plating,
@@ -4605,10 +4586,19 @@
 "Fd" = (
 /obj/machinery/door/blast/regular{
 	dir = 4;
-	id_tag = "lucius_gun_2"
+	id_tag = "lucius_gun_2";
+	name = "Launcher Blast Door"
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/lucius/storage)
+"Fg" = (
+/obj/effect/paint/silver,
+/obj/effect/paint_stripe/blue,
+/obj/structure/font/double/lazarev{
+	dir = 1
+	},
+/turf/simulated/wall/r_titanium,
+/area/lucius/lazarev)
 "Fs" = (
 /obj/item/weapon/net_shell,
 /obj/structure/cable/green{
@@ -4620,7 +4610,6 @@
 /area/lucius/storage)
 "Fu" = (
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
-	icon_state = "intact";
 	dir = 4
 	},
 /turf/simulated/wall/r_wall/hull,
@@ -4632,12 +4621,12 @@
 "FG" = (
 /obj/machinery/door/airlock/external/bolted{
 	dir = 4;
+	frequency = 1331;
 	id_tag = "lazarev_shuttle_inner";
 	name = "MRM Lazarev Internal Access"
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
-	icon_state = "intact";
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/warning{
@@ -4657,11 +4646,9 @@
 "FK" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
-	dir = 4;
-	icon_state = "intact"
+	dir = 4
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals6{
-	icon_state = "steel_decals6";
 	dir = 1
 	},
 /turf/simulated/floor/tiled/steel_grid,
@@ -4669,12 +4656,17 @@
 "FR" = (
 /obj/item/weapon/storage/belt/holster/machete,
 /obj/effect/floor_decal/corner/blue{
-	icon_state = "corner_white";
 	dir = 10
 	},
 /obj/structure/cable/green,
 /obj/machinery/power/apc/sol{
 	pixel_y = -24
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 8
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 5
 	},
 /turf/simulated/floor/tiled/dark,
 /area/lucius/storage)
@@ -4682,11 +4674,9 @@
 /obj/effect/overmap/visitable/ship/landable/lazarev,
 /obj/machinery/computer/ship/helm{
 	dir = 4;
-	icon_state = "computer";
 	req_access = list("ACCESS_SOL_PILOT")
 	},
 /obj/effect/floor_decal/corner/lightgrey/border{
-	icon_state = "bordercolor";
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -4703,9 +4693,6 @@
 /turf/simulated/floor/plating,
 /area/lucius/hangar)
 "Ge" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 5
-	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/machinery/firealarm{
 	dir = 1;
@@ -4721,11 +4708,11 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/plating,
 /area/lucius/maintenance/second)
 "Gn" = (
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
-	icon_state = "intact";
 	dir = 6
 	},
 /obj/structure/table/steel,
@@ -4737,15 +4724,13 @@
 /obj/effect/floor_decal/industrial/warning/cee,
 /obj/machinery/atmospherics/pipeturbine{
 	anchored = 1;
-	dir = 1;
-	icon_state = "turbine"
+	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/lucius/thrust)
 "GT" = (
 /obj/structure/dispenser/oxygen,
 /obj/effect/floor_decal/corner/blue{
-	icon_state = "corner_white";
 	dir = 10
 	},
 /turf/simulated/floor/tiled/dark,
@@ -4763,7 +4748,6 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4,
 /obj/effect/floor_decal/steeldecal/steel_decals4{
-	icon_state = "steel_decals4";
 	dir = 10
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -4791,6 +4775,10 @@
 	icon_state = "4-8"
 	},
 /obj/effect/decal/cleanable/blood/oil,
+/obj/machinery/alarm/sol{
+	dir = 1;
+	pixel_y = -24
+	},
 /turf/simulated/floor/plating,
 /area/lucius/maintenance/second)
 "HU" = (
@@ -4818,7 +4806,6 @@
 	},
 /obj/structure/sign/warning/compressed_gas{
 	dir = 1;
-	icon_state = "hikpa";
 	pixel_y = -32
 	},
 /turf/simulated/floor/plating,
@@ -4844,19 +4831,20 @@
 /area/lucius/maintenance/second)
 "It" = (
 /obj/effect/floor_decal/corner/blue{
-	icon_state = "corner_white";
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/blue{
-	icon_state = "corner_white";
 	dir = 10
 	},
 /obj/item/weapon/storage/box/lights/mixed,
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -32
+	},
 /turf/simulated/floor/tiled/dark,
 /area/lucius/storage)
 "Iv" = (
 /obj/machinery/atmospherics/pipe/simple/visible/black{
-	icon_state = "intact";
 	dir = 10
 	},
 /obj/structure/table/steel,
@@ -4867,11 +4855,21 @@
 	icon_state = "2-8"
 	},
 /obj/structure/sign/warning/nosmoking_burned{
-	pixel_x = 0;
 	pixel_y = 32
 	},
 /turf/simulated/floor/plating,
 /area/lucius/thrust)
+"IC" = (
+/obj/effect/paint/silver,
+/obj/effect/wallframe_spawn/reinforced/titanium,
+/obj/machinery/door/firedoor/sol,
+/obj/effect/paint_stripe/blue,
+/obj/structure/sign/firstaid{
+	pixel_x = 32;
+	pixel_y = -4
+	},
+/turf/simulated/floor/plating,
+/area/lucius/lazarev)
 "IU" = (
 /obj/structure/catwalk,
 /obj/structure/cable/green{
@@ -4881,14 +4879,13 @@
 	},
 /obj/machinery/alarm/sol{
 	dir = 1;
-	icon_state = "alarm0";
 	pixel_y = -24
 	},
 /turf/simulated/floor/plating,
 /area/lucius/thrust)
 "JV" = (
 /obj/structure/girder,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/dark,
 /area/lucius/storage)
 "JZ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -4914,6 +4911,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/door/firedoor/sol,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/lucius/hallway/second)
 "KK" = (
@@ -4936,7 +4934,8 @@
 /obj/machinery/door/blast/regular/open{
 	dir = 8;
 	icon_state = "pdoor0";
-	id_tag = "lucius_gun_2"
+	id_tag = "lucius_gun_2";
+	name = "Launcher Blast Door"
 	},
 /obj/effect/wallframe_spawn/reinforced/hull,
 /obj/machinery/door/firedoor/sol,
@@ -4947,7 +4946,6 @@
 /area/lucius/storage)
 "KY" = (
 /obj/machinery/computer/ship/engines{
-	icon_state = "computer";
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -4958,7 +4956,6 @@
 /area/lucius/fuel)
 "Lf" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging/junction{
-	icon_state = "intact";
 	dir = 4
 	},
 /turf/simulated/floor/reinforced/airless,
@@ -4966,11 +4963,6 @@
 "Lo" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
-	},
-/obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/corner/lightgrey/border,
 /turf/simulated/floor/tiled/techfloor,
@@ -5001,30 +4993,26 @@
 /area/lucius/maintenance/second)
 "LS" = (
 /obj/structure/disposaloutlet{
-	icon_state = "outlet";
 	dir = 8
 	},
 /obj/structure/disposalpipe/trunk{
 	dir = 4
 	},
+/obj/effect/floor_decal/industrial/warning/full,
 /turf/simulated/floor/reinforced/airless,
 /area/lucius/storage)
 "LT" = (
 /obj/structure/bed/chair/shuttle/blue{
-	icon_state = "shuttle_chair_preview";
 	dir = 1
 	},
 /obj/machinery/vending/wallmed2{
 	dir = 1;
-	icon_state = "wallmed";
 	pixel_y = -24
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals6{
-	icon_state = "steel_decals6";
 	dir = 10
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals6{
-	icon_state = "steel_decals6";
 	dir = 9
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -5037,7 +5025,6 @@
 "Mx" = (
 /obj/machinery/alarm/sol{
 	dir = 1;
-	icon_state = "alarm0";
 	pixel_y = -24
 	},
 /turf/simulated/floor/plating,
@@ -5067,6 +5054,10 @@
 	d1 = 1;
 	d2 = 4;
 	icon_state = "1-4"
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 1;
+	pixel_y = -32
 	},
 /turf/simulated/floor/plating,
 /area/lucius/maintenance/second)
@@ -5099,14 +5090,9 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/lucius/maintenance/second)
 "Oi" = (
-/obj/structure/railing{
-	icon_state = "railing0-1";
-	dir = 1
-	},
 /obj/effect/floor_decal/industrial/warning/full,
 /obj/structure/sign/warning/vent_port{
 	dir = 8;
-	icon_state = "securearea";
 	pixel_x = 32
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/shuttle{
@@ -5116,8 +5102,15 @@
 /obj/machinery/airlock_sensor{
 	frequency = 1331;
 	id_tag = "lazarev_shuttle_dock_sensor";
-	pixel_x = -24;
+	pixel_x = 24;
+	pixel_y = -10;
 	req_access = list("ACCESS_SOL_GENERAL")
+	},
+/obj/structure/railing/mapped{
+	dir = 1
+	},
+/obj/machinery/light{
+	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/lucius/hangar)
@@ -5132,11 +5125,14 @@
 /area/lucius/engineering)
 "OT" = (
 /obj/structure/sign/warning/vent_port{
-	icon_state = "securearea";
 	dir = 1
 	},
 /turf/simulated/wall/r_wall/hull,
 /area/lucius/thrust)
+"OZ" = (
+/obj/effect/floor_decal/industrial/warning/corner,
+/turf/simulated/floor/tiled/techfloor,
+/area/lucius/hangar)
 "Pa" = (
 /obj/effect/paint/silver,
 /obj/machinery/button/blast_door{
@@ -5145,17 +5141,21 @@
 	pixel_y = -8;
 	req_access = list("ACCESS_SOL_GENERAL")
 	},
+/obj/effect/paint_stripe/blue,
 /turf/simulated/wall/r_titanium,
 /area/lucius/lazarev)
 "Pc" = (
-/obj/machinery/atmospherics/valve/shutoff{
-	dir = 4
-	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/valve/shutoff/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/valve/shutoff/scrubbers{
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/lucius/maintenance/second)
@@ -5172,6 +5172,23 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/lucius/hangar)
+"PC" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_y = 32
+	},
+/turf/simulated/floor/plating,
+/area/lucius/hallway/second)
 "PE" = (
 /turf/simulated/wall/ocp_wall,
 /area/lucius/thrust)
@@ -5183,13 +5200,11 @@
 /obj/machinery/door/airlock/hatch/maintenance/bolted{
 	name = "Reactor Maintenance Hatch"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/firedoor/sol,
 /turf/simulated/floor/tiled/techmaint,
 /area/lucius/engineering)
 "PT" = (
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
-	icon_state = "intact";
 	dir = 5
 	},
 /obj/random/tool,
@@ -5210,7 +5225,6 @@
 	},
 /obj/machinery/alarm/sol{
 	dir = 8;
-	icon_state = "alarm0";
 	pixel_x = 24
 	},
 /turf/simulated/floor/plating,
@@ -5224,12 +5238,16 @@
 /area/lucius/storage)
 "Qu" = (
 /obj/machinery/light_construct{
-	icon_state = "tube-construct-stage1";
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/blue{
-	icon_state = "corner_white";
 	dir = 5
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 9
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/lucius/storage)
@@ -5240,15 +5258,21 @@
 "Re" = (
 /obj/machinery/firealarm{
 	dir = 8;
-	pixel_x = -24;
-	pixel_y = 0
+	pixel_x = -24
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 1;
+	pixel_y = -32
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/lucius/hangar)
+"Rf" = (
+/obj/effect/floor_decal/steeldecal/steel_decals2,
+/turf/simulated/floor/tiled/techfloor,
+/area/lucius/hallway/second)
 "Rh" = (
 /obj/machinery/mass_driver{
 	dir = 8;
-	icon_state = "mass_driver";
 	id_tag = "lucius_fire_2"
 	},
 /turf/simulated/floor/reinforced/airless,
@@ -5289,14 +5313,13 @@
 /area/lucius/storage)
 "Sf" = (
 /obj/machinery/atmospherics/pipe/simple/visible/black{
-	icon_state = "intact";
 	dir = 4
 	},
 /obj/structure/sign/warning/vent_port{
+	pixel_x = -8;
 	pixel_y = 24
 	},
 /obj/effect/floor_decal/industrial/warning{
-	icon_state = "stripe";
 	dir = 6
 	},
 /obj/structure/cable/yellow{
@@ -5305,6 +5328,13 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/meter/starts_with_radio,
+/obj/machinery/button/blast_door{
+	id_tag = "lucius_eng_vent";
+	name = "EMERGENCY ENGINE BAY VENT";
+	pixel_x = 4;
+	pixel_y = 24;
+	req_access = list("ACCESS_SOL_ENG")
+	},
 /turf/simulated/floor/plating,
 /area/lucius/thrust)
 "Sg" = (
@@ -5318,7 +5348,6 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals9,
 /obj/effect/floor_decal/steeldecal/steel_decals9{
-	icon_state = "steel_decals9";
 	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_grid,
@@ -5327,8 +5356,24 @@
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/blue/border,
 /obj/machinery/light,
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/lucius/hallway/second)
+"SJ" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	dir = 4
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals6,
+/obj/machinery/light/spot{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/lucius/hangar)
 "SP" = (
 /obj/structure/cable/yellow{
 	d1 = 4;
@@ -5349,6 +5394,7 @@
 	name = "Reactor Blast Doors"
 	},
 /obj/structure/sign/warning/radioactive,
+/obj/machinery/door/firedoor/sol,
 /turf/simulated/floor/plating,
 /area/lucius/engineering)
 "Td" = (
@@ -5385,12 +5431,13 @@
 "Te" = (
 /obj/machinery/door/blast/regular{
 	dir = 4;
-	id_tag = "lucius_gun_1"
+	id_tag = "lucius_gun_1";
+	name = "Launcher Blast Door"
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/lucius/storage)
 "TF" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/r_wall/prepainted,
 /area/lucius/hangar)
 "TI" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -5404,7 +5451,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/lucius/storage)
 "TM" = (
-/obj/machinery/atmospherics/unary/vent_pump,
+/obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/tiled/dark,
 /area/lucius/storage)
 "TT" = (
@@ -5448,16 +5495,18 @@
 /obj/machinery/alarm/sol{
 	pixel_y = 24
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/lucius/maintenance/second)
 "UB" = (
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 1
+	},
 /obj/machinery/firealarm{
 	dir = 4;
-	pixel_x = 26
-	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	icon_state = "bordercolor";
-	dir = 1
+	pixel_x = 24
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/lucius/lazarev)
@@ -5514,7 +5563,6 @@
 /obj/item/weapon/storage/belt/holster/machete,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/light_construct{
-	icon_state = "tube-construct-stage1";
 	dir = 4
 	},
 /turf/simulated/floor/tiled/dark/monotile,
@@ -5541,7 +5589,6 @@
 "Wb" = (
 /obj/effect/decal/cleanable/flour,
 /obj/effect/floor_decal/steeldecal/steel_decals6{
-	icon_state = "steel_decals6";
 	dir = 6
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -5575,11 +5622,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/effect/floor_decal/steeldecal/steel_decals4{
-	icon_state = "steel_decals4";
 	dir = 9
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
-	icon_state = "steel_decals4";
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -5587,6 +5632,12 @@
 "WN" = (
 /obj/effect/wallframe_spawn/reinforced,
 /obj/machinery/door/firedoor/sol,
+/obj/machinery/door/blast/regular/open{
+	dir = 4;
+	icon_state = "pdoor0";
+	id_tag = "lucius_dock";
+	name = "Main Docking Port Blast Doors"
+	},
 /turf/simulated/floor/plating,
 /area/lucius/hallway/second)
 "Xd" = (
@@ -5596,15 +5647,28 @@
 "Xv" = (
 /obj/machinery/light/spot,
 /obj/effect/floor_decal/steeldecal/steel_decals6{
-	icon_state = "steel_decals6";
 	dir = 6
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals6{
-	icon_state = "steel_decals6";
 	dir = 5
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/lucius/hangar)
+"XR" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/valve/shutoff/supply{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/atmospherics/valve/shutoff/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/lucius/maintenance/second)
 "XT" = (
 /obj/structure/cable/yellow{
 	d1 = 1;
@@ -5613,13 +5677,13 @@
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/blast/regular{
-	id_tag = "lucius_vent"
+	id_tag = "lucius_vent";
+	name = "Reactor Chamber Vent"
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/lucius/engineering)
 "Yl" = (
 /obj/structure/disposaloutlet{
-	icon_state = "outlet";
 	dir = 8
 	},
 /obj/structure/disposalpipe/trunk{
@@ -5628,6 +5692,7 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 4
 	},
+/obj/effect/floor_decal/industrial/warning/full,
 /turf/simulated/floor/reinforced/airless,
 /area/lucius/storage)
 "Ym" = (
@@ -5635,7 +5700,6 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals6{
-	icon_state = "steel_decals6";
 	dir = 4
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals6,
@@ -5651,20 +5715,24 @@
 	icon_state = "4-8"
 	},
 /obj/random/tech_supply,
+/obj/structure/extinguisher_cabinet{
+	dir = 1;
+	pixel_y = -32
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/lucius/maintenance/second)
 "YP" = (
 /obj/structure/bed/chair/shuttle/blue{
-	icon_state = "shuttle_chair_preview";
 	dir = 1
 	},
 /obj/machinery/alarm/sol{
 	dir = 8;
-	icon_state = "alarm0";
 	pixel_x = 24
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals6{
-	icon_state = "steel_decals6";
 	dir = 9
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -5672,7 +5740,6 @@
 "Ze" = (
 /obj/machinery/atmospherics/tvalve/digital{
 	dir = 4;
-	icon_state = "map_tvalve0";
 	id_tag = "lucius_apu_exhaust";
 	name = "APU Exhaust Bypass"
 	},
@@ -5683,6 +5750,7 @@
 /obj/machinery/light/spot{
 	dir = 8
 	},
+/obj/effect/floor_decal/industrial/warning/corner,
 /turf/simulated/floor/tiled/techfloor,
 /area/lucius/hangar)
 "ZQ" = (
@@ -21163,7 +21231,7 @@ cr
 cr
 dS
 eQ
-fM
+pw
 cK
 hq
 ik
@@ -21567,7 +21635,7 @@ bP
 WI
 dU
 BH
-fM
+Rf
 Sn
 aq
 WN
@@ -21764,7 +21832,7 @@ aa
 aa
 aq
 aq
-Lt
+PC
 cr
 cM
 dV
@@ -22773,15 +22841,15 @@ aa
 ab
 ab
 ab
-uM
+dt
 bg
 ZE
-aL
+Fg
 Bl
 eV
 fT
-aL
-ZE
+ht
+sZ
 vk
 Re
 ab
@@ -23185,7 +23253,7 @@ ea
 eW
 fV
 aL
-ht
+hu
 aH
 Lv
 iI
@@ -23581,7 +23649,7 @@ oL
 aj
 ab
 ar
-aH
+OZ
 aL
 uv
 df
@@ -23590,8 +23658,8 @@ eX
 FK
 FU
 CP
-hu
-aH
+IC
+lR
 iI
 ab
 yA
@@ -23783,7 +23851,7 @@ af
 Wb
 ab
 ar
-aJ
+Pv
 aL
 bS
 cW
@@ -25202,7 +25270,7 @@ bp
 bZ
 Ae
 Ym
-Ym
+SJ
 Ym
 nk
 pz
@@ -25605,7 +25673,7 @@ ZQ
 br
 br
 np
-br
+vl
 ff
 br
 Qn
@@ -27429,7 +27497,7 @@ SX
 cj
 cj
 bs
-in
+kf
 UU
 UU
 aa
@@ -29448,7 +29516,7 @@ ft
 gs
 hf
 mC
-in
+XR
 UU
 UU
 aa
@@ -30652,7 +30720,7 @@ aa
 aa
 UU
 UU
-bF
+aS
 cv
 dB
 ex

@@ -12,7 +12,7 @@
 	ASTEROID
 	SPACE
 	I have totally no idea what most of them sound like.
-	Alternatively, sound ambience can be set directly in the "ambience" variable. */
+	Alternatively, sound ambience can be set directly in the "ambience" or "forced_ambience" variable. */
 
 ////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////// LEVEL ZERO ////////////////////////////////////
@@ -210,6 +210,53 @@
 	name = "\improper SFP Field Office - Level One South Hallway"
 	icon_state = "department_lvl1s"
 
+/area/liberty/sfp/server
+	name = "\improper SFP Field Office - Server Room"
+	icon_state = "department_server"
+	ambience = list('sound/ambience/ambisin2.ogg', 'sound/ambience/signal.ogg', 'sound/ambience/signal.ogg', 'sound/ambience/ambigen10.ogg')
+
+// SCG
+/area/liberty/scg
+	req_access = list(list("ACCESS_SOL_SFP", "ACCESS_SOL_GENERAL"))
+
+/area/liberty/scg/docks
+	name = "\improper SCG Secure Docks"
+	icon_state = "sol_docks"
+
+// HALLWAYS
+/area/liberty/hallway/one/central
+	name = "\improper Level One - Central Hall"
+	icon_state = "lvl_1_central_hall"
+
+/area/liberty/hallway/one/aft_port
+	name = "\improper Level One - Aft Port Hallway"
+	icon_state = "lvl_1_southwest_hall"
+
+/area/liberty/hallway/one/fore_port
+	name = "\improper Level One - Fore Port Hallway"
+	icon_state = "lvl_1_northwest_hall"
+
+/area/liberty/hallway/one/starboard
+	name = "\improper Level One - Fore Port Hallway"
+	icon_state = "lvl_1_east_hall"
+
+/area/liberty/hallway/one/aft_terminal
+	name = "\improper Level One - Aft Terminal"
+	icon_state = "lvl_1_south_terminal"
+
+/area/liberty/hallway/one/fore_terminal
+	name = "\improper Level One - Fore Terminal"
+	icon_state = "lvl_1_north_terminal"
+
+/area/liberty/hallway/one/aft_docks
+	name = "\improper Level One - Aft Docks"
+	icon_state = "lvl_1_south_docks"
+
+/area/liberty/hallway/one/fore_docks
+	name = "\improper Level One - Fore Docks"
+	icon_state = "lvl_1_north_docks"
+
+
 ///////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////// LEVEL TWO ////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////
@@ -301,6 +348,9 @@
 	name = "\improper Hotel - Room 303"
 	icon_state = "hotel_room_303"
 
+/area/liberty/hotel/hallway
+	sound_env = MEDIUM_SOFTFLOOR
+
 /area/liberty/hotel/hallway/west
 	name = "\improper Hotel - West Hallway"
 	icon_state = "hotel_west"
@@ -324,6 +374,52 @@
 	icon_state = "hotel_dressing_room"
 	sound_env = SMALL_SOFTFLOOR
 
+/area/liberty/hotel/over_stage
+	name = "\improper Hotel - Stage Equipment"
+	icon_state = "hotel_stage"
+
+// CHAPEL
+
+/area/liberty/chapel
+	ambience = list('sound/ambience/ambicha1.ogg','sound/ambience/ambicha2.ogg','sound/ambience/ambicha3.ogg','sound/ambience/ambicha4.ogg','sound/music/traitor.ogg')
+
+/area/liberty/chapel/lobby
+	name = "\improper Chapel - Lobby"
+	icon_state = "chapel_lobby"
+
+/area/liberty/chapel/main
+	name = "\improper Chapel - Main Hall"
+	icon_state = "chapel_main_hall"
+	sound_env = LARGE_ENCLOSED
+
+/area/liberty/chapel/funeral_room
+	name = "\improper Chapel - Funeral Room"
+	icon_state = "chapel_funeral_room"
+
+/area/liberty/chapel/office
+	name = "\improper Chapel - Chaplain's Office"
+	icon_state = "chapel_office"
+
+// PRIVATE EYE
+
+/area/liberty/private_eye
+	name = "\improper Private Eye's Office"
+	icon_state = "private_eye"
+	sound_env = MEDIUM_SOFTFLOOR
+
+// PSYCHOLOGIST
+
+/area/liberty/psychologist
+	sound_env = MEDIUM_SOFTFLOOR
+
+/area/liberty/psychologist/waiting_room
+	name = "\improper Psychologist - Waiting Room"
+	icon_state = "psych_waiting_room"
+
+/area/liberty/psychologist/therapy_room
+	name = "\improper Psychologist - Therapy Room"
+	icon_state = "psych_therapy_room"
+
 ///////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////// TURBOLIFT ////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////
@@ -335,7 +431,6 @@
 	requires_power = 0
 	dynamic_lighting = 1
 	area_flags = AREA_FLAG_RAD_SHIELDED | AREA_FLAG_ION_SHIELDED
-	ambience = list('code_ark/sound/music/elevator.ogg')
 	req_access = null // SET ACCESS
 
 // HOTEL

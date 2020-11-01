@@ -25,9 +25,8 @@
 	vessel_mass = 3000
 	vessel_size = SHIP_SIZE_SMALL
 	initial_restricted_waypoints = list(
-		"Lucius Hangar" = list("nav_lazarev_dock")
+		"MRM Lazarev" = list("nav_lazarev_dock")
 	)
-//	initial_generic_waypoints = list(null) // PREPARE GENERIC WPTS!
 
 /obj/effect/overmap/visitable/ship/landable/lazarev
 	name = "MRM Lazarev"
@@ -54,7 +53,7 @@
 	knockdown = FALSE
 	flags = SHUTTLE_FLAGS_PROCESS
 	skill_needed = SKILL_NONE
-	ceiling_type = /turf/simulated/floor/shuttle_ceiling/sol
+	ceiling_type = /turf/simulated/floor/shuttle_ceiling/sol/alt
 	knockdown = 0
 	defer_initialisation = TRUE
 
