@@ -43,6 +43,7 @@
 
 /obj/machinery/media/mixing_console/LateInitialize()
 	. = ..()
+	tracks = setup_music_tracks(tracks)
 	for (var/obj/machinery/media/speaker/S in world)
 		if(S.id_tag == id_tag)
 			speakers += S
@@ -85,3 +86,21 @@
 	update_use_power(POWER_USE_IDLE)
 	update_icon()
 	QDEL_NULL(sound_token)
+
+/obj/machinery/media/mixing_console/ui_interact(mob/user, ui_key = "main", var/datum/nanoui/ui = null, var/force_open = 1)
+	var/list/mixer_tracks = new
+	for(var/datum/track/T in tracks)
+		mixer_tracks.Add(list(list("track"=T.title)))
+
+	var/list/data = list(
+		"current_track" = current_track != null ? current_track.title : "No track selected",
+		"playing" = playing,
+		"tracks" = mixer_tracks,
+		"volume" = volume
+	)
+
+	ui = SSnano.try_update_ui(user, src, ui_key, ui, data, force_open)
+	if (!ui)
+		ui = new(user, src, ui_key, "mixing_console.tmpl", "Mixer Console", 340, 440)
+		ui.set_initial_data(data)
+		ui.open()
