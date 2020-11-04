@@ -6,6 +6,20 @@
 
 #define ismovable(A) istype(A, /atom/movable)
 
+
+/proc/copytext_char(T, Start = 1, End = 0)
+	return copytext(T, Start, End)
+
+/proc/length_char(E)
+	return length(E)
+
+/proc/findtext_char(Haystack, Needle, Start = 1, End = 0)
+	return findtext(Haystack, Needle, Start, End)
+
+/proc/replacetextEx_char(Haystack, Needle, Replacement, Start = 1, End = 0)
+	return replacetextEx(Haystack, Needle, Replacement, Start, End)
+
+
 #endif
 
 #define PUBLIC_GAME_MODE SSticker.master_mode
@@ -101,6 +115,11 @@
 
 #define random_id(key,min_id,max_id) uniqueness_repository.Generate(/datum/uniqueness_generator/id_random, key, min_id, max_id)
 
+/proc/place_meta_charset(content)
+	if(istext(content))
+		content = "<meta charset=\"utf-8\">" + content
+	return content
+
 /// General I/O helpers
 #define to_target(target, payload)            target << (payload)
 #define from_target(target, receiver)         target >> (receiver)
@@ -111,7 +130,7 @@
 #define to_world_log(message)                 to_target(world.log, message)
 #define sound_to(target, sound)               to_target(target, sound)
 #define image_to(target, image)               to_target(target, image)
-#define show_browser(target, content, title)  to_target(target, browse(content, title))
+#define show_browser(target, content, title)  to_target(target, browse(place_meta_charset(content), title))
 #define close_browser(target, title)          to_target(target, browse(null, title))
 #define send_rsc(target, content, title)      to_target(target, browse_rsc(content, title))
 #define send_link(target, url)                to_target(target, link(url))
