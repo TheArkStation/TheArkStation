@@ -17,15 +17,16 @@
 
 	var/datum/track/current_track
 	var/list/datum/track/tracks
+
 	var/music_track/custom_track
 
-	var/list/obj/machinery/media/speaker/speakers
+	var/list/obj/machinery/media/speaker/slaves
 
 /obj/machinery/media/speaker
 	name = "loudspeaker"
 	desc = "It's a relatively powerful loudspeaker connected to a mixing console to provide the joy of music."
 	icon = 'code_ark/icons/obj/machinery.dmi'
-	icon_state = "speaker"
+	icon_state = "mixer"
 	idle_power_usage = 10
 	active_power_usage = 200
 	var/playing = 0
@@ -46,11 +47,10 @@
 
 /obj/machinery/media/mixing_console/LateInitialize()
 	. = ..()
-	tracks = setup_music_tracks(tracks)
-	for (var/obj/machinery/media/speaker/S in world)
-		if(S.id_tag == id_tag)
-			speakers += S
-			S.master = src
+	for (var/obj/machinery/media/speaker/i in world)
+		if(i.id_tag == id_tag)
+			slaves += i
+			i.master = src
 
 /obj/machinery/media/speaker/Initialize()
 	. = ..()
@@ -74,7 +74,7 @@
 	. = ..()
 	if(stat & (NOPOWER|BROKEN) && playing)
 		StopPlaying()
-		for (var/obj/machinery/media/speaker/S in speakers)
+		for (var/obj/machinery/media/speaker/S in slaves)
 			S.StopPlaying()
 	update_icon()
 
@@ -110,7 +110,7 @@
 
 		playing = 1
 
-		for(var/list/obj/machinery/media/speaker/i in speakers)
+		for(var/obj/machinery/media/speaker/i in slaves)
 			i.StartPlaying()
 
 		update_use_power(POWER_USE_ACTIVE)
@@ -130,8 +130,19 @@
 	volume = Clamp(new_volume, 0, 50)
 	if(sound_token)
 		sound_token.SetVolume(volume)
+	for(var/obj/machinery/media/speaker/i in slaves)
+		if (i.sound_token)
+			i.sound_token.SetVolume(volume)
 
 ///////////////////////// EASTER EGGS /////////////////////////
+
+/obj/machinery/media/mixing_console/emag_act(var/remaining_charges, var/mob/user)
+	if(!emagged)
+		emagged = 1
+		StopPlaying()
+		visible_message("<span class='danger'>\The [src] makes a fizzling sound.</span>")
+		update_icon()
+		return 1
 
 /obj/machinery/media/mixing_console/proc/emag_play()
 	playsound(loc, 'sound/items/AirHorn.ogg', 100, 1)
@@ -149,7 +160,7 @@
 			M.Paralyse(4)
 		else
 			M.make_jittery(400)
-	for(var/list/obj/machinery/media/speaker/i in speakers)
+	for(var/obj/machinery/media/speaker/i in slaves)
 		i.emag_play()
 	spawn(15)
 		explode()
@@ -190,7 +201,7 @@ obj/machinery/media/speaker/proc/emag_play()
 	if(stat & (NOPOWER|BROKEN))
 		set_light(0)
 	else
-		var/image/I = image('code_ark/icons/obj/machinery.dmi', playing = 1 ? "mixer_playing" : "mixer_calm")
+		var/image/I = image('code_ark/icons/obj/machinery.dmi',(playing == 1 ? "mixer_playing" : "mixer_calm"))
 		I.plane = EFFECTS_ABOVE_LIGHTING_PLANE
 		I.layer = ABOVE_LIGHTING_LAYER
 		overlays += I
@@ -198,29 +209,20 @@ obj/machinery/media/speaker/proc/emag_play()
 
 ///////////////////////// UI /////////////////////////
 
-/obj/machinery/media/mixing_console/CanUseTopic(user, state)
-	. = ..()
+/obj/machinery/media/mixing_console/interface_interact(var/mob/user)
+	ui_interact(user)
+	return TRUE
 
 /obj/machinery/media/mixing_console/ui_interact(mob/user, ui_key = "main", var/datum/nanoui/ui = null, var/force_open = 1)
 	var/list/mixer_tracks = new
 	for(var/datum/track/T in tracks)
 		mixer_tracks.Add(list(list("track"=T.title)))
 
-	var/list/data
-
-	if(custom_track)
-		data = list(
-			"current_track" = custom_track.title != null ? custom_track.title : "Unknown track",
-			"playing" = playing,
-			"tracks" = mixer_tracks,
-			"volume" = volume
-		)
-	else
-		data = list(
-			"current_track" = current_track != null ? current_track.title : "No track selected",
-			"playing" = playing,
-			"tracks" = mixer_tracks,
-			"volume" = volume
+	var/list/data = list(
+		"current_track" = custom_track != null ? (custom_track.title != null ? custom_track.title : "Unknown track") : (current_track != null ? current_track.title : "Track not set"),
+		"playing" = playing,
+		"tracks" = mixer_tracks,
+		"volume" = volume
 		)
 
 	ui = SSnano.try_update_ui(user, src, ui_key, ui, data, force_open)
@@ -244,7 +246,7 @@ obj/machinery/media/speaker/proc/emag_play()
 		return TOPIC_REFRESH
 
 	if (href_list["play"])
-		if(!current_track)
+		if(!current_track && !custom_track)
 			to_chat(usr, "No track selected.")
 		else
 			StartPlaying()
