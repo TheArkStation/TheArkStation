@@ -5675,22 +5675,6 @@
 /obj/machinery/light/spot,
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/scg/docks)
-"ls" = (
-/obj/machinery/r_n_d/server/core,
-/obj/effect/floor_decal/borderfloorwhite,
-/obj/effect/floor_decal/corner/purple/border,
-/turf/simulated/floor/tiled/white,
-/area/space)
-"lt" = (
-/obj/machinery/r_n_d/server/centcom,
-/obj/effect/floor_decal/borderfloorwhite{
-	dir = 10
-	},
-/obj/effect/floor_decal/corner/purple/border{
-	dir = 10
-	},
-/turf/simulated/floor/tiled/white,
-/area/space)
 "lu" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 4
@@ -5970,21 +5954,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/hallway/one/aft_terminal)
-"ma" = (
-/obj/structure/table/reinforced,
-/obj/effect/floor_decal/industrial/warning,
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
-	},
-/turf/simulated/floor/plating,
-/area/space)
-"mb" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
-	},
-/obj/effect/floor_decal/industrial/warning,
-/turf/simulated/floor/plating,
-/area/space)
 "mc" = (
 /turf/simulated/wall/prepainted,
 /area/liberty/hallway/one/fore_port)
@@ -6566,27 +6535,6 @@
 /obj/structure/flora/pottedplant/minitree,
 /turf/simulated/floor/wood/maple,
 /area/liberty/medbay/exam)
-"nn" = (
-/obj/machinery/door/blast/regular/open{
-	density = 0;
-	dir = 2;
-	icon_state = "pdoor0";
-	id_tag = "rnd_shutters";
-	name = "Hazard Shutters";
-	opacity = 0
-	},
-/obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/research,
-/obj/machinery/door/blast/regular/open{
-	density = 0;
-	dir = 2;
-	icon_state = "pdoor0";
-	id_tag = "rnd_shutters";
-	name = "Hazard Shutters";
-	opacity = 0
-	},
-/turf/simulated/floor/plating,
-/area/space)
 "no" = (
 /obj/structure/table/marble,
 /obj/machinery/door/window/southleft,
@@ -13388,14 +13336,6 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/liberty/hallway/one/aft_terminal)
-"DR" = (
-/obj/machinery/power/apc{
-	dir = 8;
-	name = "west bump";
-	pixel_x = -24
-	},
-/turf/simulated/floor/tiled/white,
-/area/space)
 "DS" = (
 /obj/effect/floor_decal/corner/grey{
 	dir = 10
@@ -15310,12 +15250,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/hallway/one/fore_terminal)
-"JS" = (
-/obj/effect/floor_decal/industrial/warning/cee{
-	dir = 4
-	},
-/turf/simulated/floor/plating,
-/area/space)
 "JT" = (
 /obj/structure/table/marble,
 /obj/machinery/door/blast/shutters/open{
@@ -16547,20 +16481,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/space)
-"NW" = (
-/obj/machinery/r_n_d/server/robotics,
-/obj/machinery/firealarm{
-	dir = 4;
-	pixel_x = 26
-	},
-/obj/effect/floor_decal/borderfloorwhite{
-	dir = 6
-	},
-/obj/effect/floor_decal/corner/purple/border{
-	dir = 6
-	},
-/turf/simulated/floor/tiled/white,
-/area/space)
 "NX" = (
 /obj/machinery/door/firedoor{
 	dir = 8
@@ -16612,16 +16532,6 @@
 /obj/machinery/portable_atmospherics/canister/hydrogen,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/techfloor,
-/area/space)
-"Og" = (
-/obj/machinery/light{
-	dir = 8
-	},
-/obj/machinery/firealarm{
-	dir = 8;
-	pixel_x = -24
-	},
-/turf/simulated/floor/tiled/white,
 /area/space)
 "Oh" = (
 /obj/effect/floor_decal/corner/grey{
@@ -16855,12 +16765,6 @@
 	},
 /obj/structure/table/glass,
 /turf/simulated/floor/tiled/techmaint,
-/area/space)
-"OU" = (
-/obj/machinery/light{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/dark,
 /area/space)
 "OW" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/green{
@@ -18495,13 +18399,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/space)
-"TP" = (
-/obj/machinery/door/window/westright,
-/obj/effect/floor_decal/industrial/warning{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/dark,
-/area/space)
 "TR" = (
 /obj/machinery/computer{
 	dir = 4
@@ -19182,13 +19079,6 @@
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/carpet/red,
 /area/liberty/hotel/foyer)
-"VF" = (
-/obj/effect/wallframe_spawn,
-/obj/effect/floor_decal/industrial/warning{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/dark,
-/area/space)
 "VG" = (
 /obj/effect/floor_decal/corner/white{
 	dir = 10
@@ -19496,13 +19386,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/hallway/one/aft_terminal)
-"WK" = (
-/obj/machinery/alarm{
-	dir = 4;
-	pixel_x = -23
-	},
-/turf/simulated/floor/tiled/white,
-/area/space)
 "WL" = (
 /obj/effect/floor_decal/corner/grey{
 	dir = 5
@@ -19598,12 +19481,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/hallway/one/central)
-"Xa" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/white,
-/area/space)
 "Xh" = (
 /obj/effect/floor_decal/corner/grey{
 	dir = 6
@@ -20046,10 +19923,6 @@
 	},
 /turf/simulated/wall/r_wall/prepainted,
 /area/liberty/hallway/one/aft_docks)
-"YI" = (
-/obj/effect/floor_decal/industrial/warning/corner,
-/turf/simulated/floor/tiled/white,
-/area/space)
 "YJ" = (
 /obj/effect/floor_decal/corner/grey/mono,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -20382,23 +20255,6 @@
 	dir = 9
 	},
 /turf/simulated/floor/tiled/dark,
-/area/space)
-"ZO" = (
-/obj/machinery/light{
-	dir = 4
-	},
-/obj/machinery/power/apc{
-	dir = 4;
-	name = "east bump";
-	pixel_x = 24
-	},
-/obj/effect/floor_decal/borderfloorwhite{
-	dir = 5
-	},
-/obj/effect/floor_decal/corner/purple/border{
-	dir = 5
-	},
-/turf/simulated/floor/tiled/white,
 /area/space)
 "ZP" = (
 /obj/machinery/door/firedoor,
@@ -48870,13 +48726,13 @@ gr
 gr
 lU
 fP
-gr
-gr
-DR
-Og
-WK
-gr
-ab
+aP
+aP
+aP
+aP
+aP
+aP
+aP
 aP
 aP
 qt
@@ -49072,13 +48928,13 @@ jq
 jq
 lY
 fP
-gr
-gr
-YI
-Xa
-Xa
-Xa
-nn
+aP
+aP
+aP
+aP
+aP
+aP
+aP
 aP
 aP
 qt
@@ -49274,13 +49130,13 @@ kE
 kL
 mi
 el
-kP
-bg
-bg
-TP
-ma
-VF
-ab
+aP
+aP
+aP
+aP
+aP
+aP
+aP
 aP
 aP
 qt
@@ -49476,13 +49332,13 @@ jt
 jt
 if
 el
-Rn
-lt
-bg
-fL
-mb
-fL
-ab
+aP
+aP
+aP
+aP
+aP
+aP
+aP
 aP
 aP
 qt
@@ -49678,13 +49534,13 @@ jH
 jH
 if
 el
-Qp
-ls
-bg
-fL
-mb
-fL
-ab
+aP
+aP
+aP
+aP
+aP
+aP
+aP
 aP
 aP
 qt
@@ -49880,13 +49736,13 @@ kF
 kO
 mj
 el
-ZO
-NW
-bg
-fL
-JS
-fL
-ab
+aP
+aP
+aP
+aP
+aP
+aP
+aP
 aP
 aP
 aP
@@ -50082,13 +49938,13 @@ el
 el
 el
 el
-ab
-ab
-ab
-fL
-OU
-fL
-ab
+aP
+aP
+aP
+aP
+aP
+aP
+aP
 aP
 aP
 aP
@@ -50283,14 +50139,14 @@ el
 el
 aP
 aP
-ab
 aP
 aP
-ab
-ab
-ab
-ab
-ab
+aP
+aP
+aP
+aP
+aP
+aP
 aP
 aP
 aP
