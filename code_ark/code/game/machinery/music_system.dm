@@ -2,7 +2,7 @@
 	name = "mixing console"
 	desc = "It's an advanced accoustic system control panel. It's connected to loudspeakers to cover a larger area. Along with some default tracks stored, it has access to a global music database."
 	icon = 'code_ark/icons/obj/machinery.dmi'
-	icon_state = "mixing_base"
+	icon_state = "mixer"
 	anchored = 1
 	power_channel = EQUIP
 	idle_power_usage = 10
@@ -17,6 +17,7 @@
 
 	var/datum/track/current_track
 	var/list/datum/track/tracks
+	var/music_track/custom_track
 
 	var/list/obj/machinery/media/speaker/speakers
 
@@ -34,6 +35,8 @@
 	var/datum/sound_token/sound_token
 
 	var/obj/machinery/media/mixing_console/master
+
+/////////////////////// INITIALIZATION ///////////////////////
 
 /obj/machinery/media/mixing_console/Initialize()
 	. = ..()
@@ -53,6 +56,8 @@
 	. = ..()
 	sound_id = "[type]_[sequential_id(type)]"
 
+//////////////////////// DESTRUCTION ////////////////////////
+
 /obj/machinery/media/mixing_console/Destroy()
 	StopPlaying()
 	QDEL_NULL_LIST(tracks)
@@ -63,17 +68,23 @@
 	StopPlaying()
 	. = ..()
 
+/////////////////////////// POWER ///////////////////////////
+
 /obj/machinery/media/mixing_console/power_change()
 	. = ..()
 	if(stat & (NOPOWER|BROKEN) && playing)
 		StopPlaying()
 		for (var/obj/machinery/media/speaker/S in speakers)
 			S.StopPlaying()
+	update_icon()
 
 /obj/machinery/media/speaker/power_change()
 	. = ..()
 	if(stat & (NOPOWER|BROKEN) && playing)
 		StopPlaying()
+	update_icon()
+
+///////////////////////// PLAYING /////////////////////////
 
 /obj/machinery/media/mixing_console/proc/StopPlaying()
 	playing = 0
@@ -87,20 +98,165 @@
 	update_icon()
 	QDEL_NULL(sound_token)
 
+/obj/machinery/media/mixing_console/proc/StartPlaying()
+	if(emagged)
+		emag_play()
+	else
+		StopPlaying()
+		if(!current_track && !custom_track)
+			return
+
+		sound_token = GLOB.sound_player.PlayLoopingSound(src, sound_id, (custom_track != null ? custom_track.song : current_track.GetTrack()), volume = volume, range = 7, falloff = 3, prefer_mute = TRUE)
+
+		playing = 1
+
+		for(var/list/obj/machinery/media/speaker/i in speakers)
+			i.StartPlaying()
+
+		update_use_power(POWER_USE_ACTIVE)
+		update_icon()
+
+/obj/machinery/media/speaker/proc/StartPlaying()
+	StopPlaying()
+
+	sound_token = GLOB.sound_player.PlayLoopingSound(src, sound_id,(master.custom_track != null ? master.custom_track.song : master.current_track.GetTrack()), volume = volume, range = 7, falloff = 3, prefer_mute = TRUE)
+
+	playing = 1
+
+	update_use_power(POWER_USE_ACTIVE)
+	update_icon()
+
+/obj/machinery/media/mixing_console/proc/AdjustVolume(var/new_volume)
+	volume = Clamp(new_volume, 0, 50)
+	if(sound_token)
+		sound_token.SetVolume(volume)
+
+///////////////////////// EASTER EGGS /////////////////////////
+
+/obj/machinery/media/mixing_console/proc/emag_play()
+	playsound(loc, 'sound/items/AirHorn.ogg', 100, 1)
+	for(var/mob/living/carbon/M in ohearers(6, src))
+		if(istype(M, /mob/living/carbon/human))
+			var/mob/living/carbon/human/H = M
+			if(H.get_sound_volume_multiplier() < 0.2)
+				continue
+		M.sleeping = 0
+		M.stuttering += 20
+		M.ear_deaf += 30
+		M.Weaken(3)
+		if(prob(30))
+			M.Stun(10)
+			M.Paralyse(4)
+		else
+			M.make_jittery(400)
+	for(var/list/obj/machinery/media/speaker/i in speakers)
+		i.emag_play()
+	spawn(15)
+		explode()
+
+obj/machinery/media/speaker/proc/emag_play()
+	playsound(loc, 'sound/items/AirHorn.ogg', 100, 1)
+	for(var/mob/living/carbon/M in ohearers(6, src))
+		if(istype(M, /mob/living/carbon/human))
+			var/mob/living/carbon/human/H = M
+			if(H.get_sound_volume_multiplier() < 0.2)
+				continue
+		M.sleeping = 0
+		M.stuttering += 20
+		M.ear_deaf += 30
+		M.Weaken(3)
+		if(prob(30))
+			M.Stun(10)
+			M.Paralyse(4)
+		else
+			M.make_jittery(400)
+	spawn(15)
+		explode()
+
+/obj/machinery/media/mixing_console/proc/explode()
+	walk_to(src,0)
+	src.visible_message("<span class='danger'>\the [src] blows apart!</span>", 1)
+	explosion(src.loc, 0, 0, 1, rand(1,2), 1)
+
+/obj/machinery/media/speaker/proc/explode()
+	walk_to(src,0)
+	src.visible_message("<span class='danger'>\the [src] blows apart!</span>", 1)
+	explosion(src.loc, 0, 0, 1, rand(1,2), 1)
+
+///////////////////////// ICON /////////////////////////
+
+/obj/machinery/media/mixing_console/on_update_icon()
+	overlays.Cut()
+	if(stat & (NOPOWER|BROKEN))
+		set_light(0)
+	else
+		var/image/I = image('code_ark/icons/obj/machinery.dmi', playing = 1 ? "mixer_playing" : "mixer_calm")
+		I.plane = EFFECTS_ABOVE_LIGHTING_PLANE
+		I.layer = ABOVE_LIGHTING_LAYER
+		overlays += I
+		set_light(0.1, 0.1, 1, 2, COLOR_WHITE)
+
+///////////////////////// UI /////////////////////////
+
+/obj/machinery/media/mixing_console/CanUseTopic(user, state)
+	. = ..()
+
 /obj/machinery/media/mixing_console/ui_interact(mob/user, ui_key = "main", var/datum/nanoui/ui = null, var/force_open = 1)
 	var/list/mixer_tracks = new
 	for(var/datum/track/T in tracks)
 		mixer_tracks.Add(list(list("track"=T.title)))
 
-	var/list/data = list(
-		"current_track" = current_track != null ? current_track.title : "No track selected",
-		"playing" = playing,
-		"tracks" = mixer_tracks,
-		"volume" = volume
-	)
+	var/list/data
+
+	if(custom_track)
+		data = list(
+			"current_track" = custom_track.title != null ? custom_track.title : "Unknown track",
+			"playing" = playing,
+			"tracks" = mixer_tracks,
+			"volume" = volume
+		)
+	else
+		data = list(
+			"current_track" = current_track != null ? current_track.title : "No track selected",
+			"playing" = playing,
+			"tracks" = mixer_tracks,
+			"volume" = volume
+		)
 
 	ui = SSnano.try_update_ui(user, src, ui_key, ui, data, force_open)
 	if (!ui)
-		ui = new(user, src, ui_key, "mixing_console.tmpl", "Mixer Console", 340, 440)
+		ui = new(user, src, ui_key, "mixing_console.tmpl", "Mixing Console", 340, 440)
 		ui.set_initial_data(data)
 		ui.open()
+
+/obj/machinery/media/mixing_console/OnTopic(var/mob/user, var/list/href_list, state)
+	if (href_list["title"])
+		for(var/datum/track/T in tracks)
+			if(T.title == href_list["title"])
+				current_track = T
+				custom_track = null
+				StartPlaying()
+				break
+		return TOPIC_REFRESH
+
+	if (href_list["stop"])
+		StopPlaying()
+		return TOPIC_REFRESH
+
+	if (href_list["play"])
+		if(!current_track)
+			to_chat(usr, "No track selected.")
+		else
+			StartPlaying()
+		return TOPIC_REFRESH
+
+	if (href_list["open_track"])
+		custom_track = new
+		custom_track.title = input("Input the Song Name...") as null|text
+		custom_track.song = input(usr, "Choose a Song File to Load","Upload Song File") as null|file
+		StartPlaying()
+		return TOPIC_REFRESH
+
+	if (href_list["volume"])
+		AdjustVolume(text2num(href_list["volume"]))
+		return TOPIC_REFRESH
