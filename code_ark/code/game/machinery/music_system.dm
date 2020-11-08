@@ -18,9 +18,9 @@
 	var/datum/track/current_track
 	var/list/datum/track/tracks
 
-	var/music_track/custom_track
+	var/music_track/custom_track/custom_track
 
-	var/list/obj/machinery/media/speaker/slaves
+	var/list/obj/machinery/media/speaker/slaves = list()
 
 /obj/machinery/media/speaker
 	name = "loudspeaker"
@@ -29,8 +29,11 @@
 	icon_state = "mixer"
 	idle_power_usage = 10
 	active_power_usage = 200
+	level = 1	//underfloor
+	layer = BELOW_OBJ_LAYER
+
 	var/playing = 0
-	var/volume = 20
+	var/volume = 40
 
 	var/sound_id
 	var/datum/sound_token/sound_token
@@ -55,6 +58,16 @@
 /obj/machinery/media/speaker/Initialize()
 	. = ..()
 	sound_id = "[type]_[sequential_id(type)]"
+	var/turf/T = loc
+	if(istype(T) && !T.is_plating())
+		hide(1)
+	update_icon()
+
+/obj/machinery/media/speaker/hide(var/intact)
+	set_invisibility(intact ? 101 : 0)
+
+/obj/machinery/media/speaker/hides_under_flooring()
+	return 1
 
 //////////////////////// DESTRUCTION ////////////////////////
 
@@ -90,6 +103,8 @@
 	playing = 0
 	update_use_power(POWER_USE_IDLE)
 	update_icon()
+	for(var/obj/machinery/media/speaker/i in slaves)
+		i.StopPlaying()
 	QDEL_NULL(sound_token)
 
 /obj/machinery/media/speaker/proc/StopPlaying()
@@ -106,7 +121,7 @@
 		if(!current_track && !custom_track)
 			return
 
-		sound_token = GLOB.sound_player.PlayLoopingSound(src, sound_id, (custom_track != null ? custom_track.song : current_track.GetTrack()), volume = volume, range = 7, falloff = 3, prefer_mute = TRUE)
+		sound_token = GLOB.sound_player.PlayLoopingSound(src, sound_id, (custom_track != null ? custom_track.song : current_track.GetTrack()), volume = volume, range = 2, falloff = 1, prefer_mute = TRUE)
 
 		playing = 1
 
@@ -119,7 +134,7 @@
 /obj/machinery/media/speaker/proc/StartPlaying()
 	StopPlaying()
 
-	sound_token = GLOB.sound_player.PlayLoopingSound(src, sound_id,(master.custom_track != null ? master.custom_track.song : master.current_track.GetTrack()), volume = volume, range = 7, falloff = 3, prefer_mute = TRUE)
+	sound_token = GLOB.sound_player.PlayLoopingSound(src, sound_id,(master.custom_track != null ? master.custom_track.song : master.current_track.GetTrack()), volume = volume, range = 20, falloff = 1, prefer_mute = TRUE)
 
 	playing = 1
 
@@ -132,7 +147,7 @@
 		sound_token.SetVolume(volume)
 	for(var/obj/machinery/media/speaker/i in slaves)
 		if (i.sound_token)
-			i.sound_token.SetVolume(volume)
+			i.sound_token.SetVolume(new_volume)
 
 ///////////////////////// EASTER EGGS /////////////////////////
 
@@ -219,7 +234,7 @@ obj/machinery/media/speaker/proc/emag_play()
 		mixer_tracks.Add(list(list("track"=T.title)))
 
 	var/list/data = list(
-		"current_track" = custom_track != null ? (custom_track.title != null ? custom_track.title : "Unknown track") : (current_track != null ? current_track.title : "Track not set"),
+		"current_track" = custom_track != null ? ((custom_track.title != null && custom_track.title != "") ? custom_track.title : "Unknown track") : (current_track != null ? current_track.title : "Track not set"),
 		"playing" = playing,
 		"tracks" = mixer_tracks,
 		"volume" = volume
@@ -230,6 +245,8 @@ obj/machinery/media/speaker/proc/emag_play()
 		ui = new(user, src, ui_key, "mixing_console.tmpl", "Mixing Console", 340, 440)
 		ui.set_initial_data(data)
 		ui.open()
+
+/music_track/custom_track/New()
 
 /obj/machinery/media/mixing_console/OnTopic(var/mob/user, var/list/href_list, state)
 	if (href_list["title"])
@@ -256,6 +273,8 @@ obj/machinery/media/speaker/proc/emag_play()
 		custom_track = new
 		custom_track.title = input("Input the Song Name...") as null|text
 		custom_track.song = input(usr, "Choose a Song File to Load","Upload Song File") as null|file
+		if(!custom_track.song)
+			return TOPIC_REFRESH
 		StartPlaying()
 		return TOPIC_REFRESH
 
