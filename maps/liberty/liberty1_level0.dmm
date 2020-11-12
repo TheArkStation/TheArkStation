@@ -2753,6 +2753,13 @@
 	pixel_x = 6;
 	pixel_y = -14
 	},
+/obj/machinery/button/blast_door{
+	dir = 1;
+	id_tag = "engineroomvent";
+	name = "Emergency Upper Engine Room Venting";
+	pixel_x = -6;
+	pixel_y = -14
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/space)
 "fM" = (
@@ -2986,10 +2993,6 @@
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/space)
-"gq" = (
-/obj/effect/wallframe_spawn/reinforced,
-/turf/simulated/floor/plating,
-/area/space)
 "gr" = (
 /obj/machinery/door/airlock/multi_tile/glass/civilian{
 	dir = 8;
@@ -3036,6 +3039,7 @@
 /area/space)
 "gC" = (
 /obj/effect/wallframe_spawn/reinforced_phoron,
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
 /area/space)
 "gD" = (
@@ -3830,6 +3834,7 @@
 /area/space)
 "iI" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/monotile,
 /area/space)
 "iJ" = (
@@ -3978,11 +3983,13 @@
 /obj/machinery/atmospherics/pipe/manifold/visible/green{
 	dir = 4
 	},
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
 /area/space)
 "je" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow,
 /obj/effect/wallframe_spawn/reinforced_phoron,
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
 /area/space)
 "jg" = (
@@ -4355,6 +4362,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/monotile,
 /area/space)
 "kt" = (
@@ -4442,6 +4450,7 @@
 /area/space)
 "kD" = (
 /obj/effect/wallframe_spawn/reinforced/no_grille,
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
 /area/space)
 "kE" = (
@@ -4619,6 +4628,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/maintenance,
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/space)
 "lb" = (
@@ -4710,6 +4720,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible/blue{
 	dir = 4
 	},
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
 /area/space)
 "lx" = (
@@ -4824,6 +4835,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/monotile,
 /area/space)
 "mf" = (
@@ -5054,6 +5066,7 @@
 /obj/machinery/door/airlock/maintenance{
 	name = "Elevator Maintenance Access"
 	},
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/space)
 "nd" = (
@@ -5362,6 +5375,7 @@
 "ov" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/green,
 /obj/effect/wallframe_spawn/reinforced_phoron,
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
 /area/space)
 "oy" = (
@@ -5484,6 +5498,7 @@
 /obj/machinery/door/airlock/engineering{
 	name = "Level Zero Substation"
 	},
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/space)
 "pi" = (
@@ -5523,6 +5538,7 @@
 /obj/machinery/door/airlock/engineering{
 	name = "Level Zero Substation"
 	},
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/space)
 "pq" = (
@@ -5994,6 +6010,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/monotile,
 /area/space)
 "rP" = (
@@ -6244,6 +6261,7 @@
 "sO" = (
 /obj/effect/wallframe_spawn/reinforced_phoron,
 /obj/machinery/atmospherics/pipe/simple/visible/red,
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
 /area/space)
 "sS" = (
@@ -6349,6 +6367,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/space)
 "ts" = (
@@ -6607,6 +6626,7 @@
 	dir = 4
 	},
 /obj/effect/wallframe_spawn/reinforced_phoron,
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
 /area/space)
 "uo" = (
@@ -6960,6 +6980,7 @@
 	name = "Maintenance Shutters"
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/space)
 "vP" = (
@@ -7467,6 +7488,7 @@
 	id_tag = "supermatter_obs";
 	name = "Supermatter Observation blast doors"
 	},
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
 /area/space)
 "yk" = (
@@ -8078,6 +8100,7 @@
 	name = "Maintenance Shutters"
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/space)
 "AT" = (
@@ -8971,6 +8994,7 @@
 "EN" = (
 /obj/effect/wallframe_spawn/reinforced_phoron,
 /obj/machinery/atmospherics/pipe/simple/visible/blue,
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
 /area/space)
 "ET" = (
@@ -9043,6 +9067,7 @@
 "Fg" = (
 /obj/machinery/door/airlock/maintenance,
 /obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/space)
 "Fk" = (
@@ -9619,6 +9644,7 @@
 	id_tag = "supermatter_obs";
 	name = "Supermatter Observation blast doors"
 	},
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
 /area/space)
 "HC" = (
@@ -9907,6 +9933,7 @@
 "IM" = (
 /obj/machinery/door/airlock/maintenance,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/space)
 "IN" = (
@@ -10042,6 +10069,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/space)
 "Jr" = (
@@ -10358,6 +10386,7 @@
 /obj/machinery/door/airlock/engineering{
 	name = "Level Zero Substation"
 	},
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/space)
 "KB" = (
@@ -10421,6 +10450,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/monotile,
 /area/space)
 "KS" = (
@@ -10440,6 +10470,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/monotile,
 /area/space)
 "KX" = (
@@ -10592,6 +10623,7 @@
 /obj/machinery/door/airlock/maintenance{
 	name = "Elevator Maintenance Access"
 	},
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/space)
 "LB" = (
@@ -10874,6 +10906,7 @@
 	dir = 4
 	},
 /obj/effect/wallframe_spawn/reinforced_phoron,
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
 /area/space)
 "MB" = (
@@ -10938,6 +10971,7 @@
 	id_tag = "engi_warehouse";
 	name = "Engineering Hard Storage"
 	},
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/space)
 "MU" = (
@@ -11461,6 +11495,7 @@
 "Pj" = (
 /obj/effect/wallframe_spawn/reinforced_phoron,
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan,
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
 /area/space)
 "Pk" = (
@@ -11548,6 +11583,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/monotile,
 /area/space)
 "Py" = (
@@ -11624,6 +11660,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/space)
 "PL" = (
@@ -11656,6 +11693,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/space)
 "PT" = (
@@ -12230,6 +12268,7 @@
 /area/liberty/hotel/locker_room_m)
 "Sd" = (
 /obj/machinery/door/airlock/maintenance,
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/space)
 "Se" = (
@@ -13024,6 +13063,7 @@
 /obj/machinery/door/airlock/multi_tile/glass/engineering{
 	name = "Engineering Access"
 	},
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/monotile,
 /area/space)
 "VV" = (
@@ -13387,6 +13427,8 @@
 	id_tag = "engi_shutters";
 	name = "Engineering Storage Shutters"
 	},
+/obj/machinery/door/firedoor,
+/obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/techfloor,
 /area/space)
 "Xw" = (
@@ -13736,6 +13778,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/space)
 "YK" = (
@@ -13981,6 +14024,7 @@
 /obj/machinery/door/airlock/multi_tile/atmos{
 	name = "Atmospherics"
 	},
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/space)
 "ZO" = (
@@ -43230,9 +43274,9 @@ iI
 me
 dh
 dh
-gq
+XO
 ks
-gq
+XO
 dh
 DL
 DL
@@ -43430,7 +43474,7 @@ ad
 dh
 ql
 RM
-gq
+XO
 HW
 Td
 rK
@@ -43627,12 +43671,12 @@ aa
 aa
 aa
 aa
-eV
+XO
 ad
 dh
 wO
 RM
-gq
+XO
 Hr
 Yc
 Yb
@@ -43829,7 +43873,7 @@ aa
 aa
 aa
 aa
-eV
+XO
 ad
 Sd
 ql
@@ -44031,12 +44075,12 @@ aa
 aa
 aa
 aa
-eV
+XO
 ad
 dh
 ql
 RM
-gq
+XO
 En
 Yc
 Yb
@@ -44238,7 +44282,7 @@ dh
 dh
 YK
 QP
-gq
+XO
 yM
 Bl
 gw
@@ -44442,8 +44486,8 @@ PI
 IT
 DL
 DL
-gq
-gq
+XO
+XO
 DL
 HA
 DL
