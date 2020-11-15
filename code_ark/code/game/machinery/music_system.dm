@@ -4,6 +4,7 @@
 	icon = 'code_ark/icons/obj/machinery.dmi'
 	icon_state = "mixer"
 	anchored = 1
+	density = 1
 	power_channel = EQUIP
 	idle_power_usage = 10
 	active_power_usage = 100
@@ -26,19 +27,13 @@
 	name = "loudspeaker"
 	desc = "It's a relatively powerful loudspeaker connected to a mixing console to provide the joy of music."
 	icon = 'code_ark/icons/obj/machinery.dmi'
-	icon_state = "mixer"
+	icon_state = "speaker"
 	idle_power_usage = 10
 	active_power_usage = 200
 	level = 1	//underfloor
 	layer = BELOW_OBJ_LAYER
 
 	var/playing = 0
-	var/volume = 40
-
-	var/sound_id
-	var/datum/sound_token/sound_token
-
-	var/obj/machinery/media/mixing_console/master
 
 /////////////////////// INITIALIZATION ///////////////////////
 
@@ -53,11 +48,9 @@
 	for (var/obj/machinery/media/speaker/i in world)
 		if(i.id_tag == id_tag)
 			slaves += i
-			i.master = src
 
 /obj/machinery/media/speaker/Initialize()
 	. = ..()
-	sound_id = "[type]_[sequential_id(type)]"
 	var/turf/T = loc
 	if(istype(T) && !T.is_plating())
 		hide(1)
@@ -111,7 +104,6 @@
 	playing = 0
 	update_use_power(POWER_USE_IDLE)
 	update_icon()
-	QDEL_NULL(sound_token)
 
 /obj/machinery/media/mixing_console/proc/StartPlaying()
 	if(emagged)
@@ -132,12 +124,7 @@
 		update_icon()
 
 /obj/machinery/media/speaker/proc/StartPlaying()
-	StopPlaying()
-
-	sound_token = GLOB.sound_player.PlayLoopingSound(src, sound_id,(master.custom_track != null ? master.custom_track.song : master.current_track.GetTrack()), volume = volume, range = 20, falloff = 1, prefer_mute = TRUE)
-
 	playing = 1
-
 	update_use_power(POWER_USE_ACTIVE)
 	update_icon()
 
@@ -145,9 +132,6 @@
 	volume = Clamp(new_volume, 0, 50)
 	if(sound_token)
 		sound_token.SetVolume(volume)
-	for(var/obj/machinery/media/speaker/i in slaves)
-		if (i.sound_token)
-			i.sound_token.SetVolume(new_volume)
 
 ///////////////////////// EASTER EGGS /////////////////////////
 
@@ -156,7 +140,6 @@
 		emagged = 1
 		StopPlaying()
 		visible_message("<span class='danger'>\The [src] makes a fizzling sound.</span>")
-		update_icon()
 		return 1
 
 /obj/machinery/media/mixing_console/proc/emag_play()
@@ -203,11 +186,13 @@ obj/machinery/media/speaker/proc/emag_play()
 	walk_to(src,0)
 	src.visible_message("<span class='danger'>\the [src] blows apart!</span>", 1)
 	explosion(src.loc, 0, 0, 1, rand(1,2), 1)
+	Destroy()
 
 /obj/machinery/media/speaker/proc/explode()
 	walk_to(src,0)
 	src.visible_message("<span class='danger'>\the [src] blows apart!</span>", 1)
 	explosion(src.loc, 0, 0, 1, rand(1,2), 1)
+	Destroy()
 
 ///////////////////////// ICON /////////////////////////
 
@@ -216,11 +201,17 @@ obj/machinery/media/speaker/proc/emag_play()
 	if(stat & (NOPOWER|BROKEN))
 		set_light(0)
 	else
-		var/image/I = image('code_ark/icons/obj/machinery.dmi',(playing == 1 ? "mixer_playing" : "mixer_calm"))
+		var/image/I = image('code_ark/icons/obj/machinery.dmi',(playing == 1 ? "mixer_playing" : (emagged == 1 ? "mixer_emagged" : "mixer_calm")))
 		I.plane = EFFECTS_ABOVE_LIGHTING_PLANE
 		I.layer = ABOVE_LIGHTING_LAYER
 		overlays += I
 		set_light(0.1, 0.1, 1, 2, COLOR_WHITE)
+
+/obj/machinery/media/speaker/on_update_icon()
+	overlays.Cut()
+	if(!stat & (NOPOWER|BROKEN))
+		var/image/I = image('code_ark/icons/obj/machinery.dmi',(playing == 1 ? "speaker_playing" : "speaker_powered"))
+		overlays += I
 
 ///////////////////////// UI /////////////////////////
 
