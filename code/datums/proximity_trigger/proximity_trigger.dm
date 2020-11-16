@@ -174,3 +174,18 @@ var/const/PROXIMITY_EXCLUDE_HOLDER_TURF = 1 // When acquiring turfs to monitor, 
 		T.overlays -= overlay
 	for(var/turf/T in new_turfs)
 		T.overlays += overlay
+
+/datum/proximity_trigger/music_system // ARK
+	turf_selection = /decl/turf_selection/line // ARK
+
+/datum/proximity_trigger/music_system/register_turfs() // ARK
+	var/datum/sound_token/S = proc_owner // ARK
+	turfs_in_range = S.synchronization_turfs
+	seen_turfs_ = S.synchronization_turfs // ARK
+	for(var/t in seen_turfs_) // ARK
+		GLOB.entered_event.register(t, src, /datum/proximity_trigger/proc/on_turf_entered) // ARK
+	on_turf_visibility_changed() // ARK
+
+/datum/proximity_trigger/music_system/on_turf_visibility_changed() // ARK
+	call(proc_owner, on_turfs_changed)(seen_turfs_.Copy(), seen_turfs_.Copy()) // ARK
+

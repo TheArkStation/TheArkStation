@@ -6,6 +6,31 @@
 	req_access = list(access_sol_command, access_sol_pilot)
 	shuttle_tag = "SEV Lucius"
 
+/obj/machinery/computer/shuttle_control/explore/lucius/Initialize()
+	..()
+	return INITIALIZE_HINT_LATELOAD
+
+/obj/machinery/computer/shuttle_control/explore/lucius/LateInitialize()
+	..()
+	Autodock_ticker()
+
+/obj/machinery/computer/shuttle_control/explore/lucius/proc/Autodock_ticker()
+	var/datum/shuttle/autodock/overmap/lucius/shuttle
+	var/obj/effect/shuttle_landmark/liberty/hangar/lucius/landmark
+	var/waiting_for_round_start = 1
+	spawn (300)
+	while (waiting_for_round_start)
+		sleep (30)
+		if(!shuttle)
+			shuttle = SSshuttle.shuttles["SEV Lucius"]
+		if(!landmark)
+			landmark = locate() in world
+		if(round_start_time && shuttle && landmark)
+			landmark.docking_controller.docking_codes = shuttle.docking_codes
+			shuttle.set_destination(landmark)
+			shuttle.process_launch()
+			waiting_for_round_start = 0
+
 /obj/machinery/computer/shuttle_control/explore/lazarev
 	name = "MRM Lazarev control console"
 	req_access = list(access_sol_pilot)

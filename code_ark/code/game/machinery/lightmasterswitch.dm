@@ -23,6 +23,8 @@
 	SetName("remote light switch ([connected_area.name])")
 
 /obj/machinery/light_switch/slave/interface_interact(mob/user)
+	if (istype(user, /mob/observer/ghost))
+		return
 	if(CanInteract(user, DefaultTopicState()))
 		to_chat(user, SPAN_WARNING("There's no way you can flip a remote light switch. Try to find the linked master switch."))
 
@@ -68,6 +70,8 @@
 					if(!L.lightbulb)
 						continue
 					if(L.lightbulb.status != LIGHT_OK)
+						continue
+					if(L.lightbulb.can_change_color)
 						continue
 					L.lightbulb.b_max_bright = initial(L.lightbulb.b_max_bright)*brightness
 					L.update_icon()

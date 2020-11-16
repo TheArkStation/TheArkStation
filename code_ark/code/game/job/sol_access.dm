@@ -69,3 +69,9 @@
 	id = access_sol_sfp
 	desc = "Sol Federal Police"
 	region = ACCESS_REGION_SOL_SFP
+
+/var/const/access_sol_diplomacy = "ACCESS_SOL_DIPLOMACY"
+/datum/access/sol/diplomacy
+	id = access_sol_diplomacy
+	desc = "Sol Diplomacy"
+	region = ACCESS_REGION_SOL_HIGH

@@ -6,5 +6,5 @@
 	in_space = 1
 	hide_from_reports = TRUE
 	initial_restricted_waypoints = list(
-		"SEV Lucius" = list("nav_hangar_lucius") 	//can't have random shuttles popping inside the ship
+		"SEV Lucius" = list("nav_hangar_lucius")
 	)

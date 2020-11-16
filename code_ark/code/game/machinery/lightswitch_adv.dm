@@ -31,6 +31,8 @@
 					continue
 				if(L.lightbulb.status != LIGHT_OK)
 					continue
+				if(L.lightbulb.can_change_color)
+					continue
 				L.lightbulb.b_max_bright = initial(L.lightbulb.b_max_bright)*brightness // Brightness reset on light bulb removal is set n lightmasterswitch.dm
 				L.update_icon()
 			to_chat(user, SPAN_NOTICE("The brightness is now set to [brightness*100]%."))

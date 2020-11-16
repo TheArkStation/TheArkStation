@@ -87,6 +87,8 @@ GLOBAL_DATUM_INIT(sound_player, /decl/sound_player, new)
 	var/datum/proximity_trigger/square/proxy_listener
 	var/list/can_be_heard_from
 
+	var/list/synchronization_turfs	//ARK
+
 /datum/sound_token/New(var/atom/source, var/sound_id, var/sound/sound, var/range = 4, var/prefer_mute = FALSE)
 	..()
 	if(!istype(source))
@@ -117,7 +119,22 @@ GLOBAL_DATUM_INIT(sound_player, /decl/sound_player, new)
 
 	GLOB.destroyed_event.register(source, src, /datum/proc/qdel_self)
 
-	if(ismovable(source))
+	if(istype(source, /obj/machinery/media/mixing_console)) //ARK
+		var/list/synchronization_areas = list() //ARK
+		var/obj/machinery/media/mixing_console/T = source //ARK
+		for(var/obj/machinery/media/mixing_console/M in world) //ARK
+			if(!(get_area(M) in synchronization_areas) && T.id_tag == M.id_tag)//ARK
+				synchronization_areas += get_area(M) //ARK
+		for(var/obj/machinery/media/speaker/S in world) //ARK
+			if(!(get_area(S) in synchronization_areas) && T.id_tag == S.id_tag) //ARK
+				synchronization_areas += get_area(S) //ARK
+		for(var/area/A in synchronization_areas) //ARK
+			synchronization_turfs += get_area_turfs(A) //ARK
+
+	if(istype(source, /obj/machinery/media/mixing_console)) //ARK
+		proxy_listener = new /datum/proximity_trigger/music_system (source, /datum/sound_token/proc/PrivAddListener, /datum/sound_token/proc/PrivLocateListeners, range, proc_owner = src) //ARK
+		proxy_listener.register_turfs() //ARK
+	else if(ismovable(source))
 		proxy_listener = new(source, /datum/sound_token/proc/PrivAddListener, /datum/sound_token/proc/PrivLocateListeners, range, proc_owner = src)
 		proxy_listener.register_turfs()
 
@@ -167,7 +184,17 @@ datum/sound_token/proc/Mute()
 		return
 
 	can_be_heard_from = current_turfs
-	var/current_listeners = all_hearers(source, range)
+	var/current_listeners // ARK
+	if(istype(source, /obj/machinery/media/mixing_console)) // ARK
+		var/obj/machinery/media/mixing_console/T = source //ARK
+		for(var/obj/machinery/media/mixing_console/M in world) // ARK
+			if(M.id_tag == T.id_tag)
+				current_listeners += all_hearers(M, 20) // ARK
+		for(var/obj/machinery/media/speaker/S in world) // ARK
+			if(S.id_tag == T.id_tag)
+				current_listeners += all_hearers(S, 20) // ARK
+	else // ARK
+		current_listeners = all_hearers(source, range) // ARK
 	var/former_listeners = listeners - current_listeners
 	var/new_listeners = current_listeners - listeners
 
@@ -217,7 +244,7 @@ datum/sound_token/proc/PrivAddListener(var/atom/listener)
 	var/turf/listener_turf = get_turf(listener)
 
 	var/distance = get_dist(source_turf, listener_turf)
-	if(!listener_turf || (distance > range) || !(listener_turf in can_be_heard_from))
+	if(!listener_turf || (!istype(source, /obj/machinery/media/mixing_console) && (distance > range)) || !(listener_turf in can_be_heard_from)) // ARK
 		if(prefer_mute)
 			listener_status[listener] |= SOUND_MUTE
 		else
@@ -226,8 +253,8 @@ datum/sound_token/proc/PrivAddListener(var/atom/listener)
 	else if(prefer_mute)
 		listener_status[listener] &= ~SOUND_MUTE
 
-	sound.x = source_turf.x - listener_turf.x
-	sound.z = source_turf.y - listener_turf.y
+	sound.x = synchronization_turfs ? 0 : source_turf.x - listener_turf.x // ARK
+	sound.z = synchronization_turfs ? 0 : source_turf.y - listener_turf.y // ARK
 	sound.y = 1
 	// Far as I can tell from testing, sound priority just doesn't work.
 	// Sounds happily steal channels from each other no matter what.

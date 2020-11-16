@@ -52,10 +52,10 @@
 	desc = "It's a large white metal digit 5."
 	icon_state = "5"
 
-/obj/structure/font/double
-	icon = 'maps/liberty/ship_lucius/icons/structures/font_double.dmi'
+/obj/structure/font/triple
+	icon = 'maps/liberty/ship_lucius/icons/structures/font_triple.dmi'
 
-/obj/structure/font/double/lazarev
+/obj/structure/font/triple/lazarev
 	name = "MRM Lazarev"
 	desc = "It's the name of the vessel displayed on its exterior."
 	icon_state = "lazarev"
