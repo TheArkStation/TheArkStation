@@ -152,3 +152,46 @@
 
 /obj/effect/floor_decal/beach/inner/smooth
 	icon_state = "sandcorner_inner_good"
+
+/obj/effect/floor_decal/floor_sign
+	name = "floor sign"
+	icon = 'maps/liberty/icons/decals.dmi'
+
+/obj/effect/floor_decal/floor_sign/arrow/d1
+	icon_state = "arrow_d1"
+
+/obj/effect/floor_decal/floor_sign/arrow/d2
+	icon_state = "arrow_d2"
+
+/obj/effect/floor_decal/floor_sign/arrow/d4
+	icon_state = "arrow_d4"
+
+/obj/effect/floor_decal/floor_sign/arrow/d8
+	icon_state = "arrow_d8"
+
+/obj/effect/floor_decal/floor_sign/tag/police
+	icon_state = "tag_police"
+
+/obj/effect/floor_decal/floor_sign/tag/lift
+	icon_state = "tag_lift"
+
+/obj/effect/floor_decal/floor_sign/tag/toilets
+	icon_state = "tag_toilets"
+
+/obj/effect/floor_decal/floor_sign/tag/hotel
+	icon_state = "tag_hotel"
+
+/obj/effect/floor_decal/floor_sign/tag/clinic
+	icon_state = "tag_clinic"
+
+/obj/effect/floor_decal/floor_sign/tag/shop
+	icon_state = "tag_shop"
+
+/obj/effect/floor_decal/floor_sign/tag/cargo
+	icon_state = "tag_cargo"
+
+/obj/effect/floor_decal/floor_sign/tag/administration
+	icon_state = "tag_administation"
+
+/obj/effect/floor_decal/floor_sign/tag/scg_representative
+	icon_state = "tag_scg_representative"
