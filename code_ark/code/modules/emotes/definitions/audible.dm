@@ -124,8 +124,8 @@
 /decl/emote/audible/chuckle
 	key = "chuckle"
 	emote_sound = list(
-		MALE = 'code_ark/sound/voice/chuckle_TEMP.ogg',
-		FEMALE = 'code_ark/sound/voice/chuckle_TEMP.ogg')
+		MALE = 'code_ark/sound/voice/chuckle_male.ogg',
+		FEMALE = 'code_ark/sound/voice/chuckle_female.ogg')
 	emote_message_3p = "USER усмехается."
 
 /decl/emote/audible/chuckle/resomi
@@ -162,8 +162,12 @@
 /decl/emote/audible/laugh
 	key = "laugh"
 	emote_sound = list(
-		MALE = 'code_ark/sound/voice/laugh_male_1.ogg',
-		FEMALE = 'code_ark/sound/voice/laugh_female_2.ogg')
+		MALE = list('code_ark/sound/voice/laugh_male_1.ogg', 'code_ark/sound/voice/laugh_male_2.ogg',
+				'code_ark/sound/voice/laugh_male_3.ogg', 'code_ark/sound/voice/laugh_male_4.ogg',
+				'code_ark/sound/voice/laugh_male_5.ogg', 'code_ark/sound/voice/laugh_male_6.ogg'),
+		FEMALE = list('code_ark/sound/voice/laugh_female_1.ogg', 'code_ark/sound/voice/laugh_female_2.ogg',
+				'code_ark/sound/voice/laugh_female_3.ogg', 'code_ark/sound/voice/laugh_female_4.ogg',
+				'code_ark/sound/voice/laugh_female_5.ogg', 'code_ark/sound/voice/laugh_female_6.ogg'))
 	emote_message_3p = "USER смеётся."
 	emote_message_3p_target = "USER смеётся над TARGET!"
 
