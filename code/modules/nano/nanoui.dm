@@ -352,6 +352,7 @@ nanoui is used to open and update nano browser uis
 /datum/nanoui/proc/get_html()
 
 	// before the UI opens, add the layout files based on the layout key
+	autoset_mode() // ARK
 	add_stylesheet("layout_[layout_key].css")
 	add_template("layout", "layout_[layout_key].tmpl")
 	if (layout_header_key)
