@@ -1,6 +1,12 @@
-body {
-    background: #002f50 url(uiBackground-Sol.png) no-repeat;
+html {
+	height: 100%;
+	background: #002f50 url(uiBackground-Sol.png) center no-repeat;
     background-size: auto 100%;
+    background-attachment: scroll;
+}
+
+body {
+	background: rgba(0,0,0,0);
 }
 
 #uiWrapper {
@@ -21,7 +27,7 @@ body {
     left: 44px;
     width: 66%;
     overflow: hidden;
-    color: #E9C183;
+    color: #ffffff;
     font-size: 16px;
 }
 
