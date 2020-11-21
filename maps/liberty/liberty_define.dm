@@ -7,9 +7,9 @@
 
 	admin_levels = list()
 	empty_levels = list(6)
-	station_levels = list(1,2,3,4,5)
-	contact_levels = list(1,2,3,4,5)
-	player_levels = list(1,2,3,4,5)
+	station_levels = list(1,2,3,4)
+	contact_levels = list(1,2,3,4)
+	player_levels = list(1,2,3,4)
 	accessible_z_levels = list("1"=1,"2"=1,"3"=1,"4"=1,"5"=1,"6"=30)
 	overmap_size = 35
 	overmap_event_areas = 34

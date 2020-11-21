@@ -36,7 +36,7 @@
 /obj/turbolift_map_holder/liberty/east
 	name = "Liberty east main turbolift map placeholder"
 	dir = WEST
-	depth = 5
+	depth = 4
 	lift_size_x = 4
 	lift_size_y = 4
 	door_floor_type = /turf/simulated/floor/tiled/monotile
