@@ -23,6 +23,7 @@
 		for(var/R in A.req_access)
 			if(R in sol_accesses)
 				layout_key = "sol"
+				add_stylesheet("shared_sol.css")
 				break
 			if(R in sfp_accesses)
 				layout_key = "sfp"
