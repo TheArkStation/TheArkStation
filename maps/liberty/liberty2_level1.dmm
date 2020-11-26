@@ -7490,6 +7490,12 @@
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/access_button/airlock_interior{
+	frequency = 1331;
+	master_tag = "sfp_shuttle";
+	pixel_y = 24;
+	req_access = list("ACCESS_SOL_SFP")
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/space)
 "aoF" = (
@@ -16238,6 +16244,7 @@
 /obj/machinery/power/terminal{
 	dir = 8
 	},
+/obj/effect/floor_decal/industrial/warning/full,
 /turf/simulated/floor/plating,
 /area/space)
 "aEX" = (
@@ -17696,7 +17703,8 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/warning/full,
-/turf/simulated/floor/shuttle_ceiling/sol,
+/obj/structure/catwalk,
+/turf/simulated/floor/airless,
 /area/space)
 "aIb" = (
 /obj/structure/lattice,
@@ -20224,7 +20232,8 @@
 	id_tag = "sfp_shuttle_pump_out_external"
 	},
 /obj/effect/floor_decal/industrial/warning/full,
-/turf/simulated/floor/shuttle_ceiling/sol,
+/obj/structure/catwalk,
+/turf/simulated/floor/airless,
 /area/space)
 "aMZ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
