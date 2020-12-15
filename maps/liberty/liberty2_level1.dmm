@@ -6081,7 +6081,6 @@
 /turf/simulated/floor/plating,
 /area/space)
 "amb" = (
-/obj/machinery/power/smes/buildable/preset/torch/substation,
 /obj/machinery/light/small{
 	dir = 4
 	},
@@ -6090,6 +6089,7 @@
 	icon_state = "0-2"
 	},
 /obj/structure/cable/green,
+/obj/machinery/power/smes,
 /turf/simulated/floor/tiled/techfloor,
 /area/space)
 "amc" = (
@@ -13056,6 +13056,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/hallway/one/aft_terminal)
 "ayA" = (
@@ -13607,6 +13610,11 @@
 /obj/effect/floor_decal/corner/grey,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/hallway/one/aft_terminal)
@@ -18856,15 +18864,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/hallway/one/fore_port)
-"aKs" = (
-/obj/effect/floor_decal/corner/grey{
-	dir = 10
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/liberty/hallway/one/aft_terminal)
 "aKt" = (
 /obj/effect/floor_decal/corner/grey{
 	dir = 6
@@ -19878,10 +19877,10 @@
 /turf/simulated/floor/plating,
 /area/space)
 "aMr" = (
-/obj/machinery/power/smes/buildable/preset/torch/substation,
 /obj/structure/cable/yellow{
 	dir = 1
 	},
+/obj/machinery/power/smes,
 /turf/simulated/floor/tiled/techfloor,
 /area/space)
 "aMs" = (
@@ -21895,7 +21894,6 @@
 /turf/simulated/floor/tiled,
 /area/space)
 "aQh" = (
-/obj/machinery/power/smes/buildable/preset/torch/engine_main,
 /obj/structure/cable{
 	dir = 1
 	},
@@ -21903,6 +21901,7 @@
 	d2 = 8;
 	icon_state = "0-8"
 	},
+/obj/machinery/power/smes,
 /turf/simulated/floor/tiled/techfloor,
 /area/space)
 "aQi" = (
@@ -22291,6 +22290,11 @@
 /obj/effect/floor_decal/corner/grey/mono,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/liberty/hallway/one/aft_terminal)
@@ -26637,6 +26641,11 @@
 	d1 = 1;
 	d2 = 8;
 	icon_state = "1-8"
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/liberty/hallway/one/aft_terminal)
@@ -48757,7 +48766,7 @@ aXb
 aON
 axa
 atf
-aKs
+aCj
 aXb
 aYo
 aGt
@@ -48959,7 +48968,7 @@ aTy
 aKy
 aCT
 axi
-aKs
+aCj
 aXb
 aYo
 aGQ
@@ -56824,7 +56833,7 @@ aab
 aLk
 aJS
 aaP
-aaP
+aab
 aaP
 aaP
 aaP
