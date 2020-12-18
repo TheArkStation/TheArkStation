@@ -8,65 +8,66 @@
 	#include "liberty_turfs.dm"
 	#include "liberty_shuttles.dm"
 
+	#include "items/rigs.dm"
 	#include "machinery/doors.dm"
+	#include "machinery/misc.dm"
 	#include "objects/misc.dm"
 	#include "structures/flooring_decals.dm"
 
 // TORCH DEFINES
 
-//	#include "../torch/torch_ranks.dm"
+//	#include "../torch/torch_ranks.dm" // FIX ME
 
-//	#include "../torch/datums/uniforms.dm"
-//	#include "../torch/datums/uniforms_expedition.dm"
-//	#include "../torch/datums/uniforms_fleet.dm"
+//	#include "../torch/datums/uniforms.dm" // FIX ME
+//	#include "../torch/datums/uniforms_expedition.dm" // FIX ME
+//	#include "../torch/datums/uniforms_fleet.dm" // FIX ME
 
 //	#include "../torch/items/cards_ids.dm"
-	#include "../torch/items/encryption_keys.dm"
-	#include "../torch/items/headsets.dm"
-	#include "../torch/items/items.dm"
-	#include "../torch/items/machinery.dm"
-	#include "../torch/items/manuals.dm"
-	#include "../torch/items/stamps.dm"
-//	#include "../torch/items/uniform_vendor.dm"
-	#include "../torch/items/rigs.dm"
-	#include "../torch/items/solbanner.dm"
-	#include "../torch/items/explo_shotgun.dm"
-	#include "../torch/items/mecha.dm"
+//	#include "../torch/items/encryption_keys.dm"
+//	#include "../torch/items/headsets.dm"
+//	#include "../torch/items/items.dm"
+//	#include "../torch/items/machinery.dm"
+//	#include "../torch/items/manuals.dm"
+//	#include "../torch/items/stamps.dm"
+//	#include "../torch/items/uniform_vendor.dm" // FIX ME
+//	#include "../torch/items/rigs.dm"
+//	#include "../torch/items/solbanner.dm"
+//	#include "../torch/items/explo_shotgun.dm"
+//	#include "../torch/items/mecha.dm"
 
-	#include "../torch/items/clothing/ec_skillbadges.dm"
-	#include "../torch/items/clothing/solgov-accessory.dm"
-	#include "../torch/items/clothing/solgov-armor.dm"
-	#include "../torch/items/clothing/solgov-feet.dm"
-	#include "../torch/items/clothing/solgov-hands.dm"
-	#include "../torch/items/clothing/solgov-head.dm"
-	#include "../torch/items/clothing/solgov-suit.dm"
-	#include "../torch/items/clothing/solgov-under.dm"
-	#include "../torch/items/clothing/terran-accessory.dm"
-	#include "../torch/items/clothing/terran-feet.dm"
-	#include "../torch/items/clothing/terran-hands.dm"
-	#include "../torch/items/clothing/terran-head.dm"
-	#include "../torch/items/clothing/terran-suit.dm"
-	#include "../torch/items/clothing/terran-under.dm"
+//	#include "../torch/items/clothing/ec_skillbadges.dm"
+//	#include "../torch/items/clothing/solgov-accessory.dm"
+//	#include "../torch/items/clothing/solgov-armor.dm"
+//	#include "../torch/items/clothing/solgov-feet.dm"
+//	#include "../torch/items/clothing/solgov-hands.dm"
+//	#include "../torch/items/clothing/solgov-head.dm"
+//	#include "../torch/items/clothing/solgov-suit.dm"
+//	#include "../torch/items/clothing/solgov-under.dm"
+//	#include "../torch/items/clothing/terran-accessory.dm"
+//	#include "../torch/items/clothing/terran-feet.dm"
+//	#include "../torch/items/clothing/terran-hands.dm"
+//	#include "../torch/items/clothing/terran-head.dm"
+//	#include "../torch/items/clothing/terran-suit.dm"
+//	#include "../torch/items/clothing/terran-under.dm"
 
-	#include "../torch/items/weapon/storage/wallets.dm"
+//	#include "../torch/items/weapon/storage/wallets.dm"
 
-	#include "../torch/structures/signs.dm"
-	#include "../torch/structures/closets.dm"
-	#include "../torch/structures/closets/closet_appearances.dm"
-	#include "../torch/structures/closets/command.dm"
-	#include "../torch/structures/closets/engineering.dm"
-	#include "../torch/structures/closets/medical.dm"
-	#include "../torch/structures/closets/misc.dm"
-	#include "../torch/structures/closets/research.dm"
-	#include "../torch/structures/closets/security.dm"
-	#include "../torch/structures/closets/services.dm"
-	#include "../torch/structures/closets/supply.dm"
-	#include "../torch/structures/closets/exploration.dm"
+//	#include "../torch/structures/signs.dm"
+//	#include "../torch/structures/closets.dm"
+//	#include "../torch/structures/closets/closet_appearances.dm"
+//	#include "../torch/structures/closets/command.dm"
+//	#include "../torch/structures/closets/engineering.dm"
+//	#include "../torch/structures/closets/medical.dm"
+//	#include "../torch/structures/closets/misc.dm"
+//	#include "../torch/structures/closets/research.dm"
+//	#include "../torch/structures/closets/security.dm"
+//	#include "../torch/structures/closets/services.dm"
+//	#include "../torch/structures/closets/supply.dm"
+//	#include "../torch/structures/closets/exploration.dm"
 
-	#include "../torch/machinery/suit_storage.dm"
+//	#include "../torch/machinery/suit_storage.dm"
 
 	#include "../torch/job/torch_access.dm" // REMOVE ME
-	#include "../torch/torch_presets.dm" // REMOVE ME
 
 // END OF TORCH DEFINES
 

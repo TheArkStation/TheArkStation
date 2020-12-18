@@ -52,6 +52,12 @@
 	desc = "Sol ID Modification"
 	region = ACCESS_REGION_SOL
 
+/var/const/access_sol_senior = "ACCESS_SOL_SENIOR"
+/datum/access/sol/senior
+	id = access_sol_senior
+	desc = "Sol Senior Personnel"
+	region = ACCESS_REGION_SOL
+
 /var/const/access_sol_command = "ACCESS_SOL_COMMAND"
 /datum/access/sol/command
 	id = access_sol_command
@@ -70,8 +76,14 @@
 	desc = "Sol Federal Police"
 	region = ACCESS_REGION_SOL_SFP
 
+/var/const/access_sol_sfp_command = "ACCESS_SOL_SFP_COMMAND"
+/datum/access/sol/sfp_command
+	id = access_sol_sfp_command
+	desc = "Sol Federal Police Command"
+	region = ACCESS_REGION_SOL_SFP
+
 /var/const/access_sol_diplomacy = "ACCESS_SOL_DIPLOMACY"
 /datum/access/sol/diplomacy
 	id = access_sol_diplomacy
 	desc = "Sol Diplomacy"
-	region = ACCESS_REGION_SOL_HIGH
+	region = ACCESS_REGION_NONE
