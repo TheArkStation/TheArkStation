@@ -2988,6 +2988,7 @@
 /area/liberty/sfp/dorm)
 "afu" = (
 /obj/structure/lattice,
+/obj/structure/ladder/updown,
 /turf/simulated/open,
 /area/space)
 "afv" = (
@@ -9022,6 +9023,7 @@
 	d2 = 4;
 	icon_state = "32-4"
 	},
+/obj/structure/lattice,
 /turf/simulated/open,
 /area/space)
 "arj" = (
@@ -12325,6 +12327,7 @@
 	d2 = 4;
 	icon_state = "32-4"
 	},
+/obj/structure/lattice,
 /turf/simulated/open,
 /area/space)
 "axg" = (
@@ -12982,6 +12985,7 @@
 /obj/structure/cable{
 	dir = 8
 	},
+/obj/structure/lattice,
 /turf/simulated/open,
 /area/space)
 "ays" = (
@@ -16364,6 +16368,7 @@
 /obj/machinery/atmospherics/pipe/zpipe/down/supply{
 	dir = 4
 	},
+/obj/structure/lattice,
 /turf/simulated/open,
 /area/space)
 "aFh" = (
@@ -26996,6 +27001,11 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/liberty/hallway/one/aft_docks)
+"wvv" = (
+/obj/structure/ladder,
+/obj/structure/lattice,
+/turf/simulated/open,
+/area/space)
 "wGR" = (
 /obj/effect/floor_decal/corner/black{
 	dir = 6
@@ -55028,7 +55038,7 @@ aaP
 aaP
 aaP
 aaP
-aaP
+wvv
 afG
 aaa
 aaa
@@ -56807,7 +56817,7 @@ aaa
 afG
 afG
 afG
-aaP
+wvv
 aaP
 aaP
 aaP
@@ -60241,7 +60251,7 @@ afG
 afG
 aaP
 aaP
-aaP
+wvv
 aaP
 aaP
 aaP
