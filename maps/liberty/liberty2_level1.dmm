@@ -3141,8 +3141,8 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/liberty/sfp/interrogation)
 "afJ" = (
-/obj/effect/wallframe_spawn/reinforced,
-/turf/simulated/floor/tiled,
+/obj/structure/foamedmetal,
+/turf/simulated/floor/plating,
 /area/space)
 "afK" = (
 /obj/machinery/door/blast/regular/open{
@@ -16954,13 +16954,11 @@
 /turf/simulated/floor/tiled/old_tile,
 /area/liberty/hotel/kitchen)
 "aGq" = (
-/obj/structure/railing/mapped{
-	dir = 8
-	},
-/obj/structure/railing/mapped{
-	dir = 1
-	},
-/turf/simulated/open,
+/obj/structure/closet/crate,
+/obj/random/junk,
+/obj/random/junk,
+/obj/random/trash,
+/turf/simulated/floor/plating,
 /area/space)
 "aGr" = (
 /turf/simulated/wall/r_wall/liberty/sfp_blue,
@@ -17692,10 +17690,9 @@
 /turf/simulated/wall/liberty/sfp_blue,
 /area/liberty/sfp/office)
 "aHY" = (
-/obj/structure/railing/mapped{
-	dir = 1
-	},
-/turf/simulated/open,
+/obj/random/trash,
+/obj/random/obstruction,
+/turf/simulated/floor/plating,
 /area/space)
 "aHZ" = (
 /obj/structure/bed/chair/bench/beige/left,
@@ -26942,8 +26939,23 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/hallway/one/aft_docks)
+"bXb" = (
+/obj/structure/railing/mapped{
+	dir = 8
+	},
+/obj/structure/railing/mapped{
+	dir = 1
+	},
+/turf/simulated/open,
+/area/space)
 "dkh" = (
 /obj/structure/ladder,
+/turf/simulated/floor/plating,
+/area/space)
+"dCu" = (
+/obj/random/contraband,
+/obj/structure/closet/crate/freezer/rations,
+/obj/random/drinkbottle,
 /turf/simulated/floor/plating,
 /area/space)
 "dQK" = (
@@ -26989,6 +27001,18 @@
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/liberty/hallway/one/aft_docks)
+"kFu" = (
+/obj/structure/railing/mapped{
+	dir = 1
+	},
+/turf/simulated/open,
+/area/space)
+"lSC" = (
+/obj/structure/railing/mapped{
+	dir = 4
+	},
+/turf/simulated/open,
+/area/space)
 "lUX" = (
 /obj/effect/floor_decal/corner/brown/diagonal,
 /turf/simulated/floor/tiled/techmaint,
@@ -26999,12 +27023,43 @@
 	},
 /turf/simulated/floor/holofloor/tiled/dark,
 /area/liberty/hallway/one/aft_docks)
+"ntS" = (
+/obj/structure/lattice,
+/obj/structure/catwalk,
+/obj/structure/closet/crate,
+/obj/random/firstaid,
+/obj/random/maintenance,
+/turf/simulated/open,
+/area/space)
+"qbs" = (
+/obj/machinery/door/airlock/maintenance,
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/space)
+"qDm" = (
+/obj/machinery/door/airlock/hatch/maintenance,
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/space)
+"rQB" = (
+/obj/structure/railing/mapped{
+	dir = 8
+	},
+/obj/structure/railing/mapped,
+/turf/simulated/open,
+/area/space)
 "uCp" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/external,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/liberty/hallway/one/aft_docks)
+"vLo" = (
+/obj/structure/lattice,
+/obj/structure/catwalk,
+/obj/random/junk,
+/turf/simulated/open,
+/area/space)
 "wvv" = (
 /obj/structure/ladder,
 /obj/structure/lattice,
@@ -27028,6 +27083,15 @@
 	},
 /turf/simulated/floor/holofloor/tiled/dark,
 /area/liberty/hallway/one/aft_docks)
+"xAo" = (
+/obj/structure/railing/mapped{
+	dir = 1
+	},
+/obj/structure/railing/mapped{
+	dir = 8
+	},
+/turf/simulated/open,
+/area/space)
 "xBE" = (
 /obj/effect/floor_decal/corner/black{
 	dir = 9
@@ -27037,6 +27101,15 @@
 	},
 /turf/simulated/floor/holofloor/tiled/dark,
 /area/liberty/hallway/one/aft_docks)
+"xUq" = (
+/obj/structure/railing/mapped{
+	dir = 1
+	},
+/obj/structure/railing/mapped{
+	dir = 4
+	},
+/turf/simulated/open,
+/area/space)
 
 (1,1,1) = {"
 aaa
@@ -39028,6 +39101,7 @@ aal
 aal
 aan
 afG
+wvv
 aaP
 aaP
 aaP
@@ -39039,9 +39113,8 @@ aaP
 aaP
 aaP
 aaP
-aaP
-aaP
-aaP
+aZI
+aZI
 aGr
 auw
 aTv
@@ -39241,9 +39314,9 @@ aLj
 aaP
 aaP
 aaP
-aaP
-aaP
-aaP
+aRK
+aep
+aep
 aGr
 aJf
 aQf
@@ -43732,7 +43805,7 @@ aaP
 aaP
 aaP
 aaP
-aaP
+wvv
 afG
 aaa
 aaa
@@ -45512,10 +45585,10 @@ aSS
 aSS
 aSS
 aSS
-afJ
-aad
-aae
-aae
+aNo
+aNo
+qbs
+aNo
 aNo
 aNR
 aCP
@@ -45709,16 +45782,16 @@ aZf
 aQJ
 aYW
 aHC
+afJ
+aNo
+aFN
+vLo
+aFN
+qDm
 aFN
 aFN
 aFN
-aFN
-aFN
-aFN
-aFN
-aFN
-aFN
-aae
+aNo
 aUv
 aLq
 aNm
@@ -45911,16 +45984,16 @@ ayx
 aRF
 aJi
 aHC
+aGq
+aNo
 aFN
+bXb
+aCu
+aNo
+rQB
 aFN
-aFN
-aFN
-aFN
-aFN
-aep
-aep
-aep
-aae
+xAo
+aNo
 aUv
 aLq
 atP
@@ -46113,16 +46186,16 @@ aUK
 aSg
 aEg
 aHC
+aHY
+aNo
 aFN
-aFN
-aGq
-aCu
-aNt
-aFN
-aep
-aep
-aep
-aae
+xUq
+lSC
+aNo
+afF
+wvv
+kFu
+aNo
 aUv
 aLq
 aNm
@@ -46315,16 +46388,16 @@ aXq
 aVx
 aOu
 aHC
+dCu
+aNo
 aFN
 aFN
-aHY
+ntS
+aNo
 aep
-afF
-aFN
+aCu
 aep
-aep
-aep
-aae
+aNo
 aUv
 aLq
 aNm
@@ -46523,9 +46596,9 @@ aKT
 aKT
 aKT
 aKT
-aJU
-aJU
-aJU
+aKT
+aKT
+aKT
 aKT
 aCU
 ayn
