@@ -6,8 +6,6 @@
 
 	#include "datums/programs/card.dm"
 
-	#include "items/headsets.dm"
-
 	#include "machinery/eng_equip.dm"
 	#include "machinery/tcomms.dm"
 

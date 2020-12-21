@@ -127,3 +127,62 @@
 	network = "sfp"
 	autolinkers = list("broadcasterSFP")
 	freq_listening = list(SEC_FREQ)
+
+//////////////////////////////////////////////
+////////////////// Networks //////////////////
+//////////////////////////////////////////////
+
+var/const/NETWORK_LEVEL_ZERO		= "Level Zero"
+var/const/NETWORK_LEVEL_ONE			= "Level One"
+var/const/NETWORK_LEVEL_TWO			= "Level Two"
+var/const/NETWORK_LEVEL_THREE		= "Level Three"
+var/const/NETWORK_SOL_COMMAND		= "Sol Command"
+var/const/NETWORK_SOL_EXPLORATION	= "Sol Exploration"
+
+/datum/map/liberty/get_network_access(var/network)
+	switch(network)
+		if(NETWORK_SOL_COMMAND)
+			return access_sol_command
+		if(NETWORK_SOL_EXPLORATION)
+			return access_sol_exp
+	return /*get_shared_network_access(network) ||*/ ..()
+
+/datum/map/liberty
+	station_networks = list(
+		NETWORK_ROBOTS,
+		NETWORK_LEVEL_ZERO,
+		NETWORK_LEVEL_ONE,
+		NETWORK_LEVEL_TWO,
+		NETWORK_LEVEL_THREE,
+	/*	NETWORK_COMMAND,
+		NETWORK_ENGINEERING,
+		NETWORK_ENGINE,
+		NETWORK_MEDICAL,
+		NETWORK_RESEARCH,
+		NETWORK_SECURITY,
+		NETWORK_SUPPLY,
+		NETWORK_POD,
+		NETWORK_NANOTRASEN, FINISH ME*/
+		NETWORK_ALARM_ATMOS,
+		NETWORK_ALARM_CAMERA,
+		NETWORK_ALARM_FIRE,
+		NETWORK_ALARM_MOTION,
+		NETWORK_ALARM_POWER,
+		NETWORK_THUNDER,
+	)
+
+//////////////////////////////////////////////
+////////////////// Cameras ///////////////////
+//////////////////////////////////////////////
+
+/obj/machinery/camera/network/sol_command
+	network = list(NETWORK_SOL_COMMAND)
+
+/obj/machinery/camera/network/sol_exploration
+	network = list(NETWORK_SOL_EXPLORATION)
+
+// TEMP REMOVE
+
+/obj/machinery/camera/network/exploration
+/obj/machinery/camera/network/supply
+/obj/machinery/camera/network/command
