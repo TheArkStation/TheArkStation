@@ -9022,6 +9022,12 @@
 	},
 /turf/simulated/floor/holofloor/tiled/dark,
 /area/liberty/hotel/hallway/lower)
+"sC" = (
+/obj/structure/railing/mapped{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/space)
 "sD" = (
 /obj/structure/railing/mapped{
 	dir = 8
@@ -13507,6 +13513,13 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
+/area/space)
+"Cj" = (
+/obj/structure/railing/mapped{
+	dir = 1
+	},
+/obj/random/junk,
+/turf/simulated/floor/plating,
 /area/space)
 "Cl" = (
 /obj/effect/floor_decal/spline/fancy,
@@ -18610,7 +18623,10 @@
 /area/liberty/hotel/locker_room_m)
 "NE" = (
 /obj/structure/table,
-/turf/simulated/floor/tiled/techfloor,
+/obj/structure/railing/mapped{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
 /area/space)
 "NF" = (
 /obj/machinery/button/alternate/door/bolts{
@@ -20767,9 +20783,6 @@
 /area/liberty/hotel/casino)
 "RV" = (
 /obj/structure/catwalk,
-/obj/structure/railing/mapped{
-	dir = 8
-	},
 /obj/machinery/firealarm{
 	pixel_y = 24
 	},
@@ -23600,7 +23613,10 @@
 /area/space)
 "XK" = (
 /obj/random/closet,
-/turf/simulated/floor/tiled/techfloor,
+/obj/structure/railing/mapped{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
 /area/space)
 "XM" = (
 /obj/structure/catwalk,
@@ -52434,8 +52450,8 @@ sF
 kY
 gB
 gB
-oP
 iC
+Ac
 DL
 aa
 aa
@@ -52636,8 +52652,8 @@ sF
 jd
 le
 gB
-zB
 iC
+Cj
 DL
 aa
 aa
@@ -52839,7 +52855,7 @@ je
 lf
 gB
 RV
-Dt
+sC
 DL
 aa
 rd
@@ -54851,9 +54867,9 @@ JR
 gf
 fX
 DL
-Ja
-dh
-ad
+zB
+iC
+iC
 iC
 DL
 aa
