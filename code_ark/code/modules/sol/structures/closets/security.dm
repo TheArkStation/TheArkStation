@@ -198,8 +198,6 @@
 	return list(												// REVIEW THE CONTENTS
 		/obj/item/clothing/suit/armor/pcarrier/medium/security,
 		/obj/item/clothing/head/helmet/solgov/security,
-//		/obj/item/device/radio/headset/headset_sec, // FIX ME
-//		/obj/item/device/radio/headset/headset_sec/alt, // FIX ME
 		/obj/item/weapon/storage/belt/holster/security,
 		/obj/item/device/flash,
 		/obj/item/weapon/reagent_containers/spray/pepper,
@@ -252,8 +250,6 @@
 	return list(
 		/obj/item/clothing/suit/armor/pcarrier/medium/command/security,
 		/obj/item/clothing/head/helmet/solgov/command,
-//		/obj/item/device/radio/headset/heads/cos, // FIX ME
-//		/obj/item/device/radio/headset/heads/cos/alt, // FIX ME
 		/obj/item/clothing/glasses/sunglasses/sechud/goggles,
 		/obj/item/taperoll/police,
 		/obj/item/weapon/handcuffs,

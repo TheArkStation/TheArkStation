@@ -68,8 +68,6 @@
 		/obj/item/clothing/suit/storage/toggle/labcoat,
 		/obj/item/clothing/suit/surgicalapron,
 		/obj/item/clothing/shoes/white,
-//		/obj/item/device/radio/headset/headset_med, // FIX ME
-//		/obj/item/device/radio/headset/headset_med/alt, // FIX ME
 		/obj/item/taperoll/medical,
 		/obj/item/weapon/storage/belt/medical,
 		/obj/item/clothing/mask/surgical,
@@ -97,8 +95,6 @@
 		/obj/item/clothing/accessory/storage/white_vest,
 		/obj/item/clothing/suit/storage/toggle/fr_jacket,
 		/obj/item/clothing/shoes/white,
-//		/obj/item/device/radio/headset/headset_med, // FIX ME
-//		/obj/item/device/radio/headset/headset_corpsman/alt, // FIX ME
 		/obj/item/taperoll/medical,
 		/obj/item/weapon/storage/belt/medical/emt,
 		/obj/item/clothing/mask/gas/half,

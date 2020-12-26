@@ -13,7 +13,6 @@
 /obj/structure/closet/chefcloset_sol/WillContain()
 	return list(
 		/obj/item/clothing/head/soft/mime,
-//		/obj/item/device/radio/headset/headset_service, // FIX ME
 		/obj/item/weapon/storage/box/mousetraps = 2,
 		/obj/item/clothing/under/rank/chef,
 		/obj/item/clothing/head/chefhat,
@@ -47,7 +46,6 @@
 /obj/structure/closet/jcloset_sol/WillContain()
 	return list(
 		/obj/item/clothing/head/soft/purple,
-//		/obj/item/device/radio/headset/headset_service, // FIX ME
 		/obj/item/clothing/gloves/thick,
 		/obj/item/device/flashlight,
 		/obj/item/weapon/caution = 4,

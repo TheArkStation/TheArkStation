@@ -41,9 +41,6 @@
 		/obj/item/device/taperecorder,
 		/obj/item/device/scanner/gas,
 		/obj/item/device/flash,
-//		/obj/item/device/radio/headset/pathfinder, // FIX ME
-//		/obj/item/device/radio/headset/pathfinder/alt, // FIX ME
-//		/obj/item/weapon/storage/box/encryptionkey/exploration, // FIX ME
 		/obj/item/device/binoculars,
 		/obj/item/weapon/material/knife/folding/swiss/explorer,
 		/obj/item/clothing/accessory/buddytag,
@@ -67,8 +64,6 @@
 		/obj/item/device/spaceflare,
 		/obj/item/clothing/accessory/storage/webbing_large,
 		/obj/item/device/scanner/gas,
-//		/obj/item/device/radio/headset/exploration, // FIX ME
-//		/obj/item/device/radio/headset/exploration/alt, // FIX ME
 		/obj/item/device/binoculars,
 		/obj/item/clothing/accessory/buddytag,
 		/obj/item/weapon/storage/firstaid/light,
@@ -91,8 +86,6 @@
 		/obj/item/device/spaceflare,
 		/obj/item/clothing/accessory/storage/webbing_large,
 		/obj/item/device/scanner/gas,
-//		/obj/item/device/radio/headset/headset_pilot, // FIX ME
-//		/obj/item/device/radio/headset/headset_pilot/alt, // FIX ME
 		/obj/item/device/binoculars,
 		/obj/item/clothing/gloves/thick,
 		/obj/item/clothing/suit/storage/hazardvest/blue,

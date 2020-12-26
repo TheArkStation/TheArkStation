@@ -96,7 +96,6 @@
 		/obj/item/weapon/folder,
 		/obj/item/device/tape/random = 3,
 		/obj/item/weapon/storage/secure/briefcase,
-//		/obj/item/device/radio/headset/headset_com, // FIX ME
 		/obj/item/clothing/shoes/laceup,
 		/obj/item/clothing/under/rank/internalaffairs/plain/solgov,
 		/obj/item/clothing/suit/storage/toggle/suit/black,
