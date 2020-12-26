@@ -63,7 +63,6 @@
 		/obj/item/clothing/suit/storage/toggle/labcoat/science,
 		/obj/item/clothing/suit/storage/toggle/labcoat,
 		/obj/item/clothing/shoes/white,
-//		/obj/item/device/radio/headset/torchnanotrasen, // FIX ME
 		/obj/item/clothing/mask/gas,
 		/obj/item/weapon/material/clipboard,
 		/obj/item/weapon/folder,
@@ -92,7 +91,6 @@
 		/obj/item/clothing/suit/storage/toggle/labcoat/science,
 		/obj/item/clothing/suit/storage/toggle/labcoat,
 		/obj/item/clothing/shoes/white,
-//		/obj/item/device/radio/headset/torchnanotrasen, // FIX ME
 		/obj/item/clothing/mask/gas/half,
 		/obj/item/weapon/tank/emergency/oxygen/engi,
 		/obj/item/weapon/material/clipboard,
@@ -156,7 +154,6 @@
 /obj/structure/closet/secure_closet/scientist_sol/WillContain()
 	return list(
 		/obj/item/clothing/suit/storage/toggle/labcoat,
-//		/obj/item/device/radio/headset/torchnanotrasen, // FIX ME
 		/obj/item/clothing/mask/gas/half,
 		/obj/item/weapon/tank/emergency/oxygen/engi,
 		/obj/item/weapon/material/clipboard,

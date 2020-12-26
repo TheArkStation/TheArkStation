@@ -202,7 +202,7 @@ var/list/autodocs = list()
 	else if(!(Org in organs_ext) && Org.name != "brain")
 		var/obj/item/organ/internal/O = Org
 		var/obj/item/organ/external/P = null
-		if(O.parent_organ && O.parent_organ in typesof(/obj/item/organ/external))
+		if(O.parent_organ && (O.parent_organ in typesof(/obj/item/organ/external)))
 			P = O.parent_organ
 			operating_limbs.Add(P)
 		switch(opname)
@@ -243,7 +243,7 @@ var/list/autodocs = list()
 	else if(Org.name == "brain")
 		var/obj/item/organ/internal/O = Org
 		var/obj/item/organ/external/P = null
-		if(O.parent_organ && O.parent_organ in typesof(/obj/item/organ/external))
+		if(O.parent_organ && (O.parent_organ in typesof(/obj/item/organ/external)))
 			P = O.parent_organ
 			operating_limbs.Add(P)
 		switch(opname)

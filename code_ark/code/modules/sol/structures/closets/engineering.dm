@@ -75,8 +75,6 @@
 		/obj/item/clothing/under/hazard,
 		/obj/item/clothing/accessory/storage/brown_vest,
 		/obj/item/weapon/storage/belt/utility/full,
-//		/obj/item/device/radio/headset/headset_eng, // FIX ME
-//		/obj/item/device/radio/headset/headset_eng/alt, // FIX ME
 		/obj/item/clothing/suit/storage/hazardvest,
 		/obj/item/clothing/mask/gas,
 		/obj/item/clothing/glasses/meson,
@@ -100,8 +98,6 @@
 	return list(
 		/obj/item/clothing/under/hazard,
 		/obj/item/clothing/accessory/storage/brown_vest,
-//		/obj/item/device/radio/headset/headset_eng, // FIX ME
-//		/obj/item/device/radio/headset/headset_eng/alt, // FIX ME
 		/obj/item/clothing/suit/storage/hazardvest,
 		/obj/item/clothing/mask/gas,
 		/obj/item/weapon/storage/belt/utility/full,

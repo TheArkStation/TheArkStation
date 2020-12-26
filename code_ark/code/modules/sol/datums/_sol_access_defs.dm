@@ -1,4 +1,4 @@
-#define ACCESS_REGION_MAX 11
+// #define ACCESS_REGION_MAX 11 - CHECK _access_defs.dm
 
 #define ACCESS_REGION_SOL 9
 #define ACCESS_REGION_SOL_HIGH 10

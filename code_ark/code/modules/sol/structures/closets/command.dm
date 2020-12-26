@@ -31,9 +31,7 @@
 
 /obj/structure/closet/secure_closet/CO/WillContain()
 	return list(
-//		/obj/item/device/radio/headset/heads/torchexec, // FIX ME
 		/obj/item/clothing/glasses/sunglasses,
-//		/obj/item/device/radio/headset/heads/torchexec/alt, // FIX ME
 		/obj/item/weapon/storage/belt/general,
 		/obj/item/weapon/melee/telebaton,
 		/obj/item/device/flash,
@@ -56,15 +54,12 @@
 /obj/structure/closet/secure_closet/XO/WillContain()
 	return list(
 		/obj/item/clothing/glasses/sunglasses,
-//		/obj/item/device/radio/headset/heads/torchexec, // FIX ME
 		/obj/item/weapon/storage/belt/general,
 		/obj/item/weapon/melee/telebaton,
 		/obj/item/device/flash,
 		/obj/item/weapon/gun/energy/confuseray,
 		/obj/item/device/megaphone,
 		/obj/item/weapon/storage/box/headset,
-//		/obj/item/device/radio/headset/heads/torchexec/alt, // FIX ME
-//		/obj/item/weapon/storage/box/radiokeys, // FIX ME
 		/obj/item/weapon/storage/box/large/ids,
 		/obj/item/weapon/storage/box/PDAs,
 		/obj/item/weapon/material/clipboard,
@@ -118,8 +113,6 @@
 		/obj/item/weapon/material/clipboard,
 		/obj/item/weapon/folder/blue,
 		/obj/item/modular_computer/tablet/lease/preset/command,
-//		/obj/item/device/radio/headset/bridgeofficer, // FIX ME
-//		/obj/item/device/radio/headset/bridgeofficer/alt, // FIX ME
 		/obj/item/weapon/storage/belt/general,
 		/obj/item/weapon/material/knife/folding/swiss/officer,
 		new /datum/atom_creator/weighted(list(/obj/item/weapon/storage/backpack, /obj/item/weapon/storage/backpack/satchel/grey)),
