@@ -66,7 +66,7 @@
 /obj/structure/closet/secure_closet/bar_torch/WillContain()
 	return list(
 		/obj/item/clothing/head/soft/black,
-//		/obj/item/device/radio/headset/headset_service, // FIX ME
+//		/obj/item/device/radio/headset/headset_service, // FIX ME,
 		/obj/item/weapon/reagent_containers/food/drinks/shaker,
 		/obj/item/glass_jar,
 		/obj/item/weapon/book/manual/barman_recipes,

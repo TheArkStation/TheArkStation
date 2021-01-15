@@ -34,8 +34,8 @@
 		/obj/item/clothing/shoes/white,
 		/obj/item/clothing/suit/storage/toggle/labcoat/cmo,
 		/obj/item/clothing/suit/storage/toggle/labcoat/cmoalt,
-//		/obj/item/device/radio/headset/heads/cmo, // FIX ME
-//		/obj/item/device/radio/headset/heads/cmo/alt, // FIX ME
+//		/obj/item/device/radio/headset/heads/cmo, // FIX ME,
+//		/obj/item/device/radio/headset/heads/cmo/alt, // FIX ME,
 		/obj/item/device/flash,
 		/obj/item/weapon/gun/energy/confuseray,
 		/obj/item/device/megaphone,
