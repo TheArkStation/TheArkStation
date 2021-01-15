@@ -1,3 +1,4 @@
+#if !defined(using_map_DATUM)
 	#include "ship_lucius/lucius.dm"
 	#include "ship_venturestar/venturestar.dm"
 
@@ -100,3 +101,9 @@
 	#include "../away/meatstation/meatstation.dm"
 
 	#define using_map_DATUM /datum/map/liberty
+
+#elif !defined(MAP_OVERRIDE)
+
+	#warn A map has already been included, ignoring Example
+
+#endif
