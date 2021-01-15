@@ -17,7 +17,6 @@ for root, subdirs, files in walk(args.dir):
     for filename in files:
         if filename.endswith('.dmi'):
             file_path = path.join(root, filename)
-            print("{0}".format(file_path))
             dmi_info = dmitool.info(file_path)
             number_of_icon_states = len(dmi_info["states"])
             if number_of_icon_states > 512:
