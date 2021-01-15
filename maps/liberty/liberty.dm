@@ -9,6 +9,7 @@
 	#include "liberty_turfs.dm"
 	#include "liberty_shuttles.dm"
 
+	#include "items/items.dm"
 	#include "items/rigs.dm"
 	#include "machinery/doors.dm"
 	#include "machinery/misc.dm"
