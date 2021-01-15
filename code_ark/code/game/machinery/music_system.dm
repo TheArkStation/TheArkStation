@@ -225,7 +225,7 @@ obj/machinery/media/speaker/proc/emag_play()
 		mixer_tracks.Add(list(list("track"=T.title)))
 
 	var/list/data = list(
-		"current_track" = custom_track != null ? ((custom_track.title != null && custom_track.title != "") ? custom_track.title : "Unknown track") : (current_track != null ? current_track.title : "Track not set"),
+		"current_track" = custom_track != null ? custom_track.title : (current_track != null ? current_track.title : "Track not set"),
 		"playing" = playing,
 		"tracks" = mixer_tracks,
 		"volume" = volume
@@ -237,7 +237,10 @@ obj/machinery/media/speaker/proc/emag_play()
 		ui.set_initial_data(data)
 		ui.open()
 
-/music_track/custom_track/New()
+/music_track/custom_track
+	title = "Unknown track"
+	song = 'sound/misc/null.ogg'
+	license = /decl/license/grandfathered
 
 /obj/machinery/media/mixing_console/OnTopic(var/mob/user, var/list/href_list, state)
 	if (href_list["title"])
@@ -264,7 +267,7 @@ obj/machinery/media/speaker/proc/emag_play()
 		custom_track = new
 		custom_track.title = input("Input the Song Name...") as null|text
 		custom_track.song = input(usr, "Choose a Song File to Load","Upload Song File") as null|file
-		if(!custom_track.song)
+		if(!custom_track.song || (custom_track.song == 'sound/misc/null.ogg'))
 			return TOPIC_REFRESH
 		StartPlaying()
 		return TOPIC_REFRESH
