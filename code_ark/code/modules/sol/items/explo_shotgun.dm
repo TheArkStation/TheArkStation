@@ -110,27 +110,3 @@
 	startswith = list(/obj/item/ammo_magazine/shotholder/beanbag = 1,
 					  /obj/item/ammo_magazine/shotholder/net = 1,
 					  /obj/item/ammo_magazine/shotholder/flash = 1)
-
-/obj/structure/closet/secure_closet/explo_gun
-	name = "gun locker"
-	desc = "Wall locker holding the boomstick."
-	req_access = list(access_expedition_shuttle_helm)
-	closet_appearance = /decl/closet_appearance/wall/explo_gun
-	density = 0
-	anchored = 1
-	wall_mounted = 1
-	storage_types = CLOSET_STORAGE_ITEMS
-
-/obj/structure/closet/secure_closet/explo_gun/WillContain()
-	return list(
-		/obj/item/weapon/storage/box/ammo/explo_shells = 3,
-		/obj/item/weapon/gun/projectile/shotgun/pump/exploration
-	)
-
-/decl/closet_appearance/wall/explo_gun
-	color = COLOR_GRAY20
-	decals = null
-	can_lock = 1
-	extra_decals = list(
-		"stripe_outer" = COLOR_PURPLE
-	)

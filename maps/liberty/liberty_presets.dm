@@ -136,8 +136,6 @@ var/const/NETWORK_LEVEL_ZERO		= "Level Zero"
 var/const/NETWORK_LEVEL_ONE			= "Level One"
 var/const/NETWORK_LEVEL_TWO			= "Level Two"
 var/const/NETWORK_LEVEL_THREE		= "Level Three"
-var/const/NETWORK_SOL_COMMAND		= "Sol Command"
-var/const/NETWORK_SOL_EXPLORATION	= "Sol Exploration"
 
 /datum/map/liberty/get_network_access(var/network)
 	switch(network)
@@ -174,12 +172,7 @@ var/const/NETWORK_SOL_EXPLORATION	= "Sol Exploration"
 //////////////////////////////////////////////
 ////////////////// Cameras ///////////////////
 //////////////////////////////////////////////
-
-/obj/machinery/camera/network/sol_command
-	network = list(NETWORK_SOL_COMMAND)
-
-/obj/machinery/camera/network/sol_exploration
-	network = list(NETWORK_SOL_EXPLORATION)
+// PLACE HERE LIBERTY CAMS ONLY!!! NOT ARK_CODE CAMS!!! Ark cams at "\code_ark\code\game\machinery\camera.dm" ~Laxesh
 
 // TEMP REMOVE
 
