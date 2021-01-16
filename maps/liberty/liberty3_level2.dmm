@@ -4878,13 +4878,13 @@
 /area/liberty/hotel/restaurant/upper)
 "mC" = (
 /obj/structure/table/woodentable/walnut,
-/obj/machinery/computer,
 /obj/effect/floor_decal/spline/fancy/black{
 	dir = 9
 	},
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/machinery/computer/modular/preset/security,
 /turf/simulated/floor/wood/walnut,
 /area/liberty/private_eye)
 "mE" = (
@@ -4971,7 +4971,7 @@
 /turf/simulated/open,
 /area/liberty/hotel/hallway/east)
 "nA" = (
-/obj/machinery/computer{
+/obj/machinery/computer/modular/preset/library{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -5763,11 +5763,11 @@
 /turf/simulated/floor/wood/walnut,
 /area/space)
 "tC" = (
-/obj/machinery/computer{
-	dir = 8
-	},
 /obj/effect/floor_decal/corner/grey{
 	dir = 5
+	},
+/obj/machinery/computer/modular/preset/civilian{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/space)
@@ -7323,11 +7323,11 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/space)
 "Fk" = (
-/obj/machinery/computer{
-	dir = 8
-	},
 /obj/effect/floor_decal/corner/grey{
 	dir = 10
+	},
+/obj/machinery/computer/modular/preset/civilian{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/space)
@@ -7752,6 +7752,12 @@
 /area/liberty/chapel/lobby)
 "HW" = (
 /obj/structure/bed/sofa/black/right{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/space)
+"HX" = (
+/obj/machinery/computer/modular/preset/aislot/sysadmin{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -29743,7 +29749,7 @@ Fb
 po
 mq
 IX
-nA
+HX
 IX
 sH
 po
