@@ -3,7 +3,7 @@
 	full_name = "TTH Liberty"
 	path = "liberty"
 	flags = MAP_HAS_BRANCH | MAP_HAS_RANK
-	config_path = "config/liberty_config.txt"
+//	config_path = "config/liberty_config.txt"
 
 	// Did you know, that poibrains have laws? No? Me too!
 	default_law_type = /datum/ai_laws/robocop
