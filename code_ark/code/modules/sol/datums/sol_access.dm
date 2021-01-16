@@ -1,5 +1,5 @@
 /var/const/access_sol_general = "ACCESS_SOL_GENERAL"
-/datum/access/sol/general
+/datum/access/sol
 	id = access_sol_general
 	desc = "Sol General"
 	region = ACCESS_REGION_SOL

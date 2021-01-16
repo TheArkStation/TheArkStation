@@ -1152,8 +1152,7 @@
 /obj/structure/railing{
 	dir = 1
 	},
-/obj/structure/closet/toolcloset/excavation,
-/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/vending/phoronresearch,
 /turf/simulated/floor/tiled/white,
 /area/space)
 "cW" = (
@@ -1419,9 +1418,8 @@
 /area/space)
 "dB" = (
 /obj/structure/window/reinforced,
-/obj/machinery/vending/phoronresearch{
-	dir = 1
-	},
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/closet/toolcloset/excavation,
 /turf/simulated/floor/tiled/dark,
 /area/space)
 "dC" = (
@@ -5513,6 +5511,11 @@
 	},
 /turf/simulated/floor/wood/walnut,
 /area/liberty/hotel/room/three_zero_three)
+"rK" = (
+/obj/structure/lattice,
+/obj/structure/catwalk,
+/turf/simulated/open,
+/area/space)
 "rM" = (
 /obj/effect/floor_decal/spline/fancy/black{
 	dir = 1
@@ -5693,9 +5696,8 @@
 /turf/simulated/floor/carpet/blue2,
 /area/space)
 "tg" = (
-/obj/effect/paint_stripe/green,
-/obj/effect/paint/white,
-/turf/simulated/wall/r_wall,
+/obj/structure/lattice,
+/turf/simulated/open,
 /area/space)
 "ti" = (
 /obj/structure/hygiene/shower{
@@ -6989,6 +6991,14 @@
 	name = "Open-Space Office"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
+/area/space)
+"Dy" = (
+/obj/structure/lattice,
+/obj/structure/catwalk,
+/obj/structure/railing/mapped{
+	dir = 8
+	},
+/turf/simulated/open,
 /area/space)
 "DB" = (
 /obj/structure/hygiene/shower{
@@ -9113,6 +9123,18 @@
 /obj/structure/closet/secure_closet/psychiatry,
 /turf/simulated/floor/wood,
 /area/liberty/psychologist/therapy_room)
+"Rn" = (
+/obj/structure/ladder/updown,
+/obj/structure/lattice,
+/obj/structure/catwalk,
+/obj/structure/railing/mapped{
+	dir = 1
+	},
+/obj/structure/railing/mapped{
+	dir = 8
+	},
+/turf/simulated/open,
+/area/space)
 "Rp" = (
 /obj/machinery/light_switch{
 	icon_state = "crema_switch";
@@ -25663,7 +25685,7 @@ vf
 zL
 zL
 NY
-tm
+YQ
 aI
 Iz
 eT
@@ -25865,7 +25887,7 @@ QJ
 WO
 sU
 LD
-tm
+YQ
 aI
 Iz
 eU
@@ -26067,7 +26089,7 @@ YQ
 Wp
 YQ
 YQ
-tm
+YQ
 aI
 Iz
 IW
@@ -33758,7 +33780,7 @@ CH
 CH
 CH
 Cp
-tg
+sJ
 ab
 aa
 aa
@@ -34566,7 +34588,7 @@ jP
 jP
 jP
 sJ
-tg
+sJ
 ab
 aa
 aa
@@ -35374,7 +35396,7 @@ QS
 QS
 QS
 EP
-tg
+sJ
 ab
 aa
 aa
@@ -36182,7 +36204,7 @@ QS
 QS
 QS
 EP
-tg
+sJ
 ab
 aa
 aa
@@ -38179,11 +38201,11 @@ aI
 aI
 aI
 aE
-bg
-bg
-bg
-bg
-bg
+tg
+tg
+tg
+tg
+Rn
 aE
 aI
 aI
@@ -38381,11 +38403,11 @@ aI
 aI
 aI
 aE
-bg
-bg
-bg
-bg
-bg
+Dy
+Dy
+Dy
+Dy
+rK
 aE
 aI
 aI
