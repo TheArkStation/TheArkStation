@@ -546,65 +546,64 @@
 	lift_floor_name = "Liberty - Level Three"
 	lift_announce_str = "Третий уровень Либерти: Администрация комлпекса. Голодек."
 
-
 //Eng
 
 /area/liberty/engineering/atmos
-	name = "\improper Atmos"
+	name = "\improper Engineering - Atmos"
 	icon_state = "eng_atmos"
 
 /area/liberty/engineering/canister_storage
-	name = "\improper Canister Storage"
+	name = "\improper Engineering - Canister Storage"
 	icon_state = "eng_canister_storage"
 
 /area/liberty/engineering/engine_monitoring_room
-	name = "\improper Engine Monitoring Room"
+	name = "\improper Engineering - Engine Monitoring Room"
 	icon_state = "eng_engine_monitoring_room"
 
 /area/liberty/engineering/engine_room
-	name = "\improper Engine Room"
+	name = "\improper Engineering - Engine Room"
 	icon_state = "eng_engine_room"
 
 /area/liberty/engineering/engineering_elevator_00
-	name = "\improper Engineering Elevator00"
+	name = "\improper Engineering - Elevator00"
 	icon_state = "eng_elevator_00"
 
 /area/liberty/engineering/engineering_elevator_01
-	name = "\improper Engineering Elevator01"
+	name = "\improper Engineering - Elevator01"
 	icon_state = "eng_elevator_01"
 
 /area/liberty/engineering/engineering_elevator_02
-	name = "\improper Engineering Elevator02"
+	name = "\improper Engineering - Elevator02"
 	icon_state = "eng_elevator_02"
 
 /area/liberty/engineering/engineering_hall
-	name = "\improper Engineering hall"
+	name = "\improper Engineering - Hall"
 	icon_state = "eng_hall"
 
 /area/liberty/engineering/engineering_prep_room
-	name = "\improper Engineering Prep Room"
+	name = "\improper Engineering - Prep Room"
 	icon_state = "eng_prep_room"
 
 /area/liberty/engineering/hard_storage
-	name = "\improper Hard Storage"
+	name = "\improper Engineering - Hard Storage"
 	icon_state = "eng_hard_storage"
 
 /area/liberty/engineering/substation_00
-	name = "\improper Substation lvl0"
+	name = "\improper Engineering - Substation Level 0"
 	icon_state = "eng_substation_00"
 
 /area/liberty/engineering/substation_01
-	name = "\improper Substation lvl1"
+	name = "\improper Engineering - Substation Level 1"
 	icon_state = "eng_substation_01"
 
 /area/liberty/engineering/substation_main
-	name = "\improper Substation Main"
+	name = "\improper Engineering - Substation Main"
 	icon_state = "eng_substation_main"
 
 /area/liberty/engineering/supermatter_tegs
-	name = "\improper Supermatter tegs"
+	name = "\improper Engineering - Supermatter Tegs"
 	icon_state = "eng_engine_tegs"
 
 /area/liberty/engineering/technical_storage
-	name = "\improper Technical Storage"
+	name = "\improper Engineering - Technical Storage"
 	icon_state = "eng_technical_storage"
