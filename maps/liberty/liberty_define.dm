@@ -5,7 +5,8 @@
 	flags = MAP_HAS_BRANCH | MAP_HAS_RANK
 	config_path = "config/liberty_config.txt"
 
-	default_law_type = /datum/ai_laws/robocop	// Did you know, that poibrains have laws? No? Me too!
+	// Did you know, that poibrains have laws? No? Me too!
+	default_law_type = /datum/ai_laws/robocop
 
 	admin_levels = list()
 	empty_levels = list(6)

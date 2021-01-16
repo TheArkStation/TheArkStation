@@ -5256,6 +5256,15 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/hotel/warehouse)
+"pz" = (
+/obj/structure/lattice,
+/obj/structure/cable{
+	d1 = 32;
+	d2 = 4;
+	icon_state = "32-4"
+	},
+/turf/simulated/open,
+/area/space)
 "pA" = (
 /obj/structure/bed/chair/wood/walnut,
 /turf/simulated/floor/carpet/blue,
@@ -5511,11 +5520,6 @@
 	},
 /turf/simulated/floor/wood/walnut,
 /area/liberty/hotel/room/three_zero_three)
-"rK" = (
-/obj/structure/lattice,
-/obj/structure/catwalk,
-/turf/simulated/open,
-/area/space)
 "rM" = (
 /obj/effect/floor_decal/spline/fancy/black{
 	dir = 1
@@ -6501,6 +6505,14 @@
 "yZ" = (
 /turf/unsimulated/mask,
 /area/space)
+"zd" = (
+/obj/structure/lattice,
+/obj/structure/catwalk,
+/obj/structure/railing/mapped{
+	dir = 8
+	},
+/turf/simulated/open,
+/area/space)
 "zi" = (
 /obj/effect/floor_decal/spline/fancy{
 	dir = 4
@@ -6991,14 +7003,6 @@
 	name = "Open-Space Office"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/space)
-"Dy" = (
-/obj/structure/lattice,
-/obj/structure/catwalk,
-/obj/structure/railing/mapped{
-	dir = 8
-	},
-/turf/simulated/open,
 /area/space)
 "DB" = (
 /obj/structure/hygiene/shower{
@@ -8041,6 +8045,18 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/liberty/hotel/room/one_zero_three)
+"Jw" = (
+/obj/structure/ladder/updown,
+/obj/structure/lattice,
+/obj/structure/catwalk,
+/obj/structure/railing/mapped{
+	dir = 1
+	},
+/obj/structure/railing/mapped{
+	dir = 8
+	},
+/turf/simulated/open,
+/area/space)
 "Jx" = (
 /obj/effect/floor_decal/corner/black/diagonal,
 /obj/item/device/radio/intercom{
@@ -8633,6 +8649,11 @@
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
 /area/liberty/hotel/dorm)
+"Nv" = (
+/obj/structure/lattice,
+/obj/structure/catwalk,
+/turf/simulated/open,
+/area/space)
 "Nw" = (
 /obj/structure/table/glass,
 /obj/effect/floor_decal/spline/fancy/black{
@@ -9123,18 +9144,6 @@
 /obj/structure/closet/secure_closet/psychiatry,
 /turf/simulated/floor/wood,
 /area/liberty/psychologist/therapy_room)
-"Rn" = (
-/obj/structure/ladder/updown,
-/obj/structure/lattice,
-/obj/structure/catwalk,
-/obj/structure/railing/mapped{
-	dir = 1
-	},
-/obj/structure/railing/mapped{
-	dir = 8
-	},
-/turf/simulated/open,
-/area/space)
 "Rp" = (
 /obj/machinery/light_switch{
 	icon_state = "crema_switch";
@@ -10394,6 +10403,18 @@
 /obj/machinery/washing_machine,
 /obj/effect/floor_decal/corner/pink/mono,
 /turf/simulated/floor/tiled/white/monotile,
+/area/space)
+"ZS" = (
+/obj/structure/lattice,
+/obj/structure/catwalk,
+/obj/structure/railing/mapped{
+	dir = 8
+	},
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/turf/simulated/open,
 /area/space)
 "ZV" = (
 /obj/effect/floor_decal/spline/fancy{
@@ -33780,7 +33801,7 @@ CH
 CH
 CH
 Cp
-sJ
+Cp
 ab
 aa
 aa
@@ -35396,7 +35417,7 @@ QS
 QS
 QS
 EP
-sJ
+EP
 ab
 aa
 aa
@@ -36204,7 +36225,7 @@ QS
 QS
 QS
 EP
-sJ
+EP
 ab
 aa
 aa
@@ -38202,10 +38223,10 @@ aI
 aI
 aE
 tg
+pz
 tg
 tg
-tg
-Rn
+Jw
 aE
 aI
 aI
@@ -38403,11 +38424,11 @@ aI
 aI
 aI
 aE
-Dy
-Dy
-Dy
-Dy
-rK
+zd
+ZS
+zd
+zd
+Nv
 aE
 aI
 aI

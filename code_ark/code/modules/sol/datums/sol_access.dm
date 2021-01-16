@@ -1,3 +1,10 @@
+/var/const/access_senengine = "ACCESS_SENIOR_ENGINEER"
+/datum/access/engine
+	id = access_senengine
+	desc = "Senior Engineer"
+	region = ACCESS_REGION_ENGINEERING
+
+
 /var/const/access_sol_general = "ACCESS_SOL_GENERAL"
 /datum/access/sol
 	id = access_sol_general
