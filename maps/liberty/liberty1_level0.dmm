@@ -11978,9 +11978,6 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/space)
 "yM" = (
-/obj/machinery/computer{
-	dir = 8
-	},
 /obj/machinery/power/apc/high{
 	dir = 4;
 	pixel_x = 24
@@ -11991,6 +11988,9 @@
 	icon_state = "0-8"
 	},
 /obj/effect/floor_decal/corner/yellow/mono,
+/obj/machinery/computer/power_monitor{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/space)
 "yN" = (
@@ -13214,10 +13214,10 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/space)
 "Bl" = (
-/obj/machinery/computer{
+/obj/effect/floor_decal/corner/yellow/mono,
+/obj/machinery/computer/atmos_alert{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/yellow/mono,
 /turf/simulated/floor/tiled/monotile,
 /area/space)
 "Bm" = (
@@ -13313,10 +13313,10 @@
 /turf/simulated/floor/plating,
 /area/space)
 "BA" = (
-/obj/machinery/computer{
+/obj/effect/floor_decal/corner/yellow/mono,
+/obj/machinery/computer/air_control/supermatter_core{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/yellow/mono,
 /turf/simulated/floor/tiled/monotile,
 /area/space)
 "BB" = (
@@ -14369,6 +14369,13 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/floor_decal/steeldecal/steel_decals_central4{
 	dir = 8
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/space)
+"DR" = (
+/obj/effect/floor_decal/corner/yellow/mono,
+/obj/machinery/computer/station_alert/engineering{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/space)
@@ -55131,7 +55138,7 @@ yM
 Bl
 gw
 Wf
-BA
+DR
 yj
 fX
 JR

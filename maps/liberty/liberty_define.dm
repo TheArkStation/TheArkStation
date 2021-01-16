@@ -39,7 +39,6 @@
 
 	evac_controller_type = /datum/evacuation_controller/starship
 
-	default_law_type = null
 	use_overmap = 1
 	num_exoplanets = 1
 
