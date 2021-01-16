@@ -70,7 +70,7 @@
 
 //	#include "../torch/machinery/suit_storage.dm"
 
-	#include "../torch/job/torch_access.dm" // REMOVE ME
+//	#include "../torch/job/torch_access.dm" // REMOVE ME
 
 // END OF TORCH DEFINES
 

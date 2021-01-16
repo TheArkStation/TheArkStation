@@ -3,7 +3,10 @@
 		list(52, 95, 1, WEST),
 		list(50, 95, 1, EAST),
 		list(57, 92, 1, WEST),
-		list(55, 92, 1, EAST)
+		list(55, 92, 1, EAST),
+		list(151, 129, 1, EAST),
+		list(153, 129, 1, EAST),
+		list(153, 129, 1, WEST),
 	)
 
 /datum/map/liberty

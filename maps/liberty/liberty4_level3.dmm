@@ -1210,6 +1210,7 @@
 /obj/machinery/atmospherics/pipe/cap/visible/scrubbers{
 	dir = 1
 	},
+/obj/structure/cable/green,
 /turf/simulated/floor/tiled/techmaint,
 /area/space)
 "kA" = (
@@ -1218,6 +1219,10 @@
 	},
 /obj/machinery/atmospherics/pipe/cap/visible/supply,
 /obj/machinery/atmospherics/pipe/cap/visible/scrubbers,
+/obj/structure/cable/green{
+	d2 = 2;
+	icon_state = "0-2"
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/space)
 "kB" = (
@@ -2362,6 +2367,10 @@
 	},
 /obj/machinery/atmospherics/pipe/cap/visible/scrubbers,
 /obj/machinery/atmospherics/pipe/cap/visible/supply,
+/obj/structure/cable/green{
+	d2 = 2;
+	icon_state = "0-2"
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/space)
 "Ou" = (

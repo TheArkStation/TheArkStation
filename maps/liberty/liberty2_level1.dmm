@@ -21216,7 +21216,7 @@
 /turf/simulated/floor/tiled/dark/monotile,
 /area/liberty/hallway/one/aft_docks)
 "aMG" = (
-/obj/machinery/power/breakerbox{
+/obj/machinery/power/breakerbox/activated{
 	RCon_tag = "Main SMES Bypass"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -28852,6 +28852,10 @@
 /obj/machinery/atmospherics/pipe/cap/visible/scrubbers{
 	dir = 4
 	},
+/obj/structure/cable/green{
+	d2 = 4;
+	icon_state = "0-4"
+	},
 /turf/simulated/floor/plating,
 /area/space)
 "fpB" = (
@@ -28937,6 +28941,15 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/liberty/medbay/operating_storage)
+"fIR" = (
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/structure/cable/cyan{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/liberty/scg/docks)
 "fPq" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 8
@@ -29239,6 +29252,14 @@
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/liberty/hallway/one/aft_docks)
+"hyo" = (
+/obj/structure/cable/cyan{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/liberty/scg/docks)
 "hAM" = (
 /obj/effect/paint_stripe/white,
 /turf/simulated/wall/r_wall,
@@ -29883,6 +29904,16 @@
 	},
 /turf/simulated/floor/plating,
 /area/space)
+"lck" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/external,
+/obj/structure/cable/cyan{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/liberty/scg/docks)
 "lcB" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -30195,6 +30226,11 @@
 	d1 = 2;
 	d2 = 8;
 	icon_state = "2-8"
+	},
+/obj/structure/cable/cyan{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/liberty/scg/docks)
@@ -31108,6 +31144,10 @@
 	},
 /obj/machinery/atmospherics/pipe/cap/visible/supply{
 	dir = 4
+	},
+/obj/structure/cable/green{
+	d2 = 4;
+	icon_state = "0-4"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/hallway/one/fore_port)
@@ -48922,7 +48962,7 @@ aaa
 aRR
 aRR
 aRR
-avl
+lck
 aRR
 aRR
 aRR
@@ -49124,7 +49164,7 @@ aaa
 aaa
 aRR
 alo
-aXv
+hyo
 alr
 aRR
 aaa
@@ -49326,7 +49366,7 @@ aaa
 aaa
 alp
 aFk
-aXv
+hyo
 aym
 aHF
 aaa
@@ -49528,7 +49568,7 @@ aaa
 aaa
 alp
 aFk
-aXv
+hyo
 aym
 aHF
 aaa
@@ -49730,7 +49770,7 @@ aaa
 aaa
 aRR
 alo
-aXv
+hyo
 alr
 aRR
 aaa
@@ -49932,7 +49972,7 @@ aHF
 aRR
 aRR
 aRR
-avl
+lck
 aRR
 aRR
 aRR
@@ -50134,7 +50174,7 @@ alO
 aHo
 aRR
 aih
-aXv
+hyo
 aXF
 aRR
 aUA
@@ -50336,7 +50376,7 @@ aXv
 aYF
 ajk
 aZJ
-aXv
+hyo
 mZH
 ajR
 aXv
@@ -50538,7 +50578,7 @@ aIZ
 aYK
 ccq
 aRV
-aIZ
+fIR
 ndM
 aHq
 sPY
