@@ -195,7 +195,7 @@
 	closet_appearance = /decl/closet_appearance/secure_closet/sfp
 
 /obj/structure/closet/secure_closet/sfp_personal/WillContain()
-	return list(												// REVIEW THE CONTENTS
+	return list(												// REVIEW THE CONTENTS,
 		/obj/item/clothing/suit/armor/pcarrier/medium/security,
 		/obj/item/clothing/head/helmet/solgov/security,
 		/obj/item/weapon/storage/belt/holster/security,

@@ -1152,8 +1152,7 @@
 /obj/structure/railing{
 	dir = 1
 	},
-/obj/structure/closet/toolcloset/excavation,
-/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/vending/phoronresearch,
 /turf/simulated/floor/tiled/white,
 /area/space)
 "cW" = (
@@ -1419,9 +1418,8 @@
 /area/space)
 "dB" = (
 /obj/structure/window/reinforced,
-/obj/machinery/vending/phoronresearch{
-	dir = 1
-	},
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/closet/toolcloset/excavation,
 /turf/simulated/floor/tiled/dark,
 /area/space)
 "dC" = (
@@ -4880,13 +4878,13 @@
 /area/liberty/hotel/restaurant/upper)
 "mC" = (
 /obj/structure/table/woodentable/walnut,
-/obj/machinery/computer,
 /obj/effect/floor_decal/spline/fancy/black{
 	dir = 9
 	},
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/machinery/computer/modular/preset/security,
 /turf/simulated/floor/wood/walnut,
 /area/liberty/private_eye)
 "mE" = (
@@ -4973,7 +4971,7 @@
 /turf/simulated/open,
 /area/liberty/hotel/hallway/east)
 "nA" = (
-/obj/machinery/computer{
+/obj/machinery/computer/modular/preset/library{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -5258,6 +5256,15 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/hotel/warehouse)
+"pz" = (
+/obj/structure/lattice,
+/obj/structure/cable{
+	d1 = 32;
+	d2 = 4;
+	icon_state = "32-4"
+	},
+/turf/simulated/open,
+/area/space)
 "pA" = (
 /obj/structure/bed/chair/wood/walnut,
 /turf/simulated/floor/carpet/blue,
@@ -5693,9 +5700,8 @@
 /turf/simulated/floor/carpet/blue2,
 /area/space)
 "tg" = (
-/obj/effect/paint_stripe/green,
-/obj/effect/paint/white,
-/turf/simulated/wall/r_wall,
+/obj/structure/lattice,
+/turf/simulated/open,
 /area/space)
 "ti" = (
 /obj/structure/hygiene/shower{
@@ -5757,11 +5763,11 @@
 /turf/simulated/floor/wood/walnut,
 /area/space)
 "tC" = (
-/obj/machinery/computer{
-	dir = 8
-	},
 /obj/effect/floor_decal/corner/grey{
 	dir = 5
+	},
+/obj/machinery/computer/modular/preset/civilian{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/space)
@@ -6498,6 +6504,14 @@
 /area/liberty/hotel/warehouse)
 "yZ" = (
 /turf/unsimulated/mask,
+/area/space)
+"zd" = (
+/obj/structure/lattice,
+/obj/structure/catwalk,
+/obj/structure/railing/mapped{
+	dir = 8
+	},
+/turf/simulated/open,
 /area/space)
 "zi" = (
 /obj/effect/floor_decal/spline/fancy{
@@ -7309,11 +7323,11 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/space)
 "Fk" = (
-/obj/machinery/computer{
-	dir = 8
-	},
 /obj/effect/floor_decal/corner/grey{
 	dir = 10
+	},
+/obj/machinery/computer/modular/preset/civilian{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/space)
@@ -7742,6 +7756,12 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/space)
+"HX" = (
+/obj/machinery/computer/modular/preset/aislot/sysadmin{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/space)
 "Id" = (
 /obj/machinery/button/alternate/door/bolts{
 	dir = 1;
@@ -8031,6 +8051,18 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/liberty/hotel/room/one_zero_three)
+"Jw" = (
+/obj/structure/ladder/updown,
+/obj/structure/lattice,
+/obj/structure/catwalk,
+/obj/structure/railing/mapped{
+	dir = 1
+	},
+/obj/structure/railing/mapped{
+	dir = 8
+	},
+/turf/simulated/open,
+/area/space)
 "Jx" = (
 /obj/effect/floor_decal/corner/black/diagonal,
 /obj/item/device/radio/intercom{
@@ -8623,6 +8655,11 @@
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
 /area/liberty/hotel/dorm)
+"Nv" = (
+/obj/structure/lattice,
+/obj/structure/catwalk,
+/turf/simulated/open,
+/area/space)
 "Nw" = (
 /obj/structure/table/glass,
 /obj/effect/floor_decal/spline/fancy/black{
@@ -10372,6 +10409,18 @@
 /obj/machinery/washing_machine,
 /obj/effect/floor_decal/corner/pink/mono,
 /turf/simulated/floor/tiled/white/monotile,
+/area/space)
+"ZS" = (
+/obj/structure/lattice,
+/obj/structure/catwalk,
+/obj/structure/railing/mapped{
+	dir = 8
+	},
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/turf/simulated/open,
 /area/space)
 "ZV" = (
 /obj/effect/floor_decal/spline/fancy{
@@ -25663,7 +25712,7 @@ vf
 zL
 zL
 NY
-tm
+YQ
 aI
 Iz
 eT
@@ -25865,7 +25914,7 @@ QJ
 WO
 sU
 LD
-tm
+YQ
 aI
 Iz
 eU
@@ -26067,7 +26116,7 @@ YQ
 Wp
 YQ
 YQ
-tm
+YQ
 aI
 Iz
 IW
@@ -29700,7 +29749,7 @@ Fb
 po
 mq
 IX
-nA
+HX
 IX
 sH
 po
@@ -33758,7 +33807,7 @@ CH
 CH
 CH
 Cp
-tg
+Cp
 ab
 aa
 aa
@@ -34566,7 +34615,7 @@ jP
 jP
 jP
 sJ
-tg
+sJ
 ab
 aa
 aa
@@ -35374,7 +35423,7 @@ QS
 QS
 QS
 EP
-tg
+EP
 ab
 aa
 aa
@@ -36182,7 +36231,7 @@ QS
 QS
 QS
 EP
-tg
+EP
 ab
 aa
 aa
@@ -38179,11 +38228,11 @@ aI
 aI
 aI
 aE
-bg
-bg
-bg
-bg
-bg
+tg
+pz
+tg
+tg
+Jw
 aE
 aI
 aI
@@ -38381,11 +38430,11 @@ aI
 aI
 aI
 aE
-bg
-bg
-bg
-bg
-bg
+zd
+ZS
+zd
+zd
+Nv
 aE
 aI
 aI

@@ -70,10 +70,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/space)
-"aq" = (
-/obj/structure/stairs/west,
-/turf/simulated/floor/tiled,
-/area/space)
 "ar" = (
 /obj/structure/bed/chair/comfy/beige{
 	dir = 1
@@ -344,8 +340,9 @@
 /area/space)
 "bj" = (
 /obj/structure/table/woodentable/walnut,
-/obj/machinery/computer{
-	dir = 1
+/obj/machinery/computer/modular/preset/cardslot/command{
+	dir = 1;
+	icon_state = "console"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/space)
@@ -619,7 +616,7 @@
 /obj/effect/floor_decal/spline/fancy/black{
 	dir = 5
 	},
-/obj/machinery/computer,
+/obj/machinery/computer/modular/preset/cardslot/command_sec,
 /turf/simulated/floor/wood/walnut,
 /area/space)
 "bU" = (
@@ -768,9 +765,13 @@
 	dir = 4
 	},
 /obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/cable/green{
+	d1 = 2;
+	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -1200,6 +1201,31 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/space)
+"kk" = (
+/obj/effect/floor_decal/corner/grey{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/cap/visible/supply{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/cap/visible/scrubbers{
+	dir = 1
+	},
+/obj/structure/cable/green,
+/turf/simulated/floor/tiled/techmaint,
+/area/space)
+"kA" = (
+/obj/effect/floor_decal/corner/grey{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/cap/visible/supply,
+/obj/machinery/atmospherics/pipe/cap/visible/scrubbers,
+/obj/structure/cable/green{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/space)
 "kB" = (
 /obj/structure/fake_stairs/single{
 	dir = 8
@@ -1212,10 +1238,9 @@
 	dir = 4
 	},
 /obj/structure/cable/green{
-	icon_state = "2-4"
-	},
-/obj/structure/cable/green{
-	icon_state = "2-8"
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
 /area/space)
@@ -1509,6 +1534,8 @@
 	dir = 4
 	},
 /obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -1529,6 +1556,8 @@
 	dir = 4
 	},
 /obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -1632,10 +1661,10 @@
 /turf/simulated/floor/tiled/monotile,
 /area/space)
 "wZ" = (
-/obj/machinery/computer/modular/preset/cardslot/command,
 /obj/effect/floor_decal/corner/grey{
 	dir = 5
 	},
+/obj/machinery/computer/modular/preset/aislot/sysadmin,
 /turf/simulated/floor/tiled/techmaint,
 /area/space)
 "xv" = (
@@ -1658,6 +1687,28 @@
 /obj/effect/floor_decal/corner/grey,
 /obj/machinery/light{
 	dir = 4
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/space)
+"xG" = (
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/space)
@@ -1793,6 +1844,18 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/space)
+"Bd" = (
+/obj/structure/catwalk,
+/obj/structure/lattice,
+/obj/structure/railing/mapped{
+	dir = 8
+	},
+/obj/structure/railing/mapped{
+	dir = 1
+	},
+/obj/structure/ladder,
+/turf/simulated/open,
+/area/space)
 "Cq" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
@@ -1826,9 +1889,19 @@
 	dir = 4
 	},
 /obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
+/area/space)
+"Di" = (
+/obj/structure/catwalk,
+/obj/structure/lattice,
+/obj/structure/railing/mapped{
+	dir = 8
+	},
+/turf/simulated/open,
 /area/space)
 "DF" = (
 /obj/structure/table/reinforced,
@@ -1884,6 +1957,8 @@
 	dir = 4
 	},
 /obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -1933,6 +2008,8 @@
 	dir = 4
 	},
 /obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/monotile,
@@ -1978,7 +2055,10 @@
 /obj/structure/railing/mapped,
 /obj/effect/floor_decal/corner/grey/mono,
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/structure/cable/green,
+/obj/structure/cable/green{
+	d2 = 8;
+	icon_state = "0-8"
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/space)
 "GG" = (
@@ -2109,6 +2189,8 @@
 	dir = 4
 	},
 /obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -2165,6 +2247,8 @@
 	dir = 4
 	},
 /obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
@@ -2272,7 +2356,21 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
 /obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
 	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/space)
+"Od" = (
+/obj/effect/floor_decal/corner/grey{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/cap/visible/scrubbers,
+/obj/machinery/atmospherics/pipe/cap/visible/supply,
+/obj/structure/cable/green{
+	d2 = 2;
+	icon_state = "0-2"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/space)
@@ -2296,6 +2394,11 @@
 	pixel_x = 24
 	},
 /turf/simulated/floor/tiled/old_cargo,
+/area/space)
+"Pk" = (
+/obj/structure/catwalk,
+/obj/structure/lattice,
+/turf/simulated/open,
 /area/space)
 "Pp" = (
 /obj/structure/flora/jungle/bush/a_2,
@@ -2405,6 +2508,8 @@
 	dir = 4
 	},
 /obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -2489,6 +2594,8 @@
 	dir = 5
 	},
 /obj/structure/cable/green{
+	d1 = 1;
+	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -2622,6 +2729,11 @@
 "YR" = (
 /obj/machinery/light{
 	dir = 8
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/space)
@@ -22550,7 +22662,7 @@ CI
 CI
 CI
 CI
-CI
+Od
 UW
 CI
 CI
@@ -24773,7 +24885,7 @@ ab
 ab
 an
 an
-Rc
+xG
 YR
 xv
 an
@@ -25378,9 +25490,9 @@ mZ
 mZ
 mZ
 mZ
-mZ
+kA
 cK
-mZ
+kk
 Az
 ad
 bE
@@ -27799,7 +27911,7 @@ bL
 cd
 cd
 bc
-aq
+ag
 bc
 aK
 bg
@@ -30432,7 +30544,7 @@ ab
 ab
 ab
 ab
-ab
+Bd
 bb
 ah
 ah
@@ -30630,11 +30742,11 @@ ah
 ah
 ah
 bb
-ab
-ab
-ab
-ab
-ab
+Di
+Di
+Di
+Di
+Pk
 bb
 ah
 ah

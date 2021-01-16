@@ -108,12 +108,12 @@
 	if(power(load))
 		if(stat & !power(load))
 			user.unset_machine()
-			user << browse(null, "window=fuel_assembly")
+			close_browser(user, "window=fuel_assembly")
 			return
 
 		if (get_dist(src, user) > 1)
 			user.unset_machine()
-			user << browse(null, "window=fuel_assembly")
+			close_browser(user, "window=fuel_assembly")
 			return
 		var/dat = "<B>Assembly fabricator</B><BR>"
 
@@ -189,7 +189,7 @@
 			transfering_sub = new_val
 
 	if( href_list["close"] )
-		user << browse(null, "window=fuel_assembly")
+		close_browser(user, "window=fuel_assembly")
 		user.unset_machine()
 
 	return TOPIC_REFRESH

@@ -24,7 +24,7 @@
 	icon_state = "hair_wisp"
 
 /datum/sprite_accessory/hair/new_ponytail
-	name = "Ponytail 7"
+	name = "Ponytail 7 (alt)"
 	icon = ICONS_PATH
 	icon_state = "hair_ponytail"
 

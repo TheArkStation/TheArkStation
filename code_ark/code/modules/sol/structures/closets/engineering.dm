@@ -39,8 +39,8 @@
 		/obj/item/clothing/head/welding,
 		/obj/item/clothing/gloves/insulated,
 		/obj/item/clothing/gloves/thick/duty/solgov/eng,
-//		/obj/item/device/radio/headset/heads/ce, // FIX ME
-//		/obj/item/device/radio/headset/heads/ce/alt, // FIX ME
+//		/obj/item/device/radio/headset/heads/ce, // FIX ME,
+//		/obj/item/device/radio/headset/heads/ce/alt, // FIX ME,
 		/obj/item/weapon/storage/belt/utility/full,
 		/obj/item/weapon/storage/belt/general,
 		/obj/item/clothing/suit/storage/hazardvest,

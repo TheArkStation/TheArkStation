@@ -485,7 +485,7 @@
 	requires_power = 0
 	dynamic_lighting = 1
 	area_flags = AREA_FLAG_RAD_SHIELDED | AREA_FLAG_ION_SHIELDED
-	req_access = null // SET ACCESS
+	req_access = list() // SET ACCESS
 
 // HOTEL
 
