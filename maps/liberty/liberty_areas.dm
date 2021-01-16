@@ -80,6 +80,37 @@
 	name = "\improper SFP Field Office - Archive"
 	icon_state = "department_archive"
 
+// ENGINEERING
+
+/area/liberty/engineering/atmos
+	name = "\improper Engineering - Atmospherics"
+	icon_state = "eng_atmos"
+
+/area/liberty/engineering/canister_storage
+	name = "\improper Engineering - Canister Storage"
+	icon_state = "eng_canister_storage"
+
+/area/liberty/engineering/engine_monitoring_room
+	name = "\improper Engineering - Engine Monitoring Room"
+	icon_state = "eng_engine_monitoring_room"
+
+/area/liberty/engineering/engine_room
+	name = "\improper Engineering - Engine Room"
+	icon_state = "eng_engine_room"
+
+/area/liberty/engineering/engineering_hall
+	name = "\improper Engineering - Level Zero Hallway"
+	icon_state = "eng_hall"
+
+/area/liberty/engineering/engineering_prep_room
+	name = "\improper Engineering - Prep Room"
+	icon_state = "eng_prep_room"
+
+
+/area/liberty/engineering/substation_zero
+	name = "\improper Engineering - Substation Level Zero"
+	icon_state = "eng_substation_00"
+
 ///////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////// LEVEL ONE ////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////
@@ -216,6 +247,7 @@
 	ambience = list('sound/ambience/ambisin2.ogg', 'sound/ambience/signal.ogg', 'sound/ambience/signal.ogg', 'sound/ambience/ambigen10.ogg')
 
 // SCG
+
 /area/liberty/scg
 	req_access = list(list("ACCESS_SOL_SFP", "ACCESS_SOL_GENERAL"))
 
@@ -224,6 +256,7 @@
 	icon_state = "sol_docks"
 
 // HALLWAYS
+
 /area/liberty/hallway/one/central
 	name = "\improper Level One - Central Hall"
 	icon_state = "lvl_1_central_hall"
@@ -256,6 +289,27 @@
 	name = "\improper Level One - Fore Docks"
 	icon_state = "lvl_1_north_docks"
 
+// ENGINEERING
+
+/area/liberty/engineering/substation_one
+	name = "\improper Engineering - Substation Level One"
+	icon_state = "eng_substation_01"
+
+/area/liberty/engineering/hard_storage
+	name = "\improper Engineering - Hard Storage"
+	icon_state = "eng_hard_storage"
+
+/area/liberty/engineering/substation_main
+	name = "\improper Engineering - Substation Main"
+	icon_state = "eng_substation_main"
+
+/area/liberty/engineering/supermatter_tegs
+	name = "\improper Engineering - Supermatter Tegs"
+	icon_state = "eng_engine_tegs"
+
+/area/liberty/engineering/technical_storage
+	name = "\improper Engineering - Technical Storage"
+	icon_state = "eng_technical_storage"
 
 ///////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////// LEVEL TWO ////////////////////////////////////
@@ -545,3 +599,17 @@
 	lift_floor_label = "3"
 	lift_floor_name = "Liberty - Level Three"
 	lift_announce_str = "Третий уровень Либерти: Администрация комлпекса. Голодек."
+
+// ENGINEERING
+
+/area/liberty/engineering/engineering_elevator_00
+	name = "\improper Engineering - Elevator00"
+	icon_state = "eng_elevator_00"
+
+/area/liberty/engineering/engineering_elevator_01
+	name = "\improper Engineering - Elevator01"
+	icon_state = "eng_elevator_01"
+
+/area/liberty/engineering/engineering_elevator_02
+	name = "\improper Engineering - Elevator02"
+	icon_state = "eng_elevator_02"
