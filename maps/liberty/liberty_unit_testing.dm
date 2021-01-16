@@ -1,7 +1,11 @@
-/*
 /datum/unit_test/station_wires_shall_be_connected
-	exceptions = list(list(80, 107, 1, WEST))
-*/
+	exceptions = list(
+		list(52, 95, 1, WEST),
+		list(50, 95, 1, EAST),
+		list(57, 92, 1, WEST),
+		list(55, 92, 1, EAST)
+	)
+
 /datum/map/liberty
 	// Unit test exemptions
 	apc_test_exempt_areas = list(

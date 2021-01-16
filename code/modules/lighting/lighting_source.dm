@@ -223,6 +223,9 @@
 	applied_lum_b = lum_b
 
 	FOR_DVIEW(var/turf/T, light_outer_range, source_turf, INVISIBILITY_LIGHTING)
+		if(!T)
+			to_world("SUKA NET '[T]' U TURFA [source_turf]. [source_turf.x],[source_turf.y],[source_turf.z]")
+			log_unit_test("SUKA NET '[T]' U TURFA [source_turf]. [source_turf.x],[source_turf.y],[source_turf.z]")
 		check_t:
 		if(!T.lighting_corners_initialised)
 			T.generate_missing_corners()

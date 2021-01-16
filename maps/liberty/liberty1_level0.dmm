@@ -5719,6 +5719,13 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/space)
+"la" = (
+/obj/effect/floor_decal/corner/yellow/mono,
+/obj/machinery/computer/station_alert/engineering{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/space)
 "lb" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 1
@@ -13495,6 +13502,11 @@
 	dir = 1
 	},
 /obj/item/stack/cable_coil/single,
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/airless,
 /area/space)
 "BT" = (
@@ -14369,13 +14381,6 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/floor_decal/steeldecal/steel_decals_central4{
 	dir = 8
-	},
-/turf/simulated/floor/tiled/monotile,
-/area/space)
-"DR" = (
-/obj/effect/floor_decal/corner/yellow/mono,
-/obj/machinery/computer/station_alert/engineering{
-	dir = 1
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/space)
@@ -55138,7 +55143,7 @@ yM
 Bl
 gw
 Wf
-DR
+la
 yj
 fX
 JR

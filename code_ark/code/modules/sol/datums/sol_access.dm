@@ -1,5 +1,5 @@
 /var/const/access_senengine = "ACCESS_SENIOR_ENGINEER"
-/datum/access/engine
+/datum/access/engine_senior
 	id = access_senengine
 	desc = "Senior Engineer"
 	region = ACCESS_REGION_ENGINEERING
