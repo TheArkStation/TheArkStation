@@ -13253,6 +13253,7 @@
 /area/space)
 "Bn" = (
 /obj/machinery/atmospherics/unary/heater{
+	connect_types = 17;
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
@@ -14325,7 +14326,9 @@
 /turf/simulated/floor/wood/yew,
 /area/liberty/hotel/gym)
 "DF" = (
-/obj/machinery/atmospherics/unary/heater,
+/obj/machinery/atmospherics/unary/heater{
+	connect_types = 17
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/space)
 "DG" = (
