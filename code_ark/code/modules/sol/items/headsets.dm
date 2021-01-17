@@ -14,3 +14,4 @@
 	icon_state = "com_headset"
 	item_state = "headset"
 	ks1type = /obj/item/device/encryptionkey/heads/sol_command_basic
+	frequency = SOL_PUB_FREQ
