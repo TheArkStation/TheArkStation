@@ -40,8 +40,33 @@
 		/area/turbolift/liberty/north/one,
 		/area/turbolift/liberty/north/two,
 		/area/turbolift/liberty/north/top,
-		/area/template_noop
-	)
+		/area/template_noop,
+		/area/centcom/holding,
+		/area/centcom/specops,
+		/area/centcom/holding,
+		/area/chapel,
+		/area/hallway,
+		/area/medical,
+		/area/security/brig,
+		/area/security/prison,
+		/area/security/brig,
+		/area/maintenance,
+		/area/rnd/xenobiology/xenoflora,
+		/area/rnd/xenobiology/xenoflora_storage,
+		/area/rnd/xenobiology/xenoflora,
+		/area/rnd/xenobiology/xenoflora,
+		/area/shuttle/escape/centcom,
+		/area/shuttle/escape/centcom,
+		/area/shuttle/specops/centcom,
+		/area/shuttle/specops/centcom,
+		/area/shuttle/syndicate_elite/mothership,
+		/area/shuttle/syndicate_elite/station,
+		/area/shuttle/syndicate_elite/mothership,
+		/area/shuttle/escape/centcom,
+		/area/supply,
+		/area/syndicate_elite_squad,
+		/area/beach
+		)
 
 /*
 /datum/unit_test/zas_area_test/cargo_bay
