@@ -17,3 +17,8 @@
 
 /obj/machinery/photocopier/faxmachine
   send_access = list() // ADD ACCESS
+
+// ENGINERRING MACINERY
+
+/obj/machinery/atmospherics/unary/heater
+	connect_types = CONNECT_TYPE_REGULAR|CONNECT_TYPE_FUEL
