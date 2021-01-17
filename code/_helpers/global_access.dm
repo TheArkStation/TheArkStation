@@ -809,8 +809,6 @@
 			return global.string_part_flags;
 		if("string_slot_flags")
 			return global.string_slot_flags;
-		if("submap_turfs_with_decals")
-			return global.submap_turfs_with_decals;
 		if("supply_drop")
 			return global.supply_drop;
 		if("supply_methods_")
@@ -1726,8 +1724,6 @@
 			global.string_part_flags=newval;
 		if("string_slot_flags")
 			global.string_slot_flags=newval;
-		if("submap_turfs_with_decals")
-			global.submap_turfs_with_decals=newval;
 		if("supply_drop")
 			global.supply_drop=newval;
 		if("supply_methods_")
@@ -2238,7 +2234,6 @@
 	"stored_shock_by_ref",
 	"string_part_flags",
 	"string_slot_flags",
-	"submap_turfs_with_decals",
 	"supply_drop",
 	"supply_methods_",
 	"swapmaps_byname",
