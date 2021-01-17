@@ -127,7 +127,8 @@ var/const/MED_I_FREQ = 1485
 var/const/SEC_I_FREQ = 1475
 
 // THE ARK PROJECT FREQUENCIES
-var/const/SOL_COMM_FREQ = 1363 // THE ARK PROJECT CODE
+var/const/SOL_COMM_FREQ = 1363 //ARK
+var/const/SOL_COMMON_FREQ = 1463 //ARK
 
 // Device signal frequencies
 var/const/ATMOS_ENGINE_FREQ = 1438 // Used by atmos monitoring in the engine.
