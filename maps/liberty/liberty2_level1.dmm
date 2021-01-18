@@ -70,10 +70,11 @@
 /turf/space,
 /area/space)
 "aan" = (
-/obj/effect/paint_stripe/white,
-/obj/effect/paint/sfp_blue,
-/turf/simulated/wall/r_wall,
-/area/liberty/scg/docks)
+/obj/effect/floor_decal/corner/sfp_blue/full,
+/obj/structure/table/marble,
+/obj/structure/hygiene/sink/modern,
+/turf/simulated/floor/tiled/old_tile,
+/area/space)
 "aao" = (
 /obj/machinery/light{
 	dir = 1
@@ -178,11 +179,17 @@
 /turf/simulated/floor/carpet/red,
 /area/liberty/hotel/restaurant/main)
 "aaC" = (
-/obj/machinery/light{
-	dir = 8
+/obj/structure/hygiene/shower{
+	dir = 4;
+	pixel_x = -12;
+	pixel_y = 5
 	},
-/obj/effect/floor_decal/corner/sfp_blue/full,
-/turf/simulated/floor/tiled/old_tile,
+/obj/effect/floor_decal/steeldecal/steel_decals6,
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	dir = 4
+	},
+/obj/structure/curtain/open/shower,
+/turf/simulated/floor/tiled/old_cargo,
 /area/space)
 "aaD" = (
 /obj/machinery/light_construct,
@@ -922,11 +929,15 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/sfp/chief)
 "abX" = (
-/obj/structure/hygiene/toilet{
-	dir = 8
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/maintenance,
+/obj/machinery/door/blast/regular/open{
+	icon_state = "pdoor0";
+	id_tag = "sfp_lockdown";
+	name = "SFP Lockdown"
 	},
-/obj/effect/floor_decal/corner/sfp_blue/full,
-/turf/simulated/floor/tiled/old_tile,
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/space)
 "abY" = (
 /obj/effect/floor_decal/corner/grey{
@@ -1168,14 +1179,6 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/sfp/hallway/one_north)
 "acs" = (
-/obj/item/weapon/storage/mirror/wide{
-	pixel_y = 32
-	},
-/obj/machinery/light{
-	dir = 8
-	},
-/obj/structure/table/reinforced,
-/obj/structure/hygiene/sink/modern,
 /obj/effect/floor_decal/corner/sfp_blue/full,
 /turf/simulated/floor/tiled/old_tile,
 /area/space)
@@ -1825,29 +1828,23 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/sfp/lobby)
 "adw" = (
-/obj/item/weapon/storage/mirror/wide{
-	pixel_y = 32
-	},
-/obj/machinery/light{
-	dir = 4
-	},
-/obj/structure/table/reinforced,
-/obj/structure/hygiene/sink/modern,
-/obj/effect/floor_decal/corner/sfp_blue/full,
-/turf/simulated/floor/tiled/old_tile,
-/area/space)
-"adx" = (
 /obj/effect/floor_decal/industrial/hatch,
-/obj/machinery/door/airlock/sfp{
-	name = "Shower"
+/obj/machinery/door/airlock/multi_tile/glass/sfp,
+/obj/machinery/door/firedoor{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/space)
+/area/liberty/sfp/recreation)
+"adx" = (
+/obj/effect/floor_decal/corner/white{
+	dir = 9
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/liberty/sfp/recreation)
 "ady" = (
-/obj/effect/floor_decal/corner/sfp_blue/full,
-/turf/simulated/floor/tiled/old_tile,
-/area/space)
-"adz" = (
 /obj/structure/table/woodentable,
 /obj/machinery/alarm{
 	alarm_id = null;
@@ -1855,6 +1852,12 @@
 	pixel_x = -24
 	},
 /turf/simulated/floor/wood,
+/area/space)
+"adz" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/carpet/blue,
 /area/space)
 "adA" = (
 /obj/structure/table/woodentable_reinforced,
@@ -2033,19 +2036,33 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/sfp/lobby)
 "adO" = (
-/obj/machinery/light{
-	dir = 1
-	},
+/obj/structure/bed/padded,
+/obj/item/weapon/bedsheet/blue,
 /turf/simulated/floor/carpet/blue,
 /area/space)
 "adP" = (
-/obj/structure/bed/padded,
-/obj/item/weapon/bedsheet/blue,
-/turf/simulated/floor/carpet/blue,
+/obj/structure/bed/chair/wood{
+	dir = 1
+	},
+/obj/machinery/button/alternate/door/bolts{
+	dir = 1;
+	id_tag = "sfp_room_4";
+	name = "Door Bolts";
+	pixel_x = 3;
+	pixel_y = -22
+	},
+/obj/machinery/power/apc{
+	dir = 8;
+	name = "west bump";
+	pixel_x = -24
+	},
+/obj/structure/cable/green{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/wood,
 /area/space)
 "adQ" = (
-/obj/structure/bed/padded,
-/obj/item/weapon/bedsheet/blue,
 /turf/simulated/floor/carpet/blue,
 /area/liberty/sfp/recreation)
 "adR" = (
@@ -2152,18 +2169,13 @@
 /turf/simulated/wall/r_wall,
 /area/liberty/scg/docks)
 "aeb" = (
-/obj/structure/hygiene/shower{
-	dir = 1
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
-/obj/structure/curtain/open/shower,
-/obj/effect/floor_decal/steeldecal/steel_decals6{
-	dir = 10
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals6{
-	dir = 9
-	},
-/turf/simulated/floor/tiled/old_cargo,
-/area/space)
+/turf/simulated/floor/carpet/blue,
+/area/liberty/sfp/recreation)
 "aec" = (
 /obj/effect/paint_stripe/white,
 /turf/simulated/wall/r_wall,
@@ -2386,17 +2398,12 @@
 	},
 /turf/simulated/floor/wood/walnut,
 /area/space)
-"aey" = (
-/obj/structure/cable/green{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/turf/simulated/floor/carpet/blue,
-/area/space)
 "aez" = (
-/obj/structure/closet/secure_closet/security,
-/turf/simulated/floor/carpet/blue,
+/obj/structure/table/woodentable_reinforced,
+/obj/effect/floor_decal/corner/grey{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/techmaint,
 /area/liberty/sfp/recreation)
 "aeA" = (
 /obj/machinery/door/airlock/civilian{
@@ -2878,13 +2885,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/sfp/lobby)
-"afr" = (
-/obj/effect/floor_decal/industrial/hatch,
-/obj/machinery/door/airlock/sfp{
-	name = "Shower"
-	},
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/liberty/sfp/dorm)
 "afs" = (
 /obj/effect/floor_decal/industrial/hatch,
 /obj/machinery/door/airlock/sfp{
@@ -3523,10 +3523,16 @@
 /turf/simulated/floor/tiled/dark,
 /area/space)
 "agC" = (
-/obj/machinery/vending/lavatory,
-/obj/effect/floor_decal/corner/sfp_blue/full,
-/turf/simulated/floor/tiled/old_tile,
-/area/liberty/sfp/dorm)
+/obj/effect/floor_decal/corner/grey{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/grey{
+	dir = 1
+	},
+/obj/structure/flora/pottedplant/orientaltree,
+/obj/machinery/light,
+/turf/simulated/floor/tiled/techmaint,
+/area/liberty/sfp/recreation)
 "agD" = (
 /obj/effect/floor_decal/borderfloorwhite/corner{
 	dir = 1
@@ -3764,9 +3770,17 @@
 /turf/simulated/floor/tiled/white,
 /area/space)
 "agY" = (
-/obj/effect/floor_decal/corner/sfp_blue/full,
-/turf/simulated/floor/tiled/old_tile,
-/area/liberty/sfp/dorm)
+/obj/effect/floor_decal/corner/white{
+	dir = 10
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 8
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/liberty/sfp/recreation)
 "agZ" = (
 /obj/effect/floor_decal/industrial/hatch,
 /obj/machinery/door/firedoor{
@@ -4393,10 +4407,16 @@
 /turf/simulated/floor/tiled/white,
 /area/space)
 "aig" = (
-/obj/structure/table/glass,
-/obj/effect/floor_decal/corner/sfp_blue/full,
-/turf/simulated/floor/tiled/old_tile,
-/area/liberty/sfp/dorm)
+/obj/effect/floor_decal/corner/grey{
+	dir = 10
+	},
+/obj/machinery/power/apc{
+	name = "south bump";
+	pixel_y = -22
+	},
+/obj/structure/cable/green,
+/turf/simulated/floor/tiled/techmaint,
+/area/liberty/sfp/recreation)
 "aih" = (
 /obj/effect/floor_decal/corner/grey{
 	dir = 1
@@ -4676,17 +4696,19 @@
 /turf/simulated/floor/tiled/white/monotile,
 /area/space)
 "aiK" = (
-/obj/effect/floor_decal/corner/white{
+/obj/machinery/disposal,
+/obj/effect/floor_decal/corner/grey{
 	dir = 10
 	},
-/obj/effect/floor_decal/steeldecal/steel_decals4{
+/obj/effect/floor_decal/corner/grey{
+	dir = 4
+	},
+/obj/machinery/light,
+/obj/machinery/camera/network/security{
 	dir = 8
 	},
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 5
-	},
 /turf/simulated/floor/tiled/techmaint,
-/area/liberty/sfp/dorm)
+/area/liberty/sfp/recreation)
 "aiL" = (
 /obj/effect/floor_decal/corner/grey,
 /obj/machinery/light{
@@ -5132,14 +5154,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/space)
-"ajC" = (
-/obj/effect/floor_decal/industrial/hatch,
-/obj/machinery/door/airlock/multi_tile/glass/sfp,
-/obj/machinery/door/firedoor{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/liberty/sfp/dorm)
 "ajD" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -5217,14 +5231,13 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/scg/docks)
 "ajK" = (
-/obj/effect/floor_decal/corner/white{
-	dir = 9
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
 	},
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 6
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/liberty/sfp/dorm)
+/turf/simulated/floor/carpet/blue,
+/area/space)
 "ajL" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 5
@@ -5298,8 +5311,14 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/space)
 "ajQ" = (
-/turf/simulated/floor/carpet/blue,
-/area/liberty/sfp/dorm)
+/obj/effect/floor_decal/industrial/hatch,
+/obj/machinery/door/airlock/sfp{
+	id_tag = "sfp_chief";
+	name = "SFP Supervisor Office"
+	},
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/liberty/sfp/recreation)
 "ajR" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/blast/regular/open{
@@ -5310,12 +5329,12 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/liberty/scg/docks)
 "ajS" = (
-/obj/structure/table/woodentable_reinforced,
-/obj/effect/floor_decal/corner/grey{
-	dir = 6
+/obj/effect/floor_decal/industrial/hatch,
+/obj/machinery/door/airlock/sfp{
+	name = "Shower"
 	},
-/turf/simulated/floor/tiled/techmaint,
-/area/liberty/sfp/dorm)
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/space)
 "ajT" = (
 /obj/effect/paint_stripe/white,
 /obj/effect/paint/sfp_blue,
@@ -5599,27 +5618,28 @@
 /turf/simulated/floor/tiled/white,
 /area/space)
 "aks" = (
-/obj/effect/floor_decal/corner/grey{
-	dir = 10
+/obj/effect/floor_decal/industrial/hatch,
+/obj/machinery/door/airlock/sfp{
+	name = "Shower"
 	},
-/obj/effect/floor_decal/corner/grey{
-	dir = 1
+/obj/machinery/door/firedoor,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
-/obj/structure/flora/pottedplant/orientaltree,
-/obj/machinery/light,
-/turf/simulated/floor/tiled/techmaint,
-/area/liberty/sfp/dorm)
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/space)
 "akt" = (
-/obj/effect/floor_decal/corner/grey{
-	dir = 10
+/obj/machinery/button/alternate/door/bolts{
+	id_tag = "sfp_room_2";
+	name = "Door Bolts";
+	pixel_x = 3;
+	pixel_y = 28
 	},
-/obj/machinery/power/apc{
-	name = "south bump";
-	pixel_y = -22
-	},
-/obj/structure/cable/green,
-/turf/simulated/floor/tiled/techmaint,
-/area/liberty/sfp/dorm)
+/obj/structure/closet/secure_closet/hos,
+/turf/simulated/floor/wood/walnut,
+/area/space)
 "aku" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -5631,19 +5651,12 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/liberty/hotel/toilet)
 "akw" = (
-/obj/machinery/disposal,
-/obj/effect/floor_decal/corner/grey{
-	dir = 10
+/obj/structure/undies_wardrobe/chestdrawer/walnut,
+/obj/item/weapon/storage/mirror{
+	pixel_y = 24
 	},
-/obj/effect/floor_decal/corner/grey{
-	dir = 4
-	},
-/obj/machinery/light,
-/obj/machinery/camera/network/security{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/liberty/sfp/dorm)
+/turf/simulated/floor/wood/walnut,
+/area/space)
 "akx" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 8
@@ -5728,17 +5741,8 @@
 /turf/simulated/floor/wood/walnut,
 /area/liberty/hotel/foyer)
 "akE" = (
-/obj/structure/hygiene/shower{
-	pixel_y = 24
-	},
-/obj/structure/curtain/open/shower,
-/obj/effect/floor_decal/steeldecal/steel_decals6{
-	dir = 5
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals6{
-	dir = 6
-	},
-/turf/simulated/floor/tiled/old_cargo,
+/obj/structure/closet/cabinet/walnut,
+/turf/simulated/floor/wood/walnut,
 /area/space)
 "akF" = (
 /obj/effect/paint_stripe/white,
@@ -5854,9 +5858,9 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/space)
 "akO" = (
-/obj/structure/closet/secure_closet/security,
-/turf/simulated/floor/carpet/blue,
-/area/liberty/sfp/dorm)
+/obj/structure/bed/chair/wood/walnut,
+/turf/simulated/floor/wood/walnut,
+/area/space)
 "akP" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/research,
@@ -5964,14 +5968,8 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/hallway/one/central)
 "akY" = (
-/obj/effect/floor_decal/industrial/hatch,
-/obj/machinery/door/airlock/sfp{
-	id_tag = "sfp_chief";
-	name = "SFP Supervisor Office"
-	},
-/obj/machinery/door/firedoor,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/liberty/sfp/dorm)
+/turf/simulated/floor/carpet/blue,
+/area/space)
 "akZ" = (
 /obj/structure/lattice,
 /obj/structure/catwalk,
@@ -6207,14 +6205,11 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/space)
 "alu" = (
-/obj/structure/table/woodentable,
-/obj/machinery/alarm{
-	alarm_id = null;
-	dir = 4;
-	pixel_x = -24
+/obj/machinery/light{
+	dir = 4
 	},
-/turf/simulated/floor/wood,
-/area/liberty/sfp/dorm)
+/turf/simulated/floor/carpet/blue,
+/area/space)
 "alv" = (
 /obj/effect/floor_decal/corner/grey{
 	dir = 9
@@ -6276,14 +6271,14 @@
 /turf/simulated/floor/tiled/monotile,
 /area/liberty/hallway/one/central)
 "alC" = (
-/obj/machinery/light,
+/obj/structure/table/woodentable/walnut,
 /turf/simulated/floor/carpet/blue,
-/area/liberty/sfp/dorm)
+/area/space)
 "alD" = (
-/obj/structure/bed/padded,
-/obj/item/weapon/bedsheet/blue,
+/obj/structure/bed/double/wood/walnut,
+/obj/item/weapon/bedsheet/double/brown,
 /turf/simulated/floor/carpet/blue,
-/area/liberty/sfp/dorm)
+/area/space)
 "alE" = (
 /obj/effect/paint/sfp_blue,
 /obj/effect/paint_stripe/white,
@@ -6304,8 +6299,24 @@
 /turf/simulated/floor/tiled/old_cargo,
 /area/liberty/hotel/kitchen)
 "alH" = (
-/turf/simulated/floor/wood/walnut,
-/area/liberty/sfp/dorm)
+/obj/structure/bed/chair/wood,
+/obj/machinery/button/alternate/door/bolts{
+	id_tag = "sfp_room_2";
+	name = "Door Bolts";
+	pixel_x = 3;
+	pixel_y = 28
+	},
+/obj/machinery/power/apc{
+	dir = 8;
+	name = "west bump";
+	pixel_x = -24
+	},
+/obj/structure/cable/green{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/wood,
+/area/space)
 "alI" = (
 /obj/structure/table/standard,
 /obj/item/weapon/paper_bin{
@@ -6340,12 +6351,13 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/sfp/server)
 "alK" = (
-/obj/structure/undies_wardrobe/chestdrawer/walnut,
-/obj/item/weapon/storage/mirror{
-	pixel_y = 24
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
 	},
-/turf/simulated/floor/wood/walnut,
-/area/liberty/sfp/dorm)
+/turf/simulated/floor/carpet/blue,
+/area/space)
 "alL" = (
 /obj/machinery/atmospherics/valve/digital{
 	dir = 4;
@@ -6575,9 +6587,12 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/sfp/hallway/one_north)
 "amj" = (
-/obj/structure/closet/cabinet/walnut,
-/turf/simulated/floor/wood/walnut,
-/area/liberty/sfp/dorm)
+/obj/effect/floor_decal/corner/sfp_blue/full,
+/obj/structure/hygiene/toilet{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/space)
 "amk" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
 	dir = 10
@@ -7184,18 +7199,8 @@
 /turf/simulated/floor/wood/maple,
 /area/liberty/medbay/exam)
 "ann" = (
-/obj/item/weapon/storage/mirror/wide{
-	pixel_y = -24
-	},
-/obj/machinery/light{
-	dir = 8
-	},
-/obj/structure/table/reinforced,
-/obj/structure/hygiene/sink/modern{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/sfp_blue/full,
-/turf/simulated/floor/tiled/old_tile,
+/obj/machinery/light,
+/turf/simulated/floor/carpet/blue,
 /area/space)
 "ano" = (
 /obj/structure/table/marble,
@@ -7989,20 +7994,6 @@
 /obj/structure/bed/chair/office/comfy/yellow,
 /obj/effect/floor_decal/corner/brown/full,
 /turf/simulated/floor/tiled/techmaint,
-/area/space)
-"aoD" = (
-/obj/item/weapon/storage/mirror/wide{
-	pixel_y = -24
-	},
-/obj/machinery/light{
-	dir = 4
-	},
-/obj/structure/table/reinforced,
-/obj/structure/hygiene/sink/modern{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/sfp_blue/full,
-/turf/simulated/floor/tiled/old_tile,
 /area/space)
 "aoE" = (
 /obj/machinery/door/airlock/external/bolted{
@@ -9720,10 +9711,6 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/space)
-"ara" = (
-/obj/structure/bed/chair/wood/walnut,
-/turf/simulated/floor/wood/walnut,
-/area/liberty/sfp/dorm)
 "arb" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/firedoor{
@@ -11907,12 +11894,6 @@
 	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/liberty/medbay/preop_ward)
-"aur" = (
-/obj/machinery/light{
-	dir = 4
-	},
-/turf/simulated/floor/carpet/blue,
-/area/liberty/sfp/dorm)
 "aus" = (
 /obj/effect/paint_stripe/white,
 /obj/structure/sign/noidle{
@@ -11941,9 +11922,6 @@
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/monotile,
 /area/space)
-"auv" = (
-/turf/simulated/floor/plating,
-/area/liberty/sfp/dorm)
 "auw" = (
 /obj/structure/table/woodentable/walnut,
 /obj/item/device/flashlight/lamp/green,
@@ -12304,10 +12282,6 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/space)
-"avb" = (
-/obj/structure/table/woodentable/walnut,
-/turf/simulated/floor/carpet/blue,
-/area/liberty/sfp/dorm)
 "avc" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 6
@@ -12345,11 +12319,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/space)
-"ave" = (
-/obj/structure/bed/double/wood/walnut,
-/obj/item/weapon/bedsheet/double/brown,
-/turf/simulated/floor/carpet/blue,
-/area/liberty/sfp/dorm)
 "avf" = (
 /turf/simulated/floor/tiled,
 /area/liberty/hallway/one/central)
@@ -13774,11 +13743,6 @@
 	},
 /turf/simulated/floor/tiled/old_cargo,
 /area/liberty/hotel/kitchen)
-"axN" = (
-/obj/effect/paint_stripe/white,
-/obj/effect/paint/sfp_blue,
-/turf/simulated/wall/r_wall,
-/area/liberty/sfp/recreation)
 "axO" = (
 /obj/effect/paint_stripe/white,
 /obj/effect/paint/sfp_blue,
@@ -15741,28 +15705,6 @@
 /obj/effect/floor_decal/corner/grey,
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/hallway/one/fore_terminal)
-"aBx" = (
-/obj/structure/bed/chair/wood{
-	dir = 1
-	},
-/obj/machinery/button/alternate/door/bolts{
-	dir = 1;
-	id_tag = "sfp_room_4";
-	name = "Door Bolts";
-	pixel_x = 3;
-	pixel_y = -22
-	},
-/obj/machinery/power/apc{
-	dir = 8;
-	name = "west bump";
-	pixel_x = -24
-	},
-/obj/structure/cable/green{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/turf/simulated/floor/wood,
-/area/space)
 "aBy" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
 	dir = 1
@@ -16954,13 +16896,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/space)
-"aDI" = (
-/obj/effect/wallframe_spawn/reinforced/polarized,
-/obj/machinery/door/firedoor,
-/obj/effect/paint_stripe/white,
-/obj/effect/paint/sfp_blue,
-/turf/simulated/floor/plating,
-/area/liberty/sfp/dorm)
 "aDJ" = (
 /obj/effect/wallframe_spawn/reinforced_phoron,
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
@@ -16975,25 +16910,6 @@
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
 /area/space)
-"aDK" = (
-/obj/structure/bed/chair/wood,
-/obj/machinery/button/alternate/door/bolts{
-	id_tag = "sfp_room_2";
-	name = "Door Bolts";
-	pixel_x = 3;
-	pixel_y = 28
-	},
-/obj/machinery/power/apc{
-	dir = 8;
-	name = "west bump";
-	pixel_x = -24
-	},
-/obj/structure/cable/green{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/turf/simulated/floor/wood,
-/area/liberty/sfp/dorm)
 "aDL" = (
 /obj/effect/floor_decal/corner/grey{
 	dir = 6
@@ -17064,16 +16980,6 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/space)
-"aDR" = (
-/obj/machinery/button/alternate/door/bolts{
-	id_tag = "sfp_room_2";
-	name = "Door Bolts";
-	pixel_x = 3;
-	pixel_y = 28
-	},
-/obj/structure/closet/secure_closet/hos,
-/turf/simulated/floor/wood/walnut,
-/area/liberty/sfp/dorm)
 "aDS" = (
 /obj/effect/wallframe_spawn/reinforced,
 /obj/machinery/door/firedoor,
@@ -17257,11 +17163,6 @@
 /obj/effect/paint/white,
 /turf/simulated/wall,
 /area/liberty/hallway/one/starboard)
-"aEn" = (
-/obj/effect/paint_stripe/white,
-/obj/effect/paint/sfp_blue,
-/turf/simulated/wall/r_wall,
-/area/liberty/sfp/dorm)
 "aEo" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -32467,14 +32368,6 @@
 	},
 /turf/simulated/open,
 /area/space)
-"xAA" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/carpet/blue,
-/area/liberty/sfp/dorm)
 "xBE" = (
 /obj/effect/floor_decal/corner/black{
 	dir = 9
@@ -32629,14 +32522,6 @@
 	},
 /turf/simulated/open,
 /area/space)
-"ykM" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/turf/simulated/floor/carpet/blue,
-/area/liberty/sfp/dorm)
 "ylW" = (
 /obj/structure/table/rack{
 	dir = 8
@@ -42629,18 +42514,18 @@ aaa
 afG
 aaP
 aaP
-axu
-axu
-axu
-axu
-axu
 aaP
 aaP
-axu
-axu
-axu
-axu
-axu
+aaP
+aaP
+aaP
+aaP
+aaP
+aaP
+aaP
+aaP
+aaP
+aaP
 aaP
 aaP
 aBH
@@ -42831,18 +42716,18 @@ aaa
 afG
 aaP
 aaP
-axu
-acs
-ady
-aeb
-axu
+aaP
+aaP
 aaP
 aaP
 axu
-akE
-ady
-ann
 axu
+axu
+axu
+aaP
+aaP
+aaP
+aaP
 aaP
 aaP
 aBH
@@ -43033,18 +42918,18 @@ aaa
 afG
 aaP
 aaP
-axu
-adw
-ady
-aeb
+aaP
 axu
 axu
 axu
 axu
-akE
-ady
-aoD
-axu
+aan
+acs
+abX
+aaP
+aaP
+aaP
+aaP
 aaP
 aaP
 aBH
@@ -43234,20 +43119,20 @@ aaa
 aaa
 afG
 aaP
+aaP
+aaP
 axu
-axu
-axu
-adx
+aaC
+aaC
 axJ
-aBX
-agC
-aig
-aBX
-aBX
-afr
+aan
+acs
+axJ
+axJ
+axJ
 axu
-axu
-axu
+aaP
+aaP
 aaP
 aBH
 aZj
@@ -43436,20 +43321,20 @@ aaa
 aaa
 afG
 aaP
+aaP
+aaP
 axu
-aaC
-adx
-ady
-ady
-afr
-agY
-agY
-afr
-agY
-agY
-adx
-aaC
+acs
+acs
+ajS
+acs
+acs
+ajS
+acs
+amj
 axu
+aaP
+aaP
 aaP
 aBH
 aZj
@@ -43638,20 +43523,20 @@ aGF
 afG
 afG
 aaP
+aaP
+aaP
 axu
-abX
-axJ
 axJ
 axJ
 aBX
 agZ
 aix
-aBX
-aBX
-aBX
+axJ
+axJ
+axJ
 axu
-abX
-axu
+aaP
+aaP
 aaP
 aBH
 aZj
@@ -43840,20 +43725,20 @@ aaL
 api
 aNo
 aaP
+aaP
+aaP
 axu
-axu
-axu
-adz
-aBx
+ady
+adP
 aBX
 ahi
 aiF
-aBX
-aDK
-alu
-aEn
-aEn
+axJ
+alH
+ady
 axu
+aaP
+aaP
 aaP
 aBH
 aBH
@@ -44045,16 +43930,16 @@ aaP
 aaP
 aaP
 axu
-adO
+adz
 ael
 afs
 ahv
 rRj
-afs
-ykM
-alC
-aEn
-auv
+aks
+alK
+ann
+axu
+aaP
 aaP
 aaP
 aNo
@@ -44247,16 +44132,16 @@ aaP
 aaP
 aaP
 axu
-adP
+adO
 aeo
 aBX
 ahx
 axF
-aBX
-akO
-alD
-aEn
-auv
+axJ
+aeo
+adO
+axu
+aaP
 aaP
 aaP
 aqL
@@ -44454,11 +44339,11 @@ axJ
 aBX
 ahC
 auO
-aBX
-aBX
-aBX
-aEn
-auv
+axJ
+axJ
+axJ
+axu
+aaP
 aaP
 aaP
 aNo
@@ -44651,16 +44536,16 @@ aaP
 aaP
 aaP
 axu
-adz
-aBx
+ady
+adP
 aBX
 ahH
 aDC
-aBX
-aDK
-alu
-aEn
-auv
+axJ
+alH
+ady
+axu
+aaP
 aaP
 fjN
 aNo
@@ -44841,7 +44726,7 @@ aaa
 aaa
 aIV
 afG
-afG
+aLj
 aLj
 aLj
 aLj
@@ -44853,16 +44738,16 @@ aaP
 aaP
 aaP
 axu
-adO
-aey
+adz
+ajK
 afs
 dba
 rRj
-afs
-ykM
-alC
-aEn
-auv
+aks
+alK
+ann
+axu
+aaP
 aaP
 cpA
 aNo
@@ -45054,17 +44939,17 @@ aet
 aeq
 acU
 aeq
-axN
-adQ
-aez
+axu
+adO
+aeo
 aBX
 ahV
 aju
-aBX
-akO
-alD
-aEn
-auv
+axJ
+aeo
+adO
+axu
+aaP
 wvv
 cpA
 aNo
@@ -45261,11 +45146,11 @@ axO
 axO
 axO
 ahW
-ajC
-aBX
-aBX
-aBX
-aEn
+adw
+axO
+axO
+axJ
+axu
 axu
 axu
 cpA
@@ -45463,11 +45348,11 @@ adR
 aeB
 aft
 ahY
-ajK
-aks
-aBX
-aDR
-ara
+adx
+agC
+axO
+akt
+akO
 auw
 axu
 cpA
@@ -45665,13 +45550,13 @@ adZ
 aeC
 afP
 oeO
+adQ
+agY
 ajQ
-aiK
+ahq
 akY
-alH
-ajQ
-avb
-aEn
+alC
+axu
 cpA
 aNo
 aUv
@@ -45867,13 +45752,13 @@ aAU
 afg
 xOs
 dIL
-xAA
-akt
-aBX
-alK
-ajQ
-ajQ
-aEn
+aeb
+aig
+axO
+akw
+akY
+akY
+axu
 cpA
 aNo
 aUr
@@ -46069,13 +45954,13 @@ adA
 adS
 agq
 aid
-ajS
-akw
-aBX
-amj
-aur
-ave
-aEn
+aez
+aiK
+axO
+akE
+alu
+alD
+axu
 cpA
 aNo
 aUv
@@ -46271,13 +46156,13 @@ axO
 azs
 aLR
 azs
-aDI
-aBX
-aBX
-aBX
-aEn
-aEn
-aEn
+azs
+axO
+axO
+axJ
+axu
+axu
+axu
 cpA
 aNo
 aBz
@@ -49063,13 +48948,13 @@ aaa
 aaa
 aaa
 aaa
-aan
-aan
-aan
+aaS
+aaS
+aaS
 lck
-aan
-aan
-aan
+aaS
+aaS
+aaS
 aaa
 aaa
 aaa
@@ -49266,11 +49151,11 @@ aaa
 aaa
 aaa
 aaa
-aan
+aaS
 alo
 hyo
 alr
-aan
+aaS
 aaa
 aaa
 aaa
@@ -49867,26 +49752,26 @@ aaa
 aaa
 aaa
 aaa
-aan
+aaS
 aaa
 aaa
 aaa
 aaa
-aan
+aaS
 alo
 hyo
 alr
-aan
+aaS
 aaa
 aaa
 aaa
 aaa
-aan
+aaS
 aaa
 aaa
 aaa
 aaa
-aan
+aaS
 aaa
 aaa
 aIV
@@ -50070,29 +49955,29 @@ aaa
 aaa
 aaa
 aaS
-aan
+aaS
 abH
 abH
-aan
-aan
-aan
+aaS
+aaS
+aaS
 lck
-aan
-aan
-aan
+aaS
+aaS
+aaS
 abH
 abH
-aan
-aan
-aan
+aaS
+aaS
+aaS
 abH
 abH
-aan
-aan
-aan
+aaS
+aaS
+aaS
 abH
 abH
-aan
+aaS
 akF
 akF
 akF
@@ -50271,21 +50156,21 @@ aaa
 aaa
 aaa
 aaa
-aan
+aaS
 aRf
 ayb
 alO
 aHo
-aan
+aaS
 aih
 hyo
 aXF
-aan
+aaS
 aUA
 ajJ
 ajJ
 alv
-aan
+aaS
 aUA
 ajJ
 ajJ
@@ -50295,12 +50180,12 @@ aUA
 ajJ
 ajJ
 alv
-aan
+aaS
 aUA
 ajJ
 ajJ
 alv
-aan
+aaS
 azw
 ajJ
 ajJ
@@ -50877,21 +50762,21 @@ aaa
 aaa
 aaa
 aaa
-aan
+aaS
 aHT
 aVc
 aXO
 ayj
-aan
+aaS
 atQ
 aXv
 aiL
-aan
+aaS
 alw
 asN
 asN
 alw
-aan
+aaS
 alw
 asN
 asN
@@ -50901,12 +50786,12 @@ alw
 asN
 asN
 alw
-aan
+aaS
 alw
 asN
 asN
 alw
-aan
+aaS
 aUt
 aXv
 aXz
@@ -51079,36 +50964,36 @@ aaa
 aaa
 aaa
 aaa
-aan
-aan
+aaS
+aaS
 abH
 acH
-aan
-aan
-aan
+aaS
+aaS
+aaS
 avl
-aan
-aan
-aan
+aaS
+aaS
+aaS
 abH
 abH
-aan
-aan
-aan
+aaS
+aaS
+aaS
 abH
 abH
-aan
-aan
-aan
+aaS
+aaS
+aaS
 abH
 abH
-aan
-aan
-aan
+aaS
+aaS
+aaS
 abH
 abH
-aan
-aan
+aaS
+aaS
 awU
 aWy
 aKI
@@ -51281,31 +51166,31 @@ aaa
 aaa
 aaa
 aaa
-aan
+aaS
 aaa
 aaa
 aaa
 aaa
-aan
+aaS
 alo
 aXv
 alr
-aan
+aaS
 aaa
 aaa
 aaa
 aaa
-aan
+aaS
 aaa
 aaa
 aaa
 aaa
-aan
+aaS
 aaa
 aaa
 aaa
 aaa
-aan
+aaS
 aaa
 aaa
 aaa
@@ -51896,7 +51781,7 @@ aea
 alo
 aXv
 alr
-aan
+aaS
 aaa
 aaa
 aaa
@@ -52093,13 +51978,13 @@ aaa
 aaa
 aaa
 aaa
-aan
-aan
-aan
+aaS
+aaS
+aaS
 avl
-aan
-aan
-aan
+aaS
+aaS
+aaS
 aaa
 aaa
 aaa
