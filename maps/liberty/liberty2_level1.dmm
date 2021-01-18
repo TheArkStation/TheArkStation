@@ -70,8 +70,10 @@
 /turf/space,
 /area/space)
 "aan" = (
-/turf/simulated/wall/liberty/sfp_blue,
-/area/space)
+/obj/effect/paint_stripe/white,
+/obj/effect/paint/sfp_blue,
+/turf/simulated/wall/r_wall,
+/area/liberty/scg/docks)
 "aao" = (
 /obj/machinery/light{
 	dir = 1
@@ -305,15 +307,10 @@
 /turf/simulated/floor/plating,
 /area/liberty/sfp/hallway/one_north)
 "aaS" = (
-/obj/effect/wallframe_spawn/reinforced,
-/obj/machinery/door/firedoor,
-/obj/machinery/door/blast/regular/open{
-	icon_state = "pdoor0";
-	id_tag = "sfp_lockdown";
-	name = "SFP Lockdown"
-	},
-/turf/simulated/floor/plating,
-/area/liberty/sfp/chief)
+/obj/effect/paint_stripe/white,
+/obj/effect/paint/sfp_blue,
+/turf/simulated/wall/r_wall,
+/area/liberty/scg/docks)
 "aaT" = (
 /obj/structure/catwalk,
 /obj/machinery/light/small/red{
@@ -818,10 +815,12 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/sfp/chief)
 "abH" = (
-/obj/effect/wallframe_spawn/reinforced/polarized,
+/obj/effect/wallframe_spawn/reinforced,
 /obj/machinery/door/firedoor,
+/obj/effect/paint_stripe/white,
+/obj/effect/paint/sfp_blue,
 /turf/simulated/floor/plating,
-/area/liberty/sfp/chief)
+/area/liberty/scg/docks)
 "abI" = (
 /obj/effect/floor_decal/corner/grey{
 	dir = 9
@@ -1383,15 +1382,10 @@
 /area/liberty/sfp/office)
 "acH" = (
 /obj/effect/wallframe_spawn/reinforced,
-/obj/machinery/door/firedoor,
-/obj/machinery/door/blast/regular/open{
-	dir = 8;
-	icon_state = "pdoor0";
-	id_tag = "sfp_lockdown";
-	name = "SFP Lockdown"
-	},
+/obj/effect/paint_stripe/white,
+/obj/effect/paint/sfp_blue,
 /turf/simulated/floor/plating,
-/area/liberty/sfp/office)
+/area/liberty/scg/docks)
 "acI" = (
 /obj/effect/floor_decal/corner/grey{
 	dir = 5
@@ -1778,13 +1772,9 @@
 "adq" = (
 /obj/effect/wallframe_spawn/reinforced,
 /obj/machinery/door/firedoor,
-/obj/machinery/door/blast/shutters/open{
-	icon_state = "shutter0";
-	id_tag = "sfp_checkpoint_shutters";
-	name = "SFP Checkpoint Shutters"
-	},
+/obj/effect/paint_stripe/white,
 /turf/simulated/floor/plating,
-/area/liberty/sfp/office)
+/area/liberty/scg/docks)
 "adr" = (
 /obj/structure/flora/jungle/grass/b_6,
 /turf/simulated/floor/grass/no_edges,
@@ -2157,28 +2147,10 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/sfp/recreation)
 "aea" = (
-/obj/effect/floor_decal/corner/white{
-	dir = 5
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 4
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 9
-	},
-/obj/machinery/light_switch{
-	pixel_x = 24;
-	pixel_y = 24
-	},
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/tiled/techmaint,
-/area/liberty/sfp/recreation)
+/obj/effect/paint/sfp_blue,
+/obj/effect/paint_stripe/white,
+/turf/simulated/wall/r_wall,
+/area/liberty/scg/docks)
 "aeb" = (
 /obj/structure/hygiene/shower{
 	dir = 1
@@ -2193,32 +2165,9 @@
 /turf/simulated/floor/tiled/old_cargo,
 /area/space)
 "aec" = (
-/obj/structure/bed/chair/wood{
-	dir = 1
-	},
-/obj/machinery/light_switch{
-	dir = 1;
-	pixel_x = 11;
-	pixel_y = -23
-	},
-/obj/machinery/button/alternate/door/bolts{
-	dir = 1;
-	id_tag = "sfp_room_4";
-	name = "Door Bolts";
-	pixel_x = 3;
-	pixel_y = -22
-	},
-/obj/machinery/power/apc{
-	dir = 8;
-	name = "west bump";
-	pixel_x = -24
-	},
-/obj/structure/cable/green{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/turf/simulated/floor/wood,
-/area/space)
+/obj/effect/paint_stripe/white,
+/turf/simulated/wall/r_wall,
+/area/liberty/scg/docks)
 "aed" = (
 /obj/effect/floor_decal/corner/white/three_quarters,
 /obj/effect/floor_decal/steeldecal/steel_decals4{
@@ -2355,9 +2304,10 @@
 /turf/simulated/open,
 /area/space)
 "aeq" = (
-/obj/effect/wallframe_spawn/reinforced/polarized,
-/turf/simulated/floor/plating,
-/area/liberty/sfp/interrogation)
+/obj/effect/paint_stripe/white,
+/obj/effect/paint/sfp_blue,
+/turf/simulated/wall/r_wall,
+/area/liberty/sfp/hallway/one_north)
 "aer" = (
 /obj/effect/floor_decal/corner/grey{
 	dir = 9
@@ -2392,15 +2342,10 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/sfp/hallway/one_south)
 "aet" = (
-/obj/effect/wallframe_spawn/reinforced,
-/obj/machinery/door/firedoor,
-/obj/machinery/door/blast/shutters/open{
-	icon_state = "shutter0";
-	id_tag = "sfp_checkpoint_shutters";
-	name = "SFP Checkpoint Shutters"
-	},
-/turf/simulated/floor/plating,
-/area/liberty/sfp/reception)
+/obj/effect/paint_stripe/white,
+/obj/effect/paint/sfp_blue,
+/turf/simulated/wall/r_wall,
+/area/liberty/sfp/armory)
 "aeu" = (
 /obj/effect/floor_decal/corner/grey{
 	dir = 4
@@ -5372,10 +5317,10 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/sfp/dorm)
 "ajT" = (
-/obj/effect/wallframe_spawn/reinforced/polarized,
-/obj/machinery/door/firedoor,
-/turf/simulated/floor/plating,
-/area/liberty/sfp/dorm)
+/obj/effect/paint_stripe/white,
+/obj/effect/paint/sfp_blue,
+/turf/simulated/wall/r_wall,
+/area/liberty/sfp/chief)
 "ajU" = (
 /obj/machinery/light_switch{
 	dir = 8;
@@ -5796,28 +5741,10 @@
 /turf/simulated/floor/tiled/old_cargo,
 /area/space)
 "akF" = (
-/obj/structure/bed/chair/wood,
-/obj/machinery/button/alternate/door/bolts{
-	id_tag = "sfp_room_2";
-	name = "Door Bolts";
-	pixel_x = 3;
-	pixel_y = 28
-	},
-/obj/machinery/light_switch{
-	pixel_x = 12;
-	pixel_y = 29
-	},
-/obj/machinery/power/apc{
-	dir = 8;
-	name = "west bump";
-	pixel_x = -24
-	},
-/obj/structure/cable/green{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/turf/simulated/floor/wood,
-/area/liberty/sfp/dorm)
+/obj/effect/paint_stripe/white,
+/obj/effect/paint/sfp_blue,
+/turf/simulated/wall/r_wall,
+/area/liberty/sfp/office)
 "akG" = (
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/white/monotile,
@@ -6224,8 +6151,16 @@
 /area/liberty/scg/docks)
 "alp" = (
 /obj/effect/wallframe_spawn/reinforced,
+/obj/machinery/door/firedoor,
+/obj/machinery/door/blast/regular/open{
+	icon_state = "pdoor0";
+	id_tag = "sfp_lockdown";
+	name = "SFP Lockdown"
+	},
+/obj/effect/paint_stripe/white,
+/obj/effect/paint/sfp_blue,
 /turf/simulated/floor/plating,
-/area/liberty/scg/docks)
+/area/liberty/sfp/chief)
 "alq" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -6350,19 +6285,10 @@
 /turf/simulated/floor/carpet/blue,
 /area/liberty/sfp/dorm)
 "alE" = (
-/obj/machinery/button/alternate/door/bolts{
-	id_tag = "sfp_room_2";
-	name = "Door Bolts";
-	pixel_x = 3;
-	pixel_y = 28
-	},
-/obj/machinery/light_switch{
-	pixel_x = 12;
-	pixel_y = 29
-	},
-/obj/structure/closet/secure_closet/hos,
-/turf/simulated/floor/wood/walnut,
-/area/liberty/sfp/dorm)
+/obj/effect/paint/sfp_blue,
+/obj/effect/paint_stripe/white,
+/turf/simulated/wall/r_wall,
+/area/liberty/sfp/hallway/one_north)
 "alF" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 4
@@ -7968,6 +7894,7 @@
 	},
 /obj/machinery/atmospherics/valve/shutoff/scrubbers,
 /obj/machinery/atmospherics/valve/shutoff/supply,
+/obj/effect/floor_decal/industrial/shutoff,
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/hallway/one/starboard)
 "aov" = (
@@ -12600,6 +12527,12 @@
 "avt" = (
 /obj/effect/wallframe_spawn/reinforced,
 /obj/machinery/door/firedoor,
+/obj/machinery/door/blast/regular/open{
+	icon_state = "pdoor0";
+	id_tag = "sfp_lockdown";
+	name = "SFP Lockdown"
+	},
+/obj/effect/paint_stripe/white,
 /turf/simulated/floor/plating,
 /area/liberty/sfp/office)
 "avu" = (
@@ -12611,6 +12544,13 @@
 	},
 /turf/simulated/floor/carpet/red,
 /area/liberty/hotel/restaurant/main)
+"avv" = (
+/obj/effect/wallframe_spawn/reinforced/polarized,
+/obj/machinery/door/firedoor,
+/obj/effect/paint_stripe/white,
+/obj/effect/paint/sfp_blue,
+/turf/simulated/floor/plating,
+/area/liberty/sfp/chief)
 "avw" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -12717,6 +12657,20 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/liberty/hotel/toilet)
+"avG" = (
+/obj/effect/wallframe_spawn/reinforced,
+/obj/machinery/door/firedoor,
+/obj/effect/paint_stripe/white,
+/obj/effect/paint/sfp_blue,
+/turf/simulated/floor/plating,
+/area/liberty/sfp/office)
+"avH" = (
+/obj/effect/wallframe_spawn/reinforced,
+/obj/machinery/door/firedoor,
+/obj/effect/paint_stripe/white,
+/obj/effect/paint/sfp_blue,
+/turf/simulated/floor/plating,
+/area/liberty/sfp/armory)
 "avI" = (
 /obj/machinery/vending/cola{
 	dir = 8
@@ -13185,10 +13139,8 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/space)
 "awB" = (
-/obj/effect/wallframe_spawn/reinforced,
-/obj/machinery/door/firedoor,
-/turf/simulated/floor/plating,
-/area/liberty/sfp/hallway/one_north)
+/turf/simulated/wall,
+/area/liberty/sfp/office)
 "awC" = (
 /obj/effect/floor_decal/corner/brown/diagonal,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -13387,6 +13339,11 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/space)
+"awU" = (
+/obj/effect/wallframe_spawn/reinforced,
+/obj/effect/paint_stripe/white,
+/turf/simulated/floor/plating,
+/area/liberty/scg/docks)
 "awV" = (
 /obj/effect/floor_decal/corner/grey{
 	dir = 9
@@ -13416,6 +13373,19 @@
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/space)
+"awZ" = (
+/obj/effect/wallframe_spawn/reinforced,
+/obj/machinery/door/firedoor,
+/obj/machinery/door/blast/regular/open{
+	dir = 8;
+	icon_state = "pdoor0";
+	id_tag = "sfp_lockdown";
+	name = "SFP Lockdown"
+	},
+/obj/effect/paint_stripe/white,
+/obj/effect/paint/sfp_blue,
+/turf/simulated/floor/plating,
+/area/liberty/sfp/office)
 "axa" = (
 /obj/effect/floor_decal/corner/grey{
 	dir = 6
@@ -13621,6 +13591,11 @@
 /obj/structure/lattice,
 /turf/space,
 /area/space)
+"axu" = (
+/obj/effect/paint_stripe/white,
+/obj/effect/paint/sfp_blue,
+/turf/simulated/wall/r_wall,
+/area/space)
 "axv" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
 	dir = 4
@@ -13746,6 +13721,16 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/hallway/one/fore_port)
+"axI" = (
+/obj/effect/paint_stripe/white,
+/obj/effect/paint/sfp_blue,
+/turf/simulated/wall/r_wall,
+/area/liberty/sfp/lobby)
+"axJ" = (
+/obj/effect/paint_stripe/white,
+/obj/effect/paint/sfp_blue,
+/turf/simulated/wall,
+/area/space)
 "axK" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -13789,6 +13774,16 @@
 	},
 /turf/simulated/floor/tiled/old_cargo,
 /area/liberty/hotel/kitchen)
+"axN" = (
+/obj/effect/paint_stripe/white,
+/obj/effect/paint/sfp_blue,
+/turf/simulated/wall/r_wall,
+/area/liberty/sfp/recreation)
+"axO" = (
+/obj/effect/paint_stripe/white,
+/obj/effect/paint/sfp_blue,
+/turf/simulated/wall,
+/area/liberty/sfp/recreation)
 "axP" = (
 /obj/structure/table/marble,
 /obj/structure/window/reinforced{
@@ -14715,10 +14710,12 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/space)
 "azs" = (
-/obj/effect/wallframe_spawn/reinforced,
+/obj/effect/wallframe_spawn/reinforced/polarized,
 /obj/machinery/door/firedoor,
+/obj/effect/paint_stripe/white,
+/obj/effect/paint/sfp_blue,
 /turf/simulated/floor/plating,
-/area/liberty/sfp/armory)
+/area/liberty/sfp/recreation)
 "azt" = (
 /obj/effect/floor_decal/corner/grey/mono,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -14774,6 +14771,11 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/scg/docks)
+"azx" = (
+/obj/effect/paint_stripe/white,
+/obj/effect/paint/sfp_blue,
+/turf/simulated/wall,
+/area/liberty/sfp/hallway/one_north)
 "azy" = (
 /obj/effect/floor_decal/corner/grey,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -14897,6 +14899,13 @@
 /obj/structure/flora/jungle/grass/b_3,
 /turf/simulated/floor/grass,
 /area/liberty/hallway/one/fore_port)
+"azL" = (
+/obj/effect/wallframe_spawn/reinforced,
+/obj/machinery/door/firedoor,
+/obj/effect/paint_stripe/white,
+/obj/effect/paint/sfp_blue,
+/turf/simulated/floor/plating,
+/area/liberty/sfp/hallway/one_north)
 "azM" = (
 /obj/effect/floor_decal/corner/grey{
 	dir = 5
@@ -14943,6 +14952,18 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/sfp/hallway/one_south)
+"azR" = (
+/obj/effect/wallframe_spawn/reinforced,
+/obj/machinery/door/firedoor,
+/obj/machinery/door/blast/shutters/open{
+	icon_state = "shutter0";
+	id_tag = "sfp_checkpoint_shutters";
+	name = "SFP Checkpoint Shutters"
+	},
+/obj/effect/paint_stripe/white,
+/obj/effect/paint/sfp_blue,
+/turf/simulated/floor/plating,
+/area/liberty/sfp/office)
 "azS" = (
 /obj/structure/bed/chair/padded/blue{
 	dir = 4
@@ -15431,8 +15452,28 @@
 /turf/simulated/floor/plating,
 /area/liberty/hotel/foyer)
 "aAU" = (
-/turf/simulated/wall/r_wall/liberty/sfp_blue,
-/area/space)
+/obj/effect/floor_decal/corner/white{
+	dir = 5
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 4
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 9
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/light_switch/advanced{
+	pixel_x = 24;
+	pixel_y = 24
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/liberty/sfp/recreation)
 "aAV" = (
 /obj/structure/railing/mapped,
 /obj/machinery/light/spot{
@@ -15700,6 +15741,28 @@
 /obj/effect/floor_decal/corner/grey,
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/hallway/one/fore_terminal)
+"aBx" = (
+/obj/structure/bed/chair/wood{
+	dir = 1
+	},
+/obj/machinery/button/alternate/door/bolts{
+	dir = 1;
+	id_tag = "sfp_room_4";
+	name = "Door Bolts";
+	pixel_x = 3;
+	pixel_y = -22
+	},
+/obj/machinery/power/apc{
+	dir = 8;
+	name = "west bump";
+	pixel_x = -24
+	},
+/obj/structure/cable/green{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/wood,
+/area/space)
 "aBy" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
 	dir = 1
@@ -15788,6 +15851,10 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/space)
+"aBJ" = (
+/obj/effect/paint/sfp_blue,
+/turf/simulated/wall/r_wall,
+/area/liberty/sfp/hallway/one_south)
 "aBK" = (
 /obj/effect/floor_decal/corner/grey/mono,
 /obj/machinery/atmospherics/valve/shutoff/supply,
@@ -15812,6 +15879,17 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/space)
+"aBM" = (
+/obj/effect/wallframe_spawn/reinforced,
+/obj/machinery/door/firedoor,
+/obj/machinery/door/blast/shutters/open{
+	icon_state = "shutter0";
+	id_tag = "sfp_checkpoint_shutters";
+	name = "SFP Checkpoint Shutters"
+	},
+/obj/effect/paint/sfp_blue,
+/turf/simulated/floor/plating,
+/area/liberty/sfp/hallway/one_south)
 "aBN" = (
 /obj/structure/table/marble,
 /obj/machinery/light{
@@ -15923,6 +16001,11 @@
 	},
 /turf/simulated/floor/grass,
 /area/liberty/hallway/one/fore_port)
+"aBX" = (
+/obj/effect/paint_stripe/white,
+/obj/effect/paint/sfp_blue,
+/turf/simulated/wall,
+/area/liberty/sfp/dorm)
 "aBY" = (
 /obj/machinery/access_button/airlock_interior{
 	master_tag = "engine_airlock";
@@ -16004,6 +16087,11 @@
 /obj/random/tech_supply,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/space)
+"aCe" = (
+/obj/effect/paint_stripe/white,
+/obj/effect/paint/sfp_blue,
+/turf/simulated/wall,
+/area/liberty/sfp/interrogation)
 "aCf" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/deployable/barrier,
@@ -16313,6 +16401,12 @@
 	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/space)
+"aCG" = (
+/obj/effect/wallframe_spawn/reinforced/polarized,
+/obj/effect/paint_stripe/white,
+/obj/effect/paint/sfp_blue,
+/turf/simulated/floor/plating,
+/area/liberty/sfp/interrogation)
 "aCH" = (
 /obj/structure/table/rack,
 /obj/item/weapon/stock_parts/circuitboard/batteryrack,
@@ -16535,6 +16629,11 @@
 	},
 /turf/simulated/floor/exoplanet/grass,
 /area/liberty/hotel/restaurant/main)
+"aDb" = (
+/obj/effect/paint_stripe/white,
+/obj/effect/paint/sfp_blue,
+/turf/simulated/wall/r_wall,
+/area/liberty/sfp/reception)
 "aDc" = (
 /obj/effect/floor_decal/corner/grey{
 	dir = 6
@@ -16676,6 +16775,18 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/liberty/sfp/hallway/one_north)
+"aDt" = (
+/obj/effect/wallframe_spawn/reinforced,
+/obj/machinery/door/firedoor,
+/obj/machinery/door/blast/shutters/open{
+	icon_state = "shutter0";
+	id_tag = "sfp_checkpoint_shutters";
+	name = "SFP Checkpoint Shutters"
+	},
+/obj/effect/paint_stripe/white,
+/obj/effect/paint/sfp_blue,
+/turf/simulated/floor/plating,
+/area/liberty/sfp/reception)
 "aDu" = (
 /obj/effect/floor_decal/corner/black/diagonal,
 /obj/structure/table/standard,
@@ -16713,6 +16824,19 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/space)
+"aDy" = (
+/obj/effect/wallframe_spawn/reinforced,
+/obj/machinery/door/firedoor,
+/obj/machinery/door/blast/regular/open{
+	dir = 8;
+	icon_state = "pdoor0";
+	id_tag = "sfp_lockdown";
+	name = "SFP Lockdown"
+	},
+/obj/effect/paint_stripe/white,
+/obj/effect/paint/sfp_blue,
+/turf/simulated/floor/plating,
+/area/liberty/sfp/reception)
 "aDz" = (
 /obj/effect/floor_decal/steeldecal/steel_decals6{
 	dir = 1
@@ -16755,6 +16879,17 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/space)
+"aDC" = (
+/obj/effect/floor_decal/corner/grey{
+	dir = 10
+	},
+/obj/machinery/light_switch/advanced{
+	dir = 1;
+	icon_state = "light0";
+	pixel_y = -24
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/liberty/sfp/dorm)
 "aDD" = (
 /obj/effect/floor_decal/corner/grey/mono,
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -16819,6 +16954,13 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/space)
+"aDI" = (
+/obj/effect/wallframe_spawn/reinforced/polarized,
+/obj/machinery/door/firedoor,
+/obj/effect/paint_stripe/white,
+/obj/effect/paint/sfp_blue,
+/turf/simulated/floor/plating,
+/area/liberty/sfp/dorm)
 "aDJ" = (
 /obj/effect/wallframe_spawn/reinforced_phoron,
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
@@ -16833,6 +16975,25 @@
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
 /area/space)
+"aDK" = (
+/obj/structure/bed/chair/wood,
+/obj/machinery/button/alternate/door/bolts{
+	id_tag = "sfp_room_2";
+	name = "Door Bolts";
+	pixel_x = 3;
+	pixel_y = 28
+	},
+/obj/machinery/power/apc{
+	dir = 8;
+	name = "west bump";
+	pixel_x = -24
+	},
+/obj/structure/cable/green{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/wood,
+/area/liberty/sfp/dorm)
 "aDL" = (
 /obj/effect/floor_decal/corner/grey{
 	dir = 6
@@ -16850,8 +17011,11 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/hallway/one/aft_terminal)
 "aDM" = (
-/turf/simulated/wall/liberty/sfp_blue,
-/area/liberty/sfp/dorm)
+/obj/effect/wallframe_spawn/reinforced,
+/obj/effect/paint_stripe/white,
+/obj/effect/paint/sfp_blue,
+/turf/simulated/floor/plating,
+/area/liberty/sfp/reception)
 "aDN" = (
 /obj/effect/floor_decal/borderfloorwhite/corner{
 	dir = 4
@@ -16900,6 +17064,23 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/space)
+"aDR" = (
+/obj/machinery/button/alternate/door/bolts{
+	id_tag = "sfp_room_2";
+	name = "Door Bolts";
+	pixel_x = 3;
+	pixel_y = 28
+	},
+/obj/structure/closet/secure_closet/hos,
+/turf/simulated/floor/wood/walnut,
+/area/liberty/sfp/dorm)
+"aDS" = (
+/obj/effect/wallframe_spawn/reinforced,
+/obj/machinery/door/firedoor,
+/obj/effect/paint_stripe/white,
+/obj/effect/paint/sfp_blue,
+/turf/simulated/floor/plating,
+/area/liberty/sfp/lobby)
 "aDT" = (
 /turf/simulated/floor/shuttle_ceiling/sol,
 /area/space)
@@ -17076,6 +17257,11 @@
 /obj/effect/paint/white,
 /turf/simulated/wall,
 /area/liberty/hallway/one/starboard)
+"aEn" = (
+/obj/effect/paint_stripe/white,
+/obj/effect/paint/sfp_blue,
+/turf/simulated/wall/r_wall,
+/area/liberty/sfp/dorm)
 "aEo" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -17116,9 +17302,10 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/space)
 "aEs" = (
-/obj/effect/wallframe_spawn/reinforced,
-/turf/simulated/floor/plating,
-/area/liberty/sfp/reception)
+/obj/effect/paint_stripe/white,
+/obj/effect/paint/sfp_blue,
+/turf/simulated/wall/r_wall,
+/area/liberty/sfp/hallway/one_south)
 "aEt" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -17204,8 +17391,10 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/hallway/one/fore_terminal)
 "aEB" = (
-/turf/simulated/wall/r_wall/liberty/sfp_blue,
-/area/liberty/sfp/recreation)
+/obj/effect/paint_stripe/white,
+/obj/effect/paint/sfp_blue,
+/turf/simulated/wall/r_wall,
+/area/liberty/sfp/interrogation)
 "aEC" = (
 /obj/effect/floor_decal/corner/brown{
 	dir = 6
@@ -17221,6 +17410,11 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/space)
+"aEE" = (
+/obj/effect/paint_stripe/white,
+/obj/effect/paint/sfp_blue,
+/turf/simulated/wall/r_wall,
+/area/liberty/sfp/server)
 "aEF" = (
 /obj/effect/floor_decal/spline/fancy/black{
 	dir = 4
@@ -17305,11 +17499,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/hallway/one/aft_terminal)
-"aEO" = (
-/obj/effect/wallframe_spawn/reinforced,
-/obj/machinery/door/firedoor,
-/turf/simulated/floor/plating,
-/area/liberty/sfp/lobby)
 "aEP" = (
 /obj/machinery/atmospherics/binary/pump/on{
 	dir = 8
@@ -17691,16 +17880,6 @@
 /obj/machinery/door/airlock/civilian,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/liberty/hotel/staff_room)
-"aFC" = (
-/obj/effect/wallframe_spawn/reinforced,
-/obj/machinery/door/firedoor,
-/obj/machinery/door/blast/shutters/open{
-	icon_state = "shutter0";
-	id_tag = "sfp_checkpoint_shutters";
-	name = "SFP Checkpoint Shutters"
-	},
-/turf/simulated/floor/plating,
-/area/liberty/sfp/hallway/one_south)
 "aFE" = (
 /obj/structure/cable/yellow{
 	d1 = 1;
@@ -18018,11 +18197,6 @@
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
 /area/space)
-"aGl" = (
-/obj/effect/wallframe_spawn/reinforced/polarized,
-/obj/machinery/door/firedoor,
-/turf/simulated/floor/plating,
-/area/liberty/sfp/recreation)
 "aGm" = (
 /obj/machinery/light,
 /obj/structure/table/standard,
@@ -18049,9 +18223,6 @@
 /obj/random/trash,
 /turf/simulated/floor/plating,
 /area/space)
-"aGr" = (
-/turf/simulated/wall/r_wall/liberty/sfp_blue,
-/area/liberty/sfp/dorm)
 "aGs" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/blast/regular/open{
@@ -18520,9 +18691,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/liberty/scg/docks)
-"aHp" = (
-/turf/simulated/wall/r_wall/prepainted,
-/area/liberty/sfp/server)
 "aHq" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/blast/regular/open{
@@ -18640,11 +18808,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/hallway/one/aft_docks)
-"aHF" = (
-/obj/effect/wallframe_spawn/reinforced,
-/obj/machinery/door/firedoor,
-/turf/simulated/floor/plating,
-/area/liberty/scg/docks)
 "aHG" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/blast/regular/open{
@@ -18807,9 +18970,6 @@
 /obj/effect/paint_stripe/white,
 /turf/simulated/wall/prepainted,
 /area/space)
-"aHX" = (
-/turf/simulated/wall/liberty/sfp_blue,
-/area/liberty/sfp/office)
 "aHY" = (
 /obj/random/trash,
 /obj/random/obstruction,
@@ -18907,9 +19067,6 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/liberty/hallway/one/fore_terminal)
-"aIg" = (
-/turf/simulated/wall/r_wall/liberty/sfp_blue,
-/area/liberty/sfp/armory)
 "aIh" = (
 /obj/effect/floor_decal/corner/grey{
 	dir = 4
@@ -19883,9 +20040,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/hallway/one/aft_terminal)
-"aKh" = (
-/turf/simulated/wall/r_wall/liberty/sfp_blue,
-/area/liberty/sfp/reception)
 "aKi" = (
 /obj/effect/floor_decal/corner/grey{
 	dir = 9
@@ -20778,9 +20932,6 @@
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/tiled/techmaint,
 /area/space)
-"aLU" = (
-/turf/simulated/wall/liberty/sfp_blue,
-/area/liberty/sfp/interrogation)
 "aLV" = (
 /obj/effect/floor_decal/corner/black/full,
 /obj/effect/floor_decal/steeldecal/steel_decals4{
@@ -22104,17 +22255,6 @@
 /obj/structure/grille,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/space)
-"aOo" = (
-/obj/effect/wallframe_spawn/reinforced,
-/obj/machinery/door/firedoor,
-/obj/machinery/door/blast/regular/open{
-	dir = 8;
-	icon_state = "pdoor0";
-	id_tag = "sfp_lockdown";
-	name = "SFP Lockdown"
-	},
-/turf/simulated/floor/plating,
-/area/liberty/sfp/reception)
 "aOp" = (
 /obj/effect/floor_decal/corner/grey/mono,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -23876,9 +24016,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/monotile,
 /area/space)
-"aRR" = (
-/turf/simulated/wall/r_wall/liberty/sfp_blue,
-/area/liberty/scg/docks)
 "aRS" = (
 /obj/effect/floor_decal/corner/grey{
 	dir = 1
@@ -24314,9 +24451,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/space)
-"aSL" = (
-/turf/simulated/wall/liberty/sfp_blue,
-/area/liberty/sfp/recreation)
 "aSM" = (
 /obj/effect/floor_decal/spline/fancy/black,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -24374,11 +24508,8 @@
 /turf/simulated/floor/tiled/monotile,
 /area/liberty/hotel/staff_room)
 "aSS" = (
-/turf/simulated/wall/r_wall/liberty/sfp_blue,
+/turf/simulated/wall/r_wall,
 /area/liberty/sfp/lobby)
-"aST" = (
-/turf/simulated/wall/r_wall/liberty/sfp_blue,
-/area/liberty/sfp/chief)
 "aSU" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/blast/shutters/open{
@@ -24910,9 +25041,6 @@
 /obj/machinery/portable_atmospherics/hydroponics,
 /turf/simulated/floor/tiled/techmaint,
 /area/space)
-"aTX" = (
-/turf/simulated/wall/liberty/sfp_blue,
-/area/liberty/sfp/hallway/one_north)
 "aTY" = (
 /obj/structure/plasticflaps,
 /obj/machinery/conveyor{
@@ -25182,9 +25310,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/hallway/one/fore_port)
-"aUw" = (
-/turf/simulated/wall/r_wall/liberty/sfp_blue,
-/area/liberty/sfp/interrogation)
 "aUx" = (
 /obj/structure/closet,
 /obj/effect/floor_decal/spline/fancy/black{
@@ -25746,9 +25871,6 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/liberty/hallway/one/aft_docks)
-"aVI" = (
-/turf/simulated/wall/r_wall/liberty/sfp_blue,
-/area/liberty/sfp/server)
 "aVJ" = (
 /obj/effect/paint/white,
 /obj/effect/paint_stripe/purple,
@@ -26688,16 +26810,6 @@
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/space)
-"aXL" = (
-/obj/effect/wallframe_spawn/reinforced,
-/obj/machinery/door/firedoor,
-/obj/machinery/door/blast/regular/open{
-	icon_state = "pdoor0";
-	id_tag = "sfp_lockdown";
-	name = "SFP Lockdown"
-	},
-/turf/simulated/floor/plating,
-/area/liberty/sfp/office)
 "aXM" = (
 /obj/effect/floor_decal/spline/fancy/black{
 	dir = 8
@@ -26907,9 +27019,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/techfloor,
 /area/liberty/sfp/armory)
-"aYf" = (
-/turf/simulated/wall/r_wall/liberty/sfp_blue,
-/area/liberty/sfp/hallway/one_north)
 "aYg" = (
 /obj/structure/catwalk,
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
@@ -27109,9 +27218,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/hallway/one/aft_port)
-"aYA" = (
-/turf/simulated/wall/r_wall/liberty/sfp_blue,
-/area/liberty/sfp/hallway/one_south)
 "aYB" = (
 /obj/effect/floor_decal/corner/black/diagonal,
 /obj/machinery/alarm{
@@ -27305,9 +27411,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/hallway/one/fore_terminal)
-"aYX" = (
-/turf/simulated/wall/r_wall/liberty/sfp_blue,
-/area/liberty/sfp/office)
 "aYY" = (
 /obj/structure/sign/warning/compressed_gas{
 	dir = 4;
@@ -42526,18 +42629,18 @@ aaa
 afG
 aaP
 aaP
-aAU
-aAU
-aAU
-aAU
-aAU
+axu
+axu
+axu
+axu
+axu
 aaP
 aaP
-aAU
-aAU
-aAU
-aAU
-aAU
+axu
+axu
+axu
+axu
+axu
 aaP
 aaP
 aBH
@@ -42728,18 +42831,18 @@ aaa
 afG
 aaP
 aaP
-aAU
+axu
 acs
 ady
 aeb
-aAU
+axu
 aaP
 aaP
-aAU
+axu
 akE
 ady
 ann
-aAU
+axu
 aaP
 aaP
 aBH
@@ -42930,18 +43033,18 @@ aaa
 afG
 aaP
 aaP
-aan
+axu
 adw
 ady
 aeb
-aan
-aAU
-aAU
-aan
+axu
+axu
+axu
+axu
 akE
 ady
 aoD
-aAU
+axu
 aaP
 aaP
 aBH
@@ -43131,20 +43234,20 @@ aaa
 aaa
 afG
 aaP
-aAU
-aAU
-aan
+axu
+axu
+axu
 adx
-aan
-aDM
+axJ
+aBX
 agC
 aig
-aDM
-aDM
+aBX
+aBX
 afr
-aan
-aAU
-aAU
+axu
+axu
+axu
 aaP
 aBH
 aZj
@@ -43333,7 +43436,7 @@ aaa
 aaa
 afG
 aaP
-aAU
+axu
 aaC
 adx
 ady
@@ -43346,7 +43449,7 @@ agY
 agY
 adx
 aaC
-aAU
+axu
 aaP
 aBH
 aZj
@@ -43535,20 +43638,20 @@ aGF
 afG
 afG
 aaP
-aAU
+axu
 abX
-aan
-aan
-aan
-aDM
+axJ
+axJ
+axJ
+aBX
 agZ
 aix
-aDM
-aDM
-aDM
-aan
+aBX
+aBX
+aBX
+axu
 abX
-aAU
+axu
 aaP
 aBH
 aZj
@@ -43737,20 +43840,20 @@ aaL
 api
 aNo
 aaP
-aAU
-aAU
-aAU
+axu
+axu
+axu
 adz
-aec
-aDM
+aBx
+aBX
 ahi
 aiF
-aDM
-akF
+aBX
+aDK
 alu
-aGr
-aGr
-aAU
+aEn
+aEn
+axu
 aaP
 aBH
 aBH
@@ -43941,7 +44044,7 @@ aNo
 aaP
 aaP
 aaP
-aAU
+axu
 adO
 ael
 afs
@@ -43950,7 +44053,7 @@ rRj
 afs
 ykM
 alC
-aGr
+aEn
 auv
 aaP
 aaP
@@ -44143,16 +44246,16 @@ aNo
 aaP
 aaP
 aaP
-aAU
+axu
 adP
 aeo
-aDM
+aBX
 ahx
 axF
-aDM
+aBX
 akO
 alD
-aGr
+aEn
 auv
 aaP
 aaP
@@ -44345,16 +44448,16 @@ aNo
 aaP
 aaP
 aaP
-aAU
-aan
-aan
-aDM
+axu
+axJ
+axJ
+aBX
 ahC
 auO
-aDM
-aDM
-aDM
-aGr
+aBX
+aBX
+aBX
+aEn
 auv
 aaP
 aaP
@@ -44547,16 +44650,16 @@ aaP
 aaP
 aaP
 aaP
-aAU
+axu
 adz
-aec
-aDM
+aBx
+aBX
 ahH
-axF
-aDM
-akF
+aDC
+aBX
+aDK
 alu
-aGr
+aEn
 auv
 aaP
 fjN
@@ -44749,7 +44852,7 @@ aLj
 aaP
 aaP
 aaP
-aAU
+axu
 adO
 aey
 afs
@@ -44758,7 +44861,7 @@ rRj
 afs
 ykM
 alC
-aGr
+aEn
 auv
 aaP
 cpA
@@ -44940,27 +45043,27 @@ aaa
 aaa
 aIV
 aIV
-aIg
-aIg
-aIg
-aIg
-aIg
-aIg
-aIg
-aIg
-aYf
+aet
+aet
+aet
+aet
+aet
+aet
+aet
+aet
+aeq
 acU
-aYf
-aEB
+aeq
+axN
 adQ
 aez
-aDM
+aBX
 ahV
 aju
-aDM
+aBX
 akO
 alD
-aGr
+aEn
 auv
 wvv
 cpA
@@ -45142,29 +45245,29 @@ aaa
 aaa
 aIV
 aIV
-aIg
-aIg
+aet
+aet
 aaV
 abh
 abA
 abR
 ach
-aIg
+aet
 acI
 acV
 acZ
-aEB
-aSL
-aSL
-aSL
+axO
+axO
+axO
+axO
 ahW
 ajC
-aDM
-aDM
-aDM
-aGr
-aAU
-aAU
+aBX
+aBX
+aBX
+aEn
+axu
+axu
 cpA
 aNo
 aUv
@@ -45344,8 +45447,8 @@ aaa
 aaa
 aIV
 aIV
-aIg
-aIg
+aet
+aet
 aaW
 azX
 aYe
@@ -45355,18 +45458,18 @@ acy
 aJL
 aXC
 axY
-aGl
+azs
 adR
 aeB
 aft
 ahY
 ajK
 aks
-aDM
-alE
+aBX
+aDR
 ara
 auw
-aAU
+axu
 cpA
 aNo
 aUv
@@ -45546,18 +45649,18 @@ aaa
 aaa
 aIV
 aIV
-aIg
-aIg
+aet
+aet
 aaX
 abi
 abB
 abS
 aci
-aIg
+aet
 aun
 aKz
 aGI
-aGl
+azs
 adZ
 aeC
 afP
@@ -45568,7 +45671,7 @@ akY
 alH
 ajQ
 avb
-aGr
+aEn
 cpA
 aNo
 aUv
@@ -45748,29 +45851,29 @@ aaa
 aaa
 aIV
 aIV
-aIg
-aIg
-aIg
+aet
+aet
+aet
 abj
-aIg
-azs
-aIg
-aIg
+aet
+avH
+aet
+aet
 acJ
 aRB
 ada
 aXf
-aea
+aAU
 afg
 xOs
 dIL
 xAA
 akt
-aDM
+aBX
 alK
 ajQ
 ajQ
-aGr
+aEn
 cpA
 aNo
 aUr
@@ -45950,29 +46053,29 @@ aaa
 aaa
 aIV
 aIV
-aST
-aST
+ajT
+ajT
 aaY
 abk
 abC
 abT
 acj
-aST
+ajT
 acK
 aEy
 adb
-aSL
+axO
 adA
 adS
 agq
 aid
 ajS
 akw
-aDM
+aBX
 amj
 aur
 ave
-aGr
+aEn
 cpA
 aNo
 aUv
@@ -46153,28 +46256,28 @@ aaa
 aIV
 aIV
 awX
-aST
+ajT
 aaZ
 abl
 aMU
 abl
 ack
-abH
+avv
 aKN
 aEy
 adc
-aSL
-aSL
-aGl
+axO
+axO
+azs
 aLR
-aGl
-ajT
-aDM
-aGr
-aGr
-aGr
-aGr
-aGr
+azs
+aDI
+aBX
+aBX
+aBX
+aEn
+aEn
+aEn
 cpA
 aNo
 aBz
@@ -46355,7 +46458,7 @@ aaa
 aIV
 aIV
 awX
-aaS
+alp
 aba
 abm
 abD
@@ -46374,7 +46477,7 @@ auz
 auz
 auz
 aXw
-aYA
+aEs
 aaP
 aaP
 cpA
@@ -46557,13 +46660,13 @@ aaa
 aIV
 aIV
 awX
-aaS
+alp
 abb
 abn
 abE
 abW
 acm
-aST
+ajT
 aKN
 aEy
 ade
@@ -46576,7 +46679,7 @@ auz
 auz
 auz
 afv
-aYA
+aEs
 aaP
 aaP
 cpA
@@ -46759,26 +46862,26 @@ aaa
 aIV
 aIV
 awX
-aaS
+alp
 abc
 abo
 abF
 abl
 acn
-abH
+avv
 acL
 aEy
 adf
-aTX
+azx
 adC
 aWI
 aef
-aLU
-aLU
-aLU
-aLU
-aLU
-aUw
+aCe
+aCe
+aCe
+aCe
+aCe
+aEB
 aaP
 aaP
 vDW
@@ -46961,21 +47064,21 @@ aaa
 aIV
 aIV
 awX
-aST
+ajT
 abd
 abl
 abl
 abl
 aco
-abH
+avv
 acM
 aEy
 adg
-awB
+azL
 adD
 aQM
 aeg
-aLU
+aCe
 aeD
 aeU
 afh
@@ -47162,27 +47265,27 @@ aaa
 aaa
 aIV
 aIV
-aST
-aST
+ajT
+ajT
 abe
 abq
 abG
 abY
 acp
-aST
+ajT
 aKN
 aEy
 adg
-awB
+azL
 adE
 aME
 aDr
-aLU
+aCe
 aeE
 aQS
 azS
 afx
-aUw
+aEB
 aaP
 aMv
 ayv
@@ -47362,33 +47465,33 @@ aaa
 aaa
 aaa
 aaa
-aYf
-aYf
-aST
-aST
-aST
-aST
-abH
-abH
-aST
-aST
+aeq
+aeq
+ajT
+ajT
+ajT
+ajT
+avv
+avv
+ajT
+ajT
 acN
 acW
 adh
-aTX
+azx
 adF
 aZb
 aeh
-aeq
+aCG
 aeF
 aQS
 afi
 afy
-aUw
-aVI
+aEB
+aEE
 abp
-aVI
-aHp
+aEE
+aEE
 aUv
 fzv
 aNm
@@ -47564,11 +47667,11 @@ aaa
 aaa
 aaa
 aaa
-aYf
+aeq
 aaK
 aaQ
 aaT
-aYf
+alE
 abr
 abI
 abZ
@@ -47581,16 +47684,16 @@ axn
 aSp
 aZb
 aei
-aeq
+aCG
 aeG
 aOZ
 atv
 afz
-aUw
+aEB
 aQP
 aYd
 aUV
-aHp
+aEE
 aUv
 fzv
 aNm
@@ -47783,16 +47886,16 @@ aJP
 aTD
 aZm
 awJ
-aLU
+aCe
 aeH
 aeV
 afj
 afA
-aUw
+aEB
 aXZ
 ant
 aDn
-aHp
+aEE
 aUv
 fzv
 aZX
@@ -47968,11 +48071,11 @@ aaa
 aaa
 aaa
 aaa
-aYf
+aeq
 aaM
 aaR
 aaU
-aYf
+alE
 abt
 abJ
 ami
@@ -47981,20 +48084,20 @@ acB
 acP
 acX
 adi
-aTX
+azx
 azM
 aAF
 aQo
-aLU
-aLU
+aCe
+aCe
 aQs
-aeq
-aLU
-aUw
+aCG
+aCe
+aEB
 aXJ
 aEY
 aBO
-aHp
+aEE
 aUv
 fzv
 aNm
@@ -48170,20 +48273,20 @@ aaa
 aaa
 aaa
 aaa
-aYf
-aYf
-aYX
-aYX
-aYX
-aYX
-avt
-avt
+aeq
+aeq
+akF
+akF
+akF
+akF
+avG
+avG
 aIt
 acC
-avt
-avt
-aHX
-aHX
+avG
+avG
+akF
+akF
 aQj
 aZb
 azj
@@ -48192,11 +48295,11 @@ aeI
 aUh
 aEX
 afB
-aYA
+aEs
 aJr
 ayJ
 aCa
-aHp
+aEE
 aUv
 fzv
 aNm
@@ -48375,8 +48478,8 @@ aaa
 aIV
 aIV
 aYa
-aYX
-aYX
+akF
+akF
 abu
 abL
 aca
@@ -48385,7 +48488,7 @@ acD
 aLz
 abL
 adj
-aHX
+akF
 adG
 adT
 aZQ
@@ -48398,7 +48501,7 @@ aND
 aIi
 auZ
 alJ
-aHp
+aEE
 aBz
 fzv
 azo
@@ -48578,7 +48681,7 @@ aIV
 aIV
 aYa
 aYa
-aXL
+avt
 abv
 abM
 acb
@@ -48587,20 +48690,20 @@ aIH
 acQ
 abM
 adk
-aHX
+akF
 adH
 adU
 aej
-aKh
-aKh
+aDb
+aDb
 aeW
-aEs
-aKh
-aAU
-aVI
-aVI
-aVI
-aHp
+aDM
+aDb
+axu
+aEE
+aEE
+aEE
+aEE
 aUv
 fzv
 aNm
@@ -48780,7 +48883,7 @@ aIV
 aIV
 aYa
 aYa
-aXL
+avt
 abw
 aJt
 acc
@@ -48789,15 +48892,15 @@ acE
 acR
 aSJ
 adl
-aYX
+akF
 adI
-aYA
+aBJ
 aZP
-aKh
+aDb
 aeJ
 azk
 afk
-aKh
+aDb
 aaP
 aaP
 aDl
@@ -48960,13 +49063,13 @@ aaa
 aaa
 aaa
 aaa
-aRR
-aRR
-aRR
+aan
+aan
+aan
 lck
-aRR
-aRR
-aRR
+aan
+aan
+aan
 aaa
 aaa
 aaa
@@ -48981,25 +49084,25 @@ aaa
 aIV
 aIV
 aYa
-aYX
-aYX
+akF
+akF
 abx
 aKP
 acd
-aHX
-aHX
+awB
+awB
 aTJ
 aIj
 aSk
-adq
+azR
 adJ
-aFC
+aBM
 aTj
-aet
+aDt
 aeK
 aeX
 afl
-aKh
+aDb
 aaP
 aaP
 aDl
@@ -49163,11 +49266,11 @@ aaa
 aaa
 aaa
 aaa
-aRR
+aan
 alo
 hyo
 alr
-aRR
+aan
 aaa
 aaa
 aaa
@@ -49183,25 +49286,25 @@ aaa
 aIV
 aIV
 aYa
-aYX
-aYX
+akF
+akF
 auI
 aKP
 azB
-aHX
-aHX
+awB
+awB
 acS
 aIj
 aKk
-adq
+azR
 adK
-aFC
+aBM
 aLW
-aet
+aDt
 aeL
 aeY
 afm
-aKh
+aDb
 aaP
 aaP
 aDl
@@ -49365,11 +49468,11 @@ aaa
 aaa
 aaa
 aaa
-alp
+acH
 aFk
 hyo
 aym
-aHF
+abH
 aaa
 aaa
 aaa
@@ -49386,7 +49489,7 @@ aIV
 aWD
 aYa
 aYa
-aXL
+avt
 abw
 aLL
 ace
@@ -49395,15 +49498,15 @@ acF
 aHu
 aNb
 adm
-adq
+azR
 adJ
-aFC
+aBM
 aTj
-aet
+aDt
 aeM
 aeZ
 afn
-aKh
+aDb
 aNo
 aNo
 aDl
@@ -49567,11 +49670,11 @@ aaa
 aaa
 aaa
 aaa
-alp
+acH
 aFk
 hyo
 aym
-aHF
+abH
 aaa
 aaa
 aaa
@@ -49588,7 +49691,7 @@ aIV
 aIV
 aYa
 aYa
-aXL
+avt
 axW
 abM
 acf
@@ -49597,15 +49700,15 @@ aEu
 abN
 aCp
 adn
-aYX
+akF
 adI
-aYA
+aBJ
 aml
-aKh
+aDb
 aeN
 afa
 afo
-aKh
+aDb
 aSY
 aAC
 azm
@@ -49764,33 +49867,33 @@ aaa
 aaa
 aaa
 aaa
-aRR
+aan
 aaa
 aaa
 aaa
 aaa
-aRR
+aan
 alo
 hyo
 alr
-aRR
+aan
 aaa
 aaa
 aaa
 aaa
-aRR
+aan
 aaa
 aaa
 aaa
 aaa
-aRR
+aan
 aaa
 aaa
 aIV
 aIV
 aYa
-aYX
-aYX
+akF
+akF
 aby
 abO
 acg
@@ -49799,15 +49902,15 @@ acG
 acT
 acY
 aAy
-aYX
+akF
 adL
 adV
 auT
-aOo
+aDy
 aeO
-aOo
-aKh
-aKh
+aDy
+aDb
+aDb
 aQT
 aBl
 aFG
@@ -49966,42 +50069,42 @@ aaa
 aaa
 aaa
 aaa
-aRR
-aRR
-aHF
-aHF
-aRR
-aRR
-aRR
+aaS
+aan
+abH
+abH
+aan
+aan
+aan
 lck
-aRR
-aRR
-aRR
-aHF
-aHF
-aRR
-aRR
-aRR
-aHF
-aHF
-aRR
-aRR
-aRR
-aHF
-aHF
-aRR
-aYX
-aYX
-aYX
-aYX
-aYX
-aYX
-aYX
-acH
-acH
-aYX
-aYX
-aSS
+aan
+aan
+aan
+abH
+abH
+aan
+aan
+aan
+abH
+abH
+aan
+aan
+aan
+abH
+abH
+aan
+akF
+akF
+akF
+akF
+akF
+akF
+akF
+awZ
+awZ
+akF
+akF
+axI
 aMt
 adM
 aFP
@@ -50009,7 +50112,7 @@ adM
 aeP
 aut
 afp
-aEO
+aDS
 aJn
 aMs
 aSh
@@ -50168,41 +50271,41 @@ aaa
 aaa
 aaa
 aaa
-aRR
+aan
 aRf
 ayb
 alO
 aHo
-aRR
+aan
 aih
 hyo
 aXF
-aRR
+aan
 aUA
 ajJ
 ajJ
 alv
-aRR
+aan
 aUA
 ajJ
 ajJ
 alv
-aRR
+aec
 aUA
 ajJ
 ajJ
 alv
-aRR
+aan
 aUA
 ajJ
 ajJ
 alv
-aRR
+aan
 azw
 ajJ
 ajJ
 awV
-aSS
+axI
 ads
 aNu
 aTE
@@ -50615,7 +50718,7 @@ aev
 aEz
 aTG
 afq
-aEO
+aDS
 aUv
 tpc
 ayi
@@ -50774,41 +50877,41 @@ aaa
 aaa
 aaa
 aaa
-aRR
+aan
 aHT
 aVc
 aXO
 ayj
-aRR
+aan
 atQ
 aXv
 aiL
-aRR
+aan
 alw
 asN
 asN
 alw
-aRR
+aan
 alw
 asN
 asN
 alw
-aRR
+aea
 alw
 asN
 asN
 alw
-aRR
+aan
 alw
 asN
 asN
 alw
-aRR
+aan
 aUt
 aXv
 aXz
 aXP
-aSS
+axI
 adv
 adN
 adY
@@ -50817,7 +50920,7 @@ aew
 aeR
 afc
 adY
-aEO
+aDS
 aCK
 aHD
 aHD
@@ -50976,50 +51079,50 @@ aaa
 aaa
 aaa
 aaa
-aRR
-aRR
-aHF
-alp
-aRR
-aRR
-aRR
+aan
+aan
+abH
+acH
+aan
+aan
+aan
 avl
-aRR
-aRR
-aRR
-aHF
-aHF
-aRR
-aRR
-aRR
-aHF
-aHF
-aRR
-aRR
-aRR
-aHF
-aHF
-aRR
-aRR
-aRR
-aHF
-aHF
-aRR
-aRR
-alp
+aan
+aan
+aan
+abH
+abH
+aan
+aan
+aan
+abH
+abH
+aan
+aan
+aan
+abH
+abH
+aan
+aan
+aan
+abH
+abH
+aan
+aan
+awU
 aWy
 aKI
-alp
-aSS
-aSS
-aSS
-aSS
-aSS
-aSS
-aSS
-aSS
-aSS
-aSS
+acH
+axI
+axI
+axI
+axI
+axI
+axI
+axI
+axI
+axI
+axI
 aNo
 aNo
 qbs
@@ -51178,31 +51281,31 @@ aaa
 aaa
 aaa
 aaa
-aRR
+aan
 aaa
 aaa
 aaa
 aaa
-aRR
+aan
 alo
 aXv
 alr
-aRR
+aan
 aaa
 aaa
 aaa
 aaa
-aRR
+aan
 aaa
 aaa
 aaa
 aaa
-aRR
+aan
 aaa
 aaa
 aaa
 aaa
-aRR
+aan
 aaa
 aaa
 aaa
@@ -51385,11 +51488,11 @@ aaa
 aaa
 aaa
 aaa
-aHF
+adq
 aFk
 aXv
 aym
-aHF
+adq
 aaa
 aaa
 aaa
@@ -51587,11 +51690,11 @@ aaa
 aaa
 aaa
 aaa
-aHF
+adq
 aFk
 aXv
 aym
-aHF
+adq
 aaa
 aaa
 aaa
@@ -51789,11 +51892,11 @@ aaa
 aaa
 aaa
 aaa
-aRR
+aea
 alo
 aXv
 alr
-aRR
+aan
 aaa
 aaa
 aaa
@@ -51990,13 +52093,13 @@ aaa
 aaa
 aaa
 aaa
-aRR
-aRR
-aRR
+aan
+aan
+aan
 avl
-aRR
-aRR
-aRR
+aan
+aan
+aan
 aaa
 aaa
 aaa
@@ -52018,7 +52121,7 @@ aaa
 aGL
 aGL
 aGL
-aGL
+aCS
 aCS
 aKT
 aZv
