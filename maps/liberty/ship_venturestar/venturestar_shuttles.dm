@@ -1,11 +1,11 @@
 /obj/machinery/computer/shuttle_control/explore/venturestar
-	name = "ISV VentureStar control console"
+	name = "IMV VentureStar control console"
 	req_access = list(access_venturestar)
-	shuttle_tag = "ISV VentureStar"
+	shuttle_tag = "IMV VentureStar"
 
 /obj/effect/overmap/visitable/ship/landable/venturestar
-	name = "ISV VentureStar"
-	shuttle = "ISV VentureStar"
+	name = "IMV VentureStar"
+	shuttle = "IMV VentureStar"
 	multiz = 1
 	icon_state = "ship"
 	moving_state = "ship_moving"
@@ -15,7 +15,7 @@
 	vessel_size = SHIP_SIZE_SMALL
 
 /datum/shuttle/autodock/overmap/venturestar
-	name = "ISV VentureStar"
+	name = "IMV VentureStar"
 	warmup_time = 5
 	multiz = 1
 	range = 1

@@ -8,9 +8,9 @@
 // TEMPLATE
 
 /datum/map_template/ruin/away_site/venturestarship
-	name = "ISV VentureStar"
+	name = "IMV VentureStar"
 	id = "awaysite_venturestar"
-	description = "Industrial Space Vessel VentureStar."
+	description = "Independent Mining Vessel VentureStar."
 	suffixes = list("../liberty/ship_venturestar/venturestar.dmm")
 	cost = 0
 	shuttles_to_initialise = list(/datum/shuttle/autodock/overmap/venturestar)
@@ -26,11 +26,11 @@
 // SUBMAP DATA
 
 /obj/effect/submap_landmark/joinable_submap/venturestar
-	name = "ISV VentureStar"
+	name = "IMV VentureStar"
 	archetype = /decl/submap_archetype/venturestar
 
 /decl/submap_archetype/venturestar
-	descriptor = "ISV VentureStar"
-	map = "ISV Venture Star"
+	descriptor = "IMV VentureStar"
+	map = "IMV VentureStar"
 	crew_jobs = list(null) // ADD JOBS
 //	call_webhook = WEBHOOK_SUBMAP_LOADED_LUCIUS
