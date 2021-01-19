@@ -98,18 +98,33 @@
 	name = "\improper Engineering - Engine Room"
 	icon_state = "eng_engine_room"
 
-/area/liberty/engineering/engineering_hall
-	name = "\improper Engineering - Level Zero Hallway"
-	icon_state = "eng_hall"
+/area/liberty/engineering/engineering_hall_level_zero
+	name = "\improper Engineering - Hallway Level Zero"
+	icon_state = "eng_hall_00"
 
 /area/liberty/engineering/engineering_prep_room
 	name = "\improper Engineering - Prep Room"
 	icon_state = "eng_prep_room"
 
-
-/area/liberty/engineering/substation_zero
+/area/liberty/engineering/substation_level_zero
 	name = "\improper Engineering - Substation Level Zero"
 	icon_state = "eng_substation_00"
+
+/area/liberty/engineering/restroom
+	name = "\improper Engineering - Restroom"
+	icon_state = "eng_restroom"
+
+/area/liberty/engineering/shower
+	name = "\improper Engineering - Shower"
+	icon_state = "eng_shower"
+
+/area/liberty/engineering/primary_storage // склад, что находится над атмосом
+	name = "\improper Engineering - Primary Storage"
+	icon_state = "eng_primary_storage"
+
+/area/liberty/engineering/engineering_solar_level_zero
+	name = "\improper Engineering - Solar Level Zero"
+	icon_state = "eng_solar_00"
 
 ///////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////// LEVEL ONE ////////////////////////////////////
@@ -291,7 +306,7 @@
 
 // ENGINEERING
 
-/area/liberty/engineering/substation_one
+/area/liberty/engineering/substation_level_one
 	name = "\improper Engineering - Substation Level One"
 	icon_state = "eng_substation_01"
 
@@ -305,11 +320,15 @@
 
 /area/liberty/engineering/supermatter_tegs
 	name = "\improper Engineering - Supermatter Tegs"
-	icon_state = "eng_engine_tegs"
+	icon_state = "eng_supermatter_tegs"
 
 /area/liberty/engineering/technical_storage
 	name = "\improper Engineering - Technical Storage"
 	icon_state = "eng_technical_storage"
+
+/area/liberty/engineering/engineering_hall_level_one
+	name = "\improper Engineering - Hallway level one"
+	icon_state = "eng_hall_01"
 
 ///////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////// LEVEL TWO ////////////////////////////////////

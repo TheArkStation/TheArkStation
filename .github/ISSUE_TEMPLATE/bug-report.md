@@ -1,62 +1,57 @@
 ---
-name: Bug Report
-about: Create a report to help us improve
-title: ''
-labels: ''
+name: Багрепорт
+about: Помогите нам стать лучше, сообщив о баге
+title: Ошибка
+labels: bug
 assignees: ''
 
 ---
 
 <!--
-	Anything inside tags like these is a comment and will not be displayed in the final issue.
-	Be careful not to write inside them!
+	Всё внутри подобных тэгов не будет отображаться в окончательной заметке о баге.
+	Пожалуйста, будьте осмотрительны.
 
-	Every field other than 'specific information for locating' is required.
-	If you do not fill out the 'specific information' field, please delete the header.
-	/!\ Omitting or not answering a required field will result in your issue being closed. /!\
-	Repeated violation of this rule, or joke or spam issues, will result in punishment.
+	Заполнение максимального числа полей является желательным. Если Вы вынуждены пропустить какой-либо пункт по некоторой причине, пожалуйста, удалите его из формы полностью.
 	
-	PUT YOUR ANSWERS ON THE BLANK LINES BELOW THE HEADERS 
-	(The lines with four #'s) 
-	Don't edit them or delete them - it's part of the formatting
+	ВВОДИТЕ СВОИ ОТВЕТЫ ПОД НАЗВАНИЯМИ ПОЛЕЙ
+	(ПОД линиями с началом из 4-х #) 
+	Пожалуйста, не удаляйте их без причины, поскольку они играют роль в форматировании.
 -->
 
-#### Description of issue
+#### Описание проблемы
 
 
 
-#### Difference between expected and actual behavior
+#### В чём отличие между фактическим и ожидаемым?
 
 
 
-#### Steps to reproduce
+#### Как воспроизвести проблему?
 
 
 
-#### Specific information for locating
-<!-- e.g. an object name, paste specific message outputs... -->
+#### Специфическая информация для обнаружения
+<!-- названия и пути предметов, логи-->
 
 
 
-#### Length of time in which bug has been known to occur
+#### Насколько долго баг имеет место?
 <!--
-	Be specific if you approximately know the time it's been occurring
-	for—this can speed up finding the source. If you're not sure
-	about it, tell us too!
+	Пожалуйста, будьте точны. Если Вы не уверены, пропустите этот пункт.
 -->
 
 
 
-#### Client version, Server revision & Game ID
-<!-- Found with the "Show server revision" verb in the OOC tab in game. -->
+#### Версия клиента, ревизия сервера, Game ID
+<!-- Отображается с помощью кнопки "Show server revision" во вкладке OOC внутриигрового клиента. -->
 
 
 
-#### Issue bingo
-<!-- Check these by writing an x inside the [ ] (like this: [x])-->
-<!-- Don't forget to remove the space between the brackets, or it won't work! -->
-- [ ] Issue could be reproduced at least once
-- [ ] Issue could be reproduced by different players
-- [ ] Issue could be reproduced in multiple rounds
-- [ ] Issue happened in a recent (less than 7 days ago) round
-- [ ] [Couldn't find an existing issue about this](https://github.com/Baystation12/Baystation12/issues)
+#### "Багованное бинго"
+<!-- Отмечайте флажки с помощью латинской буквы "x" внутри квадратных скобок [ ] (вот так: [x])-->
+<!-- Обязательно удалите пробел между скобками, иначе бинго не будет отображаться корректно. -->
+- [ ] Баг возможно воспроизвести более одного раза
+- [ ] Баг воспроизводим для нескольких игроков
+- [ ] Баг воспроизводим в нескольких раундах
+- [ ] Баг имел место недавно (менее недели назад)
+- [ ] [Я не смог найти информации об этой проблеме](https://github.com/TheArkStation/TheArkStation/issues)

@@ -198,9 +198,6 @@ var/const/NETWORK_LEVEL_THREE		= "Level Three"
 //////////////////////////////////////////////
 
 /obj/machinery/power/smes/buildable/preset/liberty/shuttle
-	uncreated_component_parts = list(
-		/obj/item/weapon/stock_parts/smes_coil/super_io = 1,
-		/obj/item/weapon/stock_parts/smes_coil/super_capacity = 1)
 	_input_maxed = TRUE
 	_output_maxed = TRUE
 	_input_on = TRUE

@@ -15,7 +15,7 @@
 /area/venturestar/primaryairlock)
 "ad" = (
 /obj/effect/floor_decal/industrial/warning,
-/obj/effect/shuttle_landmark/venturestar,
+/obj/effect/shuttle_landmark/venturestar/start,
 /turf/simulated/floor,
 /area/venturestar/primaryairlock)
 "ae" = (
@@ -285,12 +285,20 @@
 	icon_state = "bordercolor";
 	dir = 9
 	},
+/obj/machinery/light{
+	dir = 8;
+	icon_state = "tube_map"
+	},
 /turf/simulated/floor/tiled,
 /area/venturestar/crew_quarters)
 "aD" = (
 /obj/structure/catwalk,
 /obj/machinery/alarm/venturestar{
-	pixel_y = 24
+	alarm_id = "venturestar_airlock";
+	frequency = 1331;
+	id_tag = "venturestar_airlock";
+	pixel_y = 24;
+	tag = "venturestar_airlock"
 	},
 /obj/random/ore_smug,
 /turf/simulated/floor/plating,
@@ -644,7 +652,6 @@
 /turf/simulated/floor/reinforced/airless,
 /area/venturestar/primarystorage)
 "bo" = (
-/obj/machinery/door/airlock/glass/mining,
 /obj/machinery/door/firedoor/venturestar,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/venturestar/primarystorage)
@@ -826,7 +833,6 @@
 /turf/simulated/floor/tiled,
 /area/venturestar/crew_quarters)
 "bE" = (
-/obj/machinery/door/airlock/glass/mining,
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
 	icon_state = "intact";
 	dir = 4
@@ -845,6 +851,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor/venturestar,
+/obj/machinery/door/airlock/multi_tile/glass/mining,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/venturestar/primarystorage)
 "bF" = (
@@ -996,6 +1003,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/machinery/atmospherics/valve/shutoff/supply,
 /turf/simulated/floor/plating,
 /area/venturestar/crew_quarters)
 "bQ" = (
@@ -1098,7 +1106,7 @@
 	pixel_x = 32
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/shuttle{
 	dir = 8;
 	id_tag = "venturestar_aux_dock_pump_out_external"
 	},
@@ -1220,8 +1228,11 @@
 /area/venturestar/crew_quarters)
 "ck" = (
 /obj/item/weapon/stool/padded,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	icon_state = "intact-scrubbers";
+/obj/machinery/atmospherics/valve/shutoff/scrubbers{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/shutoff{
+	icon_state = "shutoff";
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -1229,14 +1240,14 @@
 "cl" = (
 /obj/effect/catwalk_plated,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/manifold/hidden/red{
-	icon_state = "map";
-	dir = 4
-	},
 /obj/machinery/firealarm{
 	dir = 4;
 	icon_state = "casing";
 	pixel_x = 24
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	icon_state = "map-scrubbers";
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/venturestar/crew_quarters)
@@ -1330,10 +1341,12 @@
 	dir = 4
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
+	cycle_to_external_air = 1;
 	frequency = 1331;
 	id_tag = "venturestar_dock";
 	name = "Primary Docking Port Controller";
-	pixel_y = 24
+	pixel_y = 24;
+	tag_air_alarm = "venturestar_airlock"
 	},
 /obj/machinery/firealarm{
 	dir = 8;
@@ -1492,7 +1505,8 @@
 "cI" = (
 /obj/effect/floor_decal/industrial/warning/full,
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/shuttle{
+	controlled = 0;
 	dir = 4;
 	id_tag = "venturestar_dock_pump_out_external"
 	},
@@ -1811,7 +1825,7 @@
 	icon_state = "shock";
 	pixel_x = -32
 	},
-/obj/machinery/power/smes/buildable/preset/torch/shuttle,
+/obj/machinery/power/smes/buildable/preset/liberty/shuttle,
 /obj/structure/cable/green{
 	d2 = 4;
 	icon_state = "0-4"
@@ -1944,14 +1958,14 @@
 /turf/simulated/floor/tiled/dark,
 /area/venturestar/primarystorage)
 "dB" = (
-/obj/machinery/door/airlock/hatch/maintenance/bolted{
-	name = "Ore Processing Maintenance"
-	},
 /obj/effect/floor_decal/industrial/warning{
 	icon_state = "stripe";
 	dir = 1
 	},
 /obj/machinery/door/firedoor/venturestar,
+/obj/machinery/door/airlock/hatch/maintenance{
+	name = "Ore Processing Maintenance Hatch"
+	},
 /turf/simulated/floor,
 /area/venturestar/engineering)
 "dC" = (
@@ -2001,7 +2015,9 @@
 /turf/simulated/floor,
 /area/venturestar/engineering)
 "dG" = (
-/obj/machinery/atmospherics/pipeturbine,
+/obj/machinery/atmospherics/pipeturbine{
+	anchored = 1
+	},
 /obj/effect/floor_decal/industrial/warning/cee{
 	icon_state = "stripecee";
 	dir = 1
@@ -2011,22 +2027,25 @@
 "dH" = (
 /obj/machinery/atmospherics/pipe/simple/visible/black,
 /obj/machinery/atmospherics/binary/passive_gate{
+	dir = 8;
 	icon_state = "map_off";
-	dir = 8
+	regulate_mode = 1;
+	set_flow_rate = 20;
+	target_pressure = 1000;
+	unlocked = 1
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor,
 /area/venturestar/engineering)
 "dI" = (
-/obj/machinery/atmospherics/pipe/simple/visible/fuel{
-	icon_state = "intact";
-	dir = 4
-	},
-/obj/machinery/door/airlock/hatch/maintenance/bolted{
-	name = "Turbine Bay"
-	},
 /obj/structure/catwalk,
 /obj/machinery/door/firedoor/venturestar,
+/obj/machinery/door/airlock/hatch/maintenance{
+	name = "Turbine Compartment"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/venturestar/engineering)
 "dJ" = (
@@ -2090,21 +2109,14 @@
 /turf/simulated/floor,
 /area/venturestar/engineering)
 "dO" = (
-/obj/machinery/atmospherics/pipe/simple/visible/fuel{
-	icon_state = "intact";
+/obj/structure/catwalk,
+/obj/machinery/door/firedoor/venturestar,
+/obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
-/obj/machinery/door/airlock/hatch/maintenance/bolted{
+/obj/machinery/door/airlock/hatch/maintenance{
 	name = "Combustion Chamber"
 	},
-/obj/structure/catwalk,
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	pixel_x = 0
-	},
-/obj/machinery/door/firedoor/venturestar,
 /turf/simulated/floor/plating,
 /area/venturestar/engineering)
 "dP" = (
@@ -2155,8 +2167,9 @@
 	dir = 1
 	},
 /obj/machinery/power/turbinemotor{
-	icon_state = "motor";
-	dir = 1
+	anchored = 1;
+	dir = 1;
+	icon_state = "motor"
 	},
 /obj/effect/floor_decal/industrial/warning/cee,
 /obj/structure/cable{
@@ -2225,7 +2238,8 @@
 "dX" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/light/small/red,
-/obj/machinery/atmospherics/valve/shutoff{
+/obj/machinery/atmospherics/valve/shutoff/fuel{
+	icon_state = "map_vclamp0";
 	dir = 4
 	},
 /turf/simulated/floor,
@@ -2519,7 +2533,7 @@
 	icon_state = "cap";
 	dir = 8
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/airless,
 /area/venturestar/engineering)
 "ey" = (
 /obj/effect/floor_decal/industrial/fire,
@@ -2606,7 +2620,8 @@
 	pixel_x = -32
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/shuttle{
+	controlled = 0;
 	dir = 4;
 	id_tag = "venturestar_dock_pump_out_external"
 	},
@@ -2616,12 +2631,24 @@
 /obj/structure/navlight_shuttle,
 /obj/effect/floor_decal/industrial/warning/full,
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/shuttle{
+	controlled = 0;
 	dir = 4;
 	id_tag = "venturestar_dock_pump_out_external"
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/venturestar/primarystorage)
+"id" = (
+/obj/effect/catwalk_plated,
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/plating,
+/area/venturestar/crew_quarters)
 "jq" = (
 /obj/effect/floor_decal/industrial/fire,
 /obj/effect/floor_decal/steeldecal/steel_decals_central4{
@@ -7243,7 +7270,7 @@ as
 ed
 bC
 bP
-bP
+id
 cO
 db
 dd
