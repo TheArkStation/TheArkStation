@@ -85,6 +85,7 @@
 /area/liberty/engineering/atmos
 	name = "\improper Engineering - Atmospherics"
 	icon_state = "eng_atmos"
+	sound_env = list('sound/ambience/ambiatm1.ogg')
 
 /area/liberty/engineering/canister_storage
 	name = "\improper Engineering - Canister Storage"
@@ -125,6 +126,11 @@
 /area/liberty/engineering/engineering_solar_level_zero
 	name = "\improper Engineering - Solar Level Zero"
 	icon_state = "eng_solar_00"
+
+/area/liberty/engineering/supermatter_space
+	name = "\improper Engineering - Supermatter Space"
+	icon_state = "eng_supermatter_space"
+	sound_env = SPACE
 
 ///////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////// LEVEL ONE ////////////////////////////////////
@@ -321,6 +327,7 @@
 /area/liberty/engineering/supermatter_tegs
 	name = "\improper Engineering - Supermatter Tegs"
 	icon_state = "eng_supermatter_tegs"
+	ambience = list('sound/ambience/ambiatm1.ogg', 'sound/ambience/ambieng.ogg')
 
 /area/liberty/engineering/technical_storage
 	name = "\improper Engineering - Technical Storage"

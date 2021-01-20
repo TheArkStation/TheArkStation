@@ -2979,6 +2979,10 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/liberty/engineering/atmos)
+"ft" = (
+/obj/machinery/atmospherics/pipe/manifold4w/hidden,
+/turf/simulated/floor/tiled/techfloor,
+/area/liberty/engineering/supermatter_space)
 "fu" = (
 /obj/machinery/door/airlock/maintenance,
 /obj/machinery/door/firedoor{
@@ -2998,7 +3002,7 @@
 	tag = "engineering_inner"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/space)
+/area/liberty/engineering/supermatter_space)
 "fz" = (
 /obj/machinery/door/firedoor,
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -3072,6 +3076,11 @@
 	},
 /turf/simulated/floor/wood/yew,
 /area/liberty/hotel/locker_room_f)
+"fI" = (
+/obj/structure/lattice,
+/obj/structure/catwalk,
+/turf/space,
+/area/liberty/engineering/supermatter_space)
 "fJ" = (
 /obj/effect/floor_decal/industrial/warning/narrow{
 	dir = 8
@@ -3195,7 +3204,7 @@
 /obj/structure/catwalk,
 /obj/structure/lattice,
 /turf/space,
-/area/space)
+/area/liberty/engineering/supermatter_space)
 "fY" = (
 /obj/structure/table/rack,
 /obj/item/weapon/tank/hydrogen,
@@ -3225,13 +3234,13 @@
 	dir = 8
 	},
 /turf/space,
-/area/space)
+/area/liberty/engineering/supermatter_space)
 "gc" = (
 /obj/structure/railing/mapped{
 	dir = 4
 	},
 /turf/space,
-/area/space)
+/area/liberty/engineering/supermatter_space)
 "gd" = (
 /obj/structure/railing/mapped{
 	dir = 1
@@ -3240,7 +3249,7 @@
 	dir = 4
 	},
 /turf/space,
-/area/space)
+/area/liberty/engineering/supermatter_space)
 "ge" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -3266,14 +3275,14 @@
 	dir = 4
 	},
 /turf/space,
-/area/space)
+/area/liberty/engineering/supermatter_space)
 "gh" = (
 /obj/structure/railing/mapped,
 /obj/structure/railing/mapped{
 	dir = 8
 	},
 /turf/space,
-/area/space)
+/area/liberty/engineering/supermatter_space)
 "gj" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
 	dir = 4
@@ -3289,6 +3298,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/space)
+"gn" = (
+/obj/structure/railing/mapped{
+	dir = 1
+	},
+/turf/space,
+/area/liberty/engineering/supermatter_space)
 "go" = (
 /obj/effect/floor_decal/industrial/warning/narrow/corner{
 	dir = 1
@@ -3424,7 +3439,7 @@
 /area/space)
 "gB" = (
 /turf/simulated/wall/ocp_wall,
-/area/space)
+/area/liberty/engineering/supermatter_space)
 "gC" = (
 /obj/effect/wallframe_spawn/reinforced_phoron,
 /obj/machinery/door/blast/regular/open{
@@ -3433,7 +3448,7 @@
 	name = "Supermatter Chamber blast doors"
 	},
 /turf/simulated/floor/plating,
-/area/space)
+/area/liberty/engineering/supermatter_space)
 "gD" = (
 /obj/structure/catwalk,
 /obj/structure/lattice,
@@ -3441,7 +3456,7 @@
 	pixel_y = -4
 	},
 /turf/space,
-/area/space)
+/area/liberty/engineering/supermatter_space)
 "gE" = (
 /obj/structure/closet/firecloset,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -3507,7 +3522,7 @@
 /area/space)
 "gN" = (
 /turf/simulated/floor/reinforced/nitrogen/engine,
-/area/space)
+/area/liberty/engineering/supermatter_space)
 "gO" = (
 /obj/machinery/alarm{
 	dir = 1;
@@ -3601,7 +3616,7 @@
 	id_tag = "engine_emitter"
 	},
 /turf/simulated/floor/airless,
-/area/space)
+/area/liberty/engineering/supermatter_space)
 "gY" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -3617,7 +3632,7 @@
 	},
 /obj/machinery/power/supermatter,
 /turf/simulated/floor/reinforced/nitrogen/engine,
-/area/space)
+/area/liberty/engineering/supermatter_space)
 "ha" = (
 /obj/structure/bed/chair/bench/wood/walnut/right{
 	dir = 8
@@ -3769,6 +3784,9 @@
 /obj/machinery/light/spot,
 /turf/simulated/floor/tiled/steel_grid,
 /area/space)
+"ht" = (
+/turf/simulated/floor/reinforced/airless,
+/area/liberty/engineering/supermatter_space)
 "hu" = (
 /obj/structure/mopbucket,
 /obj/machinery/light_construct/small,
@@ -4437,7 +4455,7 @@
 	},
 /obj/structure/railing/mapped,
 /turf/space,
-/area/space)
+/area/liberty/engineering/supermatter_space)
 "iP" = (
 /obj/machinery/firealarm{
 	dir = 8;
@@ -7323,7 +7341,7 @@
 	pixel_y = 4
 	},
 /turf/space,
-/area/space)
+/area/liberty/engineering/supermatter_space)
 "pr" = (
 /obj/machinery/door/firedoor,
 /obj/effect/floor_decal/corner/grey{
@@ -7912,6 +7930,15 @@
 /obj/effect/paint_stripe/yellow,
 /turf/simulated/wall/prepainted,
 /area/liberty/hotel/casino)
+"qE" = (
+/obj/structure/railing/mapped{
+	dir = 8
+	},
+/obj/structure/railing/mapped{
+	dir = 1
+	},
+/turf/space,
+/area/liberty/engineering/supermatter_space)
 "qF" = (
 /obj/random/ore_smug,
 /turf/space,
@@ -8042,7 +8069,7 @@
 	dir = 1
 	},
 /turf/space,
-/area/space)
+/area/liberty/engineering/supermatter_space)
 "qV" = (
 /obj/structure/catwalk,
 /obj/structure/railing/mapped{
@@ -8290,7 +8317,7 @@
 	},
 /obj/effect/floor_decal/industrial/warning/full,
 /turf/simulated/floor/plating,
-/area/space)
+/area/liberty/engineering/supermatter_space)
 "rs" = (
 /obj/effect/floor_decal/industrial/warning/narrow{
 	dir = 4
@@ -8461,7 +8488,7 @@
 	name = "Supermatter Ejection Port"
 	},
 /turf/simulated/floor/reinforced/airless,
-/area/space)
+/area/liberty/engineering/supermatter_space)
 "rM" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 1
@@ -9950,7 +9977,7 @@
 	},
 /obj/structure/catwalk,
 /turf/simulated/floor/airless,
-/area/space)
+/area/liberty/engineering/supermatter_space)
 "vd" = (
 /obj/item/weapon/stool,
 /obj/machinery/flasher{
@@ -10307,6 +10334,9 @@
 	},
 /turf/simulated/floor/plating,
 /area/space)
+"vM" = (
+/turf/simulated/wall/r_wall/prepainted,
+/area/liberty/engineering/supermatter_space)
 "vN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/universal,
 /obj/structure/cable{
@@ -10905,7 +10935,7 @@
 	},
 /obj/effect/floor_decal/industrial/warning/full,
 /turf/simulated/floor/plating,
-/area/space)
+/area/liberty/engineering/supermatter_space)
 "wY" = (
 /obj/effect/floor_decal/spline/fancy/black{
 	dir = 5
@@ -12237,7 +12267,7 @@
 	},
 /obj/structure/catwalk,
 /turf/space,
-/area/space)
+/area/liberty/engineering/supermatter_space)
 "zU" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 10
@@ -12827,6 +12857,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/space)
+"Ba" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden,
+/turf/simulated/floor/tiled/techfloor,
+/area/liberty/engineering/supermatter_space)
 "Bb" = (
 /obj/structure/table/rack,
 /obj/item/weapon/storage/box/lights/tubes,
@@ -15329,6 +15363,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/liberty/engineering/engineering_solar_level_zero)
+"Gj" = (
+/obj/structure/catwalk,
+/turf/simulated/floor/airless,
+/area/liberty/engineering/supermatter_space)
 "Gk" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/largecrate/animal/goat,
@@ -16393,6 +16431,10 @@
 /obj/machinery/constructable_frame/computerframe,
 /turf/simulated/floor/plating,
 /area/space)
+"IA" = (
+/obj/structure/railing/mapped,
+/turf/space,
+/area/liberty/engineering/supermatter_space)
 "IB" = (
 /obj/effect/floor_decal/corner/grey{
 	dir = 5
@@ -16782,7 +16824,10 @@
 	},
 /obj/effect/floor_decal/industrial/warning/full,
 /turf/simulated/floor/plating,
-/area/space)
+/area/liberty/engineering/supermatter_space)
+"Jx" = (
+/turf/space,
+/area/liberty/engineering/supermatter_space)
 "Jy" = (
 /obj/effect/floor_decal/spline/fancy/black,
 /turf/simulated/floor/wood/yew,
@@ -16934,7 +16979,7 @@
 	},
 /obj/structure/catwalk,
 /turf/space,
-/area/space)
+/area/liberty/engineering/supermatter_space)
 "JM" = (
 /obj/effect/floor_decal/corner/brown{
 	dir = 9
@@ -17630,7 +17675,7 @@
 	dir = 1
 	},
 /turf/space,
-/area/space)
+/area/liberty/engineering/supermatter_space)
 "Ll" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/structure/cable/cyan{
@@ -17984,7 +18029,7 @@
 	tag = "engineering_outer"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/space)
+/area/liberty/engineering/supermatter_space)
 "LY" = (
 /obj/effect/floor_decal/corner/black/full,
 /obj/structure/table/woodentable,
@@ -18208,7 +18253,7 @@
 	name = "Supermatter Chamber blast doors"
 	},
 /turf/simulated/floor/plating,
-/area/space)
+/area/liberty/engineering/supermatter_space)
 "MB" = (
 /obj/machinery/door/firedoor,
 /obj/effect/floor_decal/industrial/hatch,
@@ -22066,7 +22111,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/airless,
-/area/space)
+/area/liberty/engineering/supermatter_space)
 "UI" = (
 /obj/machinery/light{
 	dir = 1
@@ -22375,8 +22420,8 @@
 	dir = 6
 	},
 /obj/structure/bed/chair/padded/brown{
-	icon_state = "chair_preview";
-	dir = 8
+	dir = 8;
+	icon_state = "chair_preview"
 	},
 /turf/simulated/floor/wood/yew,
 /area/liberty/hotel/pool)
@@ -22426,7 +22471,7 @@
 	tag = "engineering_exterior_sensor"
 	},
 /turf/simulated/floor/airless,
-/area/space)
+/area/liberty/engineering/supermatter_space)
 "Vr" = (
 /obj/machinery/disposal,
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -22998,6 +23043,13 @@
 	},
 /turf/simulated/floor/plating,
 /area/space)
+"WJ" = (
+/obj/structure/railing/mapped{
+	dir = 8
+	},
+/obj/structure/railing/mapped,
+/turf/space,
+/area/liberty/engineering/supermatter_space)
 "WK" = (
 /obj/machinery/floodlight{
 	dir = 8
@@ -23245,7 +23297,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/space)
+/area/liberty/engineering/supermatter_space)
 "Xl" = (
 /obj/structure/ladder/up,
 /obj/effect/floor_decal/industrial/outline/grey,
@@ -23394,8 +23446,8 @@
 	dir = 5
 	},
 /obj/structure/bed/chair/padded/brown{
-	icon_state = "chair_preview";
-	dir = 8
+	dir = 8;
+	icon_state = "chair_preview"
 	},
 /turf/simulated/floor/wood/yew,
 /area/liberty/hotel/pool)
@@ -23583,7 +23635,7 @@
 	},
 /obj/structure/catwalk,
 /turf/simulated/floor/airless,
-/area/space)
+/area/liberty/engineering/supermatter_space)
 "XX" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
@@ -53539,15 +53591,15 @@ GZ
 GZ
 sI
 GZ
-tP
+Gj
 vc
-tP
+Gj
 GZ
 Vr
 GZ
 GZ
-DL
-DL
+vM
+vM
 OE
 iC
 tC
@@ -53735,21 +53787,21 @@ Pn
 TY
 px
 md
-DL
+vM
 fX
 fX
-DL
+vM
 AM
 GZ
-tP
+Gj
 gX
-tP
+Gj
 GZ
 AM
 GZ
 fX
 fX
-DL
+vM
 DL
 xB
 tC
@@ -53944,7 +53996,7 @@ fX
 fX
 fX
 gD
-tP
+Gj
 pq
 fX
 fX
@@ -54140,19 +54192,19 @@ fK
 uy
 gq
 fX
-TQ
+qE
 gb
 gb
 gb
 gh
 gD
-tP
+Gj
 pq
-TQ
+qE
 gb
 gb
 gb
-iN
+WJ
 fX
 DL
 PI
@@ -54342,19 +54394,19 @@ fL
 CT
 md
 fX
-JR
-aa
+gn
+Jx
 gc
 gc
 gg
 gD
-tP
+Gj
 pq
 qU
 gc
 gc
-aa
-gf
+Jx
+IA
 fX
 DL
 CC
@@ -54544,19 +54596,19 @@ fK
 mA
 gq
 fX
-JR
-gf
+gn
+IA
 fX
 fX
 fX
 gD
-tP
+Gj
 pq
 fX
 fX
 fX
-JR
-gf
+gn
+IA
 fX
 DL
 dh
@@ -54746,19 +54798,19 @@ NZ
 LM
 gq
 fX
-JR
-gf
+gn
+IA
 fX
-xu
-xu
+fI
+fI
 JL
-tP
+Gj
 zT
-xu
-xu
+fI
+fI
 fX
-JR
-gf
+gn
+IA
 fX
 DL
 Xl
@@ -55148,7 +55200,7 @@ wX
 wX
 LX
 XW
-tP
+Gj
 fX
 fX
 fX
@@ -55346,26 +55398,26 @@ Xm
 va
 LQ
 Xk
-WH
-Jn
+ft
+Ba
 LX
 UH
-tP
-tP
-tP
-tP
-tP
-tP
+Gj
+Gj
+Gj
+Gj
+Gj
+Gj
 gC
 gN
 gZ
 gN
 gC
-tP
-tP
-tP
-tP
-tP
+Gj
+Gj
+Gj
+Gj
+Gj
 tP
 tP
 DL
@@ -55552,7 +55604,7 @@ rr
 Jw
 LX
 Vq
-tP
+Gj
 fX
 fX
 fX
@@ -55756,7 +55808,7 @@ WC
 WC
 WC
 fX
-TQ
+qE
 gh
 fX
 fX
@@ -55767,8 +55819,8 @@ gB
 gB
 fX
 fX
-TQ
-iN
+qE
+WJ
 fX
 DL
 DL
@@ -55958,19 +56010,19 @@ xe
 ot
 WC
 fX
-JR
-gf
+gn
+IA
 fX
 fX
 fX
 Lj
-hb
+ht
 Lj
 fX
 fX
 fX
-JR
-gf
+gn
+IA
 fX
 DL
 XL
@@ -56160,19 +56212,19 @@ qd
 xF
 WC
 fX
-JR
-gf
+gn
+IA
 fX
 fX
 fX
 Lj
-hb
+ht
 Lj
 fX
 fX
 fX
-JR
-gf
+gn
+IA
 fX
 DL
 Oa
@@ -56362,19 +56414,19 @@ Ld
 Vp
 WC
 fX
-JR
-aa
+gn
+Jx
 gb
 gb
 gb
-gf
-hb
-JR
+IA
+ht
+gn
 gb
 gb
 gb
-aa
-gf
+Jx
+IA
 fX
 DL
 EA
@@ -56570,7 +56622,7 @@ gc
 gc
 gc
 gg
-hb
+ht
 gd
 gc
 gc
@@ -56772,7 +56824,7 @@ fX
 fX
 fX
 fX
-hb
+ht
 fX
 fX
 fX
