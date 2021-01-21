@@ -14,9 +14,9 @@
 	var/hidden_from_codex = TRUE
 
 	// Icon/appearance vars.
-	var/icobase =      'code_ark/icons/mob/human_races/species/human/newhuman.dmi'          // Normal icon set.
+	var/icobase =      'icons/mob/human_races/species/human/body.dmi'          // Normal icon set.
 	var/deform =       'icons/mob/human_races/species/human/deformed_body.dmi' // Mutated icon set.
-	var/preview_icon = 'icons/mob/human_races/species/human/newhumanpreview.dmi'
+	var/preview_icon = 'icons/mob/human_races/species/human/preview.dmi'
 	var/husk_icon =    'icons/mob/human_races/species/default_husk.dmi'
 	var/bandages_icon
 
@@ -227,7 +227,7 @@
 	var/list/base_auras
 
 	var/sexybits_location	//organ tag where they are located if they can be kicked for increased pain
-
+	
 	var/job_skill_buffs = list()				// A list containing jobs (/datum/job), with values the extra points that job receives.
 
 	var/list/descriptors = list(
@@ -256,7 +256,7 @@
 		list(/decl/emote/audible/grunt, /decl/emote/audible/groan) = 10,
 	)
 
-
+	
 	var/exertion_effect_chance = 0
 	var/exertion_hydration_scale = 0
 	var/exertion_nutrition_scale = 0

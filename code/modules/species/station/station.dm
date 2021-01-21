@@ -12,19 +12,6 @@
 	min_age = 17
 	max_age = 100
 	hidden_from_codex = FALSE
-
-	override_limb_types = list(
-		BP_L_ARM = /obj/item/organ/external/arm/human
-		BP_R_ARM = /obj/item/organ/external/arm/right/human
-		BP_L_LEG = /obj/item/ogran/external/leg/human
-		BP_R_LEG = /obj/item/organ/external/leg/right/human
-		BP_L_HAND = /obj/item/organ/external/hand/human
-		BP_R_HAND = /obj/item/organ/external/hand/right/human
-		BP_L_FOOT = /obj/item/organ/external/foot/human
-		BP_R_FOOT = /obj/item/organ/external/foot/right/human
-		)
-	)
-
 	bandages_icon = 'icons/mob/bandage.dmi'
 
 	spawn_flags = SPECIES_CAN_JOIN
@@ -398,7 +385,7 @@
 		if(101 to 200)	. = 12 // age bracket before this is 46 to 100 . = 8 making this +4
 		if(201 to 300)	. = 16 // + 8
 		else			. = ..()
-
+		
 // Dionaea spawned by hand or by joining will not have any
 // nymphs passed to them. This should take care of that.
 /datum/species/diona/handle_post_spawn(var/mob/living/carbon/human/H)
