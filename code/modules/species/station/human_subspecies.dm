@@ -6,7 +6,7 @@
 	eyes beneath a prominent brow in order to shield them from the glare of a dangerously \
 	bright, alien sun. This comes at the cost of mobility, flexibility, and increased \
 	oxygen requirements to support their robust metabolism."
-	icobase =     'code_ark/icons/mob/human_races/species/human/gravworldersnew_body.dmi'
+	icobase =     'code_ark/icons/mob/human_races/species/human/gravworlddersnew_body.dmi'
 	preview_icon= 'code_ark/icons/mob/human_races/species/human/gravworldersnew_preview.dmi'
 	health_hud_intensity = 3
 
