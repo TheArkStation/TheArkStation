@@ -14,13 +14,13 @@
 	hidden_from_codex = FALSE
 
 	override_limb_types = list(
-		BP_L_ARM = /obj/item/organ/external/arm/human
-		BP_R_ARM = /obj/item/organ/external/arm/right/human
-		BP_L_LEG = /obj/item/ogran/external/leg/human
-		BP_R_LEG = /obj/item/organ/external/leg/right/human
-		BP_L_HAND = /obj/item/organ/external/hand/human
-		BP_R_HAND = /obj/item/organ/external/hand/right/human
-		BP_L_FOOT = /obj/item/organ/external/foot/human
+		BP_L_ARM = /obj/item/organ/external/arm/human,
+		BP_R_ARM = /obj/item/organ/external/arm/right/human,
+		BP_L_LEG = /obj/item/ogran/external/leg/human,
+		BP_R_LEG = /obj/item/organ/external/leg/right/human,
+		BP_L_HAND = /obj/item/organ/external/hand/human,
+		BP_R_HAND = /obj/item/organ/external/hand/right/human,
+		BP_L_FOOT = /obj/item/organ/external/foot/human,
 		BP_R_FOOT = /obj/item/organ/external/foot/right/human
 		)
 	)

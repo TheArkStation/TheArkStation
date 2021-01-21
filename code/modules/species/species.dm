@@ -14,9 +14,9 @@
 	var/hidden_from_codex = TRUE
 
 	// Icon/appearance vars.
-	var/icobase =      'code_ark/icons/mob/human_races/species/human/newhuman.dmi'          // Normal icon set.
+	var/icobase =      'code_ark/icons/mob/human_races/species/human/newhumans_body.dmi'          // Normal icon set.
 	var/deform =       'icons/mob/human_races/species/human/deformed_body.dmi' // Mutated icon set.
-	var/preview_icon = 'icons/mob/human_races/species/human/newhumanpreview.dmi'
+	var/preview_icon = 'code_ark/icons/mob/human_races/species/human/newhumans_preview.dmi'
 	var/husk_icon =    'icons/mob/human_races/species/default_husk.dmi'
 	var/bandages_icon
 
