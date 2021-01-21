@@ -6,8 +6,8 @@
 	eyes beneath a prominent brow in order to shield them from the glare of a dangerously \
 	bright, alien sun. This comes at the cost of mobility, flexibility, and increased \
 	oxygen requirements to support their robust metabolism."
-	icobase =     'code_ark/icons/mob/human_races/species/human/gravworlddersnew_body.dmi'
-	preview_icon= 'code_ark/icons/mob/human_races/species/human/gravworldersnew_preview.dmi'
+	icobase =     'code_ark/icons/mob/human_races/species/human/gravworlddersnew_body.dmi' //ARK
+	preview_icon= 'code_ark/icons/mob/human_races/species/human/gravworldersnew_preview.dmi' //ARK
 	health_hud_intensity = 3
 
 	flash_mod =     0.9
@@ -31,8 +31,8 @@
 	description = "Lithe and frail, these sickly folk were engineered for work in environments that \
 	lack both light and atmosphere. As such, they're quite resistant to asphyxiation as well as \
 	toxins, but they suffer from weakened bone structure and a marked vulnerability to bright lights."
-	icobase =     'code_ark/icons/mob/human_races/species/human/spaceadaptsnew_body.dmi'
-	preview_icon= 'code_ark/icons/mob/human_races/species/human/spaceadaptsnew_preview.dmi'
+	icobase =     'code_ark/icons/mob/human_races/species/human/spaceadaptsnew_body.dmi' //ARK
+	preview_icon= 'code_ark/icons/mob/human_races/species/human/spaceadaptsnew_preview.dmi' //ARK
 
 	oxy_mod =   0.8
 	breath_pressure = 14
@@ -71,8 +71,8 @@
 	with darker skin better display the dull, greenish hue resulting from their artificial growth. \
 	Vat-grown humans have no appendix and fewer inherited genetic disabilities but have a weakened \
 	metabolism."
-	icobase =     'code_ark/icons/mob/human_races/species/human/newvatgrown_body.dmi'
-	preview_icon= 'code_ark/icons/mob/human_races/species/human/newvatgrown_preview.dmi'
+	icobase =     'code_ark/icons/mob/human_races/species/human/newvatgrown_body.dmi' //ARK
+	preview_icon= 'code_ark/icons/mob/human_races/species/human/newvatgrown_preview.dmi' //ARK
 
 	toxins_mod =   1.1
 	has_organ = list(
@@ -101,8 +101,8 @@
 	of aquatic and non-aquatic environments. Their heavy, seal-like bodies have sharp teeth, recessed eyes, \
 	and thick blue-grey skin with a layer of dense blubber for insulation and protection, but they find \
 	it difficult to move quickly on land due to their bulk."
-	icobase =     'code_ark/icons/mob/human_races/species/human/tritoniansnew_body.dmi'
-	preview_icon= 'code_ark/icons/mob/human_races/species/human/tritoniansnew_preview.dmi'
+	icobase =     'code_ark/icons/mob/human_races/species/human/tritoniansnew_body.dmi' //ARK
+	preview_icon= 'code_ark/icons/mob/human_races/species/human/tritoniansnew_preview.dmi' //ARK
 	slowdown = 1
 
 	oxy_mod =             0.5
