@@ -466,6 +466,10 @@
 
 // BRIG
 
+/area/liberty/sfp/aft_checkpoint
+	name = "\improper Level One - Aft Docks Checkpoint"
+//	icon_state = "department_lobby"
+
 /area/liberty/sfp/lobby
 	name = "\improper SFP Field Office - Lobby"
 	icon_state = "department_lobby"
