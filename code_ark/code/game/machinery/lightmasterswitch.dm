@@ -12,7 +12,7 @@
 	var/brightness = 1
 
 /obj/machinery/light_switch/slave
-	name = "remote light witch"
+	name = "remote light switch"
 	desc = "It turns lights on and off. However, there's no way you can toggle this switch since it's remotely connected to a master."
 	icon = 'code_ark/icons/obj/power.dmi'
 	icon_state = "light-remote"
