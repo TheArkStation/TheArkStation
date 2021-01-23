@@ -1836,6 +1836,7 @@
 	d2 = 2;
 	icon_state = "0-2"
 	},
+/obj/effect/floor_decal/solarpanel,
 /turf/simulated/floor/airless,
 /area/liberty/solar/zero)
 "bGS" = (
@@ -10262,7 +10263,7 @@
 /area/liberty/sfp/hallway/zero)
 "jno" = (
 /obj/structure/stairs/south,
-/turf/simulated/wall,
+/turf/simulated/floor/tiled/techmaint,
 /area/liberty/hallway/zero)
 "jnC" = (
 /obj/structure/catwalk,
@@ -12411,6 +12412,7 @@
 "ljJ" = (
 /obj/item/solar_assembly,
 /obj/structure/cable,
+/obj/effect/floor_decal/solarpanel,
 /turf/simulated/floor/airless,
 /area/liberty/solar/zero)
 "lla" = (
@@ -15991,6 +15993,7 @@
 	d2 = 2;
 	icon_state = "0-2"
 	},
+/obj/effect/floor_decal/solarpanel,
 /turf/simulated/floor/airless,
 /area/liberty/solar/zero)
 "oow" = (
@@ -18531,6 +18534,7 @@
 "qAf" = (
 /obj/machinery/power/solar,
 /obj/structure/cable,
+/obj/effect/floor_decal/solarpanel,
 /turf/simulated/floor/airless,
 /area/liberty/solar/zero)
 "qAk" = (
@@ -19160,6 +19164,12 @@
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/liberty/maintenance/zero/engineering)
+"riS" = (
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 1
+	},
+/turf/simulated/floor/airless,
+/area/space)
 "riU" = (
 /obj/structure/catwalk,
 /obj/structure/closet/emcloset,
@@ -56238,7 +56248,7 @@ bqm
 rPD
 rPD
 fth
-kMg
+riS
 mzL
 tyY
 tyY

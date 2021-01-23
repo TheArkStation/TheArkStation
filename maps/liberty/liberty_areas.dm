@@ -343,7 +343,7 @@
 	icon_state = "devlab"
 
 /area/liberty/rnd/operating
-	name = "\improper RnD - Robotics Operating Theatre"
+	name = "\improper RnD - Robotics Operating Room"
 	icon_state = "misclab"
 
 /area/liberty/rnd/professor_office
