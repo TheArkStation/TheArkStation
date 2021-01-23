@@ -236,6 +236,7 @@
 /area/liberty/engineering/engine_room
 	name = "\improper Engineering - Engine Room"
 	icon_state = "eng_engine_room"
+	requires_power = FALSE
 
 /area/liberty/engineering/hallway/engineering_hall_level_zero
 	name = "\improper Engineering - Hallway Level Zero"
@@ -291,6 +292,10 @@
 	name = "\improper Level One - Abandoned Chapel"
 	icon_state = "chapel"
 
+/area/liberty/maintenance/one/shower
+	name = "\improper Level One - Abandoned Bathroom"
+	icon_state = "toilet"
+
 /area/liberty/maintenance/one/mechbay
 	name = "\improper Level One - Abandoned Mech Bay"
 	icon_state = "mechbay"
@@ -337,8 +342,8 @@
 	name = "\improper RnD - Development Lab"
 	icon_state = "devlab"
 
-/area/liberty/rnd/operation
-	name = "\improper RnD - Robotics Operations Theatr"
+/area/liberty/rnd/operating
+	name = "\improper RnD - Robotics Operating Theatre"
 	icon_state = "misclab"
 
 /area/liberty/rnd/professor_office
