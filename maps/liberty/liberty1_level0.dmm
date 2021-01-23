@@ -4064,11 +4064,6 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
 /obj/machinery/access_button{
 	command = "cycle_interior";
 	frequency = 1379;
@@ -4821,19 +4816,11 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/maintenance/zero/port)
 "eta" = (
-/obj/effect/floor_decal/corner/yellow{
-	dir = 5
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 1
 	},
-/obj/machinery/power/apc/high{
-	dir = 1;
-	pixel_y = 24
-	},
-/obj/structure/cable/yellow{
-	d2 = 2;
-	icon_state = "0-2"
-	},
-/turf/simulated/floor/tiled/steel_grid,
-/area/liberty/engineering/hallway/engineering_hall_level_zero)
+/turf/simulated/floor/airless,
+/area/space)
 "ets" = (
 /obj/machinery/computer/air_control{
 	dir = 1
@@ -13729,17 +13716,6 @@
 /obj/effect/floor_decal/corner/blue/border,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/liberty/hotel/gym)
-"mme" = (
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/effect/floor_decal/corner/yellow{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/steel_grid,
-/area/liberty/engineering/hallway/engineering_hall_level_zero)
 "mml" = (
 /obj/machinery/light/spot{
 	dir = 1
@@ -15534,11 +15510,6 @@
 /turf/simulated/floor/tiled/monotile,
 /area/liberty/cargo_bay/zero/mailroom)
 "nVc" = (
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
 /obj/effect/floor_decal/corner/yellow,
 /turf/simulated/floor/tiled/steel_grid,
 /area/liberty/engineering/hallway/engineering_hall_level_zero)
@@ -17435,7 +17406,7 @@
 	level = 2;
 	pixel_x = -1
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/liberty/maintenance/zero/port)
 "pGZ" = (
 /obj/effect/floor_decal/techfloor{
@@ -19164,12 +19135,6 @@
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/liberty/maintenance/zero/engineering)
-"riS" = (
-/obj/effect/floor_decal/industrial/warning/corner{
-	dir = 1
-	},
-/turf/simulated/floor/airless,
-/area/space)
 "riU" = (
 /obj/structure/catwalk,
 /obj/structure/closet/emcloset,
@@ -56248,7 +56213,7 @@ bqm
 rPD
 rPD
 fth
-riS
+eta
 mzL
 tyY
 tyY
@@ -57670,9 +57635,9 @@ dWx
 tBR
 wlg
 gts
-eta
+kJw
 nVc
-mme
+pYd
 dIX
 wvp
 kkn

@@ -26,6 +26,7 @@
 		/area/liberty/maintenance/zero/monitoring = 0,
 		/area/liberty/maintenance/zero/port = 0,
 		/area/liberty/maintenance/zero/solitary = 0,
+		/area/liberty/maintenance/one/shower = 0,
 		/area/liberty/solar = NO_SCRUBBER|NO_VENT|NO_APC,
 	)
 
