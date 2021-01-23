@@ -16,7 +16,14 @@
 /turf/simulated/floor/plating,
 /area/space)
 "ag" = (
-/turf/simulated/floor/tiled,
+/obj/machinery/computer/modular/preset/cardslot/command{
+	dir = 8;
+	icon_state = "console"
+	},
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark/monotile,
 /area/space)
 "ah" = (
 /turf/simulated/floor/plating,
@@ -53,7 +60,6 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/blast/regular/open{
 	dir = 4;
-	icon_state = "pdoor0";
 	id_tag = "controlroomwindow";
 	name = "Control Room Window Blast Doors"
 	},
@@ -63,8 +69,6 @@
 /obj/effect/wallframe_spawn/reinforced,
 /obj/machinery/door/firedoor,
 /obj/machinery/door/blast/regular/open{
-	dir = 2;
-	icon_state = "pdoor0";
 	id_tag = "controlroomwindow";
 	name = "Control Room Window Blast Doors"
 	},
@@ -316,8 +320,14 @@
 /turf/simulated/floor/tiled/monotile,
 /area/space)
 "bf" = (
-/obj/machinery/door/airlock/glass/command,
-/turf/simulated/floor/tiled,
+/obj/machinery/door/airlock/command{
+	name = "Lyudochka's office"
+	},
+/obj/machinery/door/firedoor{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/turf/simulated/floor/tiled/dark/monotile,
 /area/space)
 "bg" = (
 /obj/structure/bed/chair/comfy/brown,
@@ -423,8 +433,11 @@
 /turf/simulated/floor/tiled/dark,
 /area/space)
 "bu" = (
-/obj/structure/railing/mapped,
-/turf/simulated/open,
+/obj/effect/floor_decal/corner/grey/mono,
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/firedoor,
+/obj/machinery/vending/coffee,
+/turf/simulated/floor/tiled/monotile,
 /area/space)
 "bw" = (
 /obj/effect/wallframe_spawn/no_grille,
@@ -732,13 +745,6 @@
 	},
 /turf/simulated/floor/carpet/blue,
 /area/space)
-"cl" = (
-/obj/effect/floor_decal/corner/grey{
-	dir = 5
-	},
-/obj/effect/floor_decal/corner/grey,
-/turf/simulated/floor/tiled/techmaint,
-/area/space)
 "cm" = (
 /turf/simulated/floor/tiled/monotile,
 /area/space)
@@ -755,9 +761,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/space)
 "cK" = (
-/obj/effect/floor_decal/corner/grey{
-	dir = 9
-	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
 	},
@@ -774,23 +777,14 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
-/turf/simulated/floor/tiled/techmaint,
-/area/space)
-"cL" = (
 /obj/effect/floor_decal/corner/grey{
-	dir = 5
-	},
-/obj/effect/floor_decal/corner/grey{
-	dir = 8
+	dir = 1
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/space)
 "cR" = (
 /obj/machinery/disposal,
-/obj/effect/floor_decal/corner/grey{
-	dir = 10
-	},
-/obj/effect/floor_decal/corner/grey{
+/obj/effect/floor_decal/corner/grey/three_quarters{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -1111,7 +1105,6 @@
 	},
 /obj/machinery/door/blast/regular/open{
 	dir = 4;
-	icon_state = "pdoor0";
 	id_tag = "controlroomlockdown";
 	name = "Control Room Blast Doors"
 	},
@@ -1165,9 +1158,6 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/space)
 "jm" = (
-/obj/effect/floor_decal/corner/grey{
-	dir = 9
-	},
 /obj/machinery/atmospherics/pipe/cap/visible/supply{
 	dir = 1
 	},
@@ -1211,6 +1201,13 @@
 	name = "Toilet"
 	},
 /turf/simulated/floor/tiled,
+/area/space)
+"kb" = (
+/obj/effect/floor_decal/corner/grey/mono,
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/firedoor,
+/obj/machinery/vending/snack,
+/turf/simulated/floor/tiled/monotile,
 /area/space)
 "kg" = (
 /obj/machinery/computer/modular/preset/medical{
@@ -1303,6 +1300,13 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/space)
+"nk" = (
+/mob/living/bot/secbot/ed209{
+	name = "Lyudochka";
+	voice_name = "Lyudochka"
+	},
+/turf/simulated/floor/tiled/dark/monotile,
+/area/space)
 "ns" = (
 /obj/structure/bed/chair/comfy/beige{
 	dir = 1
@@ -1346,6 +1350,10 @@
 /area/space)
 "or" = (
 /obj/effect/floor_decal/spline/fancy,
+/obj/structure/cable/green{
+	d2 = 4;
+	icon_state = "0-4"
+	},
 /turf/simulated/floor/wood,
 /area/space)
 "pl" = (
@@ -1558,10 +1566,7 @@
 /area/space)
 "vc" = (
 /obj/structure/table/steel_reinforced,
-/obj/effect/floor_decal/corner/grey{
-	dir = 5
-	},
-/obj/effect/floor_decal/corner/grey{
+/obj/effect/floor_decal/corner/grey/three_quarters{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -1692,13 +1697,10 @@
 /turf/simulated/floor/tiled/dark,
 /area/space)
 "xy" = (
-/obj/effect/floor_decal/corner/grey{
-	dir = 5
-	},
-/obj/effect/floor_decal/corner/grey{
+/obj/machinery/light{
 	dir = 8
 	},
-/obj/machinery/light{
+/obj/effect/floor_decal/corner/grey/three_quarters{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -1757,9 +1759,6 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/space)
 "yz" = (
-/obj/effect/floor_decal/corner/grey{
-	dir = 6
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
@@ -1770,6 +1769,9 @@
 	d1 = 1;
 	d2 = 4;
 	icon_state = "1-4"
+	},
+/obj/effect/floor_decal/corner/grey{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/space)
@@ -1898,15 +1900,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/space)
-"Bf" = (
-/obj/effect/floor_decal/corner/grey{
-	dir = 10
-	},
-/obj/effect/floor_decal/corner/grey{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/space)
 "Bg" = (
 /obj/structure/table/reinforced,
 /obj/effect/floor_decal/corner/paleblue,
@@ -1980,20 +1973,15 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/techmaint,
 /area/space)
-"CA" = (
-/obj/effect/floor_decal/corner/grey{
-	dir = 9
-	},
-/obj/effect/floor_decal/corner/grey{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/space)
 "CI" = (
 /obj/effect/floor_decal/corner/grey{
 	dir = 6
 	},
 /turf/simulated/floor/tiled/techmaint,
+/area/space)
+"CP" = (
+/obj/structure/railing/mapped,
+/turf/simulated/open,
 /area/space)
 "CQ" = (
 /obj/structure/table/reinforced,
@@ -2039,11 +2027,15 @@
 	},
 /obj/machinery/power/apc{
 	name = "south bump";
-	pixel_y = -28
+	pixel_y = -24
 	},
 /obj/effect/floor_decal/spline/fancy,
 /obj/effect/floor_decal/spline/fancy{
 	dir = 1
+	},
+/obj/structure/cable/green{
+	d2 = 8;
+	icon_state = "0-8"
 	},
 /turf/simulated/floor/wood,
 /area/space)
@@ -2106,22 +2098,13 @@
 	},
 /turf/simulated/floor/carpet/blue,
 /area/space)
-"EG" = (
-/obj/effect/floor_decal/corner/grey{
-	dir = 6
-	},
-/obj/effect/floor_decal/corner/grey{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/space)
 "EV" = (
 /obj/effect/floor_decal/corner/grey{
 	dir = 6
 	},
 /obj/machinery/firealarm{
 	dir = 4;
-	pixel_x = 21
+	pixel_x = 24
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/space)
@@ -2172,6 +2155,7 @@
 /obj/structure/closet/emcloset,
 /obj/machinery/power/apc{
 	dir = 4;
+	name = "east bump";
 	pixel_x = 24
 	},
 /obj/structure/railing/mapped,
@@ -2200,7 +2184,6 @@
 	},
 /obj/machinery/door/blast/regular/open{
 	dir = 4;
-	icon_state = "pdoor0";
 	id_tag = "controlroomlockdown";
 	name = "Control Room Blast Doors"
 	},
@@ -2306,11 +2289,10 @@
 /turf/simulated/floor/carpet/blue,
 /area/space)
 "MM" = (
-/obj/effect/floor_decal/corner/grey{
-	dir = 5
-	},
-/obj/effect/floor_decal/corner/grey,
 /obj/structure/flora/pottedplant/large,
+/obj/effect/floor_decal/corner/grey/three_quarters{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/space)
 "MP" = (
@@ -2357,13 +2339,12 @@
 /turf/simulated/floor/plating,
 /area/space)
 "NG" = (
-/obj/effect/floor_decal/corner/grey{
-	dir = 5
-	},
-/obj/effect/floor_decal/corner/grey,
 /obj/machinery/firealarm{
 	dir = 4;
-	pixel_x = 21
+	pixel_x = 24
+	},
+/obj/effect/floor_decal/corner/grey/three_quarters{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/space)
@@ -2385,6 +2366,9 @@
 /area/space)
 "NZ" = (
 /obj/structure/flora/pottedplant/large,
+/obj/machinery/light/small{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark,
 /area/space)
 "Ou" = (
@@ -2482,12 +2466,7 @@
 	dir = 1;
 	icon_state = "console"
 	},
-/obj/effect/floor_decal/corner/grey{
-	dir = 10
-	},
-/obj/effect/floor_decal/corner/grey{
-	dir = 1
-	},
+/obj/effect/floor_decal/corner/grey/three_quarters,
 /turf/simulated/floor/tiled/techmaint,
 /area/space)
 "Rk" = (
@@ -2511,12 +2490,11 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/space)
 "Ro" = (
-/obj/effect/floor_decal/corner/grey{
-	dir = 5
-	},
-/obj/effect/floor_decal/corner/grey,
 /obj/machinery/light{
 	dir = 4
+	},
+/obj/effect/floor_decal/corner/grey/three_quarters{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/space)
@@ -16186,9 +16164,9 @@ ah
 ah
 ah
 ae
-cL
+uq
 zm
-Bf
+Az
 ad
 ah
 ah
@@ -18804,7 +18782,7 @@ Bn
 Bn
 Bn
 ad
-CA
+uq
 mZ
 mZ
 mZ
@@ -19208,7 +19186,7 @@ Bn
 pl
 pl
 ad
-EG
+WN
 AZ
 CI
 ug
@@ -22443,10 +22421,10 @@ ah
 ah
 ah
 bc
-cL
-mZ
+uq
 mZ
 ab
+CP
 bu
 HI
 be
@@ -22458,8 +22436,8 @@ mZ
 mZ
 mZ
 mZ
-mZ
-mZ
+qZ
+MR
 mZ
 mZ
 mZ
@@ -22647,9 +22625,9 @@ ah
 bc
 YB
 Ou
-CI
 ab
-bu
+CP
+kb
 HI
 be
 Ou
@@ -22664,8 +22642,8 @@ CI
 CI
 pK
 yz
-CI
-CI
+pl
+Ou
 CI
 CI
 ae
@@ -23054,7 +23032,7 @@ MR
 mZ
 mZ
 mZ
-pl
+qZ
 be
 Qk
 bw
@@ -23251,7 +23229,7 @@ ah
 ah
 ah
 bc
-cl
+WN
 CI
 AY
 CI
@@ -25493,7 +25471,7 @@ mZ
 mN
 cK
 jm
-Az
+Qk
 ad
 bE
 bD
@@ -26704,8 +26682,8 @@ pN
 rO
 rm
 CI
-pl
-pl
+Tt
+Qk
 bc
 jN
 az
@@ -27709,7 +27687,7 @@ Vp
 Vp
 uK
 bc
-bc
+bf
 bc
 ay
 cb
@@ -27911,7 +27889,7 @@ bL
 cd
 cd
 bc
-ag
+nk
 bc
 aK
 bg
@@ -28315,7 +28293,7 @@ vE
 bb
 bc
 bc
-bf
+bc
 bc
 bc
 bw
@@ -28517,13 +28495,13 @@ aQ
 bb
 uq
 mZ
-pl
+mZ
 Dy
 mZ
 mZ
 mZ
-pl
-pl
+qZ
+MR
 Az
 bc
 ju
@@ -28726,7 +28704,7 @@ be
 be
 be
 be
-Qk
+pl
 mY
 az
 az
@@ -29930,8 +29908,8 @@ Lc
 aX
 bb
 HI
-pl
-pl
+MR
+qZ
 Qk
 bb
 ld

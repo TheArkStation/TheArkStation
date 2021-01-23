@@ -98,7 +98,7 @@
 	name = "\improper Engineering - Engine Room"
 	icon_state = "eng_engine_room"
 
-/area/liberty/engineering/engineering_hall_level_zero
+/area/liberty/engineering/hallway/engineering_hall_level_zero
 	name = "\improper Engineering - Hallway Level Zero"
 	icon_state = "eng_hall_00"
 
@@ -106,7 +106,7 @@
 	name = "\improper Engineering - Prep Room"
 	icon_state = "eng_prep_room"
 
-/area/liberty/engineering/substation_level_zero
+/area/liberty/engineering/substation/substation_level_zero
 	name = "\improper Engineering - Substation Level Zero"
 	icon_state = "eng_substation_00"
 
@@ -122,7 +122,7 @@
 	name = "\improper Engineering - Primary Storage"
 	icon_state = "eng_primary_storage"
 
-/area/liberty/engineering/engineering_solar_level_zero
+/area/liberty/engineering/solar/engineering_solar_level_zero
 	name = "\improper Engineering - Solar Level Zero"
 	icon_state = "eng_solar_00"
 
@@ -306,7 +306,7 @@
 
 // ENGINEERING
 
-/area/liberty/engineering/substation_level_one
+/area/liberty/engineering/substation/substation_level_one
 	name = "\improper Engineering - Substation Level One"
 	icon_state = "eng_substation_01"
 
@@ -314,7 +314,7 @@
 	name = "\improper Engineering - Hard Storage"
 	icon_state = "eng_hard_storage"
 
-/area/liberty/engineering/substation_main
+/area/liberty/engineering/substation/substation_main
 	name = "\improper Engineering - Substation Main"
 	icon_state = "eng_substation_main"
 
@@ -326,7 +326,7 @@
 	name = "\improper Engineering - Technical Storage"
 	icon_state = "eng_technical_storage"
 
-/area/liberty/engineering/engineering_hall_level_one
+/area/liberty/engineering/hallway/engineering_hall_level_one
 	name = "\improper Engineering - Hallway level one"
 	icon_state = "eng_hall_01"
 

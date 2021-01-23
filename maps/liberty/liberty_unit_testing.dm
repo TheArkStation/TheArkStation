@@ -15,6 +15,9 @@
 		/area/space = NO_SCRUBBER|NO_VENT|NO_APC,
 		/area/shuttle = NO_SCRUBBER|NO_VENT|NO_APC,
 		/area/turbolift = NO_SCRUBBER|NO_VENT|NO_APC,
+		/area/exoplanet = NO_SCRUBBER|NO_VENT|NO_APC,
+		/area/liberty/engineering/substation = NO_SCRUBBER|NO_VENT,
+		/area/liberty/engineering/solar = NO_SCRUBBER|NO_VENT,
 	)
 
 	area_coherency_test_exempt_areas = list(
