@@ -9681,19 +9681,11 @@
 /turf/simulated/floor/grass/no_edges,
 /area/liberty/hallway/one/central)
 "arq" = (
-/obj/effect/floor_decal/corner/brown{
-	dir = 9
-	},
-/obj/machinery/light{
+/obj/machinery/door/firedoor{
 	dir = 8
 	},
-/obj/structure/bed/chair{
-	dir = 4
-	},
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/steel_grid,
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/turf/simulated/floor/tiled/monotile,
 /area/space)
 "arr" = (
 /obj/structure/closet,
@@ -10402,7 +10394,12 @@
 /obj/effect/floor_decal/corner/brown{
 	dir = 9
 	},
-/obj/machinery/disposal,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/structure/bed/chair{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/space)
 "asq" = (
@@ -30612,6 +30609,8 @@
 /area/liberty/medbay/reception)
 "nTb" = (
 /obj/effect/floor_decal/corner/brown/mono,
+/obj/machinery/disposal,
+/obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/monotile,
 /area/space)
 "nYJ" = (
@@ -51107,7 +51106,7 @@ apJ
 aRX
 aIT
 aqj
-arq
+aRX
 aWd
 asp
 aSj
@@ -52723,7 +52722,7 @@ alQ
 alQ
 aGa
 aGa
-ajy
+arq
 aSj
 nTb
 aSj

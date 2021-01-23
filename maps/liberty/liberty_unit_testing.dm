@@ -18,6 +18,7 @@
 		/area/exoplanet = NO_SCRUBBER|NO_VENT|NO_APC,
 		/area/liberty/engineering/substation = NO_SCRUBBER|NO_VENT,
 		/area/liberty/engineering/solar = NO_SCRUBBER|NO_VENT,
+		/area/liberty/engineering/solar/engineering_solar_level_zero = NO_SCRUBBER|NO_VENT|NO_APC,
 	)
 
 	area_coherency_test_exempt_areas = list(
