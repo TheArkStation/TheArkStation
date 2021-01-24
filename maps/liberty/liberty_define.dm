@@ -5,8 +5,9 @@
 	flags = MAP_HAS_BRANCH | MAP_HAS_RANK
 //	config_path = "config/liberty_config.txt"
 
-	// Did you know, that poibrains have laws? No? Me too!
+	// Did you know, that posibrains have laws? No? Me too!
 	default_law_type = /datum/ai_laws/robocop
+	base_floor_type = /turf/simulated/floor/reinforced/airless
 
 	admin_levels = list()
 	empty_levels = list(6)
@@ -43,4 +44,4 @@
 	num_exoplanets = 1
 
 	away_site_budget = 3
-	id_hud_icons = 'maps/torch/icons/assignment_hud.dmi'
+	id_hud_icons = 'maps/liberty/icons/assignment_hud.dmi'
