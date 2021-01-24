@@ -528,7 +528,7 @@
 
 // HALLWAYS
 
-/area/liberty/hallway/one/central
+/area/liberty/hallway/one
 	name = "\improper Level One - Central Hall"
 	icon_state = "lvl_1_central_hall"
 
@@ -593,6 +593,20 @@
 ///////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////// LEVEL TWO ////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////
+
+// HALLWAY
+
+/area/liberty/hallway/two
+	name = "\improper Level Two - Central Hall"
+	icon_state = "lvl_2_central_hall"
+
+/area/liberty/hallway/two/fore
+	name = "\improper Level Two - Fore"
+	icon_state = "lvl_2_fore_hall"
+
+/area/liberty/hallway/two/aft
+	name = "\improper Level Two - Aft"
+	icon_state = "lvl_2_aft_hall"
 
 // RESEARCH
 

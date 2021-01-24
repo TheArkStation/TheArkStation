@@ -43,4 +43,4 @@
 	num_exoplanets = 1
 
 	away_site_budget = 3
-	id_hud_icons = 'maps/torch/icons/assignment_hud.dmi'
+	id_hud_icons = 'maps/liberty/icons/assignment_hud.dmi'
