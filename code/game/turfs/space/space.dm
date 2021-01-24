@@ -24,7 +24,7 @@
 
 /turf/space/Initialize()
 	. = ..()
-//	icon_state = "white"
+	icon_state = "white"
 	update_starlight()
 	if (!dust_cache)
 		build_dust_cache()

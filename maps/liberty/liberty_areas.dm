@@ -25,7 +25,7 @@
 	always_unpowered = 1
 	has_gravity = FALSE
 	base_turf = /turf/space
-	req_access = list(access_engine_equip)
+//	req_access = list(инженерный доступ)
 	icon = 'icons/turf/areas.dmi'	// WIP
 
 // MAINTENANCE
