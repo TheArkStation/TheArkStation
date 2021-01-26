@@ -80,28 +80,6 @@
 			src.attach_accessory(null, tie)
 
 //BS12: Species-restricted clothing check.
-/obj/item/clothing
-	var/ficon_override = FALSE
-
-/datum/species/var/all_clothing_female_icons = FALSE
-/datum/species/human/all_clothing_female_icons = TRUE
-
-/obj/item/clothing/proc/has_female_icon(var/slot)
-	var/list/valid_states = (item_icons && item_icons[slot]) ? icon_states(item_icons[slot]) : icon_states(default_onmob_icons[slot])
-	return icon_state + "_f" in valid_states || ficon_override //ARK
-
-/obj/item/clothing/get_icon_state(mob/user_mob, slot)
-	if(item_state_slots && item_state_slots[slot])
-		. = item_state_slots[slot]
-	else if (item_state)
-		. = item_state
-	else
-		. = icon_state
-	if(ishuman(user_mob))
-		var/mob/living/carbon/human/H = user_mob
-		if(H.species.all_clothing_female_icons && has_female_icon(slot) && H.gender == FEMALE)
-			. += "_f" //ARK
-
 /obj/item/clothing/mob_can_equip(M as mob, slot, disable_warning = 0)
 
 	//if we can't equip the item anyway, don't bother with species_restricted (cuts down on spam)
@@ -812,6 +790,16 @@ BLIND     // can't see anything
 	if (ismob(src.loc))
 		var/mob/M = src.loc
 		M.update_inv_wear_suit()
+
+/obj/item/clothing/suit/get_mob_overlay(mob/user_mob, slot)
+	var/image/ret = ..()
+	if(item_state_slots && item_state_slots[slot])
+		ret.icon_state = item_state_slots[slot]
+	else
+		ret.icon_state = item_state
+	if(!ret.icon_state)
+		ret.icon_state = icon_state
+	return ret
 
 /obj/item/clothing/suit/handle_shield()
 	return FALSE
