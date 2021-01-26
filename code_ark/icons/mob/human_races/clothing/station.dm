@@ -13,6 +13,17 @@
 	max_age = 100
 	hidden_from_codex = FALSE
 
+	override_limb_types = list(
+		BP_L_ARM = /obj/item/organ/external/arm/human, //ARK
+		BP_R_ARM = /obj/item/organ/external/arm/right/human, //ARK
+		BP_L_LEG = /obj/item/organ/external/leg/human, //ARK
+		BP_R_LEG = /obj/item/organ/external/leg/right/human, // ARK
+		BP_L_HAND = /obj/item/organ/external/hand/human, // ARK
+		BP_R_HAND = /obj/item/organ/external/hand/right/human, // ARK
+		BP_L_FOOT = /obj/item/organ/external/foot/human, // ARK
+		BP_R_FOOT = /obj/item/organ/external/foot/right/human //ARK
+	) //ARK
+
 	bandages_icon = 'icons/mob/bandage.dmi'
 
 	spawn_flags = SPECIES_CAN_JOIN
