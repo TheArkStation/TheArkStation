@@ -1,5 +1,7 @@
-datum/preferences
+#define TRAPME(SPECIES)	##SPECIES + " (Female)"	// ARK
+/datum/preferences
 	var/gender = MALE					//gender of character (well duh)
+	var/trap = FALSE					// ARK tonkotrap?
 	var/age = 30						//age of character
 	var/spawnpoint = "Default" 			//where this character will spawn (0-2).
 	var/metadata = ""
@@ -18,6 +20,8 @@ datum/preferences
 	from_save(S["real_name"],             pref.real_name)
 	from_save(S["name_is_always_random"], pref.be_random_name)
 
+	from_save(S["trap"],				  pref.trap)	// ARK
+
 /datum/category_item/player_setup_item/physical/basic/save_character(var/savefile/S)
 	to_save(S["gender"],                  pref.gender)
 	to_save(S["age"],                     pref.age)
@@ -26,8 +30,11 @@ datum/preferences
 	to_save(S["real_name"],               pref.real_name)
 	to_save(S["name_is_always_random"],   pref.be_random_name)
 
+	to_save(S["trap"],					  pref.trap)	// ARK
+
 /datum/category_item/player_setup_item/physical/basic/sanitize_character()
 	var/datum/species/S = all_species[pref.species ? pref.species : SPECIES_HUMAN]
+	if(!S && pref.trap)	pref.trap = FALSE
 	if(!S) S = all_species[SPECIES_HUMAN]
 	pref.age                = sanitize_integer(pref.age, S.min_age, S.max_age, initial(pref.age))
 	pref.gender             = sanitize_inlist(pref.gender, S.genders, pick(S.genders))
@@ -50,6 +57,7 @@ datum/preferences
 	. += "<a href='?src=\ref[src];always_random_name=1'>Always Random Name: [pref.be_random_name ? "Yes" : "No"]</a>"
 	. += "<hr>"
 	. += "<b>Gender:</b> <a href='?src=\ref[src];gender=1'><b>[gender2text(pref.gender)]</b></a><br>"
+	. += "<b>Be Trap:</b> <a href='?src=\ref[src];trap=1'><b>[pref.trap ? "Yes" : "No"]</b></a><br>"	// ARK
 	. += "<b>Age:</b> <a href='?src=\ref[src];age=1'>[pref.age]</a><br>"
 	. += "<b>Spawn Point</b>: <a href='?src=\ref[src];spawnpoint=1'>[pref.spawnpoint]</a>"
 	if(config.allow_Metadata)
@@ -58,6 +66,29 @@ datum/preferences
 
 /datum/category_item/player_setup_item/physical/basic/OnTopic(var/href,var/list/href_list, var/mob/user)
 	var/datum/species/S = all_species[pref.species]
+
+// [ARK]
+	if(href_list["trap"])
+		if(!pref.trap)
+			var/datum/species/check = all_species[TRAPME(S.name)]
+			if(!check)
+				to_chat(user, "<span class='warning'>У этой расы нет варианта трапика</span>")
+				return TOPIC_NOACTION
+			else
+				pref.species = check.name
+				pref.trap = TRUE
+				pref.gender = check.genders[1]	// Update that button too please
+				return TOPIC_REFRESH_UPDATE_PREVIEW
+		else
+			for(var/race in all_species)
+				var/datum/species/trap = all_species[race]
+				if(trap.type == S.parent_type)
+					pref.species = trap.name
+					pref.trap = FALSE
+					return TOPIC_REFRESH_UPDATE_PREVIEW
+			to_chat(user, "<span class='warning'>Что то пиздецки сломалось</span>")
+			return TOPIC_NOACTION
+// [/ARK]
 
 	if(href_list["rename"])
 		var/raw_name = input(user, "Choose your character's name:", "Character Name")  as text|null
