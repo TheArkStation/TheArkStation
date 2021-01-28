@@ -949,7 +949,7 @@
 
 /area/liberty/kenobi/passenger
 	name = "\improper GUP Kenobi - Passanger Compartment"
-	icon_state = "kenabi_passenger"
+	icon_state = "kenobi_passenger"
 
 /area/liberty/konigstiger
 	name = "\improper FGS Konigstiger"
