@@ -26,17 +26,17 @@
 	has_gravity = FALSE
 	base_turf = /turf/space
 //	req_access = list(инженерный доступ)
-	icon = 'icons/turf/areas.dmi'	// WIP
+	// icon = 'icons/turf/areas.dmi'	// WIP
 
 // MAINTENANCE
 
 /area/liberty/maintenance
-	icon = 'icons/turf/areas.dmi'	// WIP
+	// icon = 'icons/turf/areas.dmi'	// WIP
 
 /area/liberty/maintenance/construction	// NO_APC for unit_test
 
 /area/liberty/cargo_bay
-	icon = 'icons/turf/areas.dmi'	// WIP
+	// icon = 'icons/turf/areas.dmi'	// WIP
 
 ////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////// LEVEL ZERO ////////////////////////////////////
@@ -44,117 +44,117 @@
 
 /area/liberty/solar/zero
 	name = "\improper Level Zero - Solar Array"
-	icon_state = "panelsA"
+	icon_state = "eng_solar_00_array"
 
 // MAINTENANCE
 
 /area/liberty/maintenance/zero
 	name = "\improper Level Zero - Emergency Storage"
-	icon_state = "emergencystorage"
+	icon_state = "emergency_storage_00"
 
 /area/liberty/maintenance/zero/hangar
 	name = "\improper Maintenance - Level Zero - Hangar"
-	icon_state = "maint_e_shuttle"
+	icon_state = "maintance_zero_hangar"
 
 /area/liberty/maintenance/zero/engineering
 	name = "\improper Maintenance - Level Zero - Engineering"
-	icon_state = "maint_engine"
+	icon_state = "maintance_zero_engineering"
 
 /area/liberty/maintenance/zero/port
 	name = "\improper Maintenance - Level Zero - Port"
-	icon_state = "pmaint"
+	icon_state = "maintance_zero_port"
 
 /area/liberty/maintenance/zero/monitoring
 	name = "\improper Aux Station Monitoring"
-	icon_state = "engine_monitoring"
+	icon_state = "abandoned_aux_station_monitoring"
 
 /area/liberty/maintenance/zero/casino
 	name = "\improper Maintenance - Level Zero - Casino"
-	icon_state = "fpmaint"
+	icon_state = "maintance_zero_casino"
 
 /area/liberty/maintenance/zero/fore
 	name = "\improper Maintenance - Level Zero - Fore"
-	icon_state = "fmaint"
+	icon_state = "maintance_zero_fore"
 
 /area/liberty/maintenance/zero/laundry
 	name = "\improper Level Zero - Abandoned Laundry"
-	icon_state = "janitor"
+	icon_state = "abandoned_laundry"
 
 /area/liberty/maintenance/zero/solitary
 	name = "\improper SFP Field Office - Solitary"
-	icon_state = "brig"
+	icon_state = "abandoned_solitary"
 
 /area/liberty/maintenance/zero/brig
 	name = "\improper Maintenance - Level Zero - SFP Office"
-	icon_state = "maint_security_starboard"
+	icon_state = "maintance_zero_sfp_office"
 
 /area/liberty/maintenance/zero/fore_starboard
 	name = "\improper Maintenance - Level Zero - Fore Starboard"
-	icon_state = "fsmaint"
+	icon_state = "maintance_zero_fore_starboard"
 
 /area/liberty/maintenance/construction/zero/chapel
 	name = "\improper Level Zero - Abandoned Chapel"
-	icon_state = "chapel"
+	icon_state = "abandoned_chapel_zero"
 
 /area/liberty/maintenance/construction/zero/shop
 	name = "\improper Level Zero - Abandoned Shop"
-	icon_state = "cafeteria"
+	icon_state = "abandoned_shop"
 
 /area/liberty/maintenance/construction/zero/medbay
 	name = "\improper Level Zero - Abandoned Medbay"
-	icon_state = "medbay"
+	icon_state = "abandoned_medbay"
 
 // HALLWAYS
 
 /area/liberty/hallway/zero
 	name = "\improper Level Zero - Starboard Hall"
-	icon_state = "hallS"
-	icon = 'icons/turf/areas.dmi'	// WIP
+	icon_state = "lvl_0_hall_starboard"
+	// icon = 'icons/turf/areas.dmi'	// WIP
 
 /area/liberty/hallway/zero/fore
 	name = "\improper Level Zero - Fore Hall"
-	icon_state = "hallF"
+	icon_state = "lvl_0_hall_fore"
 
 /area/liberty/hallway/zero/aft
 	name = "\improper Level Zero - Aft Hall"
-	icon_state = "hallA"
+	icon_state = "lvl_0_hall_aft"
 
 // HANGAR
 
 /area/liberty/hangar
-	icon = 'icons/turf/areas.dmi'	// WIP
+	// icon = 'icons/turf/areas.dmi'	// WIP
 	name = "\improper Hangar Bay"
 	icon_state = "hangar"
 
 /area/liberty/hangar/canister_storage
 	name = "\improper Aux Fuel Storage"
-	icon_state = "mining_eva"
+	icon_state = "hangar_canister_storage"
 
 // CARGO
 
 /area/liberty/cargo_bay/zero
 	name = "\improper Cargo - Warehouse"
-	icon_state = "quartstorage"
+	icon_state = "cargo_warehouse"
 
 /area/liberty/cargo_bay/zero/mailroom
 	name = "\improper Cargo - Mail"
-	icon_state = "quartsorting"
+	icon_state = "cargo_mailroom"
 
 /area/liberty/cargo_bay/zero/fuel_bay
 	name = "\improper Cargo - Fuel Bay"
-	icon_state = "eva"
+	icon_state = "cargo_fuel_bay"
 
 /area/liberty/cargo_bay/zero/train
 	name = "\improper Cargo - Train Storage"
-	icon_state = "quart"
+	icon_state = "cargo_train_storage"
 
 /area/liberty/cargo_bay/zero/public_storage
 	name = "\improper Cargo - Public Warehouse"
-	icon_state = "primarystorage"
+	icon_state = "cargo_primary_public_warehouse"
 
 /area/liberty/cargo_bay/zero/public_storage/second
 	name = "\improper Cargo - Secondary Public Warehouse"
-	icon_state = "emergencystorage"
+	icon_state = "cargo_secondary_public_warehouse"
 
 // HOTEL
 
@@ -274,113 +274,113 @@
 
 /area/liberty/maintenance/one
 	name = "\improper Maintenance - Level One - Central"
-	icon_state = "maintcentral"
+	icon_state = "maintance_one_central"
 
 /area/liberty/maintenance/one/fore
 	name = "\improper Maintenance - Level One - Fore"
-	icon_state = "fmaint"
+	icon_state = "maintance_one_fore"
 
 /area/liberty/maintenance/one/port
 	name = "\improper Maintenance - Level One - Port"
-	icon_state = "pmaint"
+	icon_state = "maintance_one_port"
 
 /area/liberty/maintenance/one/aft_port
 	name = "\improper Maintenance - Level One - Aft Port"
-	icon_state = "apmaint"
+	icon_state = "maintance_one_aft_port"
 
 /area/liberty/maintenance/one/chapel
 	name = "\improper Level One - Abandoned Chapel"
-	icon_state = "chapel"
+	icon_state = "abandoned_chapel_one"
 
 /area/liberty/maintenance/one/shower
 	name = "\improper Level One - Abandoned Bathroom"
-	icon_state = "toilet"
+	icon_state = "abandoned_bathroom"
 
 /area/liberty/maintenance/one/mechbay
 	name = "\improper Level One - Abandoned Mech Bay"
-	icon_state = "mechbay"
+	icon_state = "abandoned_mechbay"
 
 /area/liberty/maintenance/one/starboard
 	name = "\improper Maintenance - Level One - Starboard"
-	icon_state = "smaint"
+	icon_state = "maintance_one_starboard"
 
 // SHOPPING HALL
 
 /area/liberty/shopping
 	name = "\improper Shopping Hall"
-	icon_state = "cafeteria"
-	icon = 'icons/turf/areas.dmi'	// WIP
+	icon_state = "shop_hall"
+	// icon = 'icons/turf/areas.dmi'	// WIP
 
 /area/liberty/shopping/keeper
 	name = "\improper Shop Keeper"
-	icon_state = "bar"
+	icon_state = "shop_keeper"
 
 /area/liberty/shopping/backroom
 	name = "\improper Shop Backroom"
-	icon_state = "kitchen"
+	icon_state = "shop_backroom"
 
 // RESEARCH
 
 /area/liberty/rnd
 	name = "\improper RnD - Shop"
-	icon_state = "research"
-	icon = 'icons/turf/areas.dmi'	// WIP
+	icon_state = "rnd_shop"
+	// icon = 'icons/turf/areas.dmi'	// WIP
 
 /area/liberty/rnd/equip
 	name = "\improper RnD - Equipment Storage"
-	icon_state = "labwing"
+	icon_state = "rnd_equipment_storage"
 
 /area/liberty/rnd/hallway
 	name = "\improper RnD - Hallway"
-	icon_state = "research_dock"
+	icon_state = "rnd_hallway"
 
 /area/liberty/rnd/robotics
 	name = "\improper RnD - Robotics Lower"
-	icon_state = "robotics"
+	icon_state = "rnd_robotics_lower"
 
 /area/liberty/rnd/rnd
 	name = "\improper RnD - Development Lab"
-	icon_state = "devlab"
+	icon_state = "rnd_devlab"
 
 /area/liberty/rnd/operating
 	name = "\improper RnD - Robotics Operating Room"
-	icon_state = "misclab"
+	icon_state = "rnd_robotics_operating_room"
 
 /area/liberty/rnd/professor_office
 	name = "\improper RnD - Professor's Office"
-	icon_state = "toxtest"
+	icon_state = "rnd_professor"
 
 /area/liberty/rnd/breakroom
 	name = "\improper RnD - Breakroom"
-	icon_state = "researchbreak"
+	icon_state = "rnd_breakroom"
 
 // HANGAR
 
 /area/liberty/hangar/tower
 	name = "\improper Traffic Tower"
-	icon_state = "Tactical"
+	icon_state = "hangar_tower"
 
 // CARGO
 
 /area/liberty/cargo_bay/one
 	name = "\improper Cargo - Elevator"
-	icon_state = "quartstorage"
+	icon_state = "cargo_elevator"
 
 /area/liberty/cargo_bay/one/office
 	name = "\improper Cargo - Office"
-	icon_state = "quartoffice"
+	icon_state = "cargo_office"
 
 /area/liberty/cargo_bay/one/quartermaster
 	name = "\improper Cargo - Quartermaster"
-	icon_state = "quart"
+	icon_state = "cargo_quartermaster"
 
 /area/liberty/cargo_bay/one/waiting_room
 	name = "\improper Cargo - Waiting Room"
-	icon_state = "quartsorting"
+	icon_state = "cargo_waiting_room"
 
 /area/liberty/cargo_bay/one/breakroom
 	name = "\improper Cargo - Breakroom"
-	icon_state = "cafeteria"
+	icon_state = "cargo_breakroom"
 
 // MEDBAY
 
@@ -468,7 +468,7 @@
 
 /area/liberty/sfp/aft_checkpoint
 	name = "\improper Level One - Aft Docks Checkpoint"
-//	icon_state = "department_lobby"
+	icon_state = "aft_docks_checkpoint"
 
 /area/liberty/sfp/lobby
 	name = "\improper SFP Field Office - Lobby"
@@ -588,7 +588,7 @@
 
 /area/liberty/engineering/breakroom
 	name = "\improper Engineering - Breakroom"
-	icon_state = "engineering_break"
+	icon_state = "eng_break"
 
 ///////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////// LEVEL TWO ////////////////////////////////////
@@ -598,33 +598,33 @@
 
 /area/liberty/hallway/two
 	name = "\improper Level Two - Central Hall"
-	icon_state = "lvl_2_central_hall"
+	icon_state = "lvl_2_hall_central"
 
 /area/liberty/hallway/two/fore
 	name = "\improper Level Two - Fore"
-	icon_state = "lvl_2_fore_hall"
+	icon_state = "lvl_2_hall_fore"
 
 /area/liberty/hallway/two/aft
 	name = "\improper Level Two - Aft"
-	icon_state = "lvl_2_aft_hall"
+	icon_state = "lvl_2_hall_aft"
 
 // RESEARCH
 
 /area/liberty/rnd/robotics/upper
 	name = "\improper RnD - Robotics Upper"
-	icon_state = "robotics"
+	icon_state = "rnd_robotics_upper"
 
 /area/liberty/rnd/toxins
 	name = "\improper RnD - Toxins Lab"
-	icon_state = "toxlab"
+	icon_state = "rnd_toxlab"
 
 /area/liberty/rnd/toxins/storage
 	name = "\improper RnD - Toxins Storage"
-	icon_state = "toxstorage"
+	icon_state = "rnd_toxstorage"
 
 /area/liberty/rnd/toxins/misc
 	name = "\improper RnD - Toxins Testing Facility"
-	icon_state = "toxtest"
+	icon_state = "rnd_toxtest"
 
 // MEDBAY
 
@@ -799,8 +799,8 @@
 
 /area/liberty/command
 	name = "\improper Command - Bridge"
-	icon_state = "bridge"
-	icon = 'icons/turf/areas.dmi'	// WIP
+	icon_state = "command_bridge"
+	// icon = 'icons/turf/areas.dmi'	// WIP
 
 ///////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////// TURBOLIFT ////////////////////////////////////
@@ -937,34 +937,34 @@
 	base_turf = /turf/simulated/floor/plating
 	area_flags = AREA_FLAG_RAD_SHIELDED | AREA_FLAG_ION_SHIELDED
 //	req_access = list(access_petrov)
-	icon = 'icons/turf/areas.dmi'	// WIP
+	// icon = 'icons/turf/areas.dmi'	// WIP
 
 /area/liberty/kenobi/cockpit
 	name = "\improper GUP Kenobi - Cockpit"
-	icon_state = "shuttle"
+	icon_state = "kenobi_cockpit"
 
 /area/liberty/kenobi/airlock
 	name = "\improper GUP Kenobi - Airlock Compartment"
-	icon_state = "shuttlegrn"
+	icon_state = "kenobi_airlock"
 
 /area/liberty/kenobi/passenger
 	name = "\improper GUP Kenobi - Passanger Compartment"
-	icon_state = "shuttlered"
+	icon_state = "kenabi_passenger"
 
 /area/liberty/konigstiger
 	name = "\improper FGS Konigstiger"
 	area_flags = AREA_FLAG_RAD_SHIELDED | AREA_FLAG_ION_SHIELDED
 	req_access = list("ACCESS_SOL_SFP")
-	icon = 'icons/turf/areas.dmi'	// WIP
+	// icon = 'icons/turf/areas.dmi'	// WIP
 
 /area/liberty/konigstiger/cockpit
 	name = "\improper FGS Konigstiger - Cockpit"
-	icon_state = "shuttle"
+	icon_state = "konigstiger_cockpit"
 
 /area/liberty/konigstiger/airlock
 	name = "\improper FGS Konigstiger - Airlock Compartment"
-	icon_state = "shuttlegrn"
+	icon_state = "konigstiger_airlock"
 
 /area/liberty/konigstiger/passenger
 	name = "\improper FGS Konigstiger - Passanger Compartment"
-	icon_state = "shuttlered"
+	icon_state = "konigstiger_passenger"
