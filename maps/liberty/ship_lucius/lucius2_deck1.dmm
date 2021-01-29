@@ -185,7 +185,6 @@
 	},
 /obj/machinery/door/blast/regular/open{
 	dir = 8;
-	icon_state = "pdoor0";
 	id_tag = "lucius_1";
 	name = "First Compartment Lockdown Blast Doors"
 	},
@@ -283,8 +282,8 @@
 /area/lucius/xeno)
 "bk" = (
 /obj/machinery/seed_storage/xenobotany,
-/obj/item/device/radio/intercom{
-	pixel_y = 23
+/obj/item/device/radio/intercom/sol{
+	pixel_y = 24
 	},
 /turf/simulated/floor/tiled/white,
 /area/lucius/xeno)
@@ -346,7 +345,6 @@
 	},
 /obj/machinery/door/blast/regular/open{
 	dir = 8;
-	icon_state = "pdoor0";
 	id_tag = "lucius_bridge_lock";
 	name = "Bridge Lockdown Blast Doors"
 	},
@@ -492,9 +490,9 @@
 	pixel_x = -8;
 	pixel_y = 24
 	},
-/obj/item/device/radio/intercom{
+/obj/item/device/radio/intercom/sol{
 	pixel_x = 8;
-	pixel_y = 23
+	pixel_y = 24
 	},
 /turf/simulated/floor/tiled/dark,
 /area/lucius/bridge)
@@ -778,8 +776,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 9
 	},
-/obj/item/device/radio/intercom{
-	pixel_y = 23
+/obj/item/device/radio/intercom/sol{
+	pixel_x = 8;
+	pixel_y = 24
 	},
 /turf/simulated/floor/tiled,
 /area/lucius/crew_quarters)
@@ -834,7 +833,6 @@
 	},
 /obj/machinery/door/blast/regular/open{
 	dir = 8;
-	icon_state = "pdoor0";
 	id_tag = "lucius_1";
 	name = "First Compartment Lockdown Blast Doors"
 	},
@@ -1119,7 +1117,6 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/blast/regular/open{
 	dir = 8;
-	icon_state = "pdoor0";
 	id_tag = "lucius_3";
 	name = "Third Compartment Lockdown Blast Doors"
 	},
@@ -1322,7 +1319,6 @@
 /obj/effect/wallframe_spawn/reinforced/hull,
 /obj/machinery/door/blast/regular/open{
 	dir = 8;
-	icon_state = "pdoor0";
 	id_tag = "lucius_bridge";
 	name = "Bridge Blast Doors"
 	},
@@ -1386,7 +1382,6 @@
 	},
 /obj/machinery/door/blast/regular/open{
 	dir = 8;
-	icon_state = "pdoor0";
 	id_tag = "lucius_1";
 	name = "First Compartment Lockdown Blast Doors"
 	},
@@ -1467,7 +1462,6 @@
 	},
 /obj/machinery/door/blast/regular/open{
 	dir = 8;
-	icon_state = "pdoor0";
 	id_tag = "lucius_bridge_lock";
 	name = "Bridge Lockdown Blast Doors"
 	},
@@ -1547,9 +1541,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/item/device/radio/intercom{
+/obj/item/device/radio/intercom/sol{
 	dir = 1;
-	pixel_y = -28
+	pixel_y = -24
 	},
 /turf/simulated/floor/plating,
 /area/lucius/hallway/first/fore)
@@ -1858,7 +1852,6 @@
 	},
 /obj/machinery/door/blast/regular/open{
 	dir = 8;
-	icon_state = "pdoor0";
 	id_tag = "lucius_ano_lock";
 	name = "Anomalous Lab Lockdown Blast Doors"
 	},
@@ -2321,9 +2314,9 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals6,
-/obj/item/device/radio/intercom{
+/obj/item/device/radio/intercom/sol{
 	dir = 8;
-	pixel_x = 21
+	pixel_x = 24
 	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/lucius/cryo)
@@ -2342,8 +2335,8 @@
 	dir = 4;
 	pixel_x = 24
 	},
-/obj/item/device/radio/intercom{
-	pixel_y = 23
+/obj/item/device/radio/intercom/sol{
+	pixel_y = 24
 	},
 /turf/simulated/floor/carpet/blue2,
 /area/lucius/captain)
@@ -2363,9 +2356,9 @@
 	dir = 4;
 	pixel_x = -24
 	},
-/obj/item/device/radio/intercom{
+/obj/item/device/radio/intercom/sol{
 	dir = 1;
-	pixel_y = -28
+	pixel_y = -24
 	},
 /turf/simulated/floor/tiled/white,
 /area/lucius/med)
@@ -2677,7 +2670,6 @@
 "gA" = (
 /obj/machinery/door/blast/regular/open{
 	dir = 2;
-	icon_state = "pdoor0";
 	id_tag = "lucius_xeno_1";
 	name = "Chamber Blast Doors"
 	},
@@ -2693,7 +2685,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
 /obj/machinery/door/blast/regular/open{
 	dir = 2;
-	icon_state = "pdoor0";
 	id_tag = "lucius_xeno_1";
 	name = "Chamber Blast Doors"
 	},
@@ -2725,7 +2716,6 @@
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/blast/regular/open{
 	dir = 2;
-	icon_state = "pdoor0";
 	id_tag = "lucius_xeno_1";
 	name = "Chamber Blast Doors"
 	},
@@ -2740,7 +2730,6 @@
 "gD" = (
 /obj/machinery/door/blast/regular/open{
 	dir = 2;
-	icon_state = "pdoor0";
 	id_tag = "lucius_xeno_2";
 	name = "Chamber Blast Doors"
 	},
@@ -2757,7 +2746,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/blast/regular/open{
 	dir = 2;
-	icon_state = "pdoor0";
 	id_tag = "lucius_xeno_2";
 	name = "Chamber Blast Doors"
 	},
@@ -2800,7 +2788,6 @@
 /area/lucius/xeno)
 "gH" = (
 /obj/machinery/door/blast/regular/open{
-	icon_state = "pdoor0";
 	id_tag = "lucius_ano_blast";
 	name = "Anomalous Chamber Blast Doors"
 	},
@@ -3013,7 +3000,6 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/effect/floor_decal/industrial/warning/full,
 /obj/machinery/door/blast/regular/open{
-	icon_state = "pdoor0";
 	id_tag = "lucius_ano_blast";
 	name = "Anomalous Chamber Blast Doors"
 	},
@@ -3293,7 +3279,6 @@
 	},
 /obj/machinery/door/blast/regular/open{
 	dir = 8;
-	icon_state = "pdoor0";
 	id_tag = "lucius_1";
 	name = "First Compartment Lockdown Blast Doors"
 	},
@@ -3633,7 +3618,6 @@
 "kJ" = (
 /obj/effect/wallframe_spawn/reinforced/hull,
 /obj/machinery/door/blast/regular/open{
-	icon_state = "pdoor0";
 	id_tag = "lucius_bridge";
 	name = "Bridge Blast Doors"
 	},
@@ -3673,7 +3657,6 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/blast/regular/open{
 	dir = 8;
-	icon_state = "pdoor0";
 	id_tag = "lucius_3";
 	name = "Third Compartment Lockdown Blast Doors"
 	},
@@ -4060,12 +4043,12 @@
 	dir = 1
 	},
 /obj/item/weapon/storage/toolbox/mechanical,
-/obj/item/device/radio/intercom{
-	dir = 1;
-	pixel_y = -28
-	},
 /obj/item/clothing/mask/gas/budget,
 /obj/item/device/scanner/gas,
+/obj/item/device/radio/intercom/sol{
+	dir = 1;
+	pixel_y = -24
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/lucius/atmos)
 "rN" = (
@@ -4197,8 +4180,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/item/device/radio/intercom{
-	pixel_y = 23
+/obj/item/device/radio/intercom/sol{
+	pixel_y = 24
 	},
 /turf/simulated/floor/tiled,
 /area/lucius/hallway/first/aft)
@@ -4446,7 +4429,6 @@
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/blast/regular/open{
 	dir = 2;
-	icon_state = "pdoor0";
 	id_tag = "lucius_ano_storage_blast";
 	name = "Anomalous Storage Observation Blast Door"
 	},
@@ -4655,7 +4637,6 @@
 /obj/effect/wallframe_spawn/reinforced/hull,
 /obj/machinery/door/blast/regular/open{
 	dir = 8;
-	icon_state = "pdoor0";
 	id_tag = "lucius_bridge";
 	name = "Bridge Blast Doors"
 	},
@@ -4856,7 +4837,6 @@
 "Gw" = (
 /obj/machinery/door/blast/regular/open{
 	dir = 2;
-	icon_state = "pdoor0";
 	id_tag = "lucius_xeno";
 	name = "Xeno Research Protective Blast Doors"
 	},
@@ -4953,8 +4933,8 @@
 	pixel_x = -24;
 	pixel_y = -8
 	},
-/obj/item/device/radio/intercom{
-	pixel_y = 23
+/obj/item/device/radio/intercom/sol{
+	pixel_y = 24
 	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/lucius/ano)
@@ -5173,7 +5153,6 @@
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/blast/regular/open{
 	dir = 2;
-	icon_state = "pdoor0";
 	id_tag = "lucius_xeno_2";
 	name = "Chamber Blast Doors"
 	},
@@ -5276,7 +5255,6 @@
 /area/lucius/xeno)
 "NR" = (
 /obj/machinery/door/blast/regular/open{
-	icon_state = "pdoor0";
 	id_tag = "lucius_ano_blast";
 	name = "Anomalous Chamber Blast Doors"
 	},
@@ -5470,7 +5448,6 @@
 	},
 /obj/machinery/door/blast/regular/open{
 	dir = 8;
-	icon_state = "pdoor0";
 	id_tag = "lucius_2";
 	name = "Second Compartment Lockdown Blast Doors"
 	},
@@ -5502,7 +5479,6 @@
 	},
 /obj/machinery/door/blast/regular/open{
 	dir = 8;
-	icon_state = "pdoor0";
 	id_tag = "lucius_2";
 	name = "Second Compartment Lockdown Blast Doors"
 	},
@@ -5640,7 +5616,6 @@
 	},
 /obj/machinery/door/blast/regular/open{
 	dir = 8;
-	icon_state = "pdoor0";
 	id_tag = "lucius_2";
 	name = "Second Compartment Lockdown Blast Doors"
 	},
@@ -5653,7 +5628,6 @@
 	},
 /obj/machinery/door/blast/regular/open{
 	dir = 2;
-	icon_state = "pdoor0";
 	id_tag = "lucius_xeno";
 	name = "Xeno Research Protective Blast Doors"
 	},
@@ -5735,7 +5709,6 @@
 	},
 /obj/machinery/door/blast/regular/open{
 	dir = 8;
-	icon_state = "pdoor0";
 	id_tag = "lucius_2";
 	name = "Second Compartment Lockdown Blast Doors"
 	},
@@ -5842,7 +5815,6 @@
 	},
 /obj/machinery/door/blast/regular/open{
 	dir = 2;
-	icon_state = "pdoor0";
 	id_tag = "lucius_xeno";
 	name = "Xeno Research Protective Blast Doors"
 	},

@@ -4,6 +4,7 @@
 // /datum/map/torch/default_internal_channels()
 
 
+
 // TCOMMS PRESETS
 /obj/machinery/telecomms/server/presets/lucius_command
 	id = "Command Server"
@@ -42,3 +43,7 @@
 	network = "lucius"
 	autolinkers = list("broadcasterLucius")
 	freq_listening = list(SOL_PUB_FREQ, SOL_COMM_FREQ)
+
+/obj/item/device/radio/intercom/sol
+	name = "intercom (Sol General)"
+	frequency = SOL_PUB_FREQ
