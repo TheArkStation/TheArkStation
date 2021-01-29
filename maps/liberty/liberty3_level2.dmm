@@ -2842,8 +2842,7 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/warning/corner{
-	dir = 4;
-	icon_state = "stripecorner"
+	dir = 4
 	},
 /turf/simulated/floor/wood/maple,
 /area/liberty/medbay/hallway/two)
@@ -2874,8 +2873,7 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/warning/corner{
-	dir = 1;
-	icon_state = "stripecorner"
+	dir = 1
 	},
 /turf/simulated/floor/wood/maple,
 /area/liberty/medbay/hallway/two)
@@ -12891,7 +12889,6 @@
 /area/liberty/rnd/robotics/upper)
 "Nq" = (
 /obj/structure/table/standard,
-/obj/machinery/light_color_switch,
 /obj/item/device/radio/intercom{
 	frequency = 1485;
 	pixel_y = 23
@@ -12899,9 +12896,11 @@
 /obj/effect/floor_decal/corner/grey{
 	dir = 9
 	},
-/obj/machinery/light_master_switch{
-	id_tag = "bar";
-	pixel_y = -8
+/obj/machinery/light_color_switch/large{
+	pixel_y = -6
+	},
+/obj/machinery/light_master_switch/large{
+	pixel_y = 8
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/hotel/over_stage)
