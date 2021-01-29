@@ -1435,8 +1435,7 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/warning/corner{
-	dir = 1;
-	icon_state = "stripecorner"
+	dir = 1
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/sfp/hallway/one_north)
@@ -2129,8 +2128,7 @@
 /turf/simulated/floor/carpet/blue,
 /area/liberty/sfp/recreation)
 "aec" = (
-/obj/effect/paint_stripe/white,
-/turf/simulated/wall/r_wall,
+/turf/space,
 /area/liberty/scg/docks)
 "aed" = (
 /obj/effect/floor_decal/corner/white/three_quarters,
@@ -3236,8 +3234,7 @@
 	dir = 5
 	},
 /obj/effect/floor_decal/industrial/warning/corner{
-	dir = 4;
-	icon_state = "stripecorner"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/sfp/hallway/one_north)
@@ -7382,7 +7379,7 @@
 	d2 = 2;
 	icon_state = "0-2"
 	},
-/obj/effect/floor_decal/spline/fancy/wood{
+/obj/effect/floor_decal/spline/fancy{
 	dir = 8
 	},
 /turf/simulated/floor/wood/maple,
@@ -8062,10 +8059,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/effect/floor_decal/spline/fancy/wood{
+/obj/effect/floor_decal/spline/fancy,
+/obj/effect/floor_decal/spline/fancy{
 	dir = 1
 	},
-/obj/effect/floor_decal/spline/fancy/wood,
 /turf/simulated/floor/wood/maple,
 /area/liberty/medbay/exam)
 "aos" = (
@@ -8075,7 +8072,7 @@
 	pixel_x = 24;
 	pixel_y = -24
 	},
-/obj/effect/floor_decal/spline/fancy/wood/corner{
+/obj/effect/floor_decal/spline/fancy/corner{
 	dir = 4
 	},
 /turf/simulated/floor/wood/maple,
@@ -8577,7 +8574,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/effect/floor_decal/spline/fancy/wood{
+/obj/effect/floor_decal/spline/fancy{
 	dir = 8
 	},
 /turf/simulated/floor/wood/maple,
@@ -8829,7 +8826,7 @@
 "apx" = (
 /obj/machinery/photocopier,
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
-/obj/effect/floor_decal/spline/fancy/wood,
+/obj/effect/floor_decal/spline/fancy,
 /turf/simulated/floor/wood/maple,
 /area/liberty/medbay/hallway/one)
 "apy" = (
@@ -8839,7 +8836,7 @@
 /obj/machinery/alarm{
 	pixel_y = 24
 	},
-/obj/effect/floor_decal/spline/fancy/wood,
+/obj/effect/floor_decal/spline/fancy,
 /turf/simulated/floor/wood/maple,
 /area/liberty/medbay/hallway/one)
 "apz" = (
@@ -8847,7 +8844,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/effect/floor_decal/spline/fancy/wood,
+/obj/effect/floor_decal/spline/fancy,
 /turf/simulated/floor/wood/maple,
 /area/liberty/medbay/hallway/one)
 "apA" = (
@@ -9825,7 +9822,6 @@
 	},
 /obj/structure/cable/yellow{
 	d2 = 8;
-	dir = 2;
 	icon_state = "0-8"
 	},
 /obj/effect/floor_decal/corner/yellow{
@@ -9969,7 +9965,7 @@
 /obj/machinery/disposal,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/light,
-/obj/effect/floor_decal/spline/fancy/wood{
+/obj/effect/floor_decal/spline/fancy{
 	dir = 1
 	},
 /turf/simulated/floor/wood/maple,
@@ -9983,7 +9979,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
-/obj/effect/floor_decal/spline/fancy/wood{
+/obj/effect/floor_decal/spline/fancy{
 	dir = 1
 	},
 /turf/simulated/floor/wood/maple,
@@ -13258,7 +13254,6 @@
 	},
 /obj/structure/cable/yellow{
 	d2 = 2;
-	dir = 2;
 	icon_state = "0-2"
 	},
 /obj/effect/floor_decal/corner/yellow{
@@ -14281,7 +14276,6 @@
 	},
 /obj/structure/cable{
 	d2 = 4;
-	dir = 2;
 	icon_state = "0-4"
 	},
 /obj/structure/lattice,
@@ -14500,8 +14494,7 @@
 	dir = 6
 	},
 /obj/effect/floor_decal/industrial/warning{
-	dir = 4;
-	icon_state = "stripe"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/hallway/one/fore_terminal)
@@ -16369,8 +16362,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/warning/corner{
-	dir = 4;
-	icon_state = "stripecorner"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/hallway/one/aft_port)
@@ -16780,7 +16772,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/effect/floor_decal/spline/fancy/wood{
+/obj/effect/floor_decal/spline/fancy{
 	dir = 1
 	},
 /turf/simulated/floor/wood/maple,
@@ -16802,7 +16794,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/effect/floor_decal/spline/fancy/wood{
+/obj/effect/floor_decal/spline/fancy{
 	dir = 8
 	},
 /turf/simulated/floor/wood/maple,
@@ -17041,7 +17033,6 @@
 /area/liberty/hotel/foyer)
 "aDx" = (
 /obj/machinery/atmospherics/unary/heater{
-	connect_types = 17;
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -17107,7 +17098,6 @@
 	},
 /obj/machinery/light_switch/advanced{
 	dir = 1;
-	icon_state = "light0";
 	pixel_y = -24
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -17297,8 +17287,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/warning/corner{
-	dir = 4;
-	icon_state = "stripecorner"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/hallway/one/fore_terminal)
@@ -17385,7 +17374,6 @@
 	},
 /obj/structure/cable/yellow{
 	d2 = 2;
-	dir = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -17479,8 +17467,7 @@
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/industrial/warning/corner{
-	dir = 4;
-	icon_state = "stripecorner"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/hallway/one/fore_docks)
@@ -17850,8 +17837,7 @@
 	dir = 6
 	},
 /obj/effect/floor_decal/industrial/warning/corner{
-	dir = 4;
-	icon_state = "stripecorner"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/hallway/one/fore_terminal)
@@ -18255,7 +18241,6 @@
 "aFE" = (
 /obj/structure/cable/orange{
 	d2 = 2;
-	dir = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/terminal{
@@ -18962,7 +18947,6 @@
 "aGV" = (
 /obj/structure/cable/yellow{
 	d2 = 2;
-	dir = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/smes/buildable,
@@ -22957,7 +22941,6 @@
 	},
 /obj/structure/cable{
 	d2 = 4;
-	dir = 2;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/plating,
@@ -23819,8 +23802,7 @@
 	pixel_y = 24
 	},
 /obj/effect/floor_decal/industrial/warning/corner{
-	dir = 4;
-	icon_state = "stripecorner"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/hallway/one/fore_docks)
@@ -24044,8 +24026,7 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/warning/corner{
-	dir = 1;
-	icon_state = "stripecorner"
+	dir = 1
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/sfp/hallway/one_south)
@@ -25739,8 +25720,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/effect/floor_decal/industrial/warning/corner{
-	dir = 4;
-	icon_state = "stripecorner"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/sfp/hallway/one_south)
@@ -28099,7 +28079,6 @@
 "aZx" = (
 /obj/structure/cable/yellow{
 	d2 = 8;
-	dir = 2;
 	icon_state = "0-8"
 	},
 /obj/item/frame/apc,
@@ -28578,8 +28557,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/effect/floor_decal/industrial/warning/corner{
-	dir = 4;
-	icon_state = "stripecorner"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/hallway/one/fore_terminal)
@@ -28732,8 +28710,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/warning/corner{
-	dir = 4;
-	icon_state = "stripecorner"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/hallway/one)
@@ -29663,10 +29640,10 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/effect/floor_decal/spline/fancy/wood{
+/obj/effect/floor_decal/spline/fancy{
 	dir = 1
 	},
-/obj/effect/floor_decal/spline/fancy/wood/corner{
+/obj/effect/floor_decal/spline/fancy/corner{
 	dir = 8
 	},
 /turf/simulated/floor/wood/maple,
@@ -30179,10 +30156,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/effect/floor_decal/spline/fancy/wood{
+/obj/effect/floor_decal/spline/fancy,
+/obj/effect/floor_decal/spline/fancy{
 	dir = 1
 	},
-/obj/effect/floor_decal/spline/fancy/wood,
 /turf/simulated/floor/wood/maple,
 /area/liberty/medbay/exam)
 "gDD" = (
@@ -30949,8 +30926,7 @@
 	dir = 5
 	},
 /obj/effect/floor_decal/industrial/warning/corner{
-	dir = 4;
-	icon_state = "stripecorner"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/hallway/one)
@@ -31778,8 +31754,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/warning/corner{
-	dir = 4;
-	icon_state = "stripecorner"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/hallway/one/fore_port)
@@ -31876,8 +31851,7 @@
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/industrial/warning/corner{
-	dir = 4;
-	icon_state = "stripecorner"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/hallway/one/aft_port)
@@ -32153,8 +32127,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/warning/corner{
-	dir = 4;
-	icon_state = "stripecorner"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
@@ -32678,8 +32651,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/effect/floor_decal/industrial/warning/corner{
-	dir = 4;
-	icon_state = "stripecorner"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/hallway/one)
@@ -32712,8 +32684,7 @@
 	dir = 5
 	},
 /obj/effect/floor_decal/industrial/warning/corner{
-	dir = 4;
-	icon_state = "stripecorner"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/hallway/one/fore_port)
@@ -32722,8 +32693,7 @@
 	dir = 5
 	},
 /obj/effect/floor_decal/industrial/warning/corner{
-	dir = 1;
-	icon_state = "stripecorner"
+	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/universal{
 	dir = 4
@@ -33137,10 +33107,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
-	dir = 2;
-	icon_state = "intact"
-	},
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan,
 /obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/liberty/hangar/tower)
@@ -33197,8 +33164,7 @@
 	dir = 5
 	},
 /obj/effect/floor_decal/industrial/warning/corner{
-	dir = 4;
-	icon_state = "stripecorner"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/hallway/one/aft_port)
@@ -33255,8 +33221,7 @@
 	dir = 6
 	},
 /obj/effect/floor_decal/industrial/warning/corner{
-	dir = 4;
-	icon_state = "stripecorner"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/hallway/one/aft_port)
@@ -34117,7 +34082,8 @@
 "tWe" = (
 /obj/structure/flora/jungle/grass/b_1,
 /obj/item/clothing/head/beret/solgov/orbital{
-	anchored = 1
+	anchored = 1;
+	pixel_y = 8
 	},
 /turf/simulated/floor/grass/no_edges,
 /area/liberty/hallway/one)
@@ -34319,8 +34285,7 @@
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/industrial/warning/corner{
-	dir = 4;
-	icon_state = "stripecorner"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/hallway/one/fore_terminal)
@@ -34572,8 +34537,7 @@
 	pixel_x = 24
 	},
 /obj/effect/floor_decal/industrial/warning/corner{
-	dir = 4;
-	icon_state = "stripecorner"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/hallway/one)
@@ -35212,8 +35176,7 @@
 	dir = 5
 	},
 /obj/effect/floor_decal/industrial/warning/corner{
-	dir = 4;
-	icon_state = "stripecorner"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/hallway/one/starboard)
