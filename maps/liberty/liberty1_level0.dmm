@@ -2489,6 +2489,10 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 24
+	},
 /turf/simulated/floor/plating,
 /area/liberty/engineering/hallway/engineering_hall_level_zero)
 "cnL" = (
@@ -6404,6 +6408,18 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/liberty/hotel/locker_room_m)
+"fUN" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/liberty/engineering/hallway/engineering_hall_level_zero)
 "fVb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/universal{
 	dir = 4
@@ -9118,9 +9134,7 @@
 /area/liberty/sfp/prison)
 "irg" = (
 /obj/structure/lattice,
-/obj/machinery/atmospherics/pipe/simple/hidden/black{
-	dir = 2
-	},
+/obj/machinery/atmospherics/pipe/simple/hidden/black,
 /obj/structure/railing/mapped,
 /turf/space,
 /area/space)
@@ -13627,8 +13641,7 @@
 	pixel_y = 32
 	},
 /obj/effect/floor_decal/industrial/warning/corner{
-	dir = 4;
-	icon_state = "stripecorner"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/liberty/engineering/hallway/engineering_hall_level_zero)
@@ -13809,8 +13822,7 @@
 	dir = 6
 	},
 /obj/structure/bed/chair/padded/brown{
-	dir = 8;
-	icon_state = "chair_preview"
+	dir = 8
 	},
 /turf/simulated/floor/wood/yew,
 /area/liberty/hotel/pool)
@@ -16077,10 +16089,6 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
 	},
-/obj/machinery/firealarm{
-	dir = 4;
-	pixel_x = 24
-	},
 /obj/structure/cable/yellow{
 	d1 = 1;
 	d2 = 4;
@@ -16884,9 +16892,7 @@
 /turf/simulated/floor/plating,
 /area/liberty/maintenance/zero/fore_starboard)
 "pjb" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/black{
-	dir = 2
-	},
+/obj/machinery/atmospherics/pipe/simple/hidden/black,
 /turf/simulated/floor/reinforced/airless,
 /area/space)
 "pji" = (
@@ -18394,9 +18400,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/liberty/hotel/hallway/lower)
 "quf" = (
-/obj/machinery/atmospherics/unary/heater{
-	connect_types = 17
-	},
+/obj/machinery/atmospherics/unary/heater,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/liberty/kenobi/airlock)
 "quE" = (
@@ -24170,9 +24174,7 @@
 /area/liberty/hotel/casino)
 "vYK" = (
 /obj/structure/lattice,
-/obj/machinery/atmospherics/pipe/simple/hidden/black{
-	dir = 2
-	},
+/obj/machinery/atmospherics/pipe/simple/hidden/black,
 /obj/structure/railing/mapped{
 	dir = 1
 	},
@@ -25588,6 +25590,12 @@
 	},
 /turf/simulated/floor/tiled/old_tile,
 /area/liberty/sfp/cells)
+"xmQ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/liberty/engineering/hallway/engineering_hall_level_zero)
 "xmT" = (
 /obj/effect/floor_decal/industrial/warning/narrow/corner,
 /obj/effect/floor_decal/steeldecal/steel_decals2,
@@ -25763,7 +25771,6 @@
 /area/liberty/maintenance/construction/zero/medbay)
 "xwu" = (
 /obj/machinery/atmospherics/unary/heater{
-	connect_types = 17;
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
@@ -25880,8 +25887,7 @@
 	dir = 5
 	},
 /obj/structure/bed/chair/padded/brown{
-	dir = 8;
-	icon_state = "chair_preview"
+	dir = 8
 	},
 /turf/simulated/floor/wood/yew,
 /area/liberty/hotel/pool)
@@ -55252,7 +55258,7 @@ qod
 gJy
 bpC
 dfu
-dfu
+fUN
 dfu
 nup
 eUb
@@ -55454,7 +55460,7 @@ tSz
 pYd
 qvq
 tKB
-tKB
+xmQ
 tKB
 sfJ
 bYN
