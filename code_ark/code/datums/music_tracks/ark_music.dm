@@ -73,3 +73,110 @@
 	song = 'code_ark/sound/music/pedro_noire_one.ogg'
 	license = /decl/license/grandfathered
 	url = "https://www.dropbox.com/s/xaznyvgj6n5fnum/Noire%20%231.mp3"
+
+// CURRENTLY UNSORTED
+
+/music_track/kom_voice_of_eternity
+	artist = "Keys of Moon"
+	title = "Voice of Eternity"
+	song = 'code_ark/sound/music/pedro_noire_one.ogg'
+	license = /decl/license/cc_by_4_0
+	url = "https://www.soundcloud.com/keysofmoon"
+
+/music_track/sbuckley_beautiful_oblivion
+	artist = "Scott Buckley"
+	title = "Beautiful Oblivion"
+	song = 'code_ark/sound/music/sbuckley_beautiful_oblivion.ogg'
+	license = /decl/license/cc_by_4_0
+	url = "https://www.scottbuckley.com.au"
+
+/music_track/sbuckley_discovery
+	artist = "Scott Buckley"
+	title = "Discovery"
+	song = 'code_ark/sound/music/sbuckley_discovery.ogg'
+	license = /decl/license/cc_by_4_0
+	url = "https://www.scottbuckley.com.au"
+
+/music_track/sbuckley_electric_dreams
+	artist = "Scott Buckley"
+	title = "Electric Dreams"
+	song = 'code_ark/sound/music/sbuckley_electric_dreams.ogg'
+	license = /decl/license/cc_by_4_0
+	url = "https://www.scottbuckley.com.au"
+
+/music_track/sbuckley_emergent
+	artist = "Scott Buckley"
+	title = "Emergent"
+	song = 'code_ark/sound/music/sbuckley_emergent.ogg'
+	license = /decl/license/cc_by_4_0
+	url = "https://www.scottbuckley.com.au"
+
+/music_track/sbuckley_filaments
+	artist = "Scott Buckley"
+	title = "Filaments"
+	song = 'code_ark/sound/music/sbuckley_filaments.ogg'
+	license = /decl/license/cc_by_4_0
+	url = "https://www.scottbuckley.com.au"
+
+/music_track/sbuckley_in_dreams
+	artist = "Scott Buckley"
+	title = "In Dreams"
+	song = 'code_ark/sound/music/sbuckley_in_dreams.ogg'
+	license = /decl/license/cc_by_4_0
+	url = "https://www.scottbuckley.com.au"
+
+/music_track/sbuckley_jul
+	artist = "Scott Buckley"
+	title = "Jul"
+	song = 'code_ark/sound/music/sbuckley_jul.ogg'
+	license = /decl/license/cc_by_4_0
+	url = "https://www.scottbuckley.com.au"
+
+/music_track/sbuckley_machina
+	artist = "Scott Buckley"
+	title = "Machina"
+	song = 'code_ark/sound/music/sbuckley_machina.ogg'
+	license = /decl/license/cc_by_4_0
+	url = "https://www.scottbuckley.com.au"
+
+/music_track/sbuckley_neon
+	artist = "Scott Buckley"
+	title = "Neon"
+	song = 'code_ark/sound/music/sbuckley_machina.ogg'
+	license = /decl/license/cc_by_4_0
+	url = "https://www.scottbuckley.com.au"
+
+/music_track/sbuckley_signal_to_noise
+	artist = "Scott Buckley"
+	title = "Signal to Noise"
+	song = 'code_ark/sound/music/sbuckley_signal_to_noise.ogg'
+	license = /decl/license/cc_by_4_0
+	url = "https://www.scottbuckley.com.au"
+
+/music_track/sbuckley_solecism
+	artist = "Scott Buckley"
+	title = "Solecism"
+	song = 'code_ark/sound/music/sbuckley_solecism.ogg'
+	license = /decl/license/cc_by_4_0
+	url = "https://www.scottbuckley.com.au"
+
+/music_track/sbuckley_tears_in_rain
+	artist = "Scott Buckley"
+	title = "Tears in Rain"
+	song = 'code_ark/sound/music/sbuckley_tears_in_rain.ogg'
+	license = /decl/license/cc_by_4_0
+	url = "https://www.scottbuckley.com.au"
+
+/music_track/sbuckley_twilight_echo
+	artist = "Scott Buckley"
+	title = "Twilight Echo"
+	song = 'code_ark/sound/music/sbuckley_twilight_echo.ogg'
+	license = /decl/license/cc_by_4_0
+	url = "https://www.scottbuckley.com.au"
+
+/music_track/sbuckley_undertow
+	artist = "Scott Buckley"
+	title = "Undertow"
+	song = 'code_ark/sound/music/sbuckley_undertow.ogg'
+	license = /decl/license/cc_by_4_0
+	url = "https://www.scottbuckley.com.au"
