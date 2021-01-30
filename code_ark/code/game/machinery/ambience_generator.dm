@@ -34,61 +34,61 @@
 /ambience_preset/city_day
 	ambience_name = "Urban Daytime"
 	ambience_icon_state = "city_day"
-//	ambience_sound =
+	ambience_sound = 'code_ark/sound/effects/city_day.ogg'
 	ambience_color = "#85a8c9"
 
 /ambience_preset/city_night
 	ambience_name = "Urban Nighttime"
 	ambience_icon_state = "city_night"
-//	ambience_sound =
+	ambience_sound = 'code_ark/sound/effects/city_night.ogg'
 	ambience_color = "#315e95"
 
 /ambience_preset/beach
 	ambience_name = "Tropical Beach"
 	ambience_icon_state = "beach"
-//	ambience_sound =
+	ambience_sound = 'code_ark/sound/effects/beach.ogg'
 	ambience_color = "#f8e09c"
 
 /ambience_preset/aquarium
 	ambience_name = "Exotic Aquarium"
 	ambience_icon_state = "aquarium"
-//	ambience_sound =
+	ambience_sound = 'code_ark/sound/effects/aquarium.ogg'
 	ambience_color = "#0197cc"
 
 /ambience_preset/fireplace
 	ambience_name = "Warming Fireplace"
 	ambience_icon_state = "fireplace"
-//	ambience_sound =
+	ambience_sound = 'code_ark/sound/effects/fireplace.ogg'
 	ambience_color = "#da790c"
 
 /ambience_preset/winter
 	ambience_name = "Winter Wonderland"
 	ambience_icon_state = "winter"
-//	ambience_sound =
+	ambience_sound = 'code_ark/sound/effects/winter.ogg'
 	ambience_color = "#ffffff"
 
 /ambience_preset/rain
 	ambience_name = "Gloomy Rainy Day"
 	ambience_icon_state = "rain"
-//	ambience_sound =
+	ambience_sound = 'code_ark/sound/effects/rain.ogg'
 	ambience_color = "#b1a893"
 
 /ambience_preset/planets
 	ambience_name = "Planetary Panorama"
 	ambience_icon_state = "planets"
-//	ambience_sound =
+	ambience_sound = 'code_ark/sound/effects/planets.ogg'
 	ambience_color = "#4a383a"
 
 /ambience_preset/forest
 	ambience_name = "Dreaming Forest"
 	ambience_icon_state = "forest"
-//	ambience_sound =
+	ambience_sound = 'code_ark/sound/effects/forest.ogg'
 	ambience_color = "#72745a"
 
 /ambience_preset/mountains
 	ambience_name = "Mighty Ridge"
 	ambience_icon_state = "mountains"
-//	ambience_sound =
+	ambience_sound = 'code_ark/sound/effects/mountains.ogg'
 	ambience_color = "#b5c9b9"
 
 GLOBAL_LIST_INIT(ambience_presets, list(	// Make sure any ambiences you've created above are added to this list,
@@ -294,6 +294,5 @@ GLOBAL_LIST_INIT(ambience_presets, list(	// Make sure any ambiences you've creat
 
 /obj/machinery/media/ambience_generator/set_broken()
 	..()
-	displaying = 0
-	current_ambience = null
+	StopDisplaying()
 	update_icon()
