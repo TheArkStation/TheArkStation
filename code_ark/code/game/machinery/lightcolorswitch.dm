@@ -124,3 +124,7 @@
 	name = "light color control panel"
 	icon_state = "large-light-color"
 	area_light_color = "#ffffff"
+
+/obj/machinery/light_color_switch/large/Initialize()
+	. = ..()
+	name = initial(name)
