@@ -9,7 +9,11 @@
 	clicksound = 'sound/machines/buttonbeep.ogg'
 	anchored = 1
 	pixel_x = -28
-	pixel_y = 35
+	pixel_y = 38
+
+	var/_light_max_brightness = 0.5
+	var/_light_inner_range = 0.5
+	var/_light_outer_range = 3
 
 	var/displaying = 0
 
@@ -85,7 +89,7 @@
 	ambience_name = "Mighty Ridge"
 	ambience_icon_state = "mountains"
 //	ambience_sound =
-	ambience_color = "#025076"
+	ambience_color = "#b5c9b9"
 
 GLOBAL_LIST_INIT(ambience_presets, list(	// Make sure any ambiences you've created above are added to this list,
 	"Urban Daytime" = /ambience_preset/city_day,
@@ -158,7 +162,7 @@ GLOBAL_LIST_INIT(ambience_presets, list(	// Make sure any ambiences you've creat
 		I.plane = EFFECTS_ABOVE_LIGHTING_PLANE
 		I.layer = ABOVE_LIGHTING_LAYER
 		overlays += I
-		set_light(0.3, 0.1, 3, 2, displaying ? current_ambience.ambience_color : "#082b78")
+		set_light(_light_max_brightness, _light_inner_range, _light_outer_range, 2, displaying ? current_ambience.ambience_color : "#082b78")
 	else
 		set_light(0)
 
@@ -221,7 +225,8 @@ GLOBAL_LIST_INIT(ambience_presets, list(	// Make sure any ambiences you've creat
 	if(!current_ambience)
 		crash_with("Ambience generator ([src] - [src.loc]) has attempted booting without an ambience selected!")
 
-//	sound_token = GLOB.sound_player.PlayLoopingSound(src, sound_id, current_ambience.ambience_sound, volume = volume, range = 5, falloff = 3, prefer_mute = TRUE)
+	if(current_ambience.ambience_sound)
+		sound_token = GLOB.sound_player.PlayLoopingSound(src, sound_id, current_ambience.ambience_sound, volume = volume, range = 5, falloff = 3, prefer_mute = TRUE)
 
 	displaying = 1
 	update_use_power(POWER_USE_ACTIVE)
@@ -231,3 +236,64 @@ GLOBAL_LIST_INIT(ambience_presets, list(	// Make sure any ambiences you've creat
 	volume = Clamp(new_volume, 0, 50)
 	if(sound_token)
 		sound_token.SetVolume(volume)
+
+// Easter eggs
+
+/obj/machinery/media/ambience_generator/proc/do_slideshow(var/severity)
+	var/number_of_switchings = min(5 * severity, 15)
+	var/delay = max(5, 45 - 15 * severity)
+
+	while(number_of_switchings)
+		if(stat & (BROKEN|NOPOWER))
+			break
+
+		volume = rand(100)
+		StartDisplaying(pick(ambiences))
+		number_of_switchings--
+		sleep(delay)
+
+	if(prob(30))
+		set_broken(TRUE)
+
+/obj/machinery/media/ambience_generator/emp_act(severity)
+	if(stat & (BROKEN|NOPOWER))
+		return
+
+	do_slideshow(severity)
+
+/obj/machinery/media/ambience_generator/emag_act(remaining_charges, mob/user)
+	if(stat & (BROKEN|NOPOWER))
+		return FALSE
+
+	do_slideshow(rand(1,3))
+	return TRUE
+
+/obj/machinery/media/ambience_generator/ex_act(severity)
+	switch(severity)
+		if(1.0)
+			qdel(src)
+			return
+		if(2.0)
+			if (prob(25))
+				qdel(src)
+				return
+			if (prob(50))
+				set_broken(TRUE)
+			else
+				do_slideshow(severity)
+		if(3.0)
+			if (prob(25))
+				set_broken(TRUE)
+			else
+				do_slideshow(severity)
+
+/obj/machinery/media/ambience_generator/bullet_act(var/obj/item/projectile/Proj)
+	if(prob(Proj.get_structure_damage()))
+		set_broken(TRUE)
+	..()
+
+/obj/machinery/media/ambience_generator/set_broken()
+	..()
+	displaying = 0
+	current_ambience = null
+	update_icon()
