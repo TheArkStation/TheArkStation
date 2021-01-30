@@ -210,3 +210,7 @@
 /obj/effect/floor_decal/techfloor/full
 	icon = 'maps/liberty/icons/decals.dmi'
 	icon_state = "techfloor_full"
+
+/obj/effect/floor_decal/small_carpet
+	icon = 'maps/liberty/icons/decals.dmi'
+	icon_state = "small_carpet"
