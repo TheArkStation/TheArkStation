@@ -200,8 +200,17 @@
 /obj/effect/floor_decal/spline/fancy/black/full
 	icon_state = "spline_fancy_full"
 
+/obj/effect/floor_decal/spline/fancy/black/cee
+	icon_state = "spline_fancy_cee"
+
+/obj/effect/floor_decal/spline/fancy/full
+	icon_state = "spline_fancy_full"
+
 /obj/effect/floor_decal/spline/fancy/corner
 	icon_state = "spline_fancy_corner"
+
+/obj/effect/floor_decal/spline/fancy/cee
+	icon_state = "spline_fancy_cee"
 
 /obj/effect/floor_decal/techfloor/cee
 	icon = 'maps/liberty/icons/decals.dmi'
