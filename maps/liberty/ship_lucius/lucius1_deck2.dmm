@@ -1310,6 +1310,10 @@
 /area/lucius/hangar)
 "dY" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/effect/floor_decal/steeldecal/steel_decals6,
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/lucius/hangar)
 "dZ" = (
@@ -1641,6 +1645,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/effect/floor_decal/steeldecal/steel_decals4,
 /turf/simulated/floor/tiled/techfloor,
 /area/lucius/hallway/second)
 "eR" = (
@@ -2726,6 +2731,7 @@
 "hu" = (
 /obj/effect/wallframe_spawn/reinforced/titanium,
 /obj/machinery/door/firedoor/sol,
+/obj/effect/paint/hull,
 /turf/simulated/floor/plating,
 /area/lucius/lazarev)
 "hv" = (
@@ -3787,7 +3793,7 @@
 /area/lucius/engineering)
 "pw" = (
 /obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 9
+	dir = 10
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/lucius/hallway/second)
@@ -4251,6 +4257,16 @@
 	},
 /turf/simulated/floor/tiled,
 /area/lucius/engineering)
+"zO" = (
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	dir = 4
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/lucius/hangar)
 "Ae" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -4340,6 +4356,9 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 6
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/lucius/hallway/second)
 "BT" = (
@@ -4705,6 +4724,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible/green,
 /obj/machinery/meter,
 /obj/machinery/door/firedoor/sol,
+/obj/effect/wallframe_spawn/reinforced,
 /turf/simulated/floor/plating,
 /area/lucius/fuel)
 "Hk" = (
@@ -4746,12 +4766,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/lucius/maintenance/second)
-"HP" = (
-/obj/effect/wallframe_spawn/reinforced/titanium,
-/obj/machinery/door/firedoor/sol,
-/obj/effect/paint/hull,
-/turf/simulated/floor/plating,
-/area/lucius/lazarev)
 "HU" = (
 /turf/simulated/wall/r_wall/hull,
 /area/lucius/storage)
@@ -5133,6 +5147,16 @@
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/lucius/hangar)
+"Pf" = (
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/airlock/external/bolted{
+	frequency = 1331;
+	id_tag = "lucius_dock_outer";
+	name = "Main Docking Port External Access"
+	},
+/obj/effect/shuttle_landmark/lucius/start,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/lucius/hallway/second)
 "Pv" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
@@ -5234,7 +5258,9 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/lucius/hangar)
 "Rf" = (
-/obj/effect/floor_decal/steeldecal/steel_decals2,
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/lucius/hallway/second)
 "Rh" = (
@@ -5317,6 +5343,12 @@
 /obj/effect/floor_decal/steeldecal/steel_decals9{
 	dir = 4
 	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 6
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/lucius/lazarev)
 "Sn" = (
@@ -5352,13 +5384,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/lucius/maintenance/second)
-"SW" = (
-/obj/machinery/atmospherics/pipe/simple/visible/green,
-/obj/machinery/meter,
-/obj/machinery/door/firedoor/sol,
-/obj/effect/wallframe_spawn/reinforced,
-/turf/simulated/floor/plating,
-/area/lucius/fuel)
 "SX" = (
 /obj/effect/wallframe_spawn/reinforced_phoron,
 /obj/machinery/door/blast/regular/open{
@@ -21206,7 +21231,7 @@ cK
 hq
 ik
 aG
-jD
+Pf
 aa
 aa
 aa
@@ -22413,7 +22438,7 @@ Gc
 cP
 dY
 eT
-dY
+zO
 Oi
 vb
 ji
@@ -23425,8 +23450,8 @@ eb
 FG
 fW
 aL
-HP
-HP
+hu
+hu
 aH
 iJ
 ab
@@ -30696,7 +30721,7 @@ dB
 ex
 dB
 mD
-SW
+Hi
 EN
 BZ
 Vh
