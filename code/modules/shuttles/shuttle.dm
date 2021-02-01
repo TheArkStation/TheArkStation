@@ -219,8 +219,6 @@
 	if(HasAbove(current_location.z))
 		for(var/area/A in shuttle_area)
 			for(var/turf/TD in A.contents)
-				if(istype(TD, /turf/simulated/floor/shuttle_ceiling))	// ARK
-					continue											// ARK
 				var/turf/TA = GetAbove(TD)
 				if(istype(TA, get_base_turf_by_area(TA)) || istype(TA, /turf/simulated/open))
 					if(get_area(TA) in shuttle_area)
