@@ -6,7 +6,6 @@
 /obj/effect/overmap/visitable/ship/landable/venturestar
 	name = "IMV VentureStar"
 	shuttle = "IMV VentureStar"
-	multiz = 1
 	icon_state = "ship"
 	moving_state = "ship_moving"
 	fore_dir = WEST
@@ -17,7 +16,6 @@
 /datum/shuttle/autodock/overmap/venturestar
 	name = "IMV VentureStar"
 	warmup_time = 5
-	multiz = 1
 	range = 1
 	current_location = "nav_venturestar_start"
 	current_dock_target = "venturestar_dock"
