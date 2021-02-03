@@ -2,7 +2,7 @@
 name: Запрос фичи
 about: Предложите что-то новенькое
 title: ''
-labels: enhancement
+labels: feature
 assignees: ''
 
 ---
