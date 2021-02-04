@@ -256,7 +256,7 @@
 	gender = FEMALE
 
 /datum/sprite_accessory/hair/ponytail8
-	name = "Ponytail 9"
+	name = "Ponytail 8"
 	icon = ICONS_PATH
 	icon_state = "hair_ponytail_8_s"
 
