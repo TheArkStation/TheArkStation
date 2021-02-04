@@ -255,4 +255,14 @@
 	flags = HAIR_TIEABLE
 	gender = FEMALE
 
+/datum/sprite_accessory/hair/ponytail8
+	name = "Ponytail 9"
+	icon = ICONS_PATH
+	icon_state = "hair_ponytail_8_s"
+
+/datum/sprite_accessory/hair/ponytail9
+	name = "Ponytail 9"
+	icon = ICONS_PATH
+	icon_state = "hair_ponytail_9_s"
+
 #undef ICONS_PATH
