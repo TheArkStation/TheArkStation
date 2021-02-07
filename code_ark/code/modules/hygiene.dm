@@ -268,8 +268,8 @@
 	var/gel = FALSE
 	var/now_using = FALSE //IDK where is a function which is not stack, so i did it myself
 
-/obj/item/weapon/toothbrush/attack(mob/living/carbon/M as mob, mob/living/carbon/user as mob)
-	if(ishuman(M) && gel && !now_using)
+/obj/item/weapon/toothbrush/attack(mob/living/carbon/M as mob, mob/living/carbon/user as mob, target_zone) // SidVeld: add targe_zone
+	if(ishuman(M) && gel && !now_using && target_zone == BP_MOUTH)                                         // SidVeld: OKAY, I ADD THIS BCS IT'S IMPORTANT
 		now_using = TRUE
 		var/mob/living/carbon/human/H = M
 		playsound(H.loc, 'code_ark/sound/effects/toothbrush.ogg', 75, 1)
@@ -285,6 +285,8 @@
 		gel = FALSE
 	else if(!gel)
 		to_chat(user, "<span class='warning'>There is no gel on toothbrush.</span>")
+	else if(target_zone != BP_MOUTH)                                                                       // SidVeld: If check failed
+		to_chat(user, "<span class='notice'>You have to aim at the mouth to brush teeth.</span>")
 	now_using = FALSE
 	update_icon()
 
@@ -329,7 +331,7 @@
 	item_state = "yellow_tootbrush"
 	desc = "A yellow toothbrush."
 
-/obj/item/weapon/tooth_gel
+/obj/item/weapon/tooth_gel // SidVeld: HEY, MB add for this amount? Check /obj/item/stack/medical/ointment for example
 	name = "tooth gel"
 	desc = "A tooth gel with an extra whitening effect from VeyMed."
 	w_class = ITEM_SIZE_SMALL
@@ -337,50 +339,20 @@
 	icon_state = "tooth_gel"
 	item_state = "tooth_gel"
 
-/obj/item/weapon/lipstick/fashionable
-	desc = "An exquisite lipstick for the elect by Rosso Caprice!"
-	icon = 'code_ark/icons/obj/parfume_cosmetics.dmi'
-	icon_state = "Rosso Caprice Lipstick"
-
-/obj/item/weapon/lipstick/fashionable/attack_self(mob/user as mob)
-	to_chat(user, "<span class='notice'>You twist \the [src] [open ? "closed" : "open"].</span>")
-	open = !open
-	if(open)
-		icon_state = "lipstick_[colour]"
-	else
-		icon_state = "Rosso Caprice Lipstick"
-
-/obj/item/weapon/lipstick/fashionable/red
-	name = "A fashionable red lipstick."
-	colour = "lips_red_s"
-
-/obj/item/weapon/lipstick/fashionable/carmine
-	name = "A fashionable carmine lipstick."
-	colour = "carmine"
-
-/obj/item/weapon/lipstick/fashionable/crimson
-	name = "A fashionable crimson lipstick."
-	colour = "crimson"
-
-/obj/item/weapon/lipstick/fashionable/maroon
-	name = "A fashionable maroon lipstick."
-	colour = "maroon"
-
-/obj/item/weapon/lipstick/fashionable/imperial
-	name = "A fashionable imperial lipstick"
-	colour = "imperial"
-
 /obj/item/weapon/storage/cosmetic_bag
 	max_storage_space = 11
 	name = "cosmetic bag"
 	icon = 'code_ark/icons/obj/parfume_cosmetics.dmi'
 	w_class = ITEM_SIZE_NORMAL
 	max_w_class = ITEM_SIZE_SMALL
+	icon_state = "male_cosmetic_bag"        // SidVeld: Without this, shitspawned /obj/item/weapon/storage/cosmetic_bag doesn't be invisble
+	desc = "A bag for your hygiene items."  // Bonus for this 🠕🠕🠕🠕🠕
 
 /obj/item/weapon/storage/cosmetic_bag/New()
 	..()
 	new /obj/item/weapon/shampoo(src)
 	new /obj/item/weapon/tooth_gel(src)
+	new /obj/item/weapon/toothbrush/blue(src) // SidVeld: why not???
 	new /obj/item/weapon/soap(src)
 
 /obj/item/weapon/storage/cosmetic_bag/male
@@ -390,3 +362,51 @@
 /obj/item/weapon/storage/cosmetic_bag/female
 	desc = "A stylish cosmetic bag that fits everything you need."
 	icon_state = "female_cosmetic_bag"
+
+// Troyan's lipstick
+
+/obj/item/weapon/lipstick/fashionable
+	name = "rosso caprice red lipstick"	
+	desc = "Fashionable and expensive lipstick from Rosso Caprice."
+	icon = 'code_ark/icons/obj/parfume_cosmetics.dmi'
+	colour = "red"
+	item_icons = list(
+        slot_l_hand_str = 'code_ark/icons/mob/onmob/items/lefthand/lefthand_cosmetics.dmi',
+        slot_r_hand_str = 'code_ark/icons/mob/onmob/items/righthand/righthand_cosmetics.dmi',
+        )
+	icon_state = "rc_lipstick"
+	item_state = "rc_lipstick"
+
+/obj/item/weapon/lipstick/fashionable/carmine
+	name = "Rosso Caprice carmine lipstick"
+	colour = "carmine"
+
+/obj/item/weapon/lipstick/fashionable/crimson
+	name = "rosso caprice crimson lipstick"
+	colour = "crimson"
+
+/obj/item/weapon/lipstick/fashionable/maroon
+	name = "rosso caprice maroon lipstick"
+	colour = "maroon"
+
+/obj/item/weapon/lipstick/fashionable/imperial
+	name = "rosso capric imperial lipstick"
+	colour = "imperial"
+
+/obj/item/weapon/lipstick/fashionable/random
+	name = "lipstick"
+
+/obj/item/weapon/lipstick/fashionable/random/Initialize()
+	. = ..()
+	colour = pick("red","carmine","maroon","imperial")
+	name = "rosso caprice [colour] lipstick"
+
+/obj/item/weapon/lipstick/fashionable/attack_self(mob/user as mob)
+	to_chat(user, "<span class='notice'>You twist \the [src] [open ? "closed" : "open"].</span>")
+	open = !open
+	if(open)
+		icon_state = "rc_lipstick_[colour]"
+		item_state = "rc_lipstick_open"
+	else
+		icon_state = "rc_lipstick"
+		item_state = "rc_lipstick"
