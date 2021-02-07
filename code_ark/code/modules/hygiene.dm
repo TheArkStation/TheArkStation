@@ -371,9 +371,9 @@
 	icon = 'code_ark/icons/obj/parfume_cosmetics.dmi'
 	colour = "red"
 	item_icons = list(
-        slot_l_hand_str = 'code_ark/icons/mob/onmob/items/lefthand/lefthand_cosmetics.dmi',
-        slot_r_hand_str = 'code_ark/icons/mob/onmob/items/righthand/righthand_cosmetics.dmi',
-        )
+		slot_l_hand_str = 'code_ark/icons/mob/onmob/items/lefthand/lefthand_cosmetics.dmi',
+		slot_r_hand_str = 'code_ark/icons/mob/onmob/items/righthand/righthand_cosmetics.dmi',
+		)
 	icon_state = "rc_lipstick"
 	item_state = "rc_lipstick"
 
