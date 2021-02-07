@@ -258,11 +258,11 @@
 /datum/sprite_accessory/hair/ponytail8
 	name = "Ponytail 8"
 	icon = ICONS_PATH
-	icon_state = "hair_ponytail_8_s"
+	icon_state = "hair_ponytail_8"
 
 /datum/sprite_accessory/hair/ponytail9
 	name = "Ponytail 9"
 	icon = ICONS_PATH
-	icon_state = "hair_ponytail_9_s"
+	icon_state = "hair_ponytail_9"
 
 #undef ICONS_PATH
