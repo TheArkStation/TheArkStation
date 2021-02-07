@@ -378,7 +378,7 @@
 	item_state = "rc_lipstick"
 
 /obj/item/weapon/lipstick/fashionable/carmine
-	name = "Rosso Caprice carmine lipstick"
+	name = "rosso caprice carmine lipstick"
 	colour = "carmine"
 
 /obj/item/weapon/lipstick/fashionable/crimson
