@@ -72,6 +72,14 @@
 /obj/structure/bed/chair/pew
 	icon = 'code_ark/icons/obj/furniture.dmi'
 
+/obj/structure/bed/chair/pew/middle
+	icon_state = "pew_middle"
+	base_icon = "pew_middle"
+
+/obj/structure/bed/chair/pew/middle/mahogany
+	color = WOOD_COLOR_RICH
+	pew_material = MATERIAL_MAHOGANY
+
 // BENCHES
 
 /obj/structure/bed/chair/bench

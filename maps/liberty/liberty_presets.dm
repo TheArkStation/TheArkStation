@@ -4,44 +4,44 @@
 
 // Servers
 
-/obj/machinery/telecomms/server/presets/liberty
+/obj/machinery/telecomms/server/liberty
 	network = "tcomms"
 
-/obj/machinery/telecomms/server/presets/liberty/admin
+/obj/machinery/telecomms/server/liberty/admin
 	id = "Administration Server"
 	freq_listening = list(COMM_FREQ)
 	channel_tags = list(list(COMM_FREQ, "Administration", COMMS_COLOR_COMMAND))
 	autolinkers = list("administration")
 
-/obj/machinery/telecomms/server/presets/liberty/engineering
+/obj/machinery/telecomms/server/liberty/engineering
 	id = "Engineering Server"
 	freq_listening = list(ENG_FREQ)
 	channel_tags = list(list(ENG_FREQ, "Engineering", COMMS_COLOR_ENGINEER))
 	autolinkers = list("engineering")
 	network = "tcomms"
 
-/obj/machinery/telecomms/server/presets/liberty/medical
+/obj/machinery/telecomms/server/liberty/medical
 	id = "Medical Server"
 	freq_listening = list(MED_FREQ)
 	channel_tags = list(list(MED_FREQ, "Medical", COMMS_COLOR_MEDICAL))
 	autolinkers = list("medical")
 	network = "tcomms"
 
-/obj/machinery/telecomms/server/presets/liberty/harbor
+/obj/machinery/telecomms/server/liberty/harbor
 	id = "Harbor Services Server"
 	freq_listening = list(SUP_FREQ)
 	channel_tags = list(list(SUP_FREQ, "Harbor", COMMS_COLOR_SUPPLY))
 	autolinkers = list("harbor")
 	network = "tcomms"
 
-/obj/machinery/telecomms/server/presets/liberty/service
+/obj/machinery/telecomms/server/liberty/service
 	id = "Service Server"
 	freq_listening = list(SRV_FREQ)
 	channel_tags = list(list(SRV_FREQ, "Harbor", COMMS_COLOR_SUPPLY))
 	autolinkers = list("harbor")
 	network = "tcomms"
 
-/obj/machinery/telecomms/server/presets/liberty/unused
+/obj/machinery/telecomms/server/liberty/unused
 	id = "Unused Server"
 	freq_listening = list()
 	autolinkers = list("unused")
@@ -93,11 +93,29 @@
 
 // Processors
 
+/obj/machinery/telecomms/processor/liberty
+	network = "tcomms"
+
+/obj/machinery/telecomms/processor/liberty/preset_one
+	id = "Processor One"
+	autolinkers = list("processor_one")
+
+/obj/machinery/telecomms/processor/liberty/preset_two
+	id = "Processor Two"
+	autolinkers = list("processor_two")
+
+// Hub
+
+/obj/machinery/telecomms/hub/liberty
+	id = "Hub"
+	network = "tcomms"
+	autolinkers = list("command", "harbor", "service", "engineering", "medical", "unused", "receiver_one", "receiver_two", "broadcaster_one", "broadcaster_two")
+
 //////////////////////////////////////////////
 ///////////////// SFP tcomms /////////////////
 //////////////////////////////////////////////
 
-/obj/machinery/telecomms/server/presets/liberty/sfp
+/obj/machinery/telecomms/server/liberty/sfp
 	id = "Police Server"
 	freq_listening = list(SEC_FREQ)
 	channel_tags = list(list(SEC_FREQ, "Security", COLOR_SFP_BLUE))
@@ -136,8 +154,6 @@ var/const/NETWORK_LEVEL_ZERO		= "Level Zero"
 var/const/NETWORK_LEVEL_ONE			= "Level One"
 var/const/NETWORK_LEVEL_TWO			= "Level Two"
 var/const/NETWORK_LEVEL_THREE		= "Level Three"
-var/const/NETWORK_SOL_COMMAND		= "Sol Command"
-var/const/NETWORK_SOL_EXPLORATION	= "Sol Exploration"
 
 /datum/map/liberty/get_network_access(var/network)
 	switch(network)
@@ -174,15 +190,39 @@ var/const/NETWORK_SOL_EXPLORATION	= "Sol Exploration"
 //////////////////////////////////////////////
 ////////////////// Cameras ///////////////////
 //////////////////////////////////////////////
+// PLACE HERE LIBERTY CAMS ONLY!!! NOT ARK_CODE CAMS!!! Ark cams at "\code_ark\code\game\machinery\camera.dm" ~Laxesh
 
-/obj/machinery/camera/network/sol_command
-	network = list(NETWORK_SOL_COMMAND)
 
-/obj/machinery/camera/network/sol_exploration
-	network = list(NETWORK_SOL_EXPLORATION)
+//////////////////////////////////////////////
+/////////////////// SMES /////////////////////
+//////////////////////////////////////////////
 
-// TEMP REMOVE
+/obj/machinery/power/smes/buildable/preset/liberty/shuttle
+	_input_maxed = TRUE
+	_output_maxed = TRUE
+	_input_on = TRUE
+	_output_on = TRUE
+	_fully_charged = TRUE
 
-/obj/machinery/camera/network/exploration
-/obj/machinery/camera/network/supply
-/obj/machinery/camera/network/command
+/obj/machinery/power/smes/buildable/preset/liberty/substation
+	uncreated_component_parts = list(/obj/item/weapon/stock_parts/smes_coil = 1) // Note that it gets one more from construction
+	_input_maxed = TRUE
+	_output_maxed = TRUE
+
+/obj/machinery/power/smes/buildable/preset/liberty/substation_full
+	uncreated_component_parts = list(/obj/item/weapon/stock_parts/smes_coil = 1)
+	_input_maxed = TRUE
+	_output_maxed = TRUE
+	_input_on = TRUE
+	_output_on = TRUE
+	_fully_charged = TRUE
+
+/obj/machinery/power/smes/buildable/preset/liberty/engine_main
+	uncreated_component_parts = list(
+		/obj/item/weapon/stock_parts/smes_coil/super_io = 2,
+		/obj/item/weapon/stock_parts/smes_coil/super_capacity = 2)
+	_input_maxed = TRUE
+	_output_maxed = TRUE
+	_input_on = TRUE
+	_output_on = TRUE
+	_fully_charged = TRUE

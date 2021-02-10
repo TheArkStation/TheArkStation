@@ -3,7 +3,11 @@
 	full_name = "TTH Liberty"
 	path = "liberty"
 	flags = MAP_HAS_BRANCH | MAP_HAS_RANK
-	config_path = "config/liberty_config.txt"
+//	config_path = "config/liberty_config.txt"
+
+	// Did you know, that posibrains have laws? No? Me too!
+	default_law_type = /datum/ai_laws/robocop
+	base_floor_type = /turf/simulated/floor/reinforced/airless
 
 	admin_levels = list()
 	empty_levels = list(6)
@@ -15,8 +19,8 @@
 	overmap_event_areas = 34
 	usable_email_tlds = list("liberty.sfp.scg", "freemail.net")
 
-	allowed_spawns = list("Cryogenic Storage", "Cyborg Storage")
-	default_spawn = "Cryogenic Storage"
+	allowed_spawns = list("Arrivals Shuttle")
+	default_spawn = "Arrivals Shuttle"
 
 	station_name  = "TTH Liberty"
 	station_short = "Liberty"
@@ -36,9 +40,8 @@
 
 	evac_controller_type = /datum/evacuation_controller/starship
 
-	default_law_type = null
 	use_overmap = 1
 	num_exoplanets = 1
 
 	away_site_budget = 3
-	id_hud_icons = 'maps/torch/icons/assignment_hud.dmi'
+	id_hud_icons = 'maps/liberty/icons/assignment_hud.dmi'

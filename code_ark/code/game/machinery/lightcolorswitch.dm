@@ -1,8 +1,8 @@
 /obj/machinery/light_color_switch
 	name = "light color switch"
 	desc = "Paint it, Black."
-	icon = 'icons/obj/power.dmi'
-	icon_state = "light-p"
+	icon = 'code_ark/icons/obj/power.dmi'
+	icon_state = "light"
 	anchored = TRUE
 	idle_power_usage = 20
 	var/broken = FALSE
@@ -29,7 +29,7 @@
 	if(stat & (NOPOWER|BROKEN))
 		set_light(0)
 	else
-		var/image/I = image('code_ark/icons/obj/power.dmi', "light-overlay-blank")
+		var/image/I = image(icon, "[icon_state]-overlay-color")
 		I.color = area_light_color
 		I.plane = EFFECTS_ABOVE_LIGHTING_PLANE
 		I.layer = ABOVE_LIGHTING_LAYER
@@ -119,3 +119,12 @@
 		sleep(delay)
 
 	broken = FALSE
+
+/obj/machinery/light_color_switch/large
+	name = "light color control panel"
+	icon_state = "large-light-color"
+	area_light_color = "#ffffff"
+
+/obj/machinery/light_color_switch/large/Initialize()
+	. = ..()
+	name = initial(name)

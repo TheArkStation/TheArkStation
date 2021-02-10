@@ -105,7 +105,7 @@ GLOBAL_LIST_INIT(music_tracks, list(
 	"Wild Encounters" = /music_track/wildencounters,
 	"Torn" = /music_track/torn,
 	"Nebula" = /music_track/nebula,
-	"Relaxing" = /music_track/bensound_relaxing,
+	"Relaxing" = /music_track/bensound_relaxing, //ARK FROM HERE ON,
 	"Better Days" = /music_track/bensound_better_days,
 	"Sad Day" = /music_track/bensound_sad_day,
 	"Tomorrow" = /music_track/bensound_tomorrow,
@@ -113,7 +113,22 @@ GLOBAL_LIST_INIT(music_tracks, list(
 	"Love" = /music_track/bensound_love,
 	"The Jazz Piano" = /music_track/bensound_the_jazz_piano,
 	"Night on the Docks - Sax" = /music_track/kmacleod_night_on_the_docks_sax,
-	"Shades of Spring" = /music_track/kmacleod_shades_of_spring
+	"Shades of Spring" = /music_track/kmacleod_shades_of_spring,
+	"Voice of Eternity" = /music_track/pedro_noire_one,
+	"Beautiful Oblivion" = /music_track/sbuckley_beautiful_oblivion,
+	"Discovery" = /music_track/sbuckley_discovery,
+	"Electric Dreams" = /music_track/sbuckley_electric_dreams,
+	"Emergent" = /music_track/sbuckley_emergent,
+	"Filaments" = /music_track/sbuckley_filaments,
+	"In Dreams" = /music_track/sbuckley_in_dreams,
+	"Jul" = /music_track/sbuckley_jul,
+	"Machina" = /music_track/sbuckley_machina,
+	"Neon" = /music_track/sbuckley_neon,
+	"Signal to Noise" = /music_track/sbuckley_signal_to_noise,
+	"Solcism" = /music_track/sbuckley_solecism,
+	"Tears in Rain" = /music_track/sbuckley_tears_in_rain,
+	"Twilight Echo" = /music_track/sbuckley_twilight_echo,
+	"Undertow" = /music_track/sbuckley_undertow
 ))
 
 /proc/setup_music_tracks(var/list/tracks)

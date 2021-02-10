@@ -2,7 +2,7 @@
 	name = "master light switch"
 	desc = "It turns lights on and off. It can be connected to several light switches in various areas to control the lights in a centralized manner."
 	icon = 'code_ark/icons/obj/power.dmi'
-	icon_state = "light-base"
+	icon_state = "light"
 	anchored = 1
 	idle_power_usage = 20
 	power_channel = EQUIP
@@ -12,7 +12,7 @@
 	var/brightness = 1
 
 /obj/machinery/light_switch/slave
-	name = "remote light witch"
+	name = "remote light switch"
 	desc = "It turns lights on and off. However, there's no way you can toggle this switch since it's remotely connected to a master."
 	icon = 'code_ark/icons/obj/power.dmi'
 	icon_state = "light-remote"
@@ -85,14 +85,14 @@
 
 /obj/machinery/light_master_switch/on_update_icon()
 	if(!overlay)
-		overlay = image(icon, "light1-overlay")
+		overlay = image(icon, "[icon_state]1-overlay")
 		overlay.plane = EFFECTS_ABOVE_LIGHTING_PLANE
 		overlay.layer = ABOVE_LIGHTING_LAYER
 	overlays.Cut()
 	if(stat & (NOPOWER|BROKEN))
 		set_light(0)
 	else
-		overlay.icon_state = "light[on]-overlay"
+		overlay.icon_state = "[icon_state][on]-overlay"
 		overlays += overlay
 		set_light(0.1, 0.1, 1, 2, on ? "#82ff4c" : "#f86060")
 
@@ -116,3 +116,8 @@
 	lightbulb.update_icon()
 	lightbulb = null
 	update_icon()
+
+// An addition for the stage
+/obj/machinery/light_master_switch/large
+	name = "light control panel"
+	icon_state = "large-light"

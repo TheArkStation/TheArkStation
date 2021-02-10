@@ -1,3 +1,4 @@
+#if !defined(using_map_DATUM)
 	#include "ship_lucius/lucius.dm"
 	#include "ship_venturestar/venturestar.dm"
 
@@ -5,9 +6,11 @@
 	#include "liberty_elevators.dm"
 	#include "liberty_overmap.dm"
 	#include "liberty_presets.dm"
-	#include "liberty_turfs.dm"
 	#include "liberty_shuttles.dm"
+	#include "liberty_turfs.dm"
+	#include "liberty_unit_testing.dm"
 
+	#include "items/items.dm"
 	#include "items/rigs.dm"
 	#include "machinery/doors.dm"
 	#include "machinery/misc.dm"
@@ -67,7 +70,7 @@
 
 //	#include "../torch/machinery/suit_storage.dm"
 
-	#include "../torch/job/torch_access.dm" // REMOVE ME
+//	#include "../torch/job/torch_access.dm" // REMOVE ME
 
 // END OF TORCH DEFINES
 
@@ -100,3 +103,9 @@
 	#include "../away/meatstation/meatstation.dm"
 
 	#define using_map_DATUM /datum/map/liberty
+
+#elif !defined(MAP_OVERRIDE)
+
+	#warn A map has already been included, ignoring Example
+
+#endif
