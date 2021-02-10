@@ -84,7 +84,7 @@
 /obj/machinery/telecomms/bus/liberty/preset_one
 	id = "Bus One"
 	freq_listening = list(COMM_FREQ, SUP_FREQ, SRV_FREQ)
-	autolinkers = list("processor_one", "command", "harbor", "service")
+	autolinkers = list("processor_one", "administration", "harbor", "service")
 
 /obj/machinery/telecomms/bus/liberty/preset_two
 	id = "Bus Two"
@@ -109,7 +109,7 @@
 /obj/machinery/telecomms/hub/liberty
 	id = "Hub"
 	network = "tcomms"
-	autolinkers = list("command", "harbor", "service", "engineering", "medical", "unused", "receiver_one", "receiver_two", "broadcaster_one", "broadcaster_two")
+	autolinkers = list("admin", "harbor", "service", "engineering", "medical", "unused", "receiver_one", "receiver_two", "broadcaster_one", "broadcaster_two")
 
 //////////////////////////////////////////////
 ///////////////// SFP tcomms /////////////////
