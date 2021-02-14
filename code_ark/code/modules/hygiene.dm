@@ -342,7 +342,7 @@
 
 /obj/item/weapon/toothbrush/random/Initialize()
 	. = ..()
-	var/colour = pick("blue","pink","red","green")
+	var/colour = pick("blue","pink","red","green","yellow")
 	name = "[colour] toothbrush"
 	icon_state = "toothbrush_[colour]"
 	item_state = "toothbrush_[colour]"
