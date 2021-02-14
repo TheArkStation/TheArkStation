@@ -321,7 +321,7 @@
 	name = "pink toothbrush"
 	icon_state = "toothbrush_pink"
 	item_state = "toothbrush_pink"
-	
+
 /obj/item/weapon/toothbrush/red
 	name = "red toothbrush"
 	icon_state = "toothbrush_red"
