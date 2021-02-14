@@ -261,10 +261,16 @@
 	startswith = list(/obj/item/weapon/napkin = 8)
 
 /obj/item/weapon/toothbrush
-	name = "toothbrush"
+	name = "red toothbrush"
 	desc = "A simple toothbrush from the VeyMed Miracle series."
-	w_class = ITEM_SIZE_SMALL
 	icon = 'code_ark/icons/obj/parfume_cosmetics.dmi'
+	icon_state = "red_tootbrush"
+	item_icons = list(
+		slot_l_hand_str = 'code_ark/icons/mob/onmob/items/lefthand/lefthand_toothbrush.dmi',
+		slot_r_hand_str = 'code_ark/icons/mob/onmob/items/righthand/righthand_toothbrush.dmi',
+		)
+	item_state = "toothbrush_red"
+	w_class = ITEM_SIZE_SMALL
 	var/gel = FALSE
 	var/now_using = FALSE //IDK where is a function which is not stack, so i did it myself
 
@@ -307,35 +313,49 @@
 		overlays = list()
 
 /obj/item/weapon/toothbrush/blue
-	icon_state = "blue_tootbrush"
-	item_state = "blue_tootbrush"
-	desc = "A blue toothbrush."
+	name = "blue toothbrush"
+	icon_state = "toothbrush_blue"
+	item_state = "toothbrush_blue"
 
 /obj/item/weapon/toothbrush/pink
-	icon_state = "pink_tootbrush"
-	item_state = "pink_tootbrush"
-	desc = "A pink toothbrush"
+	name = "pink toothbrush"
+	icon_state = "toothbrush_pink"
+	item_state = "toothbrush_pink"
 
 /obj/item/weapon/toothbrush/red
-	icon_state = "red_tootbrush"
-	item_state = "red_tootbrush"
-	desc = "A red toothbrush."
+	name = "red toothbrush"
+	icon_state = "toothbrush_red"
+	item_state = "toothbrush_red"
 
 /obj/item/weapon/toothbrush/green
-	icon_state = "green_tootbrush"
-	item_state = "green_tootbrush"
-	desc = "A green toothbrush"
+	name = "green toothbrush"
+	icon_state = "toothbrush_green"
+	item_state = "toothbrush_green"
 
 /obj/item/weapon/toothbrush/yellow
-	icon_state = "yellow_tootbrush"
-	item_state = "yellow_tootbrush"
-	desc = "A yellow toothbrush."
+	name = "yellow toothbrush"
+	icon_state = "toothbrush_yellow"
+	item_state = "toothbrush_yellow"
+
+/obj/item/weapon/toothbrush/random
+	name = "toothbrush"
+
+/obj/item/weapon/toothbrush/random/Initialize()
+	. = ..()
+	var/colour = pick("blue","pink","red","green","yellow")
+	name = "[colour] toothbrush"
+	icon_state = "toothbrush_[colour]"
+	item_state = "toothbrush_[colour]"
 
 /obj/item/weapon/tooth_gel // SidVeld: HEY, MB add for this amount? Check /obj/item/stack/medical/ointment for example
 	name = "tooth gel"
 	desc = "A tooth gel with an extra whitening effect from VeyMed."
 	w_class = ITEM_SIZE_SMALL
 	icon = 'code_ark/icons/obj/parfume_cosmetics.dmi'
+	item_icons = list(
+		slot_l_hand_str = 'code_ark/icons/mob/onmob/items/lefthand/lefthand_toothbrush.dmi',
+		slot_r_hand_str = 'code_ark/icons/mob/onmob/items/righthand/righthand_toothbrush.dmi',
+		)
 	icon_state = "tooth_gel"
 	item_state = "tooth_gel"
 
@@ -352,7 +372,7 @@
 	..()
 	new /obj/item/weapon/shampoo(src)
 	new /obj/item/weapon/tooth_gel(src)
-	new /obj/item/weapon/toothbrush/blue(src) // SidVeld: why not???
+	new /obj/item/weapon/toothbrush/random(src) // SidVeld: why not???
 	new /obj/item/weapon/soap(src)
 
 /obj/item/weapon/storage/cosmetic_bag/male
