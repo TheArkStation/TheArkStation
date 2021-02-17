@@ -109,7 +109,7 @@
 /obj/machinery/telecomms/hub/liberty
 	id = "Hub"
 	network = "tcomms"
-	autolinkers = list("admin", "harbor", "service", "engineering", "medical", "unused", "receiver_one", "receiver_two", "broadcaster_one", "broadcaster_two")
+	autolinkers = list("administration", "harbor", "service", "engineering", "medical", "unused", "receiver_one", "receiver_two", "broadcaster_one", "broadcaster_two")
 
 //////////////////////////////////////////////
 ///////////////// SFP tcomms /////////////////
