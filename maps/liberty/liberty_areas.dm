@@ -793,7 +793,7 @@
 
 /area/liberty/hotel/room/penthouse
 	name = "\improper Hotel - Penthouse"
-	icon_state = "hotel_stage"
+	icon_state = "hotel_room_penthouse"
 
 // COMMAND
 
