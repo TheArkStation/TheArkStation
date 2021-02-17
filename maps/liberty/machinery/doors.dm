@@ -107,3 +107,8 @@
 /obj/machinery/door/airlock/glass/port
 	door_color = COLOR_DARK_BROWN
 	stripe_color = COLOR_SILVER
+
+// ESCAPE PODS
+
+/obj/machinery/door/airlock/external/escapepod/white
+	door_color = "#ffffff"

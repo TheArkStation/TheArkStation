@@ -1,3 +1,6 @@
+/area/space // Fixing artifacts of shuttle movements
+	base_turf = /turf/space
+
 /obj/effect/overmap/visitable/ship/landable/find_z_levels()
 	for(var/i = 0 to multiz)
 		world.maxz++
@@ -66,6 +69,9 @@ datum/shuttle/shuttle_moved(var/obj/effect/shuttle_landmark/destination, var/lis
 				var/turf/TA = GetAbove(TO)
 				if(istype(TA, ceiling_type))
 					TA.ChangeTurf(get_base_turf_by_area(TA), 1, 1)
+					continue 														// ARK
+				if(istype(TA, /turf/simulated/open) && istype(get_area(TA), /area/space)) // ARK
+					TA.ChangeTurf(/turf/space, 1, 1)								// ARK
 		if(knockdown)
 			for(var/mob/M in A)
 				spawn(0)
@@ -92,13 +98,14 @@ datum/shuttle/shuttle_moved(var/obj/effect/shuttle_landmark/destination, var/lis
 	if(HasAbove(current_location.z + multiz)) // Since now our base coordinates are at the bottom, we have to adjust the whole process for the top part
 		for(var/area/A in shuttle_area)
 			for(var/turf/TD in A.contents)
-				if(istype(TD, /turf/simulated/floor/shuttle_ceiling))	// We wanna avoid placing a ceiling over the parts that don't really require it
-					continue											// yeah
 				var/turf/TA = GetAbove(TD)
 				if(istype(TA, get_base_turf_by_area(TA)) || istype(TA, /turf/simulated/open))
 					if(get_area(TA) in shuttle_area)
 						continue
-					TA.ChangeTurf(ceiling_type, TRUE, TRUE, TRUE)
+					if(istype(TD, /turf/simulated/floor/shuttle_ceiling) && !istype(TA, /turf/simulated/open))	// ARK: We wanna avoid placing a ceiling over the parts that don't really require it
+						TA.ChangeTurf(/turf/simulated/open, TRUE, TRUE, TRUE)									// ARK: yeah
+					else
+						TA.ChangeTurf(ceiling_type, TRUE, TRUE, TRUE)
 
 	// Remove all powernets that were affected, and rebuild them.
 	var/list/cables = list()

@@ -1,0 +1,163 @@
+<!-- 
+Title: Hotel Reservations System UI
+Used In File(s): code_ark\code\modules\hotel\hotel_computers.dm
+ -->
+
+{{if data.mode == 1}}
+    <div>
+        <H3><span class="white">Reservation Mode: </span></H3>
+        {{:helper.link('Auto' , null, {'play' : 1}, data.auto_mode == 1 ? 'disabled' : null, null)}}
+        {{:helper.link('Manual' , null, {'auto' : 0}, data.auto_mode == 0 ? 'disabled' : null, null)}}
+    </div>
+    <H2><span class="white">Single Rooms:</span></H2>
+    <div class="itemContent">
+        {{for data.single_rooms}}
+            <div class="itemGroup" style = "width: 275px">
+                <table><tr>
+                    <td>
+                        {{:helper.link( value.room.number, null, {'room_select' : value.room.number}, null, value.room.status == 0 ? 'disabled' : value.room.status == 1 ? 'greenButton' : value.room.status == 2 && value.room.requests < 2 ? null : value.room.requests > 1 ? 'redButton' : 'yellowButton' , null)}}
+                    </td><td>
+                        <span class="white">Status: </span>
+                        {{if value.room.status == 0}}
+                            <span class="bad">ERROR</span>
+                        {{else value.room.status == 1}}
+                            <span class="good">available</span>
+                        {{else value.room.status == 2}}
+                            <span class="white">occupied</span>
+                        {{if value.room.end}}
+                            <span class="white">until {{:value.room.end}}</span>
+                        {{/if}}
+                        {{else value.room.status == 3}}
+                            <span class="average">blocked</span>
+                        {{/if}}
+                        <br>1 bed - {{:value.room.price}} thalers per hour<br>
+                        <span class="white">Remarks:</span>
+                        {{if value.room.requests == 0}}
+                            none
+                        {{else value.room.requests == 1}}
+                            <span class="average">do not disturb</span>
+                        {{else value.room.requests == 2}}
+                            <span class="bad">make up the room</span>
+                        {{else value.room.requests == 3}}
+                            <span class="bad">room turnover required</span>
+                        {{/if}}
+                    </td>
+                </tr></table>
+
+            </div>
+        {{/for}}
+    </div>
+    <H2><span class="white">Double Rooms:</span></H2>
+    <div class="itemContent">
+        {{for data.double_rooms}}
+            <div class="itemGroup" style = "width: 275px">
+                <table><tr>
+                    <td>
+                        {{:helper.link( value.room.number, null, {'room_select' : value.room.number}, null, value.room.status == 0 ? 'disabled' : value.room.status == 1 ? 'greenButton' : value.room.status == 2 && value.room.requests < 2 ? null : value.room.requests > 1 ? 'redButton' : 'yellowButton' , null)}}
+                    </td><td>
+                        <span class="white">Status: </span>
+                        {{if value.room.status == 0}}
+                            <span class="bad">ERROR</span>
+                        {{else value.room.status == 1}}
+                            <span class="good">available</span>
+                        {{else value.room.status == 2}}
+                            <span class="white">occupied</span>
+                        {{if value.room.end}}
+                            <span class="white">until {{:value.room.end}}</span>
+                        {{/if}}
+                        {{else value.room.status == 3}}
+                            <span class="average">blocked</span>
+                        {{/if}}
+                        <br>
+                        {{if value.room.beds > 1}}
+                            {{:value.room.beds}} beds 
+                        {{else}}
+                            1 bed
+                        {{/if}}
+                        - {{:value.room.price}} thalers per hour<br>
+                        <span class="white">Remarks:</span>
+                        {{if value.room.requests == 0}}
+                            none
+                        {{else value.room.requests == 1}}
+                            <span class="average">do not disturb</span>
+                        {{else value.room.requests == 2}}
+                            <span class="bad">make up the room</span>
+                        {{else value.room.requests == 3}}
+                            <span class="bad">room turnover required</span>
+                        {{/if}}
+                    </td>
+                </tr></table>
+
+            </div>
+        {{/for}}
+    </div>
+    <H2><span class="white">Special Rooms:</span></H2>
+    <i>Only manual reservation available</i>
+    <div class="itemContent">
+        {{for data.special_rooms}}
+            <div class="itemGroup" style = "width: 275px">
+                <table><tr>
+                    <td>
+                        {{:helper.link( value.room.number, null, {'room_select' : value.room.number}, null, value.room.status == 0 ? 'disabled' : value.room.status == 1 ? 'greenButton' : value.room.status == 2 && value.room.requests < 2 ? null : value.room.requests > 1 ? 'redButton' : 'yellowButton' , null)}}
+                    </td><td>
+                        <span class="white">Status: </span>
+                        {{if value.room.status == 0}}
+                            <span class="bad">ERROR</span>
+                        {{else value.room.status == 1}}
+                            <span class="good">available</span>
+                        {{else value.room.status == 2}}
+                            <span class="white">occupied</span>
+                        {{if value.room.end}}
+                            <span class="white">until {{:value.room.end}}</span>
+                        {{/if}}
+                        {{else value.room.status == 3}}
+                            <span class="average">blocked</span>
+                        {{/if}}
+                        <br>
+                        {{if value.room.beds > 1}}
+                            {{:value.room.beds}} beds 
+                        {{else}}
+                            1 bed
+                        {{/if}}
+                        - {{:value.room.price}} thalers per hour<br>
+                        <span class="white">Remarks:</span>
+                        {{if value.room.requests == 0}}
+                            none
+                        {{else value.room.requests == 1}}
+                            <span class="average">do not disturb</span>
+                        {{else value.room.requests == 2}}
+                            <span class="bad">make up the room</span>
+                        {{else value.room.requests == 3}}
+                            <span class="bad">room turnover required</span>
+                        {{/if}}
+                    </td>
+                </tr></table>
+            </div>
+        {{/for}}
+    </div>
+
+{{else data.mode == 2}}
+
+{{/if}}
+
+<!---
+<H3><span class="white">Volume:</span></H3>
+{{:helper.displayBar(data.volume*2, 0, 100, 'average')}}
+<div class="itemContent">
+    {{:helper.link('0' , null, {'volume' : 0}, data.volume == 0 ? 'disabled' : null, null)}}
+    {{:helper.link('20' , null, {'volume' : 10}, data.volume == 10 ? 'disabled' : null, null)}}
+    {{:helper.link('40' , null, {'volume' : 20}, data.volume == 20 ? 'disabled' : null, null)}}
+    {{:helper.link('60' , null, {'volume' : 30}, data.volume == 30 ? 'disabled' : null, null)}}
+    {{:helper.link('80' , null, {'volume' : 40}, data.volume == 40 ? 'disabled' : null, null)}}
+    {{:helper.link('100' , null, {'volume' : 50}, data.volume == 50 ? 'disabled' : null, null)}}
+</div>
+
+<H3><span class="white">Available tracks:</span></H3>
+<div class="itemContent">
+    {{for data.tracks}}
+        <div class="item">
+            {{:helper.link( value.track, 'gear', {'title' : value.track}, value.track == data.current_track ? 'disabled' : null, null)}}    
+        </div>
+    {{/for}}
+</div>
+--->

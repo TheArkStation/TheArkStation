@@ -12,6 +12,7 @@
 
 	#include "items/items.dm"
 	#include "items/rigs.dm"
+	#include "job/liberty_access.dm"
 	#include "machinery/doors.dm"
 	#include "machinery/misc.dm"
 	#include "objects/misc.dm"

@@ -100,10 +100,6 @@
 	name = "\improper Level Zero - Abandoned Shop"
 	icon_state = "abandoned_shop"
 
-/area/liberty/maintenance/construction/zero/medbay
-	name = "\improper Level Zero - Abandoned Medbay"
-	icon_state = "abandoned_medbay"
-
 // HALLWAYS
 
 /area/liberty/hallway/zero
@@ -303,6 +299,10 @@
 /area/liberty/maintenance/one/starboard
 	name = "\improper Maintenance - Level One - Starboard"
 	icon_state = "maintance_one_starboard"
+
+/area/liberty/maintenance/construction/zero/medbay
+	name = "\improper Level Zero - Abandoned Medbay"
+	icon_state = "abandoned_medbay"
 
 // SHOPPING HALL
 
