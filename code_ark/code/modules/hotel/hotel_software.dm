@@ -7,7 +7,7 @@
 	program_key_state = "med_key"
 	program_menu_icon = "heart"
 	extended_desc = "This program connects to the hotel reservations system and enables it to be managed."
-	required_access = access_liberty_hotel
+	required_access = "ACCESS_LIBERTY_HOTEL"
 	requires_ntnet = 1
 	network_destination = "hotel reservations database"
 	size = 11
