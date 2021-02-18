@@ -78,7 +78,7 @@ GLOBAL_LIST_INIT(hotel_room_presets, list(			// Make sure any rooms you've creat
 GLOBAL_LIST_EMPTY(hotel_rooms)
 
 /proc/setup_hotel_rooms()
-	if (!LAZYLEN(!GLOB.hotel_rooms))
+	if (!LAZYLEN(GLOB.hotel_rooms))
 		var/rooms_list = GLOB.hotel_room_presets
 		for(var/room_number in rooms_list)
 			var/hotel_room_preset_path = rooms_list[room_number]
@@ -104,9 +104,7 @@ GLOBAL_LIST_EMPTY(hotel_rooms)
 	var/obj/machinery/computer/hotel_room_controller/room_controller
 	var/obj/machinery/door/airlock/room_airlock
 
-	var/obj/machinery/computer/hotel/holder
-
-/datum/hotel_room/New(var/room_number, var/hotel_room_preset_path, var/obj/machinery/computer/hotel/holder)
+/datum/hotel_room/New(var/room_number, var/hotel_room_preset_path)
 	src.room_number = room_number
 	if(ispath(hotel_room_preset_path, /hotel_room_preset))
 		var/hotel_room_preset/hotel_room_preset = decls_repository.get_decl(hotel_room_preset_path)
@@ -139,7 +137,6 @@ GLOBAL_LIST_EMPTY(hotel_rooms)
 		if(!room_airlock)
 			crash_with("A hotel room ([room_number]) is unable to find its door!")
 
-		src.holder = holder
 	else
 		crash_with("A hotel room preset ([room_number]) is incorrect!")
 
@@ -155,5 +152,9 @@ GLOBAL_LIST_EMPTY(hotel_rooms)
 	room_sign.hotel_room = null
 	QDEL_NULL_LIST(room_keys)
 	. = ..()
+
+/datum/hotel_room/proc/room_self_test()
+	if (!istype(room_sign) || !istype(room_controller) || istype(room_airlock))
+		room_status = 0
 
 /datum/hotel_room/proc/room_inoperable() // FIX ME
