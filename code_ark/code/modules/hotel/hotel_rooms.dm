@@ -100,6 +100,8 @@ GLOBAL_LIST_EMPTY(hotel_rooms)
 	var/room_reservation_start_time
 	var/room_reservation_end_time
 
+	var/list/room_log = list()
+
 	var/obj/machinery/hotel_room_sign/room_sign
 	var/obj/machinery/computer/hotel_room_controller/room_controller
 	var/obj/machinery/door/airlock/room_airlock
@@ -147,14 +149,61 @@ GLOBAL_LIST_EMPTY(hotel_rooms)
 
 	room_status = 1
 
-/datum/hotel_room/Destroy()
-	room_controller.hotel_room = null
-	room_sign.hotel_room = null
-	QDEL_NULL_LIST(room_keys)
-	. = ..()
+	room_test_n_update()
 
-/datum/hotel_room/proc/room_self_test()
-	if (!istype(room_sign) || !istype(room_controller) || istype(room_airlock))
+/datum/hotel_room/proc/room_test_n_update()
+	var/room_is_broken = 0
+
+	if (!istype(room_sign))
+		room_sign = null
+		room_is_broken = 1
+	else
+		room_sign.update_icon()
+
+	if (!istype(room_controller))
+		room_controller = null
+		room_is_broken = 1
+	else
+		room_controller.update_icon()
+
+	if (!istype(room_airlock))
+		room_airlock = null
+		room_is_broken = 1
+
+	if (room_is_broken && room_status)
 		room_status = 0
+		room_requests = 0
+		room_reservation_start_time = null
+		room_reservation_end_time = null
+		room_keys = list()
+		room_guests = list()
 
-/datum/hotel_room/proc/room_inoperable() // FIX ME
+	if (room_status == 0)
+		return 0
+	else
+		return 1
+
+/datum/hotel_room/proc/room_block()
+	room_status = 3
+	var/log_entry = "\[[stationtime2text()]\] The room was manually blocked by "
+	if(istype(usr, /mob/living/carbon/human))
+		var/mob/living/carbon/human/H = usr
+		log_entry += H.get_id_name("unknown")
+	else
+		log_entry += "unknown"
+
+	room_log.Add(log_entry)
+	room_test_n_update()
+
+/datum/hotel_room/proc/room_unblock()
+	if(room_requests != 3)
+		room_status = 1
+	var/log_entry = "\[[stationtime2text()]\] The room was manually unblocked by "
+	if(istype(usr, /mob/living/carbon/human))
+		var/mob/living/carbon/human/H = usr
+		log_entry += H.get_id_name("unknown")
+	else
+		log_entry += "unknown"
+
+	room_log.Add(log_entry)
+	room_test_n_update()

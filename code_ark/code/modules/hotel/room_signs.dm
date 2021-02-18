@@ -11,8 +11,7 @@
 	var/datum/hotel_room/hotel_room
 
 /obj/machinery/hotel_room_sign/Destroy()
-	hotel_room.room_sign = null
-	hotel_room.room_inoperable()
+	hotel_room.room_test_n_update()
 	. = ..()
 
 /obj/machinery/hotel_room_sign/on_update_icon()

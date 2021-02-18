@@ -2,10 +2,10 @@
 	filename = "hotelreservations"
 	filedesc = "Hotel Reservations Management"
 	nanomodule_path = /datum/nano_module/hotel_reservations
-	ui_header = "crew_green.gif"
+	ui_header = "alarm_green.gif"
 	program_icon_state = "crew"
-	program_key_state = "med_key"
-	program_menu_icon = "heart"
+	program_key_state = "generic_key"
+	program_menu_icon = "calendar"
 	extended_desc = "This program connects to the hotel reservations system and enables it to be managed."
 	required_access = "ACCESS_LIBERTY_HOTEL"
 	requires_ntnet = 1
@@ -15,7 +15,7 @@
 
 /datum/nano_module/hotel_reservations
 
-	var/program_mode = 1 // 1 - room list, 2 - specific room info, 3 - reservation
+	var/program_mode = 1 // 0 - error, 1 - room list, 2 - specific room info, 3 - room logs, 4 - reservation
 	var/program_auto_mode = 0 // 0 - manual reservations, 1 - automatic reservations
 
 	var/datum/hotel_room/selected_room
@@ -41,60 +41,62 @@
 		if (R == selected_room)
 			if(R.room_status == 2)
 				var/N = 0
-				for(var/guest_name in R.room_guests)
-					room_guest_list += "[guest_name]"
-					N += 1
-				if (N < R.room_guests.len)
-					room_guest_list += ", "
-			hotel_selected_room = list(list(
-			"number" = R.room_number,
-			"status" = R.room_status,
-			"requests" = R.room_requests,
-			"beds" = R.bed_count,
-			"capacity" = R.guest_count,
-			"price" = R.hourly_price,
-			"guests" = room_guest_list,
-			"start" = R.room_reservation_start_time,
-			"end" = R.room_reservation_end_time
-			))
+				if(R.room_guests.len)
+					for(var/guest_name in R.room_guests)
+						room_guest_list += "[guest_name]"
+						N += 1
+						if (N < R.room_guests.len)
+							room_guest_list += ", "
+				else
+					room_guest_list = "none"
+			hotel_selected_room = list(
+				"number" = R.room_number,
+				"status" = R.room_status,
+				"special" = R.special_room,
+				"requests" = R.room_requests,
+				"beds" = R.bed_count,
+				"capacity" = R.guest_count,
+				"price" = R.hourly_price,
+				"guests" = room_guest_list,
+				"start" = R.room_reservation_start_time,
+				"end" = R.room_reservation_end_time,
+				"room_logs" = R.room_log
+			)
 			continue
 
 		if (R.special_room)
 			hotel_special_room_list.Add(list(list("room" = list(
-			"number" = R.room_number,
-			"status" = R.room_status,
-			"requests" = R.room_requests,
-			"beds" = R.bed_count,
-			"capacity" = R.guest_count,
-			"price" = R.hourly_price,
-			"start" = R.room_reservation_start_time,
-			"end" = R.room_reservation_end_time
+				"number" = R.room_number,
+				"status" = R.room_status,
+				"requests" = R.room_requests,
+				"beds" = R.bed_count,
+				"capacity" = R.guest_count,
+				"price" = R.hourly_price,
+				"end" = R.room_reservation_end_time
 			))))
 			continue
 
 		if (R.guest_count == 2)
 			hotel_double_room_list.Add(list(list("room" = list(
-			"number" = R.room_number,
-			"status" = R.room_status,
-			"requests" = R.room_requests,
-			"beds" = R.bed_count,
-			"capacity" = R.guest_count,
-			"price" = R.hourly_price,
-			"start" = R.room_reservation_start_time,
-			"end" = R.room_reservation_end_time
+				"number" = R.room_number,
+				"status" = R.room_status,
+				"requests" = R.room_requests,
+				"beds" = R.bed_count,
+				"capacity" = R.guest_count,
+				"price" = R.hourly_price,
+				"end" = R.room_reservation_end_time
 			))))
 			continue
 
 		if (R.guest_count == 1)
 			hotel_single_room_list.Add(list(list("room" = list(
-			"number" = R.room_number,
-			"status" = R.room_status,
-			"requests" = R.room_requests,
-			"beds" = R.bed_count,
-			"capacity" = R.guest_count,
-			"price" = R.hourly_price,
-			"start" = R.room_reservation_start_time,
-			"end" = R.room_reservation_end_time
+				"number" = R.room_number,
+				"status" = R.room_status,
+				"requests" = R.room_requests,
+				"beds" = R.bed_count,
+				"capacity" = R.guest_count,
+				"price" = R.hourly_price,
+				"end" = R.room_reservation_end_time
 			))))
 			continue
 
@@ -107,7 +109,7 @@
 
 	ui = SSnano.try_update_ui(user, src, ui_key, ui, data, force_open)
 	if (!ui)
-		ui = new(user, src, ui_key, "hotel.tmpl", "Hotel Reservations System", 360, 440, state = state)
+		ui = new(user, src, ui_key, "hotel.tmpl", "Hotel Reservations System", 390, 500, state = state)
 		ui.set_initial_data(data)
 		ui.open()
 		ui.set_auto_update(1)
@@ -122,3 +124,32 @@
 				program_mode = 2
 				selected_room = R
 				return 1
+
+	if (href_list["return_to_main"])
+		program_mode = 1
+		selected_room = null
+		return 1
+
+	if (href_list["return_to_room"])
+		program_mode = 2
+		return 1
+
+	if (href_list["room_logs"])
+		program_mode = 3
+		return 1
+
+	if (href_list["room_block"])
+		selected_room.room_block()
+		return 1
+
+	if (href_list["room_unblock"])
+		selected_room.room_unblock()
+		return 1
+
+	if (href_list["print_logs"])
+		var/text_to_print = "<b>Room [selected_room.room_number] logs:</b><br><br>"
+		for (var/log_entry in selected_room.room_log)
+			text_to_print += "[log_entry]<br>"
+		text_to_print += "<hr><i>Printed at [stationtime2text()]</i>"
+		print_text(text_to_print, usr)
+		return 1
