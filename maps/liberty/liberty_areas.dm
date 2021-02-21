@@ -42,11 +42,16 @@
 //////////////////////////////////// LEVEL ZERO ////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////
 
+// SOLAR
+
 /area/liberty/solar/zero
 	name = "\improper Level Zero - Solar Array"
 	icon_state = "eng_solar_00_array"
 
 // MAINTENANCE
+
+/area/liberty/maintenance
+	sound_env = SMALL_ENCLOSED
 
 /area/liberty/maintenance/zero
 	name = "\improper Level Zero - Emergency Storage"
@@ -72,9 +77,9 @@
 	name = "\improper Maintenance - Level Zero - Casino"
 	icon_state = "maintance_zero_casino"
 
-/area/liberty/maintenance/zero/fore
-	name = "\improper Maintenance - Level Zero - Fore"
-	icon_state = "maintance_zero_fore"
+/area/liberty/maintenance/zero/aft
+	name = "\improper Maintenance - Level Zero - Port"
+	icon_state = "maintance_zero_aft"
 
 /area/liberty/maintenance/zero/laundry
 	name = "\improper Level Zero - Abandoned Laundry"
@@ -85,12 +90,12 @@
 	icon_state = "abandoned_solitary"
 
 /area/liberty/maintenance/zero/brig
-	name = "\improper Maintenance - Level Zero - SFP Office"
+	name = "\improper Maintenance - Level Zero - SFP"
 	icon_state = "maintance_zero_sfp_office"
 
-/area/liberty/maintenance/zero/fore_starboard
-	name = "\improper Maintenance - Level Zero - Fore Starboard"
-	icon_state = "maintance_zero_fore_starboard"
+/area/liberty/maintenance/zero/fore_port
+	name = "\improper Maintenance - Level Zero - Fore Port"
+	icon_state = "maintance_zero_fore_port"
 
 /area/liberty/maintenance/construction/zero/chapel
 	name = "\improper Level Zero - Abandoned Chapel"
@@ -103,22 +108,24 @@
 // HALLWAYS
 
 /area/liberty/hallway/zero
-	name = "\improper Level Zero - Starboard Hall"
+	name = "\improper Level Zero - Central Hallway"
+	icon_state = "lvl_0_hall_center"
+
+/area/liberty/hallway/zero/starboard
+	name = "\improper Level Zero - Starboard Hallway"
 	icon_state = "lvl_0_hall_starboard"
-	// icon = 'icons/turf/areas.dmi'	// WIP
 
 /area/liberty/hallway/zero/fore
-	name = "\improper Level Zero - Fore Hall"
+	name = "\improper Level Zero - Fore Hallway"
 	icon_state = "lvl_0_hall_fore"
 
-/area/liberty/hallway/zero/aft
-	name = "\improper Level Zero - Aft Hall"
-	icon_state = "lvl_0_hall_aft"
+/area/liberty/hallway/zero/port_docks
+	name = "\improper Level Zero - Port Docks"
+	icon_state = "lvl_0_port_docks"
 
 // HANGAR
 
 /area/liberty/hangar
-	// icon = 'icons/turf/areas.dmi'	// WIP
 	name = "\improper Hangar Bay"
 	icon_state = "hangar"
 
@@ -230,7 +237,7 @@
 	icon_state = "eng_engine_monitoring_room"
 
 /area/liberty/engineering/engine_room
-	name = "\improper Engineering - Engine Room"
+	name = "\improper Engineering - Supermatter Chamber"
 	icon_state = "eng_engine_room"
 	requires_power = FALSE
 
@@ -241,6 +248,9 @@
 /area/liberty/engineering/engineering_prep_room
 	name = "\improper Engineering - Prep Room"
 	icon_state = "eng_prep_room"
+
+/area/liberty/engineering/substation
+	sound_env = SMALL_ENCLOSED
 
 /area/liberty/engineering/substation/substation_level_zero
 	name = "\improper Engineering - Substation Level Zero"
@@ -272,13 +282,13 @@
 	name = "\improper Maintenance - Level One - Central"
 	icon_state = "maintance_one_central"
 
-/area/liberty/maintenance/one/fore
-	name = "\improper Maintenance - Level One - Fore"
-	icon_state = "maintance_one_fore"
+/area/liberty/maintenance/one/aft
+	name = "\improper Maintenance - Level One - Aft"
+	icon_state = "maintance_one_aft"
 
-/area/liberty/maintenance/one/port
-	name = "\improper Maintenance - Level One - Port"
-	icon_state = "maintance_one_port"
+/area/liberty/maintenance/one/fore_port
+	name = "\improper Maintenance - Level One - Fore Port"
+	icon_state = "maintance_one_fore_port"
 
 /area/liberty/maintenance/one/aft_port
 	name = "\improper Maintenance - Level One - Aft Port"
@@ -296,9 +306,13 @@
 	name = "\improper Level One - Abandoned Mech Bay"
 	icon_state = "abandoned_mechbay"
 
-/area/liberty/maintenance/one/starboard
-	name = "\improper Maintenance - Level One - Starboard"
-	icon_state = "maintance_one_starboard"
+/area/liberty/maintenance/one/fore_starboard
+	name = "\improper Maintenance - Level One - Fore Starboard"
+	icon_state = "maintance_one_fore_starboard"
+
+/area/liberty/maintenance/one/aft_starboard
+	name = "\improper Maintenance - Level One - Aft Starboard"
+	icon_state = "maintance_one_aft_starboard"
 
 /area/liberty/maintenance/construction/zero/medbay
 	name = "\improper Level Zero - Abandoned Medbay"
@@ -464,6 +478,13 @@
 	name = "\improper Hotel - Service Hallway"
 	icon_state = "hotel_staff_hall"
 
+// HYDROPONICS
+
+/area/liberty/hydroponics
+	name = "\improper Level One - Hydroponics"
+	icon_state = "hydroponics"
+	sound_env = LARGE_ENCLOSED
+
 // BRIG
 
 /area/liberty/sfp/aft_checkpoint
@@ -529,7 +550,7 @@
 // HALLWAYS
 
 /area/liberty/hallway/one
-	name = "\improper Level One - Central Hall"
+	name = "\improper Level One - Central Hallway"
 	icon_state = "lvl_1_central_hall"
 
 /area/liberty/hallway/one/aft_port
@@ -597,15 +618,15 @@
 // HALLWAY
 
 /area/liberty/hallway/two
-	name = "\improper Level Two - Central Hall"
+	name = "\improper Level Two - Central Hallway"
 	icon_state = "lvl_2_hall_central"
 
 /area/liberty/hallway/two/fore
-	name = "\improper Level Two - Fore"
+	name = "\improper Level Two - Fore Hallway"
 	icon_state = "lvl_2_hall_fore"
 
 /area/liberty/hallway/two/aft
-	name = "\improper Level Two - Aft"
+	name = "\improper Level Two - Aft Hallway"
 	icon_state = "lvl_2_hall_aft"
 
 // RESEARCH
@@ -785,6 +806,70 @@
 	name = "\improper Psychologist - Therapy Room"
 	icon_state = "psych_therapy_room"
 
+// CONFERENCE HALL
+
+/area/liberty/conference_room
+	name = "\improper Level Two - Conference Room"
+	icon_state = "conference_room"
+	sound_env = LARGE_SOFTFLOOR
+
+// SCG
+
+/area/liberty/scg/representative
+	name = "\improper Level Two - SCG Representative's Office"
+	icon_state = "councilor_office"
+	sound_env = MEDIUM_SOFTFLOOR
+
+// CORPORATE
+/area/liberty/corporate_office
+	name = "\improper Level Two - Corporate Representative's Office"
+	icon_state = "corporate_office"
+	sound_env = MEDIUM_SOFTFLOOR
+
+// LIBRARY
+
+/area/liberty/library
+	name = "\improper Level Two - Library"
+	icon_state = "library"
+	sound_env = LARGE_SOFTFLOOR
+
+// LAUNDRY
+
+/area/liberty/laundry
+	name = "\improper Level Two - Laundry"
+	icon_state = "laundry"
+
+// JANITOR
+
+/area/liberty/janitor
+	name = "\improper Level Two - Custodial Closet"
+	icon_state = "janitor"
+	sound_env = SMALL_ENCLOSED
+
+// MAINTENANCE
+
+/area/liberty/maintenance/two
+	name = "\improper Level Two - Central Maintenance"
+	icon_state = "lvl_2_central_maintenance"
+
+/area/liberty/maintenance/two/fore
+	name = "\improper Level Two - Fore Maintenance"
+	icon_state = "lvl_2_fore_maintenance"
+
+/area/liberty/maintenance/two/starboard
+	name = "\improper Level Two - Starboard Maintenance"
+	icon_state = "lvl_2_starboard_maintenance"
+
+/area/liberty/maintenance/two/port
+	name = "\improper Level Two - Port Maintenance"
+	icon_state = "lvl_2_port_maintenance"
+
+// ENGINEERING
+
+/area/liberty/engineering/substation/substation_level_two
+	name = "\improper Engineering - Substation Level Two"
+	icon_state = "lvl_2_substation"
+
 ///////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////// LEVEL THREE ///////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////
@@ -801,6 +886,87 @@
 	name = "\improper Command - Bridge"
 	icon_state = "command_bridge"
 	// icon = 'icons/turf/areas.dmi'	// WIP
+
+// TELECOMMS
+
+/area/liberty/telecomms
+	name = "\improper Level Three - Telecommunications"
+	icon_state = "telecomms"
+	ambience = list('sound/ambience/ambisin2.ogg', 'sound/ambience/signal.ogg', 'sound/ambience/signal.ogg', 'sound/ambience/ambigen10.ogg')
+
+// APARTMENTS
+
+/area/liberty/aparment
+	sound_env = MEDIUM_SOFTFLOOR
+
+/area/liberty/aparment/scg
+	name = "\improper Level Three - SCG Representative's Apartment"
+	icon_state = "councilor_apartments"
+
+/area/liberty/aparment/corporate
+	name = "\improper Level Three - Corporate Representative's Apartment"
+	icon_state = "corporate_apartment"
+
+/area/liberty/aparment/secretary
+	name = "\improper Level Three - Corporate Representative's Apartment"
+	icon_state = "secretary_apt"
+
+// DIRECTOR
+
+/area/liberty/director
+	sound_env = MEDIUM_SOFTFLOOR
+
+/area/liberty/director/reception
+	name = "\improper Director's Office - Reception"
+	icon_state = "reception"
+
+/area/liberty/director/office
+	name = "\improper Director's Office - Working Area"
+	icon_state = "director_office"
+
+/area/liberty/director/apartment
+	name = "\improper Director's Quarters - Apartment"
+	icon_state = "director_apartment"
+
+// HOLODECK
+
+/area/liberty/holodeck
+	name = "\improper Level Three - Holodeck"
+	icon_state = "holodeck"
+
+// HALLWAY
+
+/area/liberty/hallway/three
+	name = "\improper Level Three - Central Hallway"
+	icon_state = "lvl_3_central_hall"
+
+/area/liberty/hallway/three/starboard
+	name = "\improper Level Three - Starboard Hallway"
+	icon_state = "lvl_3_starboard_hall"
+
+// MAINTENANCE
+
+/area/liberty/maintenance/three/aft
+	name = "\improper Level Three - Aft Maintenance"
+	icon_state = "lvl_3_aft_maintenance"
+
+/area/liberty/maintenance/three/fore
+	name = "\improper Level Three - Fore Maintenance"
+	icon_state = "lvl_3_fore_maintenance"
+
+/area/liberty/maintenance/three/starboard
+	name = "\improper Level Three - Starboard Maintenance"
+	icon_state = "lvl_3_starboard_maintenance"
+
+/area/liberty/maintenance/three/port
+	name = "\improper Level Three - Port Maintenance"
+	icon_state = "lvl_3_port_maintenance"
+
+// ENGINEERING
+
+/area/liberty/engineering/substation/substation_level_three
+	name = "\improper Engineering - Substation Level Three"
+	icon_state = "lvl_3_substation"
 
 ///////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////// TURBOLIFT ////////////////////////////////////
