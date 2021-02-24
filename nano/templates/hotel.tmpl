@@ -3,8 +3,12 @@ Title: Hotel Reservations System UI
 Used In File(s): code_ark\code\modules\hotel\hotel_computers.dm
  -->
 
-{{if data.mode == 1}}
-    <div>
+{{if data.mode == 0}}
+    <H3><span class="bad">An error has occurred!</span></H3>
+    <div class="itemContent" style = "width: 300px">The selected room may no longer be usable, the terminal connection might have been lost, or the new reservation has timed out.<br>{{:helper.link( 'Return', 'arrowreturn-1-w', {'return_to_main' : 1}, null, null, null)}}</div>
+
+{{else data.mode == 1}}
+    <div class="itemContent">
         <H3><span class="white">Reservation Mode: </span></H3>
         {{:helper.link('Auto' , null, {'auto' : 1}, data.auto_mode == 1 ? 'selected' : null, null)}}
         {{:helper.link('Manual' , null, {'auto' : 0}, data.auto_mode == 0 ? 'selected' : null, null)}}
@@ -27,7 +31,7 @@ Used In File(s): code_ark\code\modules\hotel\hotel_computers.dm
                         {{else value.room.status == 1}}
                             <span class="good">available</span>
                         {{else value.room.status == 2}}
-                            <span class="white">occupied</span>
+                            <span class="white">{{if value.room.end}}occupied{{else}}reservation in progress{{/if}}</span>
                         {{if value.room.end}}
                             <span class="white">until {{:value.room.end}}</span>
                         {{/if}}
@@ -69,7 +73,7 @@ Used In File(s): code_ark\code\modules\hotel\hotel_computers.dm
                         {{else value.room.status == 1}}
                             <span class="good">available</span>
                         {{else value.room.status == 2}}
-                            <span class="white">occupied</span>
+                            <span class="white">{{if value.room.end}}occupied{{else}}reservation in progress{{/if}}</span>
                         {{if value.room.end}}
                             <span class="white">until {{:value.room.end}}</span>
                         {{/if}}
@@ -118,7 +122,7 @@ Used In File(s): code_ark\code\modules\hotel\hotel_computers.dm
                         {{else value.room.status == 1}}
                             <span class="good">available</span>
                         {{else value.room.status == 2}}
-                            <span class="white">occupied</span>
+                            <span class="white">{{if value.room.end}}occupied{{else}}reservation in progress{{/if}}</span>
                             {{if value.room.end}}
                                 <span class="white">until {{:value.room.end}}</span>
                             {{/if}}
@@ -162,7 +166,7 @@ Used In File(s): code_ark\code\modules\hotel\hotel_computers.dm
         {{else data.selected_room.status == 1}}
             <span class="good">available</span>
         {{else data.selected_room.status == 2}}
-            <span class="white">occupied</span>
+            <span class="white">{{if data.selected_room.end}}occupied{{else}}reservation in progress{{/if}}</span>
         {{else data.selected_room.status == 3}}
             <span class="average">blocked</span>
         {{/if}} <br>
@@ -180,7 +184,11 @@ Used In File(s): code_ark\code\modules\hotel\hotel_computers.dm
         <span class="white">Guest capacity: </span> {{:data.selected_room.capacity}} <br>
         <span class="white">Hourly price: </span> {{:data.selected_room.price}} thalers
     </div>
-        {{:helper.link( 'Reserve', 'calendar', {'room_reserve' : 1}, data.selected_room.status == 1 ? null : 'disabled' , null)}}
+        {{if data.selected_room.status == 1}}
+            {{:helper.link( 'Reserve', 'calendar', {'room_reserve' : 1}, null, 'greenButton' , null)}}
+        {{else}}
+            {{:helper.link( 'Reserve', 'calendar', {'room_reserve' : 1}, 'disabled' , null)}}
+        {{/if}}
         {{if data.selected_room.status == 0 || data.selected_room.status == 2 || data.selected_room.requests == 3}}
             {{:helper.link( data.selected_room.status == 3 ? 'Unblock' : 'Block', 'cancel', data.selected_room.status == 3 ? {'room_unblock' : 1} : {'room_block' : 1} , 'disabled', null)}}
         {{else}}
@@ -191,7 +199,7 @@ Used In File(s): code_ark\code\modules\hotel\hotel_computers.dm
         {{else}}
             {{:helper.link( 'Reset', 'refresh', {'room_reset' : 1}, 'disabled', null)}}
         {{/if}}
-        {{if data.selected_room.status == 2}}
+        {{if data.selected_room.status == 2 && data.selected_room.end}}
             {{:helper.link( 'Cancel Reservation', 'closethick', {'room_cancel' : 1}, null, 'redButton', null)}}
         {{else}}
             {{:helper.link( 'Cancel Reservation', 'closethick', {'room_cancel' : 1}, 'disabled' , null)}}
@@ -223,7 +231,38 @@ Used In File(s): code_ark\code\modules\hotel\hotel_computers.dm
             </div>
         </div>
     </div>
-{{/if}}
+
+{{else data.mode == 4}}
+    <div class="itemContent">
+        {{:helper.link( 'Return', 'arrowreturn-1-w', {'return_to_room' : 1}, null, null, null)}}
+        {{:helper.link( 'Print', 'print', {'print_reservation' : 1}, data.selected_room.end ? null : 'disabled', null)}}
+    </div>
+    <H2><span class="white">New Reservation - Room {{:data.selected_room.number}}</span></H2>
+    <H3>
+        {{if data.selected_room.end }}
+            <span class="good">Payment successful. Reservation complete</span>
+        {{else data.selected_room.start}}
+            <span class="normal">Pending payment</span>
+        {{else}}
+            <span class="white">Scan guest ID in the terminal</span>
+        {{/if}}
+    </H3>
+    <div class="statusDisplay" style="overflow: auto;">
+        <table>
+            <tr>
+                <td>Room: </td>
+                <td>{{:data.selected_room.number}}</td>
+            </tr><tr>
+                <td>Guests: </td>
+                <td>{{for data.selected_room.guests_as_list}}
+                        <div class="itemContent">{{:value}} {{:helper.link( '', 'close', {'remove_guest' : value}, null, null)}}</div>
+                    {{/for}}</td>
+            </tr><tr>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
 
 <!---
 <H3><span class="white">Volume:</span></H3>

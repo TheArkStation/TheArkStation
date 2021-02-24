@@ -15,12 +15,12 @@
 
 /datum/nano_module/hotel_reservations
 
-	var/program_mode = 1 // 0 - error, 1 - room list, 2 - specific room info, 3 - room logs, 4 - reservation
+	var/program_mode = 1 // 0 - error, 1 - room list, 2 - specific room info, 3 - room logs, 4 - new reservation, 5 - reservation extension
 	var/program_auto_mode = 0 // 0 - manual reservations, 1 - automatic reservations
 
 	var/datum/hotel_room/selected_room
 
-	var/obj/machinery/computer/hotel_terminal/hotel_terminal
+	var/obj/machinery/computer/hotel_terminal/connected_terminal
 
 /datum/nano_module/hotel_reservations/ui_interact(mob/user, ui_key = "main", var/datum/nanoui/ui = null, var/force_open = 1, var/datum/topic_state/state = GLOB.default_state)
 
@@ -36,19 +36,9 @@
 
 	for(var/datum/hotel_room/R in GLOB.hotel_rooms)
 
-		var/room_guest_list = ""
-
 		if (R == selected_room)
-			if(R.room_status == 2)
-				var/N = 0
-				if(R.room_guests.len)
-					for(var/guest_name in R.room_guests)
-						room_guest_list += "[guest_name]"
-						N += 1
-						if (N < R.room_guests.len)
-							room_guest_list += ", "
-				else
-					room_guest_list = "none"
+			if (R.room_status == 0)
+				give_error()
 			hotel_selected_room = list(
 				"number" = R.room_number,
 				"status" = R.room_status,
@@ -57,7 +47,8 @@
 				"beds" = R.bed_count,
 				"capacity" = R.guest_count,
 				"price" = R.hourly_price,
-				"guests" = room_guest_list,
+				"guests" = R.room_guests2text(),
+				"guests_as_list" = R.room_guests,
 				"start" = R.room_reservation_start_time,
 				"end" = R.room_reservation_end_time,
 				"room_logs" = R.room_log
@@ -106,6 +97,7 @@
 	data["double_rooms"] = hotel_double_room_list
 	data["special_rooms"] = hotel_special_room_list
 	data["selected_room"] = hotel_selected_room
+	data["station_time"] = stationtime2text()
 
 	ui = SSnano.try_update_ui(user, src, ui_key, ui, data, force_open)
 	if (!ui)
@@ -131,11 +123,12 @@
 		return 1
 
 	if (href_list["return_to_room"])
+		if(program_mode == 4)
+			if(alert("This will erase the reservation. Are you sure?",,"Yes","No")=="No")
+				return 1
+			else
+				selected_room.clear_reservation()
 		program_mode = 2
-		return 1
-
-	if (href_list["room_logs"])
-		program_mode = 3
 		return 1
 
 	if (href_list["room_block"])
@@ -146,6 +139,14 @@
 		selected_room.room_unblock()
 		return 1
 
+	if (href_list["room_reset"])
+		selected_room.room_reset()
+		return 1
+
+	if (href_list["room_logs"])
+		program_mode = 3
+		return 1
+
 	if (href_list["print_logs"])
 		var/text_to_print = "<b>Room [selected_room.room_number] logs:</b><br><br>"
 		for (var/log_entry in selected_room.room_log)
@@ -153,3 +154,21 @@
 		text_to_print += "<hr><i>Printed at [stationtime2text()]</i>"
 		print_text(text_to_print, usr)
 		return 1
+
+	if (href_list["room_reserve"])
+		if(selected_room.room_status != 1 || !connected_terminal)
+			return 1
+		selected_room.room_status = 2
+		program_mode = 4
+		return 1
+
+	if (href_list["room_cancel"])
+		selected_room.clear_reservation()
+		return 1
+
+/datum/nano_module/hotel_reservations/proc/give_error()
+	if(!selected_room)
+		return
+	selected_room.clear_reservation(auto_clear = 1)
+	selected_room = null
+	program_mode = 0

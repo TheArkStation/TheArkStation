@@ -93,7 +93,7 @@ GLOBAL_LIST_EMPTY(hotel_rooms)
 	var/hourly_price
 	var/special_room
 
-	var/room_status = 0 // 0 - broken, 1 - available, 2 - occupied, 3 - blocked
+	var/room_status = 0 // 0 - broken, 1 - available, 2 - occupied (or reservation in progress), 3 - blocked
 	var/room_requests = 0 // 0 - nothing, 1 - do not disturb, 2 - make up the room, 3 - room turnover (set automatically at the end of the reservation)
 	var/list/room_keys = list()
 	var/list/room_guests = list()
@@ -171,26 +171,39 @@ GLOBAL_LIST_EMPTY(hotel_rooms)
 		room_is_broken = 1
 
 	if (room_is_broken && room_status)
+		clear_reservation()
 		room_status = 0
 		room_requests = 0
-		room_reservation_start_time = null
-		room_reservation_end_time = null
-		room_keys = list()
-		room_guests = list()
 
 	if (room_status == 0)
 		return 0
 	else
 		return 1
 
-/datum/hotel_room/proc/room_block()
-	room_status = 3
-	var/log_entry = "\[[stationtime2text()]\] The room was manually blocked by "
+/datum/hotel_room/proc/room_guests2text()
+	var/room_guest_list = ""
+	if(room_status == 2)
+		var/N = 0
+		if(room_guests.len)
+			for(var/guest_name in room_guests)
+				room_guest_list += "[guest_name]"
+				N += 1
+				if (N < room_guests.len)
+					room_guest_list += ", "
+		else
+			room_guest_list = "none"
+	return room_guest_list
+
+/datum/hotel_room/proc/get_user_id_name()				// Used for logging
 	if(istype(usr, /mob/living/carbon/human))
 		var/mob/living/carbon/human/H = usr
-		log_entry += H.get_id_name("unknown")
+		return H.get_id_name("unknown")
 	else
-		log_entry += "unknown"
+		return "unknown"
+
+/datum/hotel_room/proc/room_block()
+	room_status = 3
+	var/log_entry = "\[[stationtime2text()]\] The room was blocked by [get_user_id_name()]."
 
 	room_log.Add(log_entry)
 	room_test_n_update()
@@ -198,12 +211,60 @@ GLOBAL_LIST_EMPTY(hotel_rooms)
 /datum/hotel_room/proc/room_unblock()
 	if(room_requests != 3)
 		room_status = 1
-	var/log_entry = "\[[stationtime2text()]\] The room was manually unblocked by "
-	if(istype(usr, /mob/living/carbon/human))
-		var/mob/living/carbon/human/H = usr
-		log_entry += H.get_id_name("unknown")
-	else
-		log_entry += "unknown"
+		var/log_entry = "\[[stationtime2text()]\] The room was unblocked by [get_user_id_name()]."
+
+		room_log.Add(log_entry)
+	room_test_n_update()
+
+/datum/hotel_room/proc/room_reset()
+	var/log_entry
+	if(room_requests > 1)
+		log_entry = "\[[stationtime2text()]\] The room was reset by [get_user_id_name()]. "
+		room_requests = 0
+		if(room_status == 3)
+			log_entry += "Room turnover was marked as complete. Reservation available."
+			room_status = 1
+		else
+			log_entry += "Make up request was marked as fulfilled."
 
 	room_log.Add(log_entry)
+	room_test_n_update()
+
+/datum/hotel_room/proc/clear_reservation(var/auto_clear = 0)
+
+	if(room_status != 2 && room_status != 0)
+		return
+
+	var/log_entry
+	if(room_reservation_end_time && room_status == 2) // Reservation end time serves as an indicator if the reservation has been completed
+		if(auto_clear)
+			log_entry = "\[[stationtime2text()]\] An active room reservation ended. Keycards of the following guests were rendered expired automatically: [room_guests2text()]. Room turnover required."
+		else
+			log_entry = "\[[stationtime2text()]\] An active room reservation was canceled by [get_user_id_name()]. Keycards of the following guests were rendered invalid: [room_guests2text()]. Room turnover required."
+		room_status = 3
+		room_requests = 3
+	else
+		if (room_reservation_end_time && room_status == 0)
+			log_entry = "\[[stationtime2text()]\] An active room reservation was automatically cancelled due to a fatal error! Keycards of the following guests were rendered invalid: [room_guests2text()]. Room unusable."
+		else
+			if(auto_clear)
+				log_entry = "\[[stationtime2text()]\] Room reservation process was automatically terminated due to a"
+				if(room_status)
+					log_entry += " timeout. Room reset."
+					room_status = 1
+				else
+					log_entry += " fatal room error."
+			else
+				log_entry = "\[[stationtime2text()]\] Room reservation process was terminated by [get_user_id_name()]. Room reset."
+				room_status = 1
+	room_log.Add(log_entry)
+
+
+	room_reservation_start_time = null
+	room_reservation_end_time = null
+	for(var/obj/item/weapon/card/id/hotel_key/K in room_keys)
+		K.expire()
+	room_keys = list()
+	room_guests = list()
+
 	room_test_n_update()
