@@ -16,6 +16,9 @@
 /datum/nano_module/hotel_reservations
 
 	var/program_mode = 1 // 0 - error, 1 - room list, 2 - specific room info, 3 - room logs, 4 - new reservation, 5 - reservation extension
+	var/reservation_status = 0 // 0 - adding guests, 1 - pending payment, 2 - reservation complete - the variable is used with modes 4 and 5
+	var/reservation_duration = 1 // used with modes 4 and 5
+
 	var/program_auto_mode = 0 // 0 - manual reservations, 1 - automatic reservations
 
 	var/datum/hotel_room/selected_room
@@ -49,8 +52,9 @@
 				"price" = R.hourly_price,
 				"guests" = R.room_guests2text(),
 				"guests_as_list" = R.room_guests,
-				"start" = R.room_reservation_start_time,
-				"end" = R.room_reservation_end_time,
+				"guest_count" = LAZYLEN(R.room_guests),
+				"start" = time2text(R.room_reservation_start_time, "hh:mm"),
+				"end" = R.room_end_time2text(),
 				"room_logs" = R.room_log
 			)
 			continue
@@ -63,7 +67,7 @@
 				"beds" = R.bed_count,
 				"capacity" = R.guest_count,
 				"price" = R.hourly_price,
-				"end" = R.room_reservation_end_time
+				"end" = R.room_end_time2text()
 			))))
 			continue
 
@@ -75,7 +79,7 @@
 				"beds" = R.bed_count,
 				"capacity" = R.guest_count,
 				"price" = R.hourly_price,
-				"end" = R.room_reservation_end_time
+				"end" = R.room_end_time2text()
 			))))
 			continue
 
@@ -87,11 +91,13 @@
 				"beds" = R.bed_count,
 				"capacity" = R.guest_count,
 				"price" = R.hourly_price,
-				"end" = R.room_reservation_end_time
+				"end" = R.room_end_time2text()
 			))))
 			continue
 
 	data["mode"] = program_mode
+	data["reservation"] = reservation_status
+	data["duration"] = reservation_duration
 	data["auto_mode"] = program_auto_mode
 	data["single_rooms"] = hotel_single_room_list
 	data["double_rooms"] = hotel_double_room_list
@@ -123,11 +129,12 @@
 		return 1
 
 	if (href_list["return_to_room"])
-		if(program_mode == 4)
+		if(program_mode == 4 && reservation_status != 2)
 			if(alert("This will erase the reservation. Are you sure?",,"Yes","No")=="No")
 				return 1
 			else
 				selected_room.clear_reservation()
+		reservation_status = 0 // in case we'be been reserving we'd better reset the process
 		program_mode = 2
 		return 1
 
@@ -156,14 +163,32 @@
 		return 1
 
 	if (href_list["room_reserve"])
-		if(selected_room.room_status != 1 || !connected_terminal)
+		if(selected_room.room_status != 1 /*|| !connected_terminal*/) // FIX ME
 			return 1
 		selected_room.room_status = 2
+		reservation_duration = 1
 		program_mode = 4
+		selected_room.room_reservation_start_time = station_time_in_ticks
+		selected_room.room_reservation_end_time = selected_room.room_reservation_start_time + reservation_duration HOURS
+		selected_room.room_log.Add("\[[stationtime2text()]\] Room reservation process was initiated by [selected_room.get_user_id_name()]. Room not available.")
 		return 1
 
 	if (href_list["room_cancel"])
 		selected_room.clear_reservation()
+		if (program_mode == 4)
+			reservation_duration = 1
+			selected_room.room_reservation_start_time = station_time_in_ticks
+			selected_room.room_reservation_end_time = selected_room.room_reservation_start_time + reservation_duration HOURS
+		return 1
+
+	if(href_list["set_duration"])
+		reservation_duration = text2num(href_list["set_duration"])
+		if(program_mode == 4)
+			selected_room.room_reservation_end_time = selected_room.room_reservation_start_time + reservation_duration HOURS
+		return 1
+
+	if(href_list["room_pay"])
+		reservation_status = 1
 		return 1
 
 /datum/nano_module/hotel_reservations/proc/give_error()
