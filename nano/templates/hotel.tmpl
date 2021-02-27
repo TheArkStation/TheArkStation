@@ -5,14 +5,25 @@ Used In File(s): code_ark\code\modules\hotel\hotel_computers.dm
 
 {{if data.mode == 0}}
     <H3><span class="bad">An error has occurred!</span></H3>
-    <div class="itemContent" style = "width: 300px">The selected room may no longer be usable, the terminal connection might have been lost, or the new reservation has timed out.<br>{{:helper.link( 'Return', 'arrowreturn-1-w', {'return_to_main' : 1}, null, null, null)}}</div>
+    <div class="itemContent" style = "width: 300px">The selected room may no longer be usable, the terminal connection might have been lost, or the new reservation has just timed out.<br>{{:helper.link( 'Return', 'arrowreturn-1-w', {'return_to_main' : 1}, null, null, null)}}</div>
 
 {{else data.mode == 1}}
-    <div class="itemContent">
-        <H3><span class="white">Reservation Mode: </span></H3>
-        {{:helper.link('Auto' , null, {'auto' : 1}, data.auto_mode == 1 ? 'selected' : null, null)}}
-        {{:helper.link('Manual' , null, {'auto' : 0}, data.auto_mode == 0 ? 'selected' : null, null)}}
-    </div>
+    {{if data.terminal == 0}}
+        <div class="itemGroup">
+            This device does not support hotel terminal connection. You will not be able to make or modify reservations.
+        </div>
+    {{else data.terminal == 1}}
+        <div class="itemGroup" style = "height: 65px">
+            <span class="average">Hotel terminal is not found. You can try to locate one by pressing the button below.<br></span>
+            {{:helper.link('Locate Terminal' , null, {'locate_terminal' : 1}, null, null)}}
+        </div>
+    {{else}}
+        <div class="itemGroup">
+            <table><tr><td><span class="white">Reservations mode:</span></td>
+            <td>{{:helper.link('Auto' , null, {'auto' : 1}, data.terminal == 2 ? 'selected' : null, null)}}
+            {{:helper.link('Manual' , null, {'noauto' : 1}, data.terminal == 3 ? 'selected' : null, null)}}</td></tr></table>
+        </div>
+    {{/if}}
     <H2><span class="white">Single Rooms:</span></H2>
     <div class="itemContent">
         {{for data.single_rooms}}
@@ -154,6 +165,23 @@ Used In File(s): code_ark\code\modules\hotel\hotel_computers.dm
         {{:helper.link( 'Return', 'arrowreturn-1-w', {'return_to_main' : 1}, null, null, null)}}
         {{:helper.link( 'View Room Logs', 'note', {'room_logs' : 1}, null, null, null)}}
     </div>
+    {{if data.terminal == 0}}
+        <div class="itemGroup">
+            This device does not support hotel terminal connection. You will not be able to make or modify reservations.
+        </div>
+    {{else data.terminal == 1}}
+        <div class="itemGroup" style = "height: 65px">
+            <span class="average">Hotel terminal is not found. You can try to locate one by pressing the button below.<br></span>
+            {{:helper.link('Locate Terminal' , null, {'locate_terminal' : 1}, null, null)}}
+        </div>
+    {{else}}
+        <div class="itemGroup">
+            <table><tr><td><span class="white">Reservations mode:</span></td>
+            <td>{{:helper.link('Auto' , null, {'auto' : 1}, data.terminal == 2 ? 'selected' : null, null)}}
+            {{:helper.link('Manual' , null, {'noauto' : 1}, data.terminal == 3 ? 'selected' : null, null)}}</td></tr>
+            </table>{{if data.terminal == 2}}You have to switch to manual mode to make a new reservation.{{/if}}
+        </div>
+    {{/if}}
     <H2><span class="white">Room {{:data.selected_room.number}}</span></H2>
     <H3><span class="white">Room Details:</span></H3>
     <div class="itemGroup">
@@ -183,9 +211,9 @@ Used In File(s): code_ark\code\modules\hotel\hotel_computers.dm
         <span class="white">Guest capacity: </span> {{:data.selected_room.capacity}} <br>
         <span class="white">Hourly price: </span> {{:data.selected_room.price}} thalers
     </div>
-        {{if data.selected_room.status == 1}}
+        {{if data.selected_room.status == 1 && data.terminal == 3}}
             {{:helper.link( 'Reserve', 'calendar', {'room_reserve' : 1}, null, 'greenButton' , null)}}
-        {{else data.selected_room.status == 3}}
+        {{else data.selected_room.status == 3 && data.terminal == 3}}
             {{:helper.link( 'Modify', 'calendar', {'room_modify' : 1}, null, null)}}
         {{else}}
             {{:helper.link( 'Reserve', 'calendar', {'room_reserve' : 1}, 'disabled' , null)}}
@@ -256,7 +284,7 @@ Used In File(s): code_ark\code\modules\hotel\hotel_computers.dm
             </tr><tr>
                 <td style="vertical-align: top;"><span class="white">Guest List:</span></td>
                 <td><table>{{for data.selected_room.guests_as_list}}
-                        <tr><td>{{:value}}</td><td>{{:helper.link( '', 'close', {'remove_guest' : value}, null, null)}}</td></tr>
+                        <tr><td>{{:value}}</td><td>{{:helper.link( '', 'close', {'remove_guest' : value}, data.reservation == 0 ? null : 'disabled', null)}}</td></tr>
                     {{/for}}</table></td>
             </tr><tr>
                 <td><span class="white">Final Price:</span></td>
@@ -283,12 +311,12 @@ Used In File(s): code_ark\code\modules\hotel\hotel_computers.dm
         {{else}}
             {{:helper.link( 'Payment', 'check', {'room_pay' : 1}, 'disabled', null)}}
         {{/if}}
-        {{if data.reservation == 0 && (data.selected_room.guest_count || data.duration == 1)}}
+        {{if data.reservation == 0 && (data.selected_room.guest_count || data.duration != 1)}}
             {{:helper.link( 'Clear', 'closethick', {'room_cancel' : 1}, null, null)}}
         {{else data.reservation == 1}}
             {{:helper.link( 'Cancel', 'check', {'payment_cancel' : 1}, 'redButton', null, null)}}
         {{else}}
-            {{:helper.link( 'Cancel', 'closethick', {'payment_cancel' : 1}, null, null)}}
+            {{:helper.link( 'Clear', 'closethick', {'payment_cancel' : 1}, 'disabled', null)}}
         {{/if}}
     </div>
 {{/if}}

@@ -11,7 +11,7 @@
 	requires_ntnet = 1
 	network_destination = "hotel reservations database"
 	size = 11
-	category = PROG_UTIL
+	category = PROG_OFFICE
 
 /datum/nano_module/hotel_reservations
 
@@ -19,7 +19,9 @@
 	var/reservation_status = 0 // 0 - adding guests, 1 - pending payment, 2 - reservation complete - the variable is used with modes 4 and 5
 	var/reservation_duration = 1 // used with modes 4 and 5
 
-	var/program_auto_mode = 0 // 0 - manual reservations, 1 - automatic reservations
+	var/timeout_timer_id // used to prevent people blocking rooms with new reservations
+
+	var/terminal_status = 0 // 0 - the device does not support terminal connection, 1 - the terminal is disconnected, 2 - the terminal is connected, but is in auto mode, 3 - the terminal is connected and is in manual mode
 
 	var/datum/hotel_room/selected_room
 
@@ -95,19 +97,23 @@
 			))))
 			continue
 
+	if (program_mode > 3)	// For modes 4 and 5, we gotta keep watch for that terminal
+		locate_n_check_terminal()
+
 	data["mode"] = program_mode
 	data["reservation"] = reservation_status
 	data["duration"] = reservation_duration
-	data["auto_mode"] = program_auto_mode
 	data["single_rooms"] = hotel_single_room_list
 	data["double_rooms"] = hotel_double_room_list
 	data["special_rooms"] = hotel_special_room_list
 	data["selected_room"] = hotel_selected_room
 	data["station_time"] = stationtime2text()
+	data["terminal"] = terminal_status
 
 	ui = SSnano.try_update_ui(user, src, ui_key, ui, data, force_open)
 	if (!ui)
-		ui = new(user, src, ui_key, "hotel.tmpl", "Hotel Reservations System", 390, 500, state = state)
+		locate_n_check_terminal() // We'll try to locate the terminal upon the first use of the program
+		ui = new(user, src, ui_key, "hotel.tmpl", "Hotel Reservations System", 390, 550, state = state)
 		ui.set_initial_data(data)
 		ui.open()
 		ui.set_auto_update(1)
@@ -117,6 +123,7 @@
 		return 1
 
 	if (href_list["room_select"])
+		locate_n_check_terminal()	// Room selection menu does depend on the terminal
 		for (var/datum/hotel_room/R in GLOB.hotel_rooms)
 			if (R.room_number == href_list["room_select"])
 				program_mode = 2
@@ -135,7 +142,23 @@
 			else
 				selected_room.clear_reservation()
 		reservation_status = 0 // in case we'be been reserving we'd better reset the process
+		if(program_mode == 4)
+			deltimer(timeout_timer_id)
 		program_mode = 2
+		return 1
+
+	if(href_list["locate_terminal"])
+		locate_n_check_terminal()
+		return 1
+
+	if(href_list["auto"])
+		if(locate_n_check_terminal() > 1)
+			connected_terminal.auto_mode = 1
+		return 1
+
+	if(href_list["noauto"])
+		if(locate_n_check_terminal() > 1)
+			connected_terminal.auto_mode = 0
 		return 1
 
 	if (href_list["room_block"])
@@ -162,8 +185,8 @@
 		print_text(text_to_print, usr)
 		return 1
 
-	if (href_list["room_reserve"])
-		if(selected_room.room_status != 1 /*|| !connected_terminal*/) // FIX ME
+	if (href_list["room_reserve"] && locate_n_check_terminal() == 3)	// Room shall not be reserved unless there's a properly functioning terminal
+		if(selected_room.room_status != 1) // FIX ME
 			return 1
 		selected_room.room_status = 2
 		reservation_duration = 1
@@ -171,6 +194,7 @@
 		selected_room.room_reservation_start_time = station_time_in_ticks
 		selected_room.room_reservation_end_time = selected_room.room_reservation_start_time + reservation_duration HOURS
 		selected_room.room_log.Add("\[[stationtime2text()]\] Room reservation process was initiated by [selected_room.get_user_id_name()]. Room not available.")
+		timeout_timer_id = addtimer(CALLBACK(src, /datum/nano_module/hotel_reservations/proc/give_error), 5 MINUTES, TIMER_UNIQUE|TIMER_STOPPABLE)
 		return 1
 
 	if (href_list["room_cancel"])
@@ -197,3 +221,37 @@
 	selected_room.clear_reservation(auto_clear = 1)
 	selected_room = null
 	program_mode = 0
+
+/datum/nano_module/hotel_reservations/proc/locate_n_check_terminal()
+	var/obj/machinery/computer/modular/host_console
+	if(istype(host, /obj/machinery/computer/modular))
+		host_console = host
+	else
+		terminal_status = 0	// The device is not compatible with terminals
+		return 0
+
+	if(!istype(connected_terminal))
+		connected_terminal = locate() in range(host_console, 2)
+
+	if(!istype(connected_terminal))
+		terminal_status = 1	// The device supports terminal connection, but no terminal has been found nearby
+		if(program_mode > 3)
+			give_error()
+		return 1
+	else
+		if(get_dist_euclidian(connected_terminal, host_console) > 3 || connected_terminal.stat & (NOPOWER|BROKEN))
+			connected_terminal = null
+			terminal_status = 1		// The device supports terminals, but the terminal isn't usable
+			if(program_mode > 3)
+				give_error()
+			return 1
+		else
+			if(connected_terminal.auto_mode)
+				terminal_status = 2	// Terminal connection established, but the terminal is in auto-mode
+				if(program_mode > 3)
+					give_error()
+				return 2
+			else
+				terminal_status = 3	// Terminal connection established and the terminal is in manual mode
+				return 3
+

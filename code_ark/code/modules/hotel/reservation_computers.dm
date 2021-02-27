@@ -14,7 +14,7 @@
 	icon_screen = "security"
 	light_color = "#c7c7c7"
 
-	var/obj/machinery/computer/hotel/hotel_master
+	var/auto_mode
 
 /obj/item/weapon/stock_parts/circuitboard/hotel_terminal
 	name = T_BOARD("hotel reservations system serivce terminal")
