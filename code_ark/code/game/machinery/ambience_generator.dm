@@ -11,10 +11,6 @@
 	pixel_x = -28
 	pixel_y = 38
 
-	var/_light_max_brightness = 0.5
-	var/_light_inner_range = 0.5
-	var/_light_outer_range = 3
-
 	var/displaying = 0
 
 	var/volume = 20
@@ -153,6 +149,7 @@ GLOBAL_LIST_INIT(ambience_presets, list(	// Make sure any ambiences you've creat
 	overlays.Cut()
 	var/image/I
 	if(stat & NOPOWER)
+		set_light(0)
 		return
 	if(stat & BROKEN)
 		I = image(icon, "broken")
@@ -162,7 +159,7 @@ GLOBAL_LIST_INIT(ambience_presets, list(	// Make sure any ambiences you've creat
 		I.plane = EFFECTS_ABOVE_LIGHTING_PLANE
 		I.layer = ABOVE_LIGHTING_LAYER
 		overlays += I
-		set_light(_light_max_brightness, _light_inner_range, _light_outer_range, 2, displaying ? current_ambience.ambience_color : "#082b78")
+		set_light(0.5, 0.5, 3, 2, displaying ? current_ambience.ambience_color : "#082b78")
 	else
 		set_light(0)
 
