@@ -140,7 +140,7 @@
 	icon_state = "cargo_warehouse"
 
 /area/liberty/cargo_bay/zero/mailroom
-	name = "\improper Cargo - Mail"
+	name = "\improper Cargo - Mailroom"
 	icon_state = "cargo_mailroom"
 
 /area/liberty/cargo_bay/zero/fuel_bay
@@ -148,7 +148,7 @@
 	icon_state = "cargo_fuel_bay"
 
 /area/liberty/cargo_bay/zero/train
-	name = "\improper Cargo - Train Storage"
+	name = "\improper Cargo - Cargotrain Garage"
 	icon_state = "cargo_train_storage"
 
 /area/liberty/cargo_bay/zero/public_storage
@@ -1098,12 +1098,14 @@
 //////////////////////////////////// SHUTTLES /////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////
 
+// KENOBI
+
 /area/liberty/kenobi
 	name = "\improper GUP Kenobi"
 	base_turf = /turf/simulated/floor/plating
 	area_flags = AREA_FLAG_RAD_SHIELDED | AREA_FLAG_ION_SHIELDED
 //	req_access = list(access_petrov)
-	// icon = 'icons/turf/areas.dmi'	// WIP
+
 
 /area/liberty/kenobi/cockpit
 	name = "\improper GUP Kenobi - Cockpit"
@@ -1117,11 +1119,11 @@
 	name = "\improper GUP Kenobi - Passanger Compartment"
 	icon_state = "kenobi_passenger"
 
+// KONIGSTIGER
+
 /area/liberty/konigstiger
 	name = "\improper FGS Konigstiger"
 	area_flags = AREA_FLAG_RAD_SHIELDED | AREA_FLAG_ION_SHIELDED
-	req_access = list("ACCESS_SOL_SFP")
-	// icon = 'icons/turf/areas.dmi'	// WIP
 
 /area/liberty/konigstiger/cockpit
 	name = "\improper FGS Konigstiger - Cockpit"
@@ -1132,5 +1134,25 @@
 	icon_state = "konigstiger_airlock"
 
 /area/liberty/konigstiger/passenger
-	name = "\improper FGS Konigstiger - Passanger Compartment"
+	name = "\improper FGS Konigstiger - Passenger Compartment"
 	icon_state = "konigstiger_passenger"
+
+// BEBOP
+
+/area/liberty/bebop
+	name = "\improper IFV Bebop"
+	base_turf = /turf/simulated/floor/plating
+	area_flags = AREA_FLAG_RAD_SHIELDED | AREA_FLAG_ION_SHIELDED
+//	req_access = bebop
+
+/area/liberty/bebop/cockpit
+	name = "\improper IFV Bebop - Cockpit"
+	icon_state = "bebop_cockpit"
+
+/area/liberty/bebop/main
+	name = "\improper IFV Bebop - Main Compartment"
+	icon_state = "bebop_main_compartment"
+
+/area/liberty/bebop/service
+	name = "\improper IFV Bebop - Service Compartment"
+	icon_state = "bebop_service_compartment"
