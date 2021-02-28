@@ -20,9 +20,9 @@
 	var/datum/nano_module/hotel_reservations/master_program
 	var/datum/hotel_room/selected_room
 
-/obj/item/weapon/stock_parts/circuitboard/hotel_terminal
+/*/obj/item/weapon/stock_parts/circuitboard/hotel_terminal
 	name = T_BOARD("hotel reservations system serivce terminal")
-	build_path = /obj/machinery/hotel_terminal
+	build_path = /obj/machinery/hotel_terminal*/
 
 /obj/machinery/hotel_terminal/Initialize()
 	. = ..()
@@ -36,9 +36,8 @@
 
 /obj/machinery/hotel_terminal/on_update_icon()
 	overlays.Cut()
-	if(stat & NOPOWER|BROKEN)
+	if(stat & (NOPOWER|BROKEN))
 		set_light(0)
-		return 0
 	var/screen_icon_state
 	switch(program_mode)
 		if(0)
@@ -59,24 +58,44 @@
 	I.layer = ABOVE_LIGHTING_LAYER
 	overlays += I
 	set_light(0.2, 0.5, 1, 2, "#cba561")
-	return 1
 
-/obj/machinery/hotel_terminal/proc/flick_screen(var/screen_icon_state)
-	update_icon()
-	if(stat & NOPOWER|BROKEN)
+/obj/machinery/hotel_terminal/proc/flick_screen(var/screen_icon_state = "hotel_terminal_screensaver")
+	if(stat & (NOPOWER|BROKEN))
 		return
-	var/image/I = pick(overlays)
-	flick(I, screen_icon_state)
+	overlays.Cut()
+	var/image/I = image(icon, screen_icon_state)
+	I.plane = EFFECTS_ABOVE_LIGHTING_PLANE
+	I.layer = ABOVE_LIGHTING_LAYER
+	overlays += I
+	sleep(10)
+	update_icon()
+
 
 /obj/machinery/hotel_terminal/interface_interact(var/mob/user)
+	flick_screen("hotel_terminal_screensaver")
 	ui_interact(user)
 	return TRUE
 
 /obj/machinery/hotel_terminal/CanUseTopic(user, state)
-	if(stat & BROKEN)
+	if(stat & (NOPOWER|BROKEN))
 		to_chat(user, "<span class='warning'>\The [src] is broken!</span>")
 		return STATUS_CLOSE
 	return ..()
+
+/obj/machinery/hotel_terminal/ui_interact(mob/user, ui_key = "main", var/datum/nanoui/ui = null, var/force_open = 1)
+
+	var/list/data
+
+	data["mode"] = program_mode
+
+	ui = SSnano.try_update_ui(user, src, ui_key, ui, data, force_open)
+	if (!ui)
+		ui = new(user, src, ui_key, "hotel_terminal.tmpl", "Hotel Reservations Terminal", 390, 500)
+		ui.set_initial_data(data)
+		ui.open()
+		ui.set_auto_update(1)
+
+/obj/machinery/hotel_terminal/proc/give_error()
 
 // PLACEHOLDERS - REMOVE - SHALL REPORT TO THE MASTER UPON DESTRUCTION
 

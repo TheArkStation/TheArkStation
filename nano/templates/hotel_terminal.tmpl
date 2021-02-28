@@ -1,11 +1,11 @@
 <!-- 
 Title: Hotel Reservations System UI
-Used In File(s): code_ark\code\modules\hotel\hotel_software.dm
+Used In File(s): code_ark\code\modules\hotel\reservation_computers.dm
  -->
 
 {{if data.mode == 0}}
     <H3><span class="bad">An error has occurred!</span></H3>
-    <div class="itemContent" style = "width: 300px">The selected room may no longer be usable, the terminal connection might have been lost, or the new reservation has just timed out.<br>{{:helper.link( 'Return', 'arrowreturn-1-w', {'return_to_main' : 1}, null, null, null)}}</div>
+    <div class="itemContent" style = "width: 300px">The selected room may no longer be usable, the terminal might have been reset, or the new reservation has just timed out.<br>{{:helper.link( 'Return', 'arrowreturn-1-w', {'return_to_main' : 1}, null, null, null)}}</div>
 
 {{else data.mode == 1}}
     {{if data.terminal == 0}}
@@ -321,25 +321,3 @@ Used In File(s): code_ark\code\modules\hotel\hotel_software.dm
         {{/if}}
     </div>
 {{/if}}
-
-<!---
-<H3><span class="white">Volume:</span></H3>
-{{:helper.displayBar(data.volume*2, 0, 100, 'average')}}
-<div class="itemContent">
-    {{:helper.link('0' , null, {'volume' : 0}, data.volume == 0 ? 'disabled' : null, null)}}
-    {{:helper.link('20' , null, {'volume' : 10}, data.volume == 10 ? 'disabled' : null, null)}}
-    {{:helper.link('40' , null, {'volume' : 20}, data.volume == 20 ? 'disabled' : null, null)}}
-    {{:helper.link('60' , null, {'volume' : 30}, data.volume == 30 ? 'disabled' : null, null)}}
-    {{:helper.link('80' , null, {'volume' : 40}, data.volume == 40 ? 'disabled' : null, null)}}
-    {{:helper.link('100' , null, {'volume' : 50}, data.volume == 50 ? 'disabled' : null, null)}}
-</div>
-
-<H3><span class="white">Available tracks:</span></H3>
-<div class="itemContent">
-    {{for data.tracks}}
-        <div class="item">
-            {{:helper.link( value.track, 'gear', {'title' : value.track}, value.track == data.current_track ? 'disabled' : null, null)}}    
-        </div>
-    {{/for}}
-</div>
---->

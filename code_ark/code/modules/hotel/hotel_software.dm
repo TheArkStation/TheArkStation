@@ -25,11 +25,9 @@
 
 	var/datum/hotel_room/selected_room
 
-	var/obj/machinery/computer/hotel_terminal/connected_terminal
+	var/obj/machinery/hotel_terminal/connected_terminal
 
 /datum/nano_module/hotel_reservations/ui_interact(mob/user, ui_key = "main", var/datum/nanoui/ui = null, var/force_open = 1, var/datum/topic_state/state = GLOB.default_state)
-
-	setup_hotel_rooms() // The proc does check if the rooms have already been set up
 
 	var/list/hotel_single_room_list = new
 	var/list/hotel_double_room_list = new
@@ -113,6 +111,7 @@
 	ui = SSnano.try_update_ui(user, src, ui_key, ui, data, force_open)
 	if (!ui)
 		locate_n_check_terminal() // We'll try to locate the terminal upon the first use of the program
+		setup_hotel_rooms() // The proc does check if the rooms have already been set up
 		ui = new(user, src, ui_key, "hotel.tmpl", "Hotel Reservations System", 390, 550, state = state)
 		ui.set_initial_data(data)
 		ui.open()
@@ -158,6 +157,11 @@
 
 	if(href_list["noauto"])
 		if(locate_n_check_terminal() > 1)
+			if(connected_terminal.program_mode > 1)
+				if(alert("Someone is using the terminal to make a reservation. This will interrupt the process. Are you sure?",,"Yes","No")=="No")
+					return 1
+				else
+					connected_terminal.give_error()
 			connected_terminal.auto_mode = 0
 		return 1
 
@@ -185,8 +189,10 @@
 		print_text(text_to_print, usr)
 		return 1
 
-	if (href_list["room_reserve"] && locate_n_check_terminal() == 3)	// Room shall not be reserved unless there's a properly functioning terminal
-		if(selected_room.room_status != 1) // FIX ME
+	if (href_list["room_reserve"])
+		if(locate_n_check_terminal() != 3)// Room shall not be reserved unless there's a properly functioning terminal
+			return 1
+		if(selected_room.room_status != 1)
 			return 1
 		selected_room.room_status = 2
 		reservation_duration = 1
@@ -220,6 +226,8 @@
 		return
 	selected_room.clear_reservation(auto_clear = 1)
 	selected_room = null
+	if(program_mode == 4)
+		deltimer(timeout_timer_id)
 	program_mode = 0
 
 /datum/nano_module/hotel_reservations/proc/locate_n_check_terminal()
@@ -235,23 +243,20 @@
 
 	if(!istype(connected_terminal))
 		terminal_status = 1	// The device supports terminal connection, but no terminal has been found nearby
-		if(program_mode > 3)
-			give_error()
-		return 1
 	else
 		if(get_dist_euclidian(connected_terminal, host_console) > 3 || connected_terminal.stat & (NOPOWER|BROKEN))
 			connected_terminal = null
 			terminal_status = 1		// The device supports terminals, but the terminal isn't usable
-			if(program_mode > 3)
-				give_error()
-			return 1
 		else
+			if(connected_terminal.master_program != src)
+				connected_terminal.master_program = src
 			if(connected_terminal.auto_mode)
 				terminal_status = 2	// Terminal connection established, but the terminal is in auto-mode
-				if(program_mode > 3)
-					give_error()
-				return 2
 			else
 				terminal_status = 3	// Terminal connection established and the terminal is in manual mode
-				return 3
+
+	if(program_mode > 3 && terminal_status != 3)
+		give_error()
+
+	return terminal_status
 
