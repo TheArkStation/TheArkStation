@@ -7895,7 +7895,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/tiled/techmaint,
-/area/liberty/hallway/one)
+/area/liberty/maintenance/one/aft_starboard)
 "anW" = (
 /turf/simulated/wall/r_wall/prepainted,
 /area/liberty/hallway/one/fore_docks)
@@ -13776,7 +13776,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/space)
+/area/liberty/sfp/hallway/one_north)
 "axo" = (
 /obj/structure/railing/mapped{
 	dir = 8
@@ -16076,15 +16076,18 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/liberty/engineering/supermatter_tegs)
 "aBu" = (
-/obj/effect/wallframe_spawn/no_grille,
-/obj/machinery/door/blast/shutters/open{
-	dir = 4;
-	id_tag = "shopping_hall_lockdown";
-	name = "Shopping Hall Lockdown"
-	},
 /obj/machinery/door/firedoor,
-/turf/simulated/floor/plating,
-/area/liberty/shopping)
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/liberty/sfp/hallway/one_north)
 "aBv" = (
 /obj/effect/shuttle_landmark/liberty/hangar/lucius,
 /turf/space,
@@ -18756,12 +18759,15 @@
 /turf/simulated/floor/tiled/white,
 /area/liberty/shopping)
 "aGa" = (
-/obj/effect/wallframe_spawn/no_grille,
 /obj/machinery/door/firedoor{
 	dir = 8
 	},
+/obj/effect/wallframe_spawn/reinforced/polarized/full{
+	id = "merchant_tint"
+	},
+/obj/effect/paint_stripe/white,
 /turf/simulated/floor/plating,
-/area/liberty/cargo_bay/one/office)
+/area/liberty/shopping/keeper)
 "aGb" = (
 /obj/structure/cable/yellow{
 	d1 = 4;
@@ -20840,18 +20846,17 @@
 /turf/simulated/floor/exoplanet/grass,
 /area/liberty/hotel/restaurant/main)
 "aJP" = (
-/obj/machinery/door/firedoor,
-/obj/effect/floor_decal/industrial/hatch,
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+/obj/effect/wallframe_spawn/no_grille,
+/obj/machinery/door/blast/shutters/open{
+	id_tag = "shopping_hall_lockdown";
+	name = "Shopping Hall Lockdown"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/space)
+/obj/machinery/door/firedoor{
+	dir = 8
+	},
+/obj/effect/paint_stripe/white,
+/turf/simulated/floor/plating,
+/area/liberty/shopping/keeper)
 "aJQ" = (
 /obj/structure/cable/yellow{
 	d1 = 4;
@@ -23420,14 +23425,17 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/liberty/hangar/tower)
 "aOx" = (
+/obj/effect/wallframe_spawn/no_grille,
+/obj/machinery/door/blast/shutters/open{
+	id_tag = "shopping_hall_lockdown";
+	name = "Shopping Hall Lockdown"
+	},
 /obj/machinery/door/firedoor{
 	dir = 8
 	},
-/obj/effect/wallframe_spawn/reinforced/polarized/full{
-	id = "merchant_tint"
-	},
+/obj/effect/paint_stripe/white,
 /turf/simulated/floor/plating,
-/area/liberty/shopping/keeper)
+/area/liberty/shopping)
 "aOy" = (
 /obj/structure/railing/mapped,
 /turf/simulated/open,
@@ -25401,7 +25409,7 @@
 	dir = 5
 	},
 /obj/effect/floor_decal/corner/grey/half,
-/obj/machinery/computer/hotel_terminal,
+/obj/machinery/hotel_terminal,
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/hotel/foyer)
 "aSg" = (
@@ -29113,14 +29121,14 @@
 "aZq" = (
 /obj/effect/wallframe_spawn/no_grille,
 /obj/machinery/door/blast/shutters/open{
+	dir = 4;
 	id_tag = "shopping_hall_lockdown";
 	name = "Shopping Hall Lockdown"
 	},
-/obj/machinery/door/firedoor{
-	dir = 8
-	},
+/obj/machinery/door/firedoor,
+/obj/effect/paint_stripe/white,
 /turf/simulated/floor/plating,
-/area/liberty/shopping/keeper)
+/area/liberty/shopping)
 "aZr" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/structure/cable/green{
@@ -31250,10 +31258,80 @@
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
 /area/liberty/maintenance/one/aft_starboard)
+"bdw" = (
+/obj/effect/wallframe_spawn/no_grille,
+/obj/effect/paint_stripe/white,
+/turf/simulated/floor/plating,
+/area/liberty/shopping/keeper)
+"bdx" = (
+/obj/effect/wallframe_spawn/no_grille,
+/obj/machinery/door/firedoor,
+/obj/effect/paint_stripe/white,
+/obj/effect/paint/brown,
+/turf/simulated/floor/plating,
+/area/liberty/cargo_bay/one/office)
 "bdy" = (
 /obj/item/stack/material/rods,
 /turf/space,
 /area/space)
+"bdz" = (
+/obj/effect/wallframe_spawn/no_grille,
+/obj/machinery/door/firedoor,
+/obj/effect/paint_stripe/white,
+/obj/effect/paint/brown,
+/turf/simulated/floor/plating,
+/area/liberty/cargo_bay/one/waiting_room)
+"bdA" = (
+/obj/effect/wallframe_spawn/no_grille,
+/obj/machinery/door/firedoor{
+	dir = 8
+	},
+/obj/effect/paint_stripe/white,
+/obj/effect/paint/brown,
+/turf/simulated/floor/plating,
+/area/liberty/cargo_bay/one/office)
+"bdB" = (
+/obj/effect/wallframe_spawn/no_grille,
+/obj/machinery/door/firedoor{
+	dir = 8
+	},
+/obj/effect/paint_stripe/white,
+/obj/effect/paint/brown,
+/turf/simulated/floor/plating,
+/area/liberty/cargo_bay/one/waiting_room)
+"bdC" = (
+/obj/machinery/door/airlock/maintenance,
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/firedoor,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/liberty/maintenance/one/aft)
+"bdD" = (
+/obj/effect/wallframe_spawn/no_grille,
+/obj/machinery/door/firedoor{
+	dir = 8
+	},
+/obj/effect/paint_stripe/white,
+/obj/effect/paint/brown,
+/turf/simulated/floor/plating,
+/area/liberty/cargo_bay/one)
+"bdE" = (
+/obj/effect/wallframe_spawn/no_grille,
+/obj/effect/paint_stripe/white,
+/obj/effect/paint/brown,
+/turf/simulated/floor/plating,
+/area/liberty/cargo_bay/one/breakroom)
+"bdF" = (
+/obj/effect/wallframe_spawn/reinforced,
+/obj/machinery/door/firedoor,
+/obj/effect/paint_stripe/white,
+/obj/effect/paint/brown,
+/turf/simulated/floor/plating,
+/area/liberty/cargo_bay/one/quartermaster)
 "bdR" = (
 /obj/effect/floor_decal/corner/grey{
 	dir = 9
@@ -31487,11 +31565,6 @@
 /obj/effect/floor_decal/steeldecal/steel_decals4,
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/hallway/one/aft_port)
-"caW" = (
-/obj/effect/wallframe_spawn/no_grille,
-/obj/machinery/door/firedoor,
-/turf/simulated/floor/plating,
-/area/liberty/cargo_bay/one/office)
 "ccq" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/external/bolted{
@@ -31872,11 +31945,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/liberty/medbay/hallway/one)
-"due" = (
-/obj/effect/wallframe_spawn/reinforced,
-/obj/machinery/door/firedoor,
-/turf/simulated/floor/plating,
-/area/liberty/cargo_bay/one/quartermaster)
 "dBe" = (
 /obj/effect/floor_decal/corner/grey/mono,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -35777,10 +35845,6 @@
 /obj/effect/floor_decal/steeldecal/steel_decals6,
 /turf/simulated/floor/tiled/white,
 /area/liberty/shopping)
-"pSG" = (
-/obj/effect/wallframe_spawn/no_grille,
-/turf/simulated/floor/plating,
-/area/liberty/shopping/keeper)
 "pSX" = (
 /obj/effect/floor_decal/corner/grey{
 	dir = 9
@@ -36374,11 +36438,6 @@
 /obj/machinery/constructable_frame/machine_frame,
 /turf/simulated/floor/tiled/airless,
 /area/liberty/maintenance/construction/zero/medbay)
-"rYJ" = (
-/obj/effect/wallframe_spawn/no_grille,
-/obj/machinery/door/firedoor,
-/turf/simulated/floor/plating,
-/area/liberty/cargo_bay/one/waiting_room)
 "rZg" = (
 /obj/structure/table/standard,
 /obj/item/weapon/pen,
@@ -37753,13 +37812,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/liberty/maintenance/one/chapel)
-"wrP" = (
-/obj/effect/wallframe_spawn/no_grille,
-/obj/machinery/door/firedoor{
-	dir = 8
-	},
-/turf/simulated/floor/plating,
-/area/liberty/cargo_bay/one)
 "wtp" = (
 /obj/effect/floor_decal/steeldecal/steel_decals6{
 	dir = 4
@@ -37787,17 +37839,6 @@
 /obj/structure/mattress/dirty,
 /turf/simulated/floor/airless,
 /area/liberty/maintenance/construction/zero/medbay)
-"wxR" = (
-/obj/effect/wallframe_spawn/no_grille,
-/obj/machinery/door/blast/shutters/open{
-	id_tag = "shopping_hall_lockdown";
-	name = "Shopping Hall Lockdown"
-	},
-/obj/machinery/door/firedoor{
-	dir = 8
-	},
-/turf/simulated/floor/plating,
-/area/liberty/shopping)
 "wAt" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -38143,17 +38184,6 @@
 	},
 /turf/simulated/open,
 /area/liberty/maintenance/one/chapel)
-"xCt" = (
-/obj/machinery/door/airlock/maintenance,
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/machinery/door/firedoor,
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/liberty/hallway/one/aft_port)
 "xEo" = (
 /obj/effect/floor_decal/corner/grey/mono,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -38231,10 +38261,6 @@
 	},
 /turf/simulated/floor/carpet/blue,
 /area/liberty/sfp/recreation)
-"xPz" = (
-/obj/effect/wallframe_spawn/no_grille,
-/turf/simulated/floor/plating,
-/area/liberty/cargo_bay/one/breakroom)
 "xUi" = (
 /turf/simulated/floor/wood/walnut,
 /area/liberty/rnd/professor_office)
@@ -38287,13 +38313,6 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/tiled/monotile,
 /area/liberty/hallway/one/aft_port)
-"yba" = (
-/obj/effect/wallframe_spawn/no_grille,
-/obj/machinery/door/firedoor{
-	dir = 8
-	},
-/turf/simulated/floor/plating,
-/area/liberty/cargo_bay/one/waiting_room)
 "ybe" = (
 /obj/effect/floor_decal/corner/grey{
 	dir = 1
@@ -53612,7 +53631,7 @@ aDs
 ark
 axh
 aWo
-aJP
+aBu
 aTD
 aZm
 awJ
@@ -55059,7 +55078,7 @@ aQl
 mTu
 aMe
 aQz
-xCt
+bdC
 bbw
 bbw
 bbw
@@ -55461,7 +55480,7 @@ aXH
 ayk
 gCK
 aZE
-caW
+bdx
 amI
 anv
 aLB
@@ -55649,7 +55668,7 @@ aFG
 aTu
 fzv
 aNm
-aOx
+aGa
 azW
 aPv
 aHW
@@ -55663,7 +55682,7 @@ aku
 ayk
 aJc
 aLG
-caW
+bdx
 amJ
 axp
 aTO
@@ -55851,7 +55870,7 @@ azK
 axH
 fzv
 aNm
-aOx
+aGa
 aQZ
 aMR
 ajx
@@ -55865,7 +55884,7 @@ hLb
 ayk
 aJc
 auA
-caW
+bdx
 aLT
 aDi
 aMC
@@ -55877,7 +55896,7 @@ aPF
 aUU
 vNa
 arP
-due
+bdF
 atd
 aAJ
 aad
@@ -56067,7 +56086,7 @@ azz
 ayk
 aJc
 ajm
-caW
+bdx
 amK
 aGy
 aoc
@@ -56270,17 +56289,17 @@ yaI
 aJc
 alQ
 alQ
-aGa
+bdA
 anx
-aGa
+bdA
 alQ
 apj
 alQ
 cfe
 aFx
 cfe
-xPz
-xPz
+bdE
+bdE
 ctb
 aDH
 asK
@@ -56470,7 +56489,7 @@ mrk
 aBn
 ayk
 aJc
-caW
+bdx
 aPS
 amM
 aNc
@@ -56659,7 +56678,7 @@ beO
 mID
 fzv
 hvy
-aZq
+aJP
 ain
 aZL
 iMv
@@ -56668,16 +56687,16 @@ aKA
 aDB
 aye
 aHe
-wxR
+aOx
 aTV
 ayk
 aJc
-caW
+bdx
 amh
 avJ
 aUZ
 aVl
-caW
+bdx
 auQ
 aqV
 aJA
@@ -56865,20 +56884,20 @@ aHW
 avj
 ahM
 ahM
-pSG
+bdw
 aId
 aFZ
 avT
 aTK
-wxR
+aOx
 aTV
 ayk
 aJa
 alQ
 alQ
 anz
-aGa
-aGa
+bdA
+bdA
 alQ
 aLH
 aZi
@@ -57063,7 +57082,7 @@ vUP
 tAS
 fzv
 qqJ
-wxR
+aOx
 asZ
 asZ
 asZ
@@ -57072,7 +57091,7 @@ aDB
 aiO
 aCF
 aJq
-wxR
+aOx
 aTV
 ayk
 aGG
@@ -57467,7 +57486,7 @@ vUP
 nmT
 oIl
 uQV
-wxR
+aOx
 aye
 aCD
 aRI
@@ -57476,15 +57495,15 @@ aDB
 aHJ
 aRI
 aye
-wxR
+aOx
 aTV
 ayk
 aJa
 dCv
 dCv
-yba
+bdB
 arM
-yba
+bdB
 dCv
 awd
 aBj
@@ -57682,12 +57701,12 @@ aWO
 aQc
 ayk
 aJc
-rYJ
+bdz
 aSe
 amQ
 aZy
 aLv
-rYJ
+bdz
 aED
 aqZ
 aqZ
@@ -57880,7 +57899,7 @@ aAZ
 aVB
 aVB
 aTc
-wxR
+aOx
 aTV
 ayk
 qJH
@@ -58086,7 +58105,7 @@ mrk
 qQI
 ayk
 hof
-rYJ
+bdz
 aCk
 amS
 anC
@@ -58094,8 +58113,8 @@ aNB
 dCv
 jTe
 ncs
-wrP
-wrP
+bdD
+bdD
 nJB
 aSj
 nTb
@@ -58277,12 +58296,12 @@ cHs
 std
 mrk
 mrk
-aBu
-aBu
+aZq
+aZq
 aOq
 ayg
-aBu
-aBu
+aZq
+aZq
 mrk
 mrk
 aVS
@@ -58290,9 +58309,9 @@ aNL
 aWl
 dCv
 dCv
-yba
-yba
-yba
+bdB
+bdB
+bdB
 dCv
 ncs
 ncs
