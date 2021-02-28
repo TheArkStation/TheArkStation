@@ -42,21 +42,22 @@
 		if (R == selected_room)
 			if (R.room_status == 0)
 				give_error()
-			hotel_selected_room = list(
-				"number" = R.room_number,
-				"status" = R.room_status,
-				"special" = R.special_room,
-				"requests" = R.room_requests,
-				"beds" = R.bed_count,
-				"capacity" = R.guest_count,
-				"price" = R.hourly_price,
-				"guests" = R.room_guests2text(),
-				"guests_as_list" = R.room_guests,
-				"guest_count" = LAZYLEN(R.room_guests),
-				"start" = time2text(R.room_reservation_start_time, "hh:mm"),
-				"end" = R.room_end_time2text(),
-				"room_logs" = R.room_log
-			)
+			else
+				hotel_selected_room = list(
+					"number" = R.room_number,
+					"status" = R.room_status,
+					"special" = R.special_room,
+					"requests" = R.room_requests,
+					"beds" = R.bed_count,
+					"capacity" = R.guest_count,
+					"price" = R.hourly_price,
+					"guests" = R.room_guests2text(),
+					"guests_as_list" = R.room_guests,
+					"guest_count" = LAZYLEN(R.room_guests),
+					"start" = time2text(R.room_reservation_start_time, "hh:mm"),
+					"end" = R.room_end_time2text(),
+					"room_logs" = R.room_log
+					)
 			continue
 
 		if (R.special_room)
@@ -105,7 +106,6 @@
 	data["double_rooms"] = hotel_double_room_list
 	data["special_rooms"] = hotel_special_room_list
 	data["selected_room"] = hotel_selected_room
-	data["station_time"] = stationtime2text()
 	data["terminal"] = terminal_status
 
 	ui = SSnano.try_update_ui(user, src, ui_key, ui, data, force_open)
@@ -135,6 +135,8 @@
 		return 1
 
 	if (href_list["return_to_room"])
+		if(!selected_room)
+			return 1
 		if(program_mode == 4 && reservation_status != 2)
 			if(alert("This will erase the reservation. Are you sure?",,"Yes","No")=="No")
 				return 1
@@ -166,22 +168,32 @@
 		return 1
 
 	if (href_list["room_block"])
+		if(!selected_room)
+			return 1
 		selected_room.room_block()
 		return 1
 
 	if (href_list["room_unblock"])
+		if(!selected_room)
+			return 1
 		selected_room.room_unblock()
 		return 1
 
 	if (href_list["room_reset"])
+		if(!selected_room)
+			return 1
 		selected_room.room_reset()
 		return 1
 
 	if (href_list["room_logs"])
+		if(!selected_room)
+			return 1
 		program_mode = 3
 		return 1
 
 	if (href_list["print_logs"])
+		if(!selected_room)
+			return 1
 		var/text_to_print = "<b>Room [selected_room.room_number] logs:</b><br><br>"
 		for (var/log_entry in selected_room.room_log)
 			text_to_print += "[log_entry]<br>"
@@ -190,7 +202,7 @@
 		return 1
 
 	if (href_list["room_reserve"])
-		if(locate_n_check_terminal() != 3)// Room shall not be reserved unless there's a properly functioning terminal
+		if(locate_n_check_terminal() != 3 || !selected_room)// Room shall not be reserved unless there's a properly functioning terminal
 			return 1
 		if(selected_room.room_status != 1)
 			return 1
@@ -204,6 +216,8 @@
 		return 1
 
 	if (href_list["room_cancel"])
+		if(!selected_room)
+			return 1
 		selected_room.clear_reservation()
 		if (program_mode == 4)
 			reservation_duration = 1
@@ -213,9 +227,16 @@
 
 	if(href_list["set_duration"])
 		reservation_duration = text2num(href_list["set_duration"])
-		if(program_mode == 4)
+		if(program_mode == 4 && selected_room)
 			selected_room.room_reservation_end_time = selected_room.room_reservation_start_time + reservation_duration HOURS
 		return 1
+
+	if(href_list["remove_guest"])
+		if(selected_room)
+			for(var/guest in selected_room.room_guests)
+				if(guest == href_list["remove_guest"])
+					selected_room.room_guests -= href_list["remove_guest"]
+					return 1
 
 	if(href_list["room_pay"])
 		reservation_status = 1
