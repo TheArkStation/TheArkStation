@@ -552,6 +552,7 @@
 /area/liberty/hallway/one
 	name = "\improper Level One - Central Hallway"
 	icon_state = "lvl_1_central_hall"
+	sound_env = LARGE_ENCLOSED
 
 /area/liberty/hallway/one/aft_port
 	name = "\improper Level One - Aft Port Hallway"
@@ -877,8 +878,17 @@
 // HOTEL
 
 /area/liberty/hotel/room/penthouse
-	name = "\improper Hotel - Penthouse"
-	icon_state = "hotel_room_penthouse"
+	name = "\improper Hotel - Penthouse Living Room"
+	icon_state = "hotel_room_penthouse_living_room"
+	sound_env = MEDIUM_SOFTFLOOR
+
+/area/liberty/hotel/room/penthouse/bedroom
+	name = "\improper Hotel - Penthouse Bedroom"
+	icon_state = "hotel_room_penthouse_bedroom"
+
+/area/liberty/hotel/room/penthouse/bathroom
+	name = "\improper Hotel - Penthouse Bathroom"
+	icon_state = "hotel_room_penthouse_bathroom"
 
 // COMMAND
 
