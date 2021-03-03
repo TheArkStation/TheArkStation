@@ -18,7 +18,11 @@
 /obj/machinery/photocopier/faxmachine
   send_access = list() // ADD ACCESS
 
-// ENGINERRING MACINERY
+// ENGINERRING MACHINERY
 
 /obj/machinery/atmospherics/unary/heater
 	connect_types = CONNECT_TYPE_REGULAR|CONNECT_TYPE_FUEL
+
+// BRIG CELLS FIX
+/obj/machinery/door_timer
+	layer = ABOVE_WINDOW_LAYER
