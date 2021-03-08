@@ -9020,6 +9020,20 @@
 	},
 /turf/simulated/floor/tiled/old_tile,
 /area/liberty/hotel/dorm)
+"vi" = (
+/obj/effect/floor_decal/corner/grey/mono,
+/obj/machinery/door/firedoor{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/liberty/library)
 "vj" = (
 /obj/effect/floor_decal/corner/grey{
 	dir = 10
@@ -9925,20 +9939,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/dark,
 /area/liberty/chapel/main)
-"xW" = (
-/obj/effect/floor_decal/corner/grey/mono,
-/obj/machinery/door/firedoor{
-	dir = 8
-	},
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/monotile,
-/area/liberty/library)
 "xY" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -12942,6 +12942,11 @@
 "Gc" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/maintenance,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/liberty/janitor)
 "Gd" = (
@@ -19506,11 +19511,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
-	},
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/hallway/two)
@@ -34311,7 +34311,7 @@ ag
 Pj
 aE
 Jm
-xW
+vi
 Mm
 Jm
 Jm
