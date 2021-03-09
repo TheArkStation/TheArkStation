@@ -119,7 +119,7 @@
 
 /datum/nano_module/hotel_reservations/Topic(href, href_list)
 	if (..())
-		return 1
+		return TOPIC_REFRESH
 
 	if (href_list["room_select"])
 		locate_n_check_terminal()	// Room selection menu does depend on the terminal
@@ -127,128 +127,156 @@
 			if (R.room_number == href_list["room_select"])
 				program_mode = 2
 				selected_room = R
-				return 1
+		return TOPIC_REFRESH
 
 	if (href_list["return_to_main"])
 		program_mode = 1
 		selected_room = null
-		return 1
+		return TOPIC_REFRESH
 
 	if (href_list["return_to_room"])
 		if(!selected_room)
-			return 1
+			return TOPIC_REFRESH
 		if(program_mode == 4 && reservation_status != 2)
 			if(alert("This will erase the reservation. Are you sure?",,"Yes","No")=="No")
-				return 1
+				return TOPIC_REFRESH
 			else
+				if(locate_n_check_terminal() == 3)
+					connected_terminal.program_mode = 1
+					connected_terminal.flick_screen("hotel_terminal_loading")
 				selected_room.clear_reservation()
 		reservation_status = 0 // in case we'be been reserving we'd better reset the process
-		if(program_mode == 4)
+		if(timeout_timer_id)
 			deltimer(timeout_timer_id)
+			timeout_timer_id = null
 		program_mode = 2
-		return 1
+		return TOPIC_REFRESH
 
 	if(href_list["locate_terminal"])
 		locate_n_check_terminal()
-		return 1
+		return TOPIC_REFRESH
 
 	if(href_list["auto"])
 		if(locate_n_check_terminal() > 1)
-			connected_terminal.auto_mode = 1
-		return 1
+			if(!connected_terminal.auto_mode)
+				connected_terminal.auto_mode = 1
+				connected_terminal.flick_screen("hotel_terminal_loading")
+		return TOPIC_REFRESH
 
 	if(href_list["noauto"])
 		if(locate_n_check_terminal() > 1)
-			if(connected_terminal.program_mode > 1)
-				if(alert("Someone is using the terminal to make a reservation. This will interrupt the process. Are you sure?",,"Yes","No")=="No")
-					return 1
-				else
-					connected_terminal.give_error()
-			connected_terminal.auto_mode = 0
-		return 1
+			if(connected_terminal.auto_mode)
+				if(connected_terminal.program_mode > 1)
+					if(alert("Someone is using the terminal to make a reservation. This will interrupt the process. Are you sure?",,"Yes","No")=="No")
+						return TOPIC_REFRESH
+					else
+						connected_terminal.auto_mode = 0
+						connected_terminal.give_error(terminal_reset = 1)
+						return TOPIC_REFRESH
+				connected_terminal.auto_mode = 0
+				connected_terminal.flick_screen("hotel_terminal_loading")
+		return TOPIC_REFRESH
 
 	if (href_list["room_block"])
 		if(!selected_room)
-			return 1
+			return TOPIC_REFRESH
 		selected_room.room_block()
-		return 1
+		return TOPIC_REFRESH
 
 	if (href_list["room_unblock"])
 		if(!selected_room)
-			return 1
+			return TOPIC_REFRESH
 		selected_room.room_unblock()
-		return 1
+		return TOPIC_REFRESH
 
 	if (href_list["room_reset"])
 		if(!selected_room)
-			return 1
+			return TOPIC_REFRESH
 		selected_room.room_reset()
-		return 1
+		return TOPIC_REFRESH
 
 	if (href_list["room_logs"])
 		if(!selected_room)
-			return 1
+			return TOPIC_REFRESH
 		program_mode = 3
-		return 1
+		return TOPIC_REFRESH
 
 	if (href_list["print_logs"])
 		if(!selected_room)
-			return 1
+			return TOPIC_REFRESH
 		var/text_to_print = "<b>Room [selected_room.room_number] logs:</b><br><br>"
 		for (var/log_entry in selected_room.room_log)
 			text_to_print += "[log_entry]<br>"
 		text_to_print += "<hr><i>Printed at [stationtime2text()]</i>"
 		print_text(text_to_print, usr)
-		return 1
+		return TOPIC_REFRESH
 
 	if (href_list["room_reserve"])
 		if(locate_n_check_terminal() != 3 || !selected_room)// Room shall not be reserved unless there's a properly functioning terminal
-			return 1
+			return TOPIC_REFRESH
 		if(selected_room.room_status != 1)
-			return 1
+			return TOPIC_REFRESH
+
 		selected_room.room_status = 2
 		reservation_duration = 1
 		program_mode = 4
+		reservation_status = 0
+
+		connected_terminal.program_mode = 3
+		connected_terminal.flick_screen("hotel_terminal_loading")
+
 		selected_room.room_reservation_start_time = station_time_in_ticks
 		selected_room.room_reservation_end_time = selected_room.room_reservation_start_time + reservation_duration HOURS
 		selected_room.room_log.Add("\[[stationtime2text()]\] Room reservation process was initiated by [selected_room.get_user_id_name()]. Room not available.")
 		timeout_timer_id = addtimer(CALLBACK(src, /datum/nano_module/hotel_reservations/proc/give_error), 5 MINUTES, TIMER_UNIQUE|TIMER_STOPPABLE)
-		return 1
+		return TOPIC_REFRESH
 
 	if (href_list["room_cancel"])
 		if(!selected_room)
-			return 1
-		selected_room.clear_reservation()
+			return TOPIC_REFRESH
+		selected_room.clear_reservation(just_reset = text2num(href_list["room_cancel"]) == 2 ? 1 : 0)
 		if (program_mode == 4)
 			reservation_duration = 1
 			selected_room.room_reservation_start_time = station_time_in_ticks
 			selected_room.room_reservation_end_time = selected_room.room_reservation_start_time + reservation_duration HOURS
-		return 1
+		return TOPIC_REFRESH
 
 	if(href_list["set_duration"])
 		reservation_duration = text2num(href_list["set_duration"])
 		if(program_mode == 4 && selected_room)
 			selected_room.room_reservation_end_time = selected_room.room_reservation_start_time + reservation_duration HOURS
-		return 1
+		return TOPIC_REFRESH
 
 	if(href_list["remove_guest"])
 		if(selected_room)
-			for(var/guest in selected_room.room_guests)
-				if(guest == href_list["remove_guest"])
-					selected_room.room_guests -= href_list["remove_guest"]
-					return 1
+			selected_room.remove_guest(href_list["remove_guest"])
+			if(LAZYLEN(selected_room.room_guests) != selected_room.guest_count && locate_n_check_terminal() == 3)
+				connected_terminal.program_mode = 3
+				connected_terminal.flick_screen("hotel_terminal_loading")
+		return TOPIC_REFRESH
 
 	if(href_list["room_pay"])
-		reservation_status = 1
-		return 1
+		if(locate_n_check_terminal() == 3)
+			reservation_status = 1
+			connected_terminal.program_mode = 4
+			connected_terminal.flick_screen("hotel_terminal_loading")
+		return TOPIC_REFRESH
 
 /datum/nano_module/hotel_reservations/proc/give_error()
+	if(reservation_status == 2)
+		program_mode = 1
+		selected_room = null
+		reservation_status = 0
 	if(!selected_room)
 		return
 	selected_room.clear_reservation(auto_clear = 1)
 	selected_room = null
-	if(program_mode == 4)
+	if(istype(connected_terminal))
+		connected_terminal.program_mode = 1
+		connected_terminal.flick_screen("hotel_terminal_loading")
+	if(timeout_timer_id)
 		deltimer(timeout_timer_id)
+		timeout_timer_id = null
 	program_mode = 0
 
 /datum/nano_module/hotel_reservations/proc/locate_n_check_terminal()
@@ -265,6 +293,14 @@
 	if(!istype(connected_terminal))
 		terminal_status = 1	// The device supports terminal connection, but no terminal has been found nearby
 	else
+
+		if(istype(connected_terminal.master_program) && connected_terminal.master_program != src)	// Check if we're overriding an existing terminal connection
+			if(connected_terminal.master_program.locate_n_check_terminal() > 1 )
+				terminal_status = 1
+				if(program_mode > 3 && terminal_status != 3)
+					give_error()
+				return terminal_status
+
 		if(get_dist_euclidian(connected_terminal, host_console) > 3 || connected_terminal.stat & (NOPOWER|BROKEN))
 			connected_terminal = null
 			terminal_status = 1		// The device supports terminals, but the terminal isn't usable

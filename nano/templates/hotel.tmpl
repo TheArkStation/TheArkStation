@@ -5,7 +5,7 @@ Used In File(s): code_ark\code\modules\hotel\hotel_software.dm
 
 {{if data.mode == 0}}
     <H3><span class="bad">An error has occurred!</span></H3>
-    <div class="itemContent" style = "width: 300px">The selected room may no longer be usable, the terminal connection might have been lost, or the new reservation has just timed out.<br>{{:helper.link( 'Return', 'arrowreturn-1-w', {'return_to_main' : 1}, null, null, null)}}</div>
+    <div class="itemGroup" style = "width: 300px">The selected room may no longer be usable, the terminal connection might have been lost, or the new reservation has just timed out.</div><br>{{:helper.link( 'Return', 'arrowreturn-1-w', {'return_to_main' : 1}, null, null, null)}}
 
 {{else data.mode == 1}}
     {{if data.terminal == 0}}
@@ -179,7 +179,7 @@ Used In File(s): code_ark\code\modules\hotel\hotel_software.dm
             <table><tr><td><span class="white">Reservations mode:</span></td>
             <td>{{:helper.link('Auto' , null, {'auto' : 1}, data.terminal == 2 ? 'selected' : null, null)}}
             {{:helper.link('Manual' , null, {'noauto' : 1}, data.terminal == 3 ? 'selected' : null, null)}}</td></tr>
-            </table>{{if data.terminal == 2}}You have to switch to manual mode to make a new reservation.{{/if}}
+            </table>{{if data.terminal == 2}}You have to switch to manual mode to make a new reservation or to modify an existing one.{{/if}}
         </div>
     {{/if}}
     <H2><span class="white">Room {{:data.selected_room.number}}</span></H2>
@@ -313,7 +313,7 @@ Used In File(s): code_ark\code\modules\hotel\hotel_software.dm
             {{:helper.link( 'Payment', 'check', {'room_pay' : 1}, 'disabled', null)}}
         {{/if}}
         {{if data.reservation == 0 && (data.selected_room.guest_count || data.duration != 1)}}
-            {{:helper.link( 'Clear', 'closethick', {'room_cancel' : 1}, null, null)}}
+            {{:helper.link( 'Clear', 'closethick', {'room_cancel' : 2}, null, null)}}
         {{else data.reservation == 1}}
             {{:helper.link( 'Cancel', 'check', {'payment_cancel' : 1}, 'redButton', null, null)}}
         {{else}}

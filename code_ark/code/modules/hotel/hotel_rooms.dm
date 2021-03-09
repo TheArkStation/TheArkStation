@@ -93,7 +93,7 @@ GLOBAL_LIST_EMPTY(hotel_rooms)
 	var/hourly_price
 	var/special_room
 
-	var/room_status = 0 // 0 - broken, 1 - available, 2 - occupied, 3 - reservation in progress, 4 - blocked
+	var/room_status = 0 // 0 - broken, 1 - available, 2 - reservation in progress, 3 - occupied, 4 - blocked
 	var/room_requests = 0 // 0 - nothing, 1 - do not disturb, 2 - make up the room, 3 - room turnover (set automatically at the end of the reservation)
 	var/list/room_keys = list()
 	var/list/room_guests = list()
@@ -248,7 +248,18 @@ GLOBAL_LIST_EMPTY(hotel_rooms)
 	room_log.Add(log_entry)
 	room_test_n_update()
 
-/datum/hotel_room/proc/clear_reservation(var/auto_clear = 0)
+/datum/hotel_room/proc/remove_guest(var/guest_name)
+	for(var/guest in room_guests)
+		if(guest == guest_name)
+			room_guests -= guest_name
+
+/datum/hotel_room/proc/add_guest(var/guest_name)
+	if(LAZYLEN(room_guests) < guest_count && !(guest_name in room_guests) && room_status == 2)
+		room_guests += guest_name
+		return 1
+	return 0
+
+/datum/hotel_room/proc/clear_reservation(var/auto_clear = 0, var/terminal_clear = 0, var/just_reset = 0)
 
 	if(room_status != 2 && room_status != 3 && room_status != 0)  // If the room has no reservation or hasn't been broken there's nothing to cancel
 		return
@@ -268,14 +279,19 @@ GLOBAL_LIST_EMPTY(hotel_rooms)
 			if(auto_clear)
 				log_entry = "\[[stationtime2text()]\] Room reservation process was automatically terminated due to a"
 				if(room_status)
-					log_entry += " timeout. Room reset."
+					if(terminal_clear)
+						log_entry += " a terminal error (terminal reset). Room reset."
+					else
+						log_entry += " timeout. Room reset."
 					room_status = 1
 				else
 					log_entry += " fatal room error."
 			else
-				log_entry = "\[[stationtime2text()]\] Room reservation process was terminated by [get_user_id_name()]. Room reset."
-				room_status = 1
-	room_log.Add(log_entry)
+				if(!just_reset)
+					log_entry = "\[[stationtime2text()]\] Room reservation process was terminated [terminal_clear ? "in a guest terminal" : "by " + get_user_id_name()]. Room reset."
+					room_status = 1
+	if(log_entry)
+		room_log.Add(log_entry)
 
 	room_reservation_start_time = null
 	room_reservation_end_time = null
