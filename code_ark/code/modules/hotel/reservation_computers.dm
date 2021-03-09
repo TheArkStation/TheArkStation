@@ -29,16 +29,9 @@
 	build_path = /obj/machinery/hotel_terminal*/
 
 /obj/machinery/hotel_terminal/Initialize()
-	..()
-	update_icon()
-	return INITIALIZE_HINT_LATELOAD
-
-/obj/machinery/hotel_terminal/LateInitialize()
 	. = ..()
-	spawn(300)
-		while(!round_start_time)
-			sleep(100)
-		setup_hotel_rooms()
+	update_icon()
+	setup_hotel_rooms()
 
 /obj/machinery/hotel_terminal/Destroy()
 	if(master_program)
