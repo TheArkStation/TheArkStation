@@ -29,9 +29,16 @@
 	build_path = /obj/machinery/hotel_terminal*/
 
 /obj/machinery/hotel_terminal/Initialize()
-	. = ..()
-	setup_hotel_rooms()
+	..()
 	update_icon()
+	return INITIALIZE_HINT_LATELOAD
+
+/obj/machinery/hotel_terminal/LateInitialize()
+	. = ..()
+	spawn(300)
+		while(!round_start_time)
+			sleep(100)
+		setup_hotel_rooms()
 
 /obj/machinery/hotel_terminal/Destroy()
 	if(master_program)
@@ -43,10 +50,7 @@
 
 	if(I || istype(W, /obj/item/weapon/spacecash/ewallet))
 
-		if(I == W || W == null)
-			visible_message("<span class='info'>\The [usr] swipes \the [I] through \the [src].</span>")
-		else
-			visible_message("<span class='info'>\The [usr] swipes \the [W] through \the [src].</span>")
+		visible_message("<span class='info'>\The [usr] swipes \the [I == W || W == null ? I : W] through \the [src].</span>")
 
 		if(program_mode == 3)
 			if(!I)
