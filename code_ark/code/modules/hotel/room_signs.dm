@@ -10,16 +10,23 @@
 
 	var/datum/hotel_room/hotel_room
 
+/obj/machinery/hotel_room_sign/Initialize()
+	. = ..()
+	update_icon()
+
 /obj/machinery/hotel_room_sign/Destroy()
-	hotel_room.room_test_n_update()
+	if(hotel_room)
+		hotel_room.room_test_n_update()
 	. = ..()
 
 /obj/machinery/hotel_room_sign/on_update_icon()
 	overlays.Cut()
 	var/image/I = image(icon, icon_state)
-	if(!hotel_room)
-		I.color = "#999999"
-		set_light(0)
+	if(!hotel_room && !(stat & NOPOWER))
+		I.color = "#ffffff"
+		I.plane = EFFECTS_ABOVE_LIGHTING_PLANE
+		I.layer = ABOVE_LIGHTING_LAYER
+		set_light(0.3, 0.1, 1, 2, "#ffffff")
 		overlays += I
 		return
 	if((stat & NOPOWER) || hotel_room.room_status == 0)

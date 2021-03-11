@@ -31,7 +31,7 @@
 /obj/machinery/hotel_terminal/Initialize()
 	. = ..()
 	update_icon()
-	setup_hotel_rooms()
+
 
 /obj/machinery/hotel_terminal/Destroy()
 	if(master_program)
@@ -67,6 +67,7 @@
 							flick_screen(screen_icon_state = "hotel_terminal_loading")
 			else
 				to_chat(user, "<span class='warning'>Unable to add the guest to the room.</span>")
+			return
 
 
 /obj/machinery/hotel_terminal/on_update_icon()
@@ -108,6 +109,7 @@
 
 /obj/machinery/hotel_terminal/interface_interact(var/mob/user)
 	flick_screen("hotel_terminal_screensaver")
+	setup_hotel_rooms()
 	ui_interact(user)
 	return TRUE
 
