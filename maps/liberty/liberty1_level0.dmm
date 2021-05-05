@@ -9,6 +9,10 @@
 /obj/effect/floor_decal/spline/fancy/black/cee{
 	dir = 1
 	},
+/obj/machinery/computer/ship/engines{
+	dir = 4;
+	name = "bebop's engine control console"
+	},
 /turf/simulated/floor/plating,
 /area/liberty/bebop/cockpit)
 "aad" = (
@@ -1556,6 +1560,8 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/hatch,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/monotile,
 /area/liberty/bebop/cockpit)
 "ade" = (
@@ -6451,11 +6457,19 @@
 	d2 = 2;
 	icon_state = "0-2"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/bebop/cockpit)
 "amW" = (
 /obj/machinery/button/blast_door{
 	id_tag = "bebop_blastdoor"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/bebop/cockpit)
@@ -6468,6 +6482,8 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/monotile,
 /area/liberty/bebop/cockpit)
 "ana" = (
@@ -6486,6 +6502,12 @@
 	d1 = 2;
 	d2 = 4;
 	icon_state = "2-4"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/bebop/main)
@@ -6513,21 +6535,14 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/lino,
-/area/liberty/bebop/main)
-"ane" = (
-/obj/effect/floor_decal/corner/grey{
-	dir = 10
-	},
-/obj/machinery/firealarm{
-	dir = 4;
-	pixel_x = 24
-	},
-/obj/machinery/light/small{
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/techmaint,
-/area/liberty/hallway/zero/port_docks)
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/lino,
+/area/liberty/bebop/main)
 "anf" = (
 /obj/effect/floor_decal/corner/grey{
 	dir = 6
@@ -6742,15 +6757,17 @@
 "anK" = (
 /obj/effect/floor_decal/spline/fancy/black/cee,
 /obj/machinery/light/small/red,
-/obj/machinery/computer/ship/engines{
-	dir = 4;
-	name = "bebop's engine control console"
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/liberty/bebop/cockpit)
 "anL" = (
 /obj/effect/floor_decal/spline/fancy/black/cee,
 /obj/machinery/light/small/red,
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/liberty/bebop/cockpit)
 "anM" = (
@@ -6838,18 +6855,18 @@
 /turf/simulated/floor/tiled/monotile,
 /area/liberty/bebop/service)
 "anV" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 10
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 10
-	},
 /obj/structure/cable/cyan{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/liberty/bebop/main)
 "anW" = (
@@ -9494,6 +9511,14 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/liberty/engineering/hallway/engineering_hall_level_zero)
+"cOx" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 10
+	},
+/obj/effect/paint/black,
+/obj/structure/shuttle/engine/heater,
+/turf/simulated/wall/r_titanium,
+/area/liberty/bebop/service)
 "cPl" = (
 /obj/machinery/hologram/holopad,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -9822,6 +9847,12 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/bebop/main)
 "ddo" = (
@@ -9921,6 +9952,14 @@
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/liberty/cargo_bay/zero)
+"dfD" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 6
+	},
+/obj/effect/paint/black,
+/obj/structure/shuttle/engine/heater,
+/turf/simulated/wall/r_titanium,
+/area/liberty/bebop/service)
 "dfL" = (
 /obj/effect/floor_decal/techfloor,
 /obj/machinery/atmospherics/pipe/manifold/visible,
@@ -10173,6 +10212,8 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/bebop/cockpit)
 "dxQ" = (
@@ -13033,14 +13074,6 @@
 /obj/effect/paint/sun,
 /turf/simulated/wall/r_titanium,
 /area/liberty/kenobi/airlock)
-"gHV" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
-	dir = 10
-	},
-/obj/effect/paint/black,
-/obj/structure/shuttle/engine/heater,
-/turf/simulated/wall/r_titanium,
-/area/liberty/bebop/service)
 "gIC" = (
 /obj/structure/cable/cyan{
 	d1 = 1;
@@ -14392,6 +14425,15 @@
 /obj/structure/largecrate/animal/cow,
 /turf/simulated/floor/tiled/monotile,
 /area/liberty/cargo_bay/zero)
+"idX" = (
+/obj/effect/floor_decal/corner/grey{
+	dir = 5
+	},
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/liberty/hallway/zero/port_docks)
 "ier" = (
 /obj/machinery/disposal,
 /obj/structure/railing/mapped{
@@ -14471,6 +14513,11 @@
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /turf/simulated/floor/tiled/monotile,
 /area/liberty/cargo_bay/zero/fuel_bay)
+"iit" = (
+/obj/effect/floor_decal/corner/grey/diagonal,
+/obj/machinery/washing_machine,
+/turf/simulated/floor/tiled/techmaint,
+/area/liberty/bebop/main)
 "iiu" = (
 /obj/structure/closet/secure_closet,
 /obj/effect/floor_decal/corner/grey{
@@ -15065,15 +15112,6 @@
 	},
 /turf/simulated/floor/wood/maple,
 /area/liberty/engineering/restroom)
-"iID" = (
-/obj/effect/floor_decal/corner/grey{
-	dir = 5
-	},
-/obj/machinery/light/small{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/liberty/hallway/zero/port_docks)
 "iIK" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
@@ -18723,6 +18761,15 @@
 	},
 /turf/simulated/floor/plating,
 /area/liberty/engineering/hallway/engineering_hall_level_zero)
+"mrd" = (
+/obj/structure/railing/mapped{
+	dir = 4
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
+/turf/simulated/floor/lino,
+/area/liberty/bebop/main)
 "mrv" = (
 /obj/effect/floor_decal/industrial/warning/narrow{
 	dir = 4
@@ -19248,15 +19295,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/liberty/engineering/hard_storage)
-"mVN" = (
-/obj/structure/railing/mapped{
-	dir = 8
-	},
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 8
-	},
-/turf/simulated/floor/lino,
-/area/liberty/bebop/main)
 "mVS" = (
 /obj/structure/table/standard,
 /obj/structure/flora/pottedplant/deskfern,
@@ -21198,6 +21236,12 @@
 	d1 = 1;
 	d2 = 8;
 	icon_state = "1-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
 	},
 /turf/simulated/floor/lino,
 /area/liberty/bebop/main)
@@ -24312,6 +24356,19 @@
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/liberty/cargo_bay/zero/train)
+"scf" = (
+/obj/effect/floor_decal/corner/grey{
+	dir = 10
+	},
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 24
+	},
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/liberty/hallway/zero/port_docks)
 "scn" = (
 /obj/structure/closet/crate/radiation_gear,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -24450,11 +24507,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/liberty/maintenance/zero/port)
-"sid" = (
-/obj/effect/floor_decal/corner/grey/diagonal,
-/obj/machinery/washing_machine,
-/turf/simulated/floor/tiled/techmaint,
-/area/liberty/bebop/main)
 "siS" = (
 /obj/structure/table/rack,
 /obj/structure/railing/mapped,
@@ -24993,16 +25045,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/liberty/hallway/zero/fore)
-"sSE" = (
-/obj/structure/railing/mapped{
-	dir = 4
-	},
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 4
-	},
-/turf/simulated/floor/lino,
-/area/liberty/bebop/main)
+/area/liberty/maintenance/zero/casino)
 "sSZ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -26311,14 +26354,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/plating,
 /area/liberty/maintenance/zero/brig)
-"ueJ" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
-	dir = 6
-	},
-/obj/effect/paint/black,
-/obj/structure/shuttle/engine/heater,
-/turf/simulated/wall/r_titanium,
-/area/liberty/bebop/service)
 "ueN" = (
 /obj/machinery/door/firedoor,
 /obj/effect/floor_decal/industrial/hatch,
@@ -26483,6 +26518,11 @@
 /obj/effect/floor_decal/industrial/number/b/three,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/liberty/cargo_bay/zero)
+"umJ" = (
+/obj/effect/paint/black,
+/obj/effect/paint/black,
+/turf/simulated/wall/r_titanium,
+/area/liberty/bebop/service)
 "unl" = (
 /obj/structure/catwalk,
 /obj/structure/closet/crate/trashcart,
@@ -27752,6 +27792,12 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/liberty/bebop/main)
 "vVb" = (
@@ -28055,11 +28101,6 @@
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/liberty/cargo_bay/zero/public_storage)
-"wje" = (
-/obj/effect/paint/black,
-/obj/effect/paint/black,
-/turf/simulated/wall/r_titanium,
-/area/liberty/bebop/service)
 "wlg" = (
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
@@ -29644,6 +29685,15 @@
 /obj/structure/railing/mapped,
 /turf/simulated/floor/plating,
 /area/liberty/maintenance/zero)
+"xPW" = (
+/obj/structure/railing/mapped{
+	dir = 8
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/turf/simulated/floor/lino,
+/area/liberty/bebop/main)
 "xQq" = (
 /obj/structure/morgue,
 /turf/simulated/floor/tiled/old_cargo,
@@ -37201,7 +37251,7 @@ rrB
 rrB
 ihI
 aoy
-ueJ
+dfD
 cro
 lQF
 lQF
@@ -37800,11 +37850,11 @@ anb
 vUW
 anu
 anQ
-mVN
+xPW
 kwV
 vNo
 aog
-wje
+umJ
 wee
 jij
 pJW
@@ -38608,7 +38658,7 @@ ang
 yiB
 anu
 aoc
-sSE
+mrd
 kwV
 qjB
 eQw
@@ -39221,7 +39271,7 @@ wee
 xPF
 aoz
 ocr
-gHV
+cOx
 cro
 lQF
 lQF
@@ -39615,7 +39665,7 @@ lQF
 lQF
 lQF
 aop
-sid
+iit
 mvU
 eJn
 kLG
@@ -39623,7 +39673,7 @@ qvU
 qbc
 wee
 wee
-wje
+umJ
 wee
 wee
 lQF
@@ -39632,10 +39682,10 @@ lQF
 lQF
 lQF
 aad
-iID
+idX
 alR
 ami
-ane
+scf
 aad
 lQF
 lQF
@@ -40642,10 +40692,10 @@ rdW
 lQF
 lQF
 aad
-iID
+idX
 alR
 ami
-ane
+scf
 aad
 lQF
 lQF
