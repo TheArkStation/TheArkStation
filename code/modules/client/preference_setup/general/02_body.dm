@@ -108,7 +108,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	pref.b_eyes			= sanitize_integer(pref.b_eyes, 0, 255, initial(pref.b_eyes))
 	pref.b_type			= sanitize_text(pref.b_type, initial(pref.b_type))
 
-	if(!pref.species || !(pref.species in playable_species))
+	if(!pref.species || (!(pref.species in GLOB.trapSpecies) && !(pref.species in playable_species)))	// ARK was	if(!pref.species || !(pref.species in playable_species))
 		pref.species = SPECIES_HUMAN
 
 	var/datum/species/mob_species = all_species[pref.species]
@@ -354,6 +354,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 
 		var/prev_species = pref.species
 		pref.species = choice
+		pref.trap = FALSE // ARK
 		if(prev_species != pref.species)
 			mob_species = all_species[pref.species]
 			if(!(pref.gender in mob_species.genders))
